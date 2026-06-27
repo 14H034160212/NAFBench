@@ -1,0 +1,1652 @@
+[
+ {
+  "task_id": "v2-even_one_sided-d0-w0::cred",
+  "rec_id": "v2-even_one_sided-d0-w0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w0::skept",
+  "rec_id": "v2-even_one_sided-d0-w0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w0::wfs",
+  "rec_id": "v2-even_one_sided-d0-w0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w2::cred",
+  "rec_id": "v2-even_one_sided-d0-w2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w2::skept",
+  "rec_id": "v2-even_one_sided-d0-w2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w2::wfs",
+  "rec_id": "v2-even_one_sided-d0-w2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w4::cred",
+  "rec_id": "v2-even_one_sided-d0-w4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w4::skept",
+  "rec_id": "v2-even_one_sided-d0-w4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w4::wfs",
+  "rec_id": "v2-even_one_sided-d0-w4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w6::cred",
+  "rec_id": "v2-even_one_sided-d0-w6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w6::skept",
+  "rec_id": "v2-even_one_sided-d0-w6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w6::wfs",
+  "rec_id": "v2-even_one_sided-d0-w6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w8::cred",
+  "rec_id": "v2-even_one_sided-d0-w8",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 8,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w8::skept",
+  "rec_id": "v2-even_one_sided-d0-w8",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 8,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d0-w8::wfs",
+  "rec_id": "v2-even_one_sided-d0-w8",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 0,
+  "width": 8,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w0::cred",
+  "rec_id": "v2-even_one_sided-d2-w0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w0::skept",
+  "rec_id": "v2-even_one_sided-d2-w0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w0::wfs",
+  "rec_id": "v2-even_one_sided-d2-w0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w2::cred",
+  "rec_id": "v2-even_one_sided-d2-w2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w2::skept",
+  "rec_id": "v2-even_one_sided-d2-w2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w2::wfs",
+  "rec_id": "v2-even_one_sided-d2-w2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w4::cred",
+  "rec_id": "v2-even_one_sided-d2-w4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w4::skept",
+  "rec_id": "v2-even_one_sided-d2-w4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w4::wfs",
+  "rec_id": "v2-even_one_sided-d2-w4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w6::cred",
+  "rec_id": "v2-even_one_sided-d2-w6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w6::skept",
+  "rec_id": "v2-even_one_sided-d2-w6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w6::wfs",
+  "rec_id": "v2-even_one_sided-d2-w6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w8::cred",
+  "rec_id": "v2-even_one_sided-d2-w8",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 8,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w8::skept",
+  "rec_id": "v2-even_one_sided-d2-w8",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 8,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d2-w8::wfs",
+  "rec_id": "v2-even_one_sided-d2-w8",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 2,
+  "width": 8,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w0::cred",
+  "rec_id": "v2-even_one_sided-d4-w0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w0::skept",
+  "rec_id": "v2-even_one_sided-d4-w0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w0::wfs",
+  "rec_id": "v2-even_one_sided-d4-w0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w2::cred",
+  "rec_id": "v2-even_one_sided-d4-w2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w2::skept",
+  "rec_id": "v2-even_one_sided-d4-w2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w2::wfs",
+  "rec_id": "v2-even_one_sided-d4-w2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w4::cred",
+  "rec_id": "v2-even_one_sided-d4-w4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w4::skept",
+  "rec_id": "v2-even_one_sided-d4-w4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w4::wfs",
+  "rec_id": "v2-even_one_sided-d4-w4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w6::cred",
+  "rec_id": "v2-even_one_sided-d4-w6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w6::skept",
+  "rec_id": "v2-even_one_sided-d4-w6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w6::wfs",
+  "rec_id": "v2-even_one_sided-d4-w6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w8::cred",
+  "rec_id": "v2-even_one_sided-d4-w8",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 8,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w8::skept",
+  "rec_id": "v2-even_one_sided-d4-w8",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 8,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d4-w8::wfs",
+  "rec_id": "v2-even_one_sided-d4-w8",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 4,
+  "width": 8,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w0::cred",
+  "rec_id": "v2-even_one_sided-d6-w0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w0::skept",
+  "rec_id": "v2-even_one_sided-d6-w0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w0::wfs",
+  "rec_id": "v2-even_one_sided-d6-w0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w2::cred",
+  "rec_id": "v2-even_one_sided-d6-w2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w2::skept",
+  "rec_id": "v2-even_one_sided-d6-w2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w2::wfs",
+  "rec_id": "v2-even_one_sided-d6-w2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w4::cred",
+  "rec_id": "v2-even_one_sided-d6-w4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w4::skept",
+  "rec_id": "v2-even_one_sided-d6-w4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w4::wfs",
+  "rec_id": "v2-even_one_sided-d6-w4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w6::cred",
+  "rec_id": "v2-even_one_sided-d6-w6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w6::skept",
+  "rec_id": "v2-even_one_sided-d6-w6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w6::wfs",
+  "rec_id": "v2-even_one_sided-d6-w6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w8::cred",
+  "rec_id": "v2-even_one_sided-d6-w8",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 8,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w8::skept",
+  "rec_id": "v2-even_one_sided-d6-w8",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 8,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d6-w8::wfs",
+  "rec_id": "v2-even_one_sided-d6-w8",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 6,
+  "width": 8,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w0::cred",
+  "rec_id": "v2-even_one_sided-d8-w0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w0::skept",
+  "rec_id": "v2-even_one_sided-d8-w0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w0::wfs",
+  "rec_id": "v2-even_one_sided-d8-w0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w2::cred",
+  "rec_id": "v2-even_one_sided-d8-w2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w2::skept",
+  "rec_id": "v2-even_one_sided-d8-w2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w2::wfs",
+  "rec_id": "v2-even_one_sided-d8-w2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 are all filed. Checklist B passes if item 1 and item 2 are all filed. Item j is filed if form j is signed (for each j). Every form 1..2 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w4::cred",
+  "rec_id": "v2-even_one_sided-d8-w4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w4::skept",
+  "rec_id": "v2-even_one_sided-d8-w4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w4::wfs",
+  "rec_id": "v2-even_one_sided-d8-w4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. Item j is filed if form j is signed (for each j). Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w6::cred",
+  "rec_id": "v2-even_one_sided-d8-w6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w6::skept",
+  "rec_id": "v2-even_one_sided-d8-w6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w6::wfs",
+  "rec_id": "v2-even_one_sided-d8-w6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 are all filed. Item j is filed if form j is signed (for each j). Every form 1..6 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w8::cred",
+  "rec_id": "v2-even_one_sided-d8-w8",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 8,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w8::skept",
+  "rec_id": "v2-even_one_sided-d8-w8",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 8,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "v2-even_one_sided-d8-w8::wfs",
+  "rec_id": "v2-even_one_sided-d8-w8",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "depth": 8,
+  "width": 8,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "metrics": {
+   "prolog_inferences": null,
+   "clingo_conflicts": 0,
+   "clingo_choices": 1,
+   "n_stable_models": 2
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does NOT sign off. Reviewer 1 signs off if and only if reviewer 0 does NOT sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 are all filed. Item j is filed if form j is signed (for each j). Every form 1..8 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is warranted and the audit is complete.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]
