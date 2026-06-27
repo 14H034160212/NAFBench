@@ -10,3 +10,4 @@ runs/
 *.safetensors
 # verbose raw model-output dumps (not needed to read results)
 *.raw.json
+.claude/

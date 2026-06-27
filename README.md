@@ -8,6 +8,15 @@ automated cross-vendor evaluation** of 9 models — Claude, OpenAI (incl. GPT-5)
 and local open-source models (DeepSeek-R1, Qwen2.5, Llama3) — to answer the
 central question: *do frontier models still actually have this problem?*
 
+## Interactive demo (static, Cloudflare-Pages ready)
+
+A self-contained static site lives in [`site/`](site/) — an interactive
+per-model correctness panel, a `G(depth, width, bin)` explorer showing the
+certified four-tuple and the exact prompt per semantics, and the figure gallery.
+No backend (all data precomputed into `site/data.js`). Rebuild with
+`python build_site.py`; deploy by pointing Cloudflare Pages at the `site/`
+directory (see [`site/README.md`](site/README.md)).
+
 ## Demo examples (meeting-ready)
 
 Three self-contained slides. Every "certified" answer is computed by a real

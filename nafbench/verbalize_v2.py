@@ -54,60 +54,84 @@ SEMANTICS_INSTRUCTIONS = {
         "'Definitely no' for false, 'Cannot be determined' for undefined."),
 }
 
-_REVIEWERS = ["reviewer 0", "reviewer 1", "reviewer 2", "reviewer 3",
-              "reviewer 4", "reviewer 5", "reviewer 6"]
+# surface themes (replicates) — same logical structure, different vocabulary;
+# this doubles as the verbalization-load axis.
+THEMES_V2 = [
+    dict(actor="reviewer", verb="signs off", notverb="does not sign off",
+         warranted="the escalation is WARRANTED",
+         audit="the audit is COMPLETE", clA="checklist A passes", clB="checklist B passes",
+         item="item", form="form", stage="stage", query="the case is ESCALATED",
+         qword="Is the case ESCALATED?"),
+    dict(actor="sensor", verb="is active", notverb="is not active",
+         warranted="the alarm condition HOLDS",
+         audit="the self-test PASSES", clA="diagnostic A passes", clB="diagnostic B passes",
+         item="signal", form="channel", stage="relay", query="the ALARM is raised",
+         qword="Is the ALARM raised?"),
+    dict(actor="auditor", verb="approves", notverb="does not approve",
+         warranted="the override is JUSTIFIED",
+         audit="the paperwork is IN ORDER", clA="file A is clear", clB="file B is clear",
+         item="document", form="record", stage="tier", query="the override is GRANTED",
+         qword="Is the override GRANTED?"),
+]
+_ORD = ["0", "1", "2", "3", "4", "5", "6"]
 
 
-def _premises(prog: Program) -> str:
+def _cap(s: str) -> str:
+    """Capitalize only the first character (preserve intentional CAPS / 'A','B')."""
+    return s[:1].upper() + s[1:]
+
+
+def _premises(prog: Program, theme: int = 0) -> str:
     m = prog.meta
     b, k, d, w = m["divergence_bin"], m["cycle_len"], m["depth"], m["width"]
+    th = THEMES_V2[theme % len(THEMES_V2)]
+    A, V = th["actor"], th["verb"]
     L = []
 
     # --- divergence core ---
     if b == "control":
-        L.append("The escalation is WARRANTED unless it has been blocked.")
-        # (no statement ever blocks it)
+        L.append(f"{_cap(th['warranted'])} unless it has been blocked.")
     else:
-        revs = _REVIEWERS[:k]
+        revs = [f"{A} {_ORD[i]}" for i in range(k)]
         for i in range(k):
-            L.append(f"{revs[i].capitalize()} signs off if and only if "
-                     f"{revs[(i + 1) % k]} does NOT sign off.")
+            L.append(f"{_cap(revs[i])} {V} if and only if "
+                     f"{revs[(i + 1) % k]} {th['notverb']}.")
         if b == "even_both_sided":
             for r in revs:
-                L.append(f"The escalation is WARRANTED if {r} signs off.")
-        else:  # even_one_sided / odd: query enters through reviewer 0 only
-            L.append(f"The escalation is WARRANTED if {revs[0]} signs off.")
+                L.append(f"{_cap(th['warranted'])} if {r} {V}.")
+        else:
+            L.append(f"{_cap(th['warranted'])} if {revs[0]} {V}.")
 
     # --- width block (shared subgoals) ---
     if w <= 0:
-        L.append("The audit is COMPLETE.")
+        L.append(f"{_cap(th['audit'])}.")
     else:
-        L.append("The audit is COMPLETE if checklist A passes and checklist B passes.")
-        items = " and ".join(f"item {j + 1}" for j in range(w))
-        L.append(f"Checklist A passes if {items} are all filed.")
-        L.append(f"Checklist B passes if {items} are all filed.")
-        L.append("Item j is filed if form j is signed (for each j).")
-        L.append("Every form 1.." + str(w) + " is signed.")
+        L.append(f"{_cap(th['audit'])} if {th['clA']} and {th['clB']}.")
+        items = " and ".join(f"{th['item']} {j + 1}" for j in range(w))
+        L.append(f"{_cap(th['clA'])} if {items} are all filed.")
+        L.append(f"{_cap(th['clB'])} if {items} are all filed.")
+        L.append(f"A {th['item']} is filed if its {th['form']} is signed.")
+        L.append(f"Every {th['form']} 1..{w} is signed.")
 
     # --- depth chain ---
+    warr = th["warranted"]
+    aud = th["audit"]
     if d <= 0:
-        L.append("The case is ESCALATED if the escalation is warranted and the "
-                 "audit is complete.")
+        L.append(f"{_cap(th['query'])} if {warr} and {aud}.")
     else:
-        L.append("The case is ESCALATED if stage 0 is reached.")
+        L.append(f"{_cap(th['query'])} if {th['stage']} 0 is reached.")
         for j in range(d - 1):
-            L.append(f"Stage {j} is reached if stage {j + 1} is reached.")
-        L.append(f"Stage {d - 1} is reached if the escalation is warranted and the "
-                 f"audit is complete.")
+            L.append(f"{_cap(th['stage'])} {j} is reached if {th['stage']} {j + 1} is reached.")
+        L.append(f"{_cap(th['stage'])} {d - 1} is reached if {warr} and {aud}.")
     return " ".join(L)
 
 
-def build_prompt(prog: Program, semantics: str) -> str:
+def build_prompt(prog: Program, semantics: str, theme: int = 0) -> str:
     instr = SEMANTICS_INSTRUCTIONS[semantics]
     return (
         f"{instr}\n\n"
-        f"Rules:\n{_premises(prog)}\n\n"
-        f"Question: Is the case ESCALATED?\n\n"
+        f"Rules:\n{_premises(prog, theme)}\n\n"
+        f"Question: {THEMES_V2[theme % len(THEMES_V2)]['qword']}\n\n"
         f"Choose exactly one:\n"
         f"  A. Definitely yes\n"
         f"  B. Definitely no\n"
