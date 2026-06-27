@@ -1,0 +1,362 @@
+[
+ {
+  "task_id": "naf-042::stable",
+  "rec_id": "naf-042",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n委员A投赞成票，当且仅当委员B不投赞成票。委员B投赞成票，当且仅当委员A不投赞成票。如果委员A投赞成票，则动议通过。\n\n问题：动议会通过吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-042::wfs",
+  "rec_id": "naf-042",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n委员A投赞成票，当且仅当委员B不投赞成票。委员B投赞成票，当且仅当委员A不投赞成票。如果委员A投赞成票，则动议通过。\n\n问题：动议会通过吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-044::stable",
+  "rec_id": "naf-044",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n甲出席会议，当且仅当乙不出席会议。乙出席会议，当且仅当甲不出席会议。如果甲出席会议，则步骤S0发生。如果步骤S0发生，则会议召开。\n\n问题：会议会召开吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-044::wfs",
+  "rec_id": "naf-044",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n甲出席会议，当且仅当乙不出席会议。乙出席会议，当且仅当甲不出席会议。如果甲出席会议，则步骤S0发生。如果步骤S0发生，则会议召开。\n\n问题：会议会召开吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-046::stable",
+  "rec_id": "naf-046",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n委员A投赞成票，当且仅当委员B不投赞成票。委员B投赞成票，当且仅当委员A不投赞成票。如果委员A投赞成票，则步骤S0发生。如果步骤S0发生，则步骤S1发生。如果步骤S1发生，则动议通过。\n\n问题：动议会通过吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-046::wfs",
+  "rec_id": "naf-046",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n委员A投赞成票，当且仅当委员B不投赞成票。委员B投赞成票，当且仅当委员A不投赞成票。如果委员A投赞成票，则步骤S0发生。如果步骤S0发生，则步骤S1发生。如果步骤S1发生，则动议通过。\n\n问题：动议会通过吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-048::stable",
+  "rec_id": "naf-048",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n节点1在线，当且仅当节点2不在线。节点2在线，当且仅当节点1不在线。如果节点1在线，则服务可用。如果节点2在线，则服务可用。\n\n问题：服务可用吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-048::wfs",
+  "rec_id": "naf-048",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "true",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n节点1在线，当且仅当节点2不在线。节点2在线，当且仅当节点1不在线。如果节点1在线，则服务可用。如果节点2在线，则服务可用。\n\n问题：服务可用吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-050::stable",
+  "rec_id": "naf-050",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n节点1在线，当且仅当节点2不在线。节点2在线，当且仅当节点1不在线。只有当节点1在线且节点2在线时，才触发故障警报。\n\n问题：会触发故障警报吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-050::wfs",
+  "rec_id": "naf-050",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "false",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n节点1在线，当且仅当节点2不在线。节点2在线，当且仅当节点1不在线。只有当节点1在线且节点2在线时，才触发故障警报。\n\n问题：会触发故障警报吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-064::stable",
+  "rec_id": "naf-064",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用稳定模型（回答集）语义：考虑所有恰好由规则证成的自洽真值赋值（每个称为一个“回答集”）。仅当被查询陈述在每个回答集中都成立时回答“一定是”；在任何回答集中都不成立时回答“一定否”；若在部分回答集成立、部分不成立，或根本不存在回答集，则回答“无法确定”。\n\n规则：\n甲出席会议，当且仅当乙不出席会议。乙出席会议，当且仅当丙不出席会议。丙出席会议，当且仅当丁不出席会议。丁出席会议，当且仅当甲不出席会议。如果甲出席会议，则步骤S0发生。如果步骤S0发生，则会议召开。\n\n问题：会议会召开吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-064::wfs",
+  "rec_id": "naf-064",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n甲出席会议，当且仅当乙不出席会议。乙出席会议，当且仅当丙不出席会议。丙出席会议，当且仅当丁不出席会议。丁出席会议，当且仅当甲不出席会议。如果甲出席会议，则步骤S0发生。如果步骤S0发生，则会议召开。\n\n问题：会议会召开吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-000::wfs",
+  "rec_id": "naf-000",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n项目X属于C1类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-001::wfs",
+  "rec_id": "naf-001",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\n项目X属于C1类。C1类的项目默认获批，除非它被标记。项目X已被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-002::wfs",
+  "rec_id": "naf-002",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\nC2类的每个项目自动也属于C1类。项目X属于C2类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-003::wfs",
+  "rec_id": "naf-003",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\nC2类的每个项目自动也属于C1类。项目X属于C2类。C1类的项目默认获批，除非它被标记。项目X已被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-004::wfs",
+  "rec_id": "naf-004",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\nC3类的每个项目自动也属于C2类。C2类的每个项目自动也属于C1类。项目X属于C3类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-005::wfs",
+  "rec_id": "naf-005",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "lang": "zh",
+  "prompt": "请使用良基语义（三值：真/假/未定义）：仅当一个陈述最终由事实稳固支撑时才为“真”，永远无法被支撑时为“假”，若其支撑循环地依赖于对自身的假设则为“未定义”。“真”回答“一定是”，“假”回答“一定否”，“未定义”回答“无法确定”。\n\n规则：\nC3类的每个项目自动也属于C2类。C2类的每个项目自动也属于C1类。项目X属于C3类。C1类的项目默认获批，除非它被标记。项目X已被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-000::none",
+  "rec_id": "naf-000",
+  "cond": "none",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请用常识推理回答下列规则。\n\n规则：\n项目X属于C1类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-000::closed_world",
+  "rec_id": "naf-000",
+  "cond": "closed_world",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用封闭世界假设与“否定即失败”：当一个陈述无法从规则推出时，就认定它为假。像 Prolog 引擎那样按操作方式处理规则；若推理无法终止得到明确的是/否，请回答“无法确定”。\n\n规则：\n项目X属于C1类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-002::none",
+  "rec_id": "naf-002",
+  "cond": "none",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请用常识推理回答下列规则。\n\n规则：\nC2类的每个项目自动也属于C1类。项目X属于C2类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-002::closed_world",
+  "rec_id": "naf-002",
+  "cond": "closed_world",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用封闭世界假设与“否定即失败”：当一个陈述无法从规则推出时，就认定它为假。像 Prolog 引擎那样按操作方式处理规则；若推理无法终止得到明确的是/否，请回答“无法确定”。\n\n规则：\nC2类的每个项目自动也属于C1类。项目X属于C2类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-004::none",
+  "rec_id": "naf-004",
+  "cond": "none",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请用常识推理回答下列规则。\n\n规则：\nC3类的每个项目自动也属于C2类。C2类的每个项目自动也属于C1类。项目X属于C3类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ },
+ {
+  "task_id": "naf-004::closed_world",
+  "rec_id": "naf-004",
+  "cond": "closed_world",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "lang": "zh",
+  "prompt": "请使用封闭世界假设与“否定即失败”：当一个陈述无法从规则推出时，就认定它为假。像 Prolog 引擎那样按操作方式处理规则；若推理无法终止得到明确的是/否，请回答“无法确定”。\n\n规则：\nC3类的每个项目自动也属于C2类。C2类的每个项目自动也属于C1类。项目X属于C3类。C1类的项目默认获批，除非它被标记。\n\n问题：项目X会获批吗？\n\n请选择恰好一个：\n  A. 一定是\n  B. 一定否\n  C. 无法确定\n\n请逐步推理，最后单独用一行 'ANSWER: X' 给出答案（X 为 A、B 或 C）。"
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "model": "gpt-4.1",
+ "provider": "openai",
+ "answers": {
+  "naf-044::wfs": "C",
+  "naf-046::wfs": "C",
+  "naf-048::wfs": "C",
+  "naf-042::wfs": "C",
+  "naf-050::wfs": "C",
+  "naf-000::wfs": "C",
+  "naf-064::wfs": "C",
+  "naf-001::wfs": "B",
+  "naf-002::wfs": "C",
+  "naf-003::wfs": "B",
+  "naf-004::wfs": "C",
+  "naf-005::wfs": "B"
+ }
+}

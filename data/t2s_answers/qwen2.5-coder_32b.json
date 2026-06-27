@@ -1,0 +1,95 @@
+{
+ "model": "qwen2.5-coder:32b",
+ "provider": "ollama",
+ "method": "translate_then_solve",
+ "parsed_ok": 12,
+ "n_programs": 12,
+ "answers": {
+  "naf-042::stable": "C",
+  "naf-042::wfs": "C",
+  "naf-044::stable": "C",
+  "naf-044::wfs": "C",
+  "naf-046::stable": "C",
+  "naf-046::wfs": "C",
+  "naf-048::stable": "A",
+  "naf-048::wfs": "C",
+  "naf-050::stable": "B",
+  "naf-050::wfs": "C",
+  "naf-064::stable": "C",
+  "naf-064::wfs": "C",
+  "naf-000::wfs": "B",
+  "naf-001::wfs": "B",
+  "naf-002::wfs": "B",
+  "naf-003::wfs": "B",
+  "naf-004::wfs": "B",
+  "naf-005::wfs": "B",
+  "naf-000::none": "B",
+  "naf-000::closed_world": "B",
+  "naf-002::none": "B",
+  "naf-002::closed_world": "B",
+  "naf-004::none": "B",
+  "naf-004::closed_world": "B"
+ },
+ "translations": {
+  "naf-042": {
+   "text": "a :- not b.\nb :- not a.\npass :- a.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "naf-044": {
+   "text": "alice :- not bob.\nbob :- not alice.\ns0 :- alice.\nmeeting :- s0.\nQUERY: meeting",
+   "ok": true,
+   "query": "meeting"
+  },
+  "naf-046": {
+   "text": "a :- not b.\nb :- not a.\ns0 :- a.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "naf-048": {
+   "text": "online1 :- not online2.\nonline2 :- not online1.\navailable :- online1.\navailable :- online2.\nQUERY: available",
+   "ok": true,
+   "query": "available"
+  },
+  "naf-050": {
+   "text": "online1 :- not online2.\nonline2 :- not online1.\noutage :- online1, online2.\nQUERY: outage",
+   "ok": true,
+   "query": "outage"
+  },
+  "naf-000": {
+   "text": "x.\napproved :- c1, not flagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-064": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\ns0 :- alice.\nmeeting :- s0.\nQUERY: meeting",
+   "ok": true,
+   "query": "meeting"
+  },
+  "naf-001": {
+   "text": "x_in_c1.\napproved :- x_in_c1, not flagged.\nflagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-002": {
+   "text": "c1 :- c2.\nx :- c2.\napproved :- c1, not flagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-003": {
+   "text": "c1 :- c2.\nx :- c2.\napproved :- c1, not flagged.\nflagged :- x.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-004": {
+   "text": "c3 :- c2.\nc2 :- c1.\nx :- c3.\napproved :- c1, not flagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-005": {
+   "text": "c3 :- c2.\nc2 :- c1.\nx :- c3.\napproved :- c1, not flagged.\nflagged :- x.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  }
+ }
+}

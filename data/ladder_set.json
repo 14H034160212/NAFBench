@@ -1,0 +1,450 @@
+[
+ {
+  "task_id": "negdep-authority-1::none",
+  "rec_id": "negdep-authority-1",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 1,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-2::none",
+  "rec_id": "negdep-authority-2",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 2,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-3::none",
+  "rec_id": "negdep-authority-3",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 3,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-4::none",
+  "rec_id": "negdep-authority-4",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 4,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority ACTS if and only if the level-4 authority does NOT acts. The level-4 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-5::none",
+  "rec_id": "negdep-authority-5",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 5,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority ACTS if and only if the level-4 authority does NOT acts. The level-4 authority ACTS if and only if the level-5 authority does NOT acts. The level-5 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-6::none",
+  "rec_id": "negdep-authority-6",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 6,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority ACTS if and only if the level-4 authority does NOT acts. The level-4 authority ACTS if and only if the level-5 authority does NOT acts. The level-5 authority ACTS if and only if the level-6 authority does NOT acts. The level-6 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-7::none",
+  "rec_id": "negdep-authority-7",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 7,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority ACTS if and only if the level-4 authority does NOT acts. The level-4 authority ACTS if and only if the level-5 authority does NOT acts. The level-5 authority ACTS if and only if the level-6 authority does NOT acts. The level-6 authority ACTS if and only if the level-7 authority does NOT acts. The level-7 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-authority-8::none",
+  "rec_id": "negdep-authority-8",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 8,
+  "family": "negation_stack",
+  "theme": "authority",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nThe level-0 authority ACTS if and only if the level-1 authority does NOT acts. The level-1 authority ACTS if and only if the level-2 authority does NOT acts. The level-2 authority ACTS if and only if the level-3 authority does NOT acts. The level-3 authority ACTS if and only if the level-4 authority does NOT acts. The level-4 authority ACTS if and only if the level-5 authority does NOT acts. The level-5 authority ACTS if and only if the level-6 authority does NOT acts. The level-6 authority ACTS if and only if the level-7 authority does NOT acts. The level-7 authority ACTS if and only if the level-8 authority does NOT acts. The level-8 authority definitely acts.\n\nQuestion: Does the level-0 authority ACT?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-1::none",
+  "rec_id": "negdep-review-1",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 1,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-2::none",
+  "rec_id": "negdep-review-2",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 2,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-3::none",
+  "rec_id": "negdep-review-3",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 3,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-4::none",
+  "rec_id": "negdep-review-4",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 4,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 SIGNS OFF if and only if reviewer 4 does NOT signs off. Reviewer 4 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-5::none",
+  "rec_id": "negdep-review-5",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 5,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 SIGNS OFF if and only if reviewer 4 does NOT signs off. Reviewer 4 SIGNS OFF if and only if reviewer 5 does NOT signs off. Reviewer 5 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-6::none",
+  "rec_id": "negdep-review-6",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 6,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 SIGNS OFF if and only if reviewer 4 does NOT signs off. Reviewer 4 SIGNS OFF if and only if reviewer 5 does NOT signs off. Reviewer 5 SIGNS OFF if and only if reviewer 6 does NOT signs off. Reviewer 6 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-7::none",
+  "rec_id": "negdep-review-7",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 7,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 SIGNS OFF if and only if reviewer 4 does NOT signs off. Reviewer 4 SIGNS OFF if and only if reviewer 5 does NOT signs off. Reviewer 5 SIGNS OFF if and only if reviewer 6 does NOT signs off. Reviewer 6 SIGNS OFF if and only if reviewer 7 does NOT signs off. Reviewer 7 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "negdep-review-8::none",
+  "rec_id": "negdep-review-8",
+  "cond": "none",
+  "axis": "negation_depth",
+  "axis_value": 8,
+  "family": "negation_stack",
+  "theme": "review",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 SIGNS OFF if and only if reviewer 1 does NOT signs off. Reviewer 1 SIGNS OFF if and only if reviewer 2 does NOT signs off. Reviewer 2 SIGNS OFF if and only if reviewer 3 does NOT signs off. Reviewer 3 SIGNS OFF if and only if reviewer 4 does NOT signs off. Reviewer 4 SIGNS OFF if and only if reviewer 5 does NOT signs off. Reviewer 5 SIGNS OFF if and only if reviewer 6 does NOT signs off. Reviewer 6 SIGNS OFF if and only if reviewer 7 does NOT signs off. Reviewer 7 SIGNS OFF if and only if reviewer 8 does NOT signs off. Reviewer 8 definitely signs off.\n\nQuestion: Does reviewer 0 SIGN OFF?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-1::closed_world",
+  "rec_id": "ruledep-approval-1",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 1,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nItem x is in category C1. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-2::closed_world",
+  "rec_id": "ruledep-approval-2",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 2,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in category C2 is automatically also in category C1. Item x is in category C2. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-3::closed_world",
+  "rec_id": "ruledep-approval-3",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 3,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C3. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-4::closed_world",
+  "rec_id": "ruledep-approval-4",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 4,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in category C4 is automatically also in category C3. Every item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C4. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-5::closed_world",
+  "rec_id": "ruledep-approval-5",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 5,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in category C5 is automatically also in category C4. Every item in category C4 is automatically also in category C3. Every item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C5. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-approval-6::closed_world",
+  "rec_id": "ruledep-approval-6",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 6,
+  "family": "chain_default",
+  "theme": "approval",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in category C6 is automatically also in category C5. Every item in category C5 is automatically also in category C4. Every item in category C4 is automatically also in category C3. Every item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C6. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-1::closed_world",
+  "rec_id": "ruledep-eligibility-1",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 1,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nApplicant y is in tier T1. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-2::closed_world",
+  "rec_id": "ruledep-eligibility-2",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 2,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in tier T2 is automatically also in tier T1. Applicant y is in tier T2. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-3::closed_world",
+  "rec_id": "ruledep-eligibility-3",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 3,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in tier T3 is automatically also in tier T2. Every item in tier T2 is automatically also in tier T1. Applicant y is in tier T3. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-4::closed_world",
+  "rec_id": "ruledep-eligibility-4",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 4,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in tier T4 is automatically also in tier T3. Every item in tier T3 is automatically also in tier T2. Every item in tier T2 is automatically also in tier T1. Applicant y is in tier T4. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-5::closed_world",
+  "rec_id": "ruledep-eligibility-5",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 5,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in tier T5 is automatically also in tier T4. Every item in tier T4 is automatically also in tier T3. Every item in tier T3 is automatically also in tier T2. Every item in tier T2 is automatically also in tier T1. Applicant y is in tier T5. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "ruledep-eligibility-6::closed_world",
+  "rec_id": "ruledep-eligibility-6",
+  "cond": "closed_world",
+  "axis": "rule_depth",
+  "axis_value": 6,
+  "family": "chain_default",
+  "theme": "eligibility",
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is taken to be FALSE exactly when it cannot be derived from the rules. Treat the rules operationally, the way a Prolog engine would. If the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nEvery item in tier T6 is automatically also in tier T5. Every item in tier T5 is automatically also in tier T4. Every item in tier T4 is automatically also in tier T3. Every item in tier T3 is automatically also in tier T2. Every item in tier T2 is automatically also in tier T1. Applicant y is in tier T6. An item in tier T1 is ELIGIBLE unless it has been disqualified.\n\nQuestion: Is applicant Y ELIGIBLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ }
+]

@@ -1,9 +1,12 @@
 __pycache__/
 *.pyc
 .env
-data/
+.venv_tf/
+# large training artifacts (LoRA adapters / model weights) — reproduce via scripts
 runs/
 *.pt
 *.pth
 *.ckpt
 *.safetensors
+# verbose raw model-output dumps (not needed to read results)
+*.raw.json

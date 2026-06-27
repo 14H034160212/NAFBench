@@ -1,0 +1,95 @@
+{
+ "model": "gpt-5",
+ "provider": "openai",
+ "method": "translate_then_solve",
+ "parsed_ok": 12,
+ "n_programs": 12,
+ "answers": {
+  "naf-042::stable": "C",
+  "naf-042::wfs": "C",
+  "naf-044::stable": "C",
+  "naf-044::wfs": "C",
+  "naf-046::stable": "C",
+  "naf-046::wfs": "C",
+  "naf-048::stable": "A",
+  "naf-048::wfs": "C",
+  "naf-050::stable": "B",
+  "naf-050::wfs": "C",
+  "naf-064::stable": "C",
+  "naf-064::wfs": "C",
+  "naf-000::wfs": "A",
+  "naf-001::wfs": "B",
+  "naf-002::wfs": "A",
+  "naf-003::wfs": "B",
+  "naf-004::wfs": "A",
+  "naf-005::wfs": "B",
+  "naf-000::none": "A",
+  "naf-000::closed_world": "A",
+  "naf-002::none": "A",
+  "naf-002::closed_world": "A",
+  "naf-004::none": "A",
+  "naf-004::closed_world": "A"
+ },
+ "translations": {
+  "naf-042": {
+   "text": "a :- not b.\nb :- not a.\npass :- a.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "naf-048": {
+   "text": "n1 :- not n2.\nn2 :- not n1.\navail :- n1.\navail :- n2.\nQUERY: avail",
+   "ok": true,
+   "query": "avail"
+  },
+  "naf-044": {
+   "text": "a :- not b.\nb :- not a.\ns0 :- a.\nheld :- s0.\nQUERY: held",
+   "ok": true,
+   "query": "held"
+  },
+  "naf-046": {
+   "text": "ay :- not by.\nby :- not ay.\ns0 :- ay.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "naf-000": {
+   "text": "c1x.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
+   "ok": true,
+   "query": "approvedx"
+  },
+  "naf-050": {
+   "text": "o1 :- not o2.\no2 :- not o1.\nout :- o1, o2.\nQUERY: out",
+   "ok": true,
+   "query": "out"
+  },
+  "naf-001": {
+   "text": "c1x.\nflagx.\napprx :- c1x, not flagx.\nQUERY: apprx",
+   "ok": true,
+   "query": "apprx"
+  },
+  "naf-064": {
+   "text": "a :- not b.\nb :- not c.\nc :- not d.\nd :- not a.\ns0 :- a.\nm :- s0.\nQUERY: m",
+   "ok": true,
+   "query": "m"
+  },
+  "naf-003": {
+   "text": "c2x.\nc1x :- c2x.\nflgx.\napx :- c1x, not flgx.\nQUERY: apx",
+   "ok": true,
+   "query": "apx"
+  },
+  "naf-005": {
+   "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\nflagx.\nappx :- c1x, not flagx.\nQUERY: appx",
+   "ok": true,
+   "query": "appx"
+  },
+  "naf-002": {
+   "text": "c2x.\nc1x :- c2x.\napx :- c1x, not flgx.\nQUERY: apx",
+   "ok": true,
+   "query": "apx"
+  },
+  "naf-004": {
+   "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\napprx :- c1x, not flaggedx.\nQUERY: apprx",
+   "ok": true,
+   "query": "apprx"
+  }
+ }
+}

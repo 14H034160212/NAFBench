@@ -1,0 +1,23 @@
+{
+  "_note": "Claude models via subagents (pure reasoning, no tools), WFS condition of the 24-prompt eval set + Opus on the 12 WFS prompts. Scored against the same solver-certified gold as the automated models.",
+  "models": {
+    "claude-opus-4.8": {
+      "naf-042::wfs": "C", "naf-044::wfs": "C", "naf-046::wfs": "C",
+      "naf-048::wfs": "C", "naf-050::wfs": "C", "naf-064::wfs": "C",
+      "naf-000::wfs": "A", "naf-001::wfs": "B", "naf-002::wfs": "A",
+      "naf-003::wfs": "B", "naf-004::wfs": "A", "naf-005::wfs": "B"
+    },
+    "claude-sonnet-4.6": {
+      "naf-042::wfs": "C", "naf-044::wfs": "C", "naf-046::wfs": "C",
+      "naf-048::wfs": "C", "naf-050::wfs": "B", "naf-064::wfs": "C",
+      "naf-000::wfs": "A", "naf-001::wfs": "B", "naf-002::wfs": "A",
+      "naf-003::wfs": "B", "naf-004::wfs": "A", "naf-005::wfs": "B"
+    },
+    "claude-haiku-4.5": {
+      "naf-042::wfs": "B", "naf-044::wfs": "C", "naf-046::wfs": "C",
+      "naf-048::wfs": "A", "naf-050::wfs": "B", "naf-064::wfs": "B",
+      "naf-000::wfs": "C", "naf-001::wfs": "B", "naf-002::wfs": "A",
+      "naf-003::wfs": "B", "naf-004::wfs": "A", "naf-005::wfs": "B"
+    }
+  }
+}

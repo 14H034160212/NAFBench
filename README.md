@@ -38,6 +38,11 @@ online, so the alert is impossible → Definitely no."* That is **classical
 two-valued logic**; well-founded semantics says `undefined ∧ undefined =
 undefined`. Only Opus 4.8 and GPT-4.1 follow the semantics they were told to use.
 
+The full 9-model × 12-prompt picture under well-founded semantics (green =
+correct, red = wrong, cell = the model's answer, `[.]` = gold):
+
+![model heatmap](data/model_heatmap.png)
+
 ### Example 2 — No model assumes a closed world by default; only the strong ones can be told to
 
 > **Rules.** Item X is in category C1. An item in category C1 is APPROVED
@@ -93,6 +98,9 @@ make_verify_set.py + analyze_extra.py   verify-before-infer mitigation + EN/ZH p
 make_big_wfs.py + score_big.py   44-prompt scaled WFS set + 95% Wilson CIs
 make_training_data.py   solver-certified SFT + DPO data (mitigation-by-training)
 train_sft.py + train_dpo.py + eval_local.py   LoRA SFT/DPO + local HF eval
+nafbench/instances.py + nafbench/solvers.py::certify_full   v2: G(depth,width,bin) + 4 labels + hardness
+validate_v2.py + build_v2.py   v2 bin validation, hardness grid, data/nafbench_v2.jsonl
+heatmap.py   9-model x 12-prompt correctness heatmap
 tests/test_solvers.py   6 textbook cases with known answers (all pass)
 data/auto_answers/      direct-reasoning answers (DeepSeek/Qwen/Llama/GPT-5/4.1/4o-mini)
 data/t2s_answers/       translate-then-solve answers + the emitted programs
@@ -465,6 +473,44 @@ its own reasoning on the hard cases**; the next step is SFT targets that include
 the `<think>` block so the certified discipline is learned inside the model's
 reasoning, not just its final line. (The env, scripts, and weights are all in
 place to run that.)
+
+## Experiment 9 — v2 parametrization (4 labels, divergence bins, depth × width, solver hardness)
+
+Following Agnieszka's design (UK collaborators), the certifier was upgraded to
+**four label dimensions** and the generator to **`G(depth, width, divergence_bin)`**
+(`nafbench/instances.py`, `nafbench/solvers.py::certify_full`):
+
+* **Stable is split into credulous and skeptical**, with the zero-model
+  conventions: credulous `any([]) = F`, skeptical `all([]) = T` (vacuous). The
+  four dimensions are `SLDNF {T,F,loop}`, `WFS {T,F,u}`, `stable-credulous {T,F}`,
+  `stable-skeptical {T,F}`.
+* **Four divergence bins** by cycle presence/parity, validated by `validate_v2.py`
+  to reproduce the predicted signatures **exactly across every (depth, width)**:
+
+  | bin | (cred, skept, WFS, SLDNF) | distinct |
+  |---|---|---|
+  | control | (T, T, T, T) | 1 |
+  | even-cycle, one-sided (`q :- x`) | (T, F, u, loop) | **4 (all differ)** |
+  | odd-cycle (no stable model) | (F, T, u, loop) | **4 (all differ)** |
+  | even-cycle, both-sided (`q :- x ; q :- y`) | (T, T, u, loop) | 3 |
+
+* **Complexity = depth × width.** Depth is the rule-chain length; **width** is
+  the number of shared subgoals two parents both depend on (`a :- h1..hk`,
+  `b :- h1..hk`), forcing the reasoner to keep `k` atoms in memory at once. The
+  depth chain and width block are certified-true, so they scale difficulty
+  **without changing the divergence signature** — verified on the 80-instance
+  grid (`data/nafbench_v2.jsonl`: 20 control / 40 all-differ / 20 three-differ).
+* **Per-instance solver hardness** is now recorded: **Prolog inferences**
+  (`statistics/2`) and **clingo conflicts/choices**. Inferences grow with both
+  knobs (e.g. control: width 0→16 ⇒ 7→73 inferences; depth 0→16 ⇒ 7→23),
+  giving a solver-side hardness axis to correlate with model accuracy.
+
+![v2 hardness](data/v2_hardness.png)
+
+This is the experimental backbone for the next phase: regress model
+default-reversion on (depth, width, divergence-bin) and on solver hardness, to
+test the hypothesis that *width* (simultaneous tracking) is a stronger moderator
+than *depth* (linear chaining).
 
 ## Takeaway for the proposal
 

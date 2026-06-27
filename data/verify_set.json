@@ -1,0 +1,182 @@
+[
+ {
+  "task_id": "naf-042::wfs",
+  "rec_id": "naf-042",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nMember A votes YES if and only if Member B does NOT. Member B votes YES if and only if Member A does NOT. The motion passes if Member A votes YES.\n\nQuestion: Does the motion PASS?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-044::wfs",
+  "rec_id": "naf-044",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nAlice attends the meeting if and only if Bob does NOT. Bob attends the meeting if and only if Alice does NOT. Step s0 occurs if alice attends the meeting. The meeting is held if step s0 occurs.\n\nQuestion: Is the meeting HELD?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-046::wfs",
+  "rec_id": "naf-046",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nMember A votes YES if and only if Member B does NOT. Member B votes YES if and only if Member A does NOT. Step s0 occurs if member a votes yes. Step s1 occurs if step s0 occurs. The motion passes if step s1 occurs.\n\nQuestion: Does the motion PASS?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-048::wfs",
+  "rec_id": "naf-048",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "true",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nNode 1 is ONLINE if and only if Node 2 does NOT. Node 2 is ONLINE if and only if Node 1 does NOT. The service is available if Node 1 is ONLINE. The service is available if Node 2 is ONLINE.\n\nQuestion: Is the service AVAILABLE?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-050::wfs",
+  "rec_id": "naf-050",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "false",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nNode 1 is ONLINE if and only if Node 2 does NOT. Node 2 is ONLINE if and only if Node 1 does NOT. An outage alert fires only if Node 1 is ONLINE and Node 2 is ONLINE.\n\nQuestion: Does an OUTAGE alert fire?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-064::wfs",
+  "rec_id": "naf-064",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nAlice attends the meeting if and only if Bob does NOT. Bob attends the meeting if and only if Carol does NOT. Carol attends the meeting if and only if Dave does NOT. Dave attends the meeting if and only if Alice does NOT. Step s0 occurs if alice attends the meeting. The meeting is held if step s0 occurs.\n\nQuestion: Is the meeting HELD?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-000::wfs",
+  "rec_id": "naf-000",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nItem x is in category C1. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-001::wfs",
+  "rec_id": "naf-001",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nItem x is in category C1. An item in category C1 is APPROVED unless it has been flagged. Item x has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-002::wfs",
+  "rec_id": "naf-002",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nEvery item in category C2 is automatically also in category C1. Item x is in category C2. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-003::wfs",
+  "rec_id": "naf-003",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nEvery item in category C2 is automatically also in category C1. Item x is in category C2. An item in category C1 is APPROVED unless it has been flagged. Item x has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-004::wfs",
+  "rec_id": "naf-004",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "A",
+  "certified": {
+   "stable": "true",
+   "wfs": "true",
+   "sldnf": "true"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nEvery item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C3. An item in category C1 is APPROVED unless it has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-005::wfs",
+  "rec_id": "naf-005",
+  "cond": "wfs",
+  "family": "chain_default",
+  "divergent": false,
+  "gold": "B",
+  "certified": {
+   "stable": "false",
+   "wfs": "false",
+   "sldnf": "false"
+  },
+  "method": "self_verify",
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nEvery item in category C3 is automatically also in category C2. Every item in category C2 is automatically also in category C1. Item x is in category C3. An item in category C1 is APPROVED unless it has been flagged. Item x has been flagged.\n\nQuestion: Is item X APPROVED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nBefore answering, reason in three explicit, labelled steps:\nSTEP 1 \u2014 State the exact semantics you must apply and its rule for 'true' / 'false' / 'undefined'.\nSTEP 2 \u2014 For EACH atom that appears, determine its truth value under THAT semantics. For any atom whose support runs through a cycle of negations, check whether it is grounded in facts; if it is not, it is 'undefined' (do NOT case-split into separate consistent worlds unless the semantics tells you to).\nSTEP 3 \u2014 Evaluate the queried atom from the Step-2 values (undefined propagates: anything that depends on an undefined atom and is not otherwise grounded is itself undefined).\nThen give your final answer as a line 'ANSWER: X' where X is A, B, or C."
+ }
+]

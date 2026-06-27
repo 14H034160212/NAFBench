@@ -1,0 +1,95 @@
+{
+ "model": "llama3:8b",
+ "provider": "ollama",
+ "method": "translate_then_solve",
+ "parsed_ok": 11,
+ "n_programs": 12,
+ "answers": {
+  "naf-042::stable": null,
+  "naf-042::wfs": null,
+  "naf-044::stable": "C",
+  "naf-044::wfs": "C",
+  "naf-046::stable": "C",
+  "naf-046::wfs": "C",
+  "naf-048::stable": "A",
+  "naf-048::wfs": "C",
+  "naf-050::stable": "B",
+  "naf-050::wfs": "C",
+  "naf-064::stable": "C",
+  "naf-064::wfs": "C",
+  "naf-000::wfs": "B",
+  "naf-001::wfs": "B",
+  "naf-002::wfs": "B",
+  "naf-003::wfs": "B",
+  "naf-004::wfs": "B",
+  "naf-005::wfs": "B",
+  "naf-000::none": "B",
+  "naf-000::closed_world": "B",
+  "naf-002::none": "B",
+  "naf-002::closed_world": "B",
+  "naf-004::none": "B",
+  "naf-004::closed_world": "B"
+ },
+ "translations": {
+  "naf-042": {
+   "text": "fact.\na :- not b.\nb :- not a.\npass :- a.",
+   "ok": false,
+   "query": null
+  },
+  "naf-046": {
+   "text": "fact.\na :- not b.\nb :- not a.\ns0 :- a.\ns1 :- s0.\npass :- s1, not fail.\nQUERY: pass.",
+   "ok": true,
+   "query": "pass"
+  },
+  "naf-044": {
+   "text": "fact.\nalice_attends :- not bob_attends.\nbob_attends :- not alice_attends.\nstep_s0_occurs :- alice_attends.\nmeeting_held :- step_s0_occurs.\nQUERY: meeting_held.",
+   "ok": true,
+   "query": "meeting_held"
+  },
+  "naf-048": {
+   "text": "fact.\nonline_1 :- not online_2.\nonline_2 :- not online_1.\navailable :- online_1.\navailable :- online_2.\nQUERY: available.",
+   "ok": true,
+   "query": "available"
+  },
+  "naf-000": {
+   "text": "fact.\nin_category_c1(x).\napproved_in_c1 :- not flagged, fact.\nQUERY: approved(x).",
+   "ok": true,
+   "query": "approved(x)"
+  },
+  "naf-050": {
+   "text": "fact.\nonline_1 :- not online_2.\nonline_2 :- not online_1.\noutage_alert :- online_1, online_2, not outage_alert.\nQUERY: outage_alert.",
+   "ok": true,
+   "query": "outage_alert"
+  },
+  "naf-064": {
+   "text": "fact.\nalice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\nstep_s0 :- alice.\nmeeting :- step_s0.\nQUERY: meeting.",
+   "ok": true,
+   "query": "meeting"
+  },
+  "naf-001": {
+   "text": "fact.\nin_c1(x).\napproved_in_c1 :- not flagged.\nflagged.\nQUERY: approved(x).",
+   "ok": true,
+   "query": "approved(x)"
+  },
+  "naf-002": {
+   "text": "fact.\nin_c2(x).\nin_c1 :- in_c2(_), not flagged.\nAPPROVED :- in_c1, not flagged.\nQUERY: APPROVED(x).",
+   "ok": true,
+   "query": "APPROVED(x)"
+  },
+  "naf-003": {
+   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, approved.\nin_c1 :- flagged.\napproved :- in_c2.\nQUERY: approved(X).",
+   "ok": true,
+   "query": "approved(X)"
+  },
+  "naf-004": {
+   "text": "fact.\nin_c3 :- .\nin_c2 :- not in_c3.\nin_c1 :- not in_c2.\nin_c3.\nin_c1 :- in_c2, not flagged.\nQUERY: approved(X).",
+   "ok": true,
+   "query": "approved(X)"
+  },
+  "naf-005": {
+   "text": "fact.\nin_c3 :- .\nin_c2 :- in_c3, not flagged.\nin_c1 :- in_c2, not flagged.\nin_c3.\nflagged.\nQUERY: approved(X).",
+   "ok": true,
+   "query": "approved(X)"
+  }
+ }
+}

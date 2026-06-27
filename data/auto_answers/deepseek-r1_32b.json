@@ -1,0 +1,31 @@
+{
+ "model": "deepseek-r1:32b",
+ "provider": "ollama",
+ "answers": {
+  "naf-042::stable": "B",
+  "naf-042::wfs": "C",
+  "naf-046::stable": "C",
+  "naf-046::wfs": "C",
+  "naf-044::wfs": "A",
+  "naf-044::stable": "B",
+  "naf-050::stable": "B",
+  "naf-048::stable": "A",
+  "naf-048::wfs": "A",
+  "naf-064::stable": "C",
+  "naf-000::wfs": "C",
+  "naf-001::wfs": "B",
+  "naf-064::wfs": "C",
+  "naf-002::wfs": "C",
+  "naf-050::wfs": "B",
+  "naf-003::wfs": "B",
+  "naf-005::wfs": "B",
+  "naf-004::wfs": "C",
+  "naf-000::none": "C",
+  "naf-002::none": "C",
+  "naf-000::closed_world": "A",
+  "naf-002::closed_world": "A",
+  "naf-004::none": "A",
+  "naf-004::closed_world": "A"
+ },
+ "_note": "naf-048/050 answered in prose/boxed form, not ANSWER: format; mapped manually (both wrong vs gold C)."
+}

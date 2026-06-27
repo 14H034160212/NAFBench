@@ -190,3 +190,99 @@ def certify(prog: Program, query: str) -> Dict:
         "agree": len(distinct) == 1,
         "distinct_verdicts": sorted(distinct),
     }
+
+
+# ==========================================================================
+# v2 certification (per Agnieszka): four label dimensions + solver-hardness
+#   SLDNF                 -> {T, F, loop}
+#   WFS                   -> {T, F, u}
+#   Stable, credulous     -> {T, F}   (q in SOME stable model; zero models -> F)
+#   Stable, skeptical     -> {T, F}   (q in ALL stable models; zero models -> T, vacuous)
+# Plus per-instance solver effort: Prolog inferences (statistics/2) and clingo
+# conflicts/choices, as a measure of the instance's actual hardness for a solver.
+# ==========================================================================
+def stable_cred_skept(prog: Program, query: str):
+    """Return (cred, skept, n_models, clingo_conflicts, clingo_choices).
+
+    cred  = 'T' iff query holds in SOME stable model   (any([]) == False -> F)
+    skept = 'T' iff query holds in EVERY stable model  (all([]) == True  -> T, vacuous)
+    """
+    import clingo
+
+    ctl = clingo.Control()
+    ctl.configuration.solve.models = 0  # enumerate ALL stable models
+    ctl.add("base", [], prog.to_clingo())
+    ctl.ground([("base", [])])
+    models: List[Set[str]] = []
+    with ctl.solve(yield_=True) as handle:
+        for m in handle:
+            models.append({str(s) for s in m.symbols(shown=True)})
+    contains = [query in m for m in models]
+    cred = "T" if any(contains) else "F"      # any([]) -> False
+    skept = "T" if all(contains) else "F"     # all([]) -> True (vacuous)
+    # solver effort
+    conflicts = choices = None
+    try:
+        st = ctl.statistics
+        solv = st.get("solving", {}).get("solvers", {})
+        conflicts = int(solv.get("conflicts", 0))
+        choices = int(solv.get("choices", 0))
+    except Exception:  # noqa
+        pass
+    return cred, skept, len(models), conflicts, choices
+
+
+def prolog_query_metrics(prog: Program, query: str, timeout_s: float = 2.5):
+    """Return (label in {'T','F','loop'}, inferences_or_None).
+
+    Inferences are SWI-Prolog's logical-inference counter (statistics/2) spent
+    resolving the query -- the operational analogue of solver hardness.
+    """
+    program_text = prog.to_prolog()
+    goal = ("statistics(inferences, I0), "
+            "( {q} -> R = t ; R = f ), "
+            "statistics(inferences, I1), Inf is I1 - I0, "
+            "format('~w ~w~n', [R, Inf]), halt.").format(q=query)
+    with tempfile.NamedTemporaryFile("w", suffix=".pl", delete=False) as f:
+        f.write(program_text + "\n")
+        path = f.name
+    try:
+        proc = subprocess.run(
+            ["swipl", "-q", "-g", goal, "-t", "halt(1)", path],
+            capture_output=True, text=True, timeout=timeout_s,
+        )
+        out = proc.stdout.strip().splitlines()
+        if not out:
+            return "F", None
+        parts = out[-1].split()
+        label = {"t": "T", "f": "F"}.get(parts[0], "F")
+        inf = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else None
+        return label, inf
+    except subprocess.TimeoutExpired:
+        return "loop", None
+    finally:
+        os.unlink(path)
+
+
+def _wfs_to_v2(label: str) -> str:
+    return {TRUE: "T", FALSE: "F", UNDEF: "u"}[label]
+
+
+def certify_full(prog: Program, query: str) -> Dict:
+    """Four-dimensional certification + solver-hardness metrics (v2)."""
+    cred, skept, n_models, conflicts, choices = stable_cred_skept(prog, query)
+    wfs = _wfs_to_v2(wfs_query(prog, query))
+    sldnf, inferences = prolog_query_metrics(prog, query)
+    labels = {"cred": cred, "skept": skept, "wfs": wfs, "sldnf": sldnf}
+    distinct = len(set(labels.values()))
+    return {
+        "labels": labels,                       # (cred, skept, wfs, sldnf)
+        "n_stable_models": n_models,
+        "n_distinct_labels": distinct,
+        "metrics": {
+            "prolog_inferences": inferences,
+            "clingo_conflicts": conflicts,
+            "clingo_choices": choices,
+            "n_stable_models": n_models,
+        },
+    }
