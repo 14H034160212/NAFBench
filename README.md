@@ -101,6 +101,7 @@ train_sft.py + train_dpo.py + eval_local.py   LoRA SFT/DPO + local HF eval
 nafbench/instances.py + nafbench/solvers.py::certify_full   v2: G(depth,width,bin) + 4 labels + hardness
 validate_v2.py + build_v2.py   v2 bin validation, hardness grid, data/nafbench_v2.jsonl
 heatmap.py   9-model x 12-prompt correctness heatmap
+nafbench/verbalize_v2.py + make_v2_eval.py + analyze_v2_grid.py   v2 NL + grid eval + width/depth analysis
 tests/test_solvers.py   6 textbook cases with known answers (all pass)
 data/auto_answers/      direct-reasoning answers (DeepSeek/Qwen/Llama/GPT-5/4.1/4o-mini)
 data/t2s_answers/       translate-then-solve answers + the emitted programs
@@ -511,6 +512,48 @@ This is the experimental backbone for the next phase: regress model
 default-reversion on (depth, width, divergence-bin) and on solver hardness, to
 test the hypothesis that *width* (simultaneous tracking) is a stronger moderator
 than *depth* (linear chaining).
+
+## Experiment 10 — v2 grid: credulous/skeptical/WFS following, and width vs depth
+
+Using the v2 generator on the richest bin (`even_one_sided`, signature
+(T, F, u, loop)), the three conditions **credulous / skeptical / WFS** have gold
+**A / B / C** — so the *same program* must get three different answers, and a
+constant guess scores only 33%. Sweeping depth × width ∈ {0,2,4,6,8}² gives a
+75-prompt grid (`make_v2_eval.py`), evaluated automatically (`data/v2_answers/`).
+
+**Strong models distinguish the semantics; weak models lock into one mode.**
+
+| Model | overall | credulous (gold A) | skeptical (gold B) | WFS (gold C) |
+|---|---|---|---|---|
+| GPT-5 | **100%** | 100% | 100% | 100% |
+| GPT-4.1 | **100%** | 100% | 100% | 100% |
+| Qwen2.5-coder 32B | 56% | 24% | 64% | 80% |
+| GPT-4o-mini | 52% | 44% | 40% | 72% |
+| Llama3-8B | 40% | 80% | 32% | 8% |
+
+GPT-4.1 and GPT-5 give the correct *three different* answers for the identical
+program — they genuinely separate "could hold in some answer set" (credulous, A)
+from "must hold in all" (skeptical, B) from "undefined" (WFS, C). The weaker
+models collapse onto a single answer mode (e.g. Llama3 almost always says "yes":
+great for credulous/A, poor for skeptical/B and WFS/C), confirming the
+credulous/skeptical split is a discriminating axis.
+
+**Width is the stronger moderator (supports the hypothesis).** On the
+non-saturated models (Qwen / GPT-4o-mini / Llama3 — GPT-4.1/GPT-5 are at ceiling
+and carry no signal), a standardized OLS of per-item correctness on depth and
+width gives **b_width = −0.031 vs b_depth = −0.009** — width degrades
+semantic-following ~3.4× more than depth, exactly as predicted: keeping `k`
+shared subgoals in memory hurts more than a linear chain of the same length.
+
+![width vs depth](data/v2_moderation.png)
+
+*Honest caveats.* The effect is directional but small/noisy at this scale: one
+instance per (depth, width) cell × 3 conditions, and the two strongest models
+saturate at 100%. Firming it up needs replicates per cell, the other bins, and a
+cycle-length sweep. Also, for the looping bins SLDNF gives no inference count
+(it times out), so the solver-hardness correlate should use **clingo
+conflicts/choices** (already recorded) rather than Prolog inferences. These are
+exactly the knobs the next round will turn.
 
 ## Takeaway for the proposal
 
