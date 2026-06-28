@@ -696,6 +696,42 @@ Agnieszka raised: we can report depth/effective-width effects without length
 masquerading as difficulty. (Small n per cell; the GPT-4.1 "high easier"
 wobble is within noise.)
 
+## Experiment 15 — extended ranges (to 32) + fuller panel (incl. GPT-5, Opus)
+
+Because depth/width were weak moderators in 2–16, the grid is pushed to
+**depth, effective-width ∈ {2, 16, 32}** (4 bins, 5 conditions), with GPT-5 added
+and Claude Opus run on the hard depth-16/eff-width-16 slice. 180 prompts.
+
+| Model | accuracy (excl. no-instruction) | closed-world | notes |
+|---|---|---|---|
+| Claude Opus 4.8 (slice) | **12/12 = 100%** | — | nails odd-cycle cred=B / skept=A(vacuous) |
+| GPT-5 | **98%** | **100%** | essentially solves it, even closed-world |
+| GPT-4.1 | 84% | 47% | weak spot is closed-world (SLDNF-loop) |
+| Llama3-8B | 60% | 50% | |
+| GPT-4o-mini | 56% | 67% | |
+| Qwen2.5-coder 32B | 54% | 58% | |
+
+![extended moderation](data/ext_moderation.png)
+
+**Findings:**
+1. **Bigger ranges don't rescue depth/width.** Standardized OLS (length
+   controlled): effective-width −0.050 vs depth −0.039 — effective-width still
+   only *edges* depth, essentially the same as in 2–16. The accuracy-vs-size
+   curves are flat to 32. The **divergence bin still dominates** (|coeff| ≈
+   0.41–0.53, ~10×). Conclusion: the semantics/cycle type is the lever; raw
+   depth and width are robustly weak moderators.
+2. **The frontier solves it.** GPT-5 (98%) and Opus (100% on the slice) handle
+   the full credulous/skeptical/WFS/closed-world distinction even at range 32 —
+   so the discriminative population is mid/small models. GPT-5 notably fixes the
+   **closed-world** case (100%) that GPT-4.1 misses (47%).
+3. **Length stays inert** as a driver (token coefficient small/positive once
+   structure is in the model), consistent with Experiment 14.
+
+This sharpens the design for the headline study: keep the divergence bin as the
+primary factor, report depth/effective-width as secondary (length-controlled),
+and use a mid/small-model population where the effect is visible (the frontier is
+near ceiling).
+
 ## Takeaway for the proposal
 
 Every stage runs on real tools (clingo + SWI-Prolog + Python), the certified

@@ -1,0 +1,19 @@
+{
+ "model": "claude-opus-4.8",
+ "provider": "claude",
+ "answers": {
+  "ext-control-d16-ew16::cred": "A",
+  "ext-control-d16-ew16::skept": "A",
+  "ext-control-d16-ew16::wfs": "A",
+  "ext-even_one_sided-d16-ew16::cred": "A",
+  "ext-even_one_sided-d16-ew16::skept": "B",
+  "ext-even_one_sided-d16-ew16::wfs": "C",
+  "ext-odd-d16-ew16::cred": "B",
+  "ext-odd-d16-ew16::skept": "A",
+  "ext-odd-d16-ew16::wfs": "C",
+  "ext-even_both_sided-d16-ew16::cred": "A",
+  "ext-even_both_sided-d16-ew16::skept": "A",
+  "ext-even_both_sided-d16-ew16::wfs": "C"
+ },
+ "_note": "12-prompt slice at depth16/eff_width16, cred/skept/wfs, via subagents"
+}
