@@ -126,14 +126,34 @@ def _premises(prog: Program, theme: int = 0) -> str:
     return " ".join(L)
 
 
-def build_prompt(prog: Program, semantics: str, theme: int = 0) -> str:
-    instr = SEMANTICS_INSTRUCTIONS[semantics]
+def _assemble(instr, rules, qword):
     return (
         f"{instr}\n\n"
-        f"Rules:\n{_premises(prog, theme)}\n\n"
-        f"Question: {THEMES_V2[theme % len(THEMES_V2)]['qword']}\n\n"
+        f"Rules:\n{rules}\n\n"
+        f"Question: {qword}\n\n"
         f"Choose exactly one:\n"
         f"  A. Definitely yes\n"
         f"  B. Definitely no\n"
         f"  C. Cannot be determined\n\n"
         f"Think step by step, then end with a line 'ANSWER: X' where X is A, B, or C.")
+
+
+def build_prompt(prog: Program, semantics: str, theme: int = 0,
+                 pad_to_tokens: int = None) -> str:
+    instr = SEMANTICS_INSTRUCTIONS[semantics]
+    qword = THEMES_V2[theme % len(THEMES_V2)]["qword"]
+    rules = _premises(prog, theme)
+    if pad_to_tokens:
+        # add inert, query-irrelevant filler until the WHOLE prompt reaches the
+        # target token count -> length-match an easy instance to a hard one,
+        # separating structure from sheer length (A. Slusarz's confound concern).
+        from . import metrics as MET
+        extra, i = [], 0
+        while MET.length_metrics(_assemble(instr, rules, qword))["tokens"] < pad_to_tokens:
+            extra.append(f"For reference, archived note {i} concerns an unrelated "
+                         f"matter and does not bear on the question.")
+            rules = (_premises(prog, theme) +
+                     "\nBackground (not part of the rules, irrelevant to the question): "
+                     + " ".join(extra))
+            i += 1
+    return _assemble(instr, rules, qword)
