@@ -1,0 +1,578 @@
+[
+ {
+  "task_id": "pad-even_one_sided-low_nat::closed_world",
+  "rec_id": "pad-even_one_sided-low_nat",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 968,
+   "words": 176,
+   "tokens": 243
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_pad::closed_world",
+  "rec_id": "pad-even_one_sided-low_pad",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2558,
+   "words": 442,
+   "tokens": 560
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-high_nat::closed_world",
+  "rec_id": "pad-even_one_sided-high_nat",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 2016,
+   "words": 408,
+   "tokens": 548
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_nat::cred",
+  "rec_id": "pad-even_one_sided-low_nat",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 1007,
+   "words": 182,
+   "tokens": 256
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_pad::cred",
+  "rec_id": "pad-even_one_sided-low_pad",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "A",
+  "length": {
+   "chars": 2597,
+   "words": 448,
+   "tokens": 573
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-high_nat::cred",
+  "rec_id": "pad-even_one_sided-high_nat",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 2055,
+   "words": 414,
+   "tokens": 561
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_nat::skept",
+  "rec_id": "pad-even_one_sided-low_nat",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "B",
+  "length": {
+   "chars": 1086,
+   "words": 192,
+   "tokens": 271
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_pad::skept",
+  "rec_id": "pad-even_one_sided-low_pad",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "B",
+  "length": {
+   "chars": 2676,
+   "words": 458,
+   "tokens": 588
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-high_nat::skept",
+  "rec_id": "pad-even_one_sided-high_nat",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "B",
+  "length": {
+   "chars": 2134,
+   "words": 424,
+   "tokens": 576
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_nat::wfs",
+  "rec_id": "pad-even_one_sided-low_nat",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 1059,
+   "words": 191,
+   "tokens": 267
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-low_pad::wfs",
+  "rec_id": "pad-even_one_sided-low_pad",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2649,
+   "words": 457,
+   "tokens": 584
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_one_sided-high_nat::wfs",
+  "rec_id": "pad-even_one_sided-high_nat",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 2107,
+   "words": 423,
+   "tokens": 572
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_nat::closed_world",
+  "rec_id": "pad-odd-low_nat",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 902,
+   "words": 162,
+   "tokens": 226
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_pad::closed_world",
+  "rec_id": "pad-odd-low_pad",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2492,
+   "words": 428,
+   "tokens": 543
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-high_nat::closed_world",
+  "rec_id": "pad-odd-high_nat",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 1974,
+   "words": 400,
+   "tokens": 539
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. A item is filed if its form is signed. Every form 1..13 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_nat::cred",
+  "rec_id": "pad-odd-low_nat",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "B",
+  "length": {
+   "chars": 941,
+   "words": 168,
+   "tokens": 239
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_pad::cred",
+  "rec_id": "pad-odd-low_pad",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "B",
+  "length": {
+   "chars": 2531,
+   "words": 434,
+   "tokens": 556
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-high_nat::cred",
+  "rec_id": "pad-odd-high_nat",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "B",
+  "length": {
+   "chars": 2013,
+   "words": 406,
+   "tokens": 552
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. A item is filed if its form is signed. Every form 1..13 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_nat::skept",
+  "rec_id": "pad-odd-low_nat",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 1020,
+   "words": 178,
+   "tokens": 254
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_pad::skept",
+  "rec_id": "pad-odd-low_pad",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "A",
+  "length": {
+   "chars": 2610,
+   "words": 444,
+   "tokens": 571
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-high_nat::skept",
+  "rec_id": "pad-odd-high_nat",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 2092,
+   "words": 416,
+   "tokens": 567
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. A item is filed if its form is signed. Every form 1..13 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_nat::wfs",
+  "rec_id": "pad-odd-low_nat",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 993,
+   "words": 177,
+   "tokens": 250
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-low_pad::wfs",
+  "rec_id": "pad-odd-low_pad",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2583,
+   "words": 443,
+   "tokens": 567
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-odd-high_nat::wfs",
+  "rec_id": "pad-odd-high_nat",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 2065,
+   "words": 415,
+   "tokens": 563
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 and item 13 are all filed. A item is filed if its form is signed. Every form 1..13 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_nat::closed_world",
+  "rec_id": "pad-even_both_sided-low_nat",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 1127,
+   "words": 203,
+   "tokens": 279
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_pad::closed_world",
+  "rec_id": "pad-even_both_sided-low_pad",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2717,
+   "words": 469,
+   "tokens": 596
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-high_nat::closed_world",
+  "rec_id": "pad-even_both_sided-high_nat",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 2175,
+   "words": 435,
+   "tokens": 584
+  },
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_nat::cred",
+  "rec_id": "pad-even_both_sided-low_nat",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 1166,
+   "words": 209,
+   "tokens": 292
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_pad::cred",
+  "rec_id": "pad-even_both_sided-low_pad",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "A",
+  "length": {
+   "chars": 2756,
+   "words": 475,
+   "tokens": 609
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-high_nat::cred",
+  "rec_id": "pad-even_both_sided-high_nat",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 2214,
+   "words": 441,
+   "tokens": 597
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_nat::skept",
+  "rec_id": "pad-even_both_sided-low_nat",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 1245,
+   "words": 219,
+   "tokens": 307
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_pad::skept",
+  "rec_id": "pad-even_both_sided-low_pad",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "A",
+  "length": {
+   "chars": 2835,
+   "words": 485,
+   "tokens": 624
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-high_nat::skept",
+  "rec_id": "pad-even_both_sided-high_nat",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "A",
+  "length": {
+   "chars": 2293,
+   "words": 451,
+   "tokens": 612
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_nat::wfs",
+  "rec_id": "pad-even_both_sided-low_nat",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_nat",
+  "structure": "low",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 1218,
+   "words": 218,
+   "tokens": 303
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-low_pad::wfs",
+  "rec_id": "pad-even_both_sided-low_pad",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "variant": "low_pad",
+  "structure": "low",
+  "padded": true,
+  "gold": "C",
+  "length": {
+   "chars": 2808,
+   "words": 484,
+   "tokens": 620
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if the escalation is WARRANTED and the audit is COMPLETE.\nBackground (not part of the rules, irrelevant to the question): For reference, archived note 0 concerns an unrelated matter and does not bear on the question. For reference, archived note 1 concerns an unrelated matter and does not bear on the question. For reference, archived note 2 concerns an unrelated matter and does not bear on the question. For reference, archived note 3 concerns an unrelated matter and does not bear on the question. For reference, archived note 4 concerns an unrelated matter and does not bear on the question. For reference, archived note 5 concerns an unrelated matter and does not bear on the question. For reference, archived note 6 concerns an unrelated matter and does not bear on the question. For reference, archived note 7 concerns an unrelated matter and does not bear on the question. For reference, archived note 8 concerns an unrelated matter and does not bear on the question. For reference, archived note 9 concerns an unrelated matter and does not bear on the question. For reference, archived note 10 concerns an unrelated matter and does not bear on the question. For reference, archived note 11 concerns an unrelated matter and does not bear on the question. For reference, archived note 12 concerns an unrelated matter and does not bear on the question. For reference, archived note 13 concerns an unrelated matter and does not bear on the question. For reference, archived note 14 concerns an unrelated matter and does not bear on the question. For reference, archived note 15 concerns an unrelated matter and does not bear on the question.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "pad-even_both_sided-high_nat::wfs",
+  "rec_id": "pad-even_both_sided-high_nat",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "variant": "high_nat",
+  "structure": "high",
+  "padded": false,
+  "gold": "C",
+  "length": {
+   "chars": 2266,
+   "words": 450,
+   "tokens": 608
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 and item 6 and item 7 and item 8 and item 9 and item 10 and item 11 and item 12 are all filed. A item is filed if its form is signed. Every form 1..12 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if stage 8 is reached. Stage 8 is reached if stage 9 is reached. Stage 9 is reached if stage 10 is reached. Stage 10 is reached if stage 11 is reached. Stage 11 is reached if stage 12 is reached. Stage 12 is reached if stage 13 is reached. Stage 13 is reached if stage 14 is reached. Stage 14 is reached if stage 15 is reached. Stage 15 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]

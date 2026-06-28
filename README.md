@@ -667,6 +667,35 @@ depth/effective-width as secondary moderators *with length controlled*, and (nex
 widen the ranges or add length-matched padding to separate width from length more
 cleanly.
 
+## Experiment 14 — length vs structure (length-matched padding)
+
+To separate the length confound cleanly, each cyclic instance gets three
+length-matched variants (`make_padtest.py`): `low_nat` (simple, short),
+`low_pad` (the *same* simple instance padded with inert, query-irrelevant filler
+to the hard length), and `high_nat` (genuinely complex, long). low_pad and
+high_nat are matched in tokens (~560–610), so:
+
+- `low_pad − low_nat` = **pure length** effect (same structure, longer),
+- `high_nat − low_pad` = **pure structure** effect (same length, more structure).
+
+| Model | low_nat | low_pad | high_nat | length effect | structure effect |
+|---|---|---|---|---|---|
+| GPT-4.1 | 83% | 83% | 92% | **+0%** | +8% |
+| GPT-4o-mini | 67% | 67% | 25% | **+0%** | **−42%** |
+| Llama3-8B | 42% | 33% | 42% | −8% | +8% |
+| Qwen2.5-coder 32B | 58% | 58% | 58% | **+0%** | +0% |
+
+![length vs structure](data/padtest.png)
+
+**Pure length is essentially inert** (low_nat ≈ low_pad for 3 of 4 models; mean
+length effect −2%): adding ~300 tokens of irrelevant filler to a simple problem
+does **not** lower accuracy. Genuine structure does (GPT-4o-mini −42% at matched
+length). So **length is correlated with difficulty only because structure
+inflates length — length itself is not the driver**. This resolves the confound
+Agnieszka raised: we can report depth/effective-width effects without length
+masquerading as difficulty. (Small n per cell; the GPT-4.1 "high easier"
+wobble is within noise.)
+
 ## Takeaway for the proposal
 
 Every stage runs on real tools (clingo + SWI-Prolog + Python), the certified
