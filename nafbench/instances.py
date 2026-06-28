@@ -84,8 +84,30 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
             rules.append(Rule(chain[j], pos=(chain[j + 1],)))
         rules.append(Rule(chain[-1], pos=(cq, wide)))   # deepest step needs core + width
 
+    # Effective width (per A. Slusarz): a negative cycle cannot be resolved, so
+    # its length contributes to the atoms that must be held in working memory at
+    # once. control has no cycle -> contributes 0.
+    cyc_contrib = 0 if bin_name == "control" else cycle_len
     prog = Program(rules)
-    prog.meta = dict(family="v2", divergence_bin=bin_name, depth=depth, width=width,
-                     cycle_len=cycle_len, query="q",
-                     expected=BIN_SIGNATURE[bin_name])
+    prog.meta = dict(family="v2", divergence_bin=bin_name, depth=depth,
+                     width=width,                       # shared-subgoal knob
+                     cycle_len=cycle_len,
+                     effective_width=width + cyc_contrib,  # subgoals + cycle length
+                     query="q", expected=BIN_SIGNATURE[bin_name])
     return prog
+
+
+def build_by_effwidth(depth: int, eff_width: int, bin_name: str, cycle_len: int = None):
+    """Build an instance at a TARGET effective width (= shared subgoals + cycle len).
+
+    The minimum effective width is the cycle length (0 for control), since the
+    cycle itself already occupies that many working-memory slots.
+    """
+    if cycle_len is None:
+        cycle_len = 3 if bin_name == "odd" else 2
+    cyc_contrib = 0 if bin_name == "control" else cycle_len
+    subgoals = eff_width - cyc_contrib
+    if subgoals < 0:
+        raise ValueError(f"eff_width {eff_width} < min {cyc_contrib} for {bin_name} "
+                         f"(cycle_len={cycle_len})")
+    return build_instance(depth, subgoals, bin_name, cycle_len)

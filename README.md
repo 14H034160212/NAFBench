@@ -111,6 +111,9 @@ nafbench/instances.py + nafbench/solvers.py::certify_full   v2: G(depth,width,bi
 validate_v2.py + build_v2.py   v2 bin validation, hardness grid, data/nafbench_v2.jsonl
 heatmap.py   9-model x 12-prompt correctness heatmap
 nafbench/verbalize_v2.py + make_v2_eval.py + analyze_v2_grid.py   v2 NL + grid eval + width/depth analysis
+make_v2_full.py + analyze_v2_full.py   full 4-bin grid + regression
+nafbench/instances.py::build_by_effwidth + nafbench/metrics.py   effective-width (cycle folded in) + token length
+make_pilot.py + analyze_pilot.py   v3 design-screening pilot
 tests/test_solvers.py   6 textbook cases with known answers (all pass)
 data/auto_answers/      direct-reasoning answers (DeepSeek/Qwen/Llama/GPT-5/4.1/4o-mini)
 data/t2s_answers/       translate-then-solve answers + the emitted programs
@@ -563,6 +566,59 @@ cycle-length sweep. Also, for the looping bins SLDNF gives no inference count
 (it times out), so the solver-hardness correlate should use **clingo
 conflicts/choices** (already recorded) rather than Prolog inferences. These are
 exactly the knobs the next round will turn.
+
+## Experiment 11 — full v2 grid (4 bins × depth × width × 3 themes)
+
+A 324-prompt grid (`make_v2_full.py`) evaluated on four models. The per-(bin,
+condition) table shows *where* models fail:
+
+| Model | raw acc | hardest cells |
+|---|---|---|
+| GPT-4.1 | 98% | control/skeptical 85% |
+| GPT-4o-mini | 73% | even-one-sided/skeptical 41%, odd/credulous 74% |
+| Qwen2.5-coder 32B | 73% | odd/credulous 22%, odd/skeptical 22% |
+| Llama3-8B | 60% | even-one-sided/skeptical 11%, odd/WFS 11% |
+
+Pooled OLS on the non-saturated models gives **bin** as the dominant factor
+(odd −0.48, even-one-sided −0.30) and **depth ≈ width (both −0.009)** when width
+counts shared subgoals only. That tie is the motivation for the next step.
+
+## Experiment 12 — v3 pilot (folding cycle length into width; design screening)
+
+Per Agnieszka's note we (a) make the cycle length **part of width**
+(`effective_width = shared_subgoals + cycle_len`, since a cycle can't be resolved
+and occupies that many working-memory slots), (b) record **instance length in
+tokens** to control for the length confound, and (c) run a small pilot to fix
+the remaining knobs. Pilot = 100 prompts (control / even-one-sided / odd; cycle
+2-vs-4 and 1-vs-3; depth ∈ {2,16}; effective width ∈ {min, 16}; all 5 conditions)
+on four models (`make_pilot.py`, `analyze_pilot.py`).
+
+![pilot summary](data/pilot_summary.png)
+
+Findings → design decisions:
+
+1. **No "trivial-cycle shortcut".** Models do *not* ace the smallest cycles; if
+   anything accuracy *drops* with longer cycles (e.g. odd, GPT-4o-mini cyc1 50%
+   → cyc3 25%). So pattern-matching on `a:-not b, b:-not a` isn't inflating
+   scores. **Decision:** fix cycle length to **even = 4 / odd = 3** (≥3, avoids
+   the most trivial 1-/2-cycles, comparable lengths).
+2. **All conditions are worth keeping.** None is trivially easy — even GPT-4.1 is
+   at 50% on closed-world (the SLDNF-loop→C case); the others sit at 45–75% on
+   every condition. **Decision:** keep all five (credulous, skeptical, WFS,
+   closed-world, and the no-instruction default).
+3. **The default differs by model** (why the no-instruction condition is
+   essential): GPT-4o-mini and Llama default to **credulous** ("yes"; 60–65%
+   match), whereas GPT-4.1 and Qwen default to **WFS/closed-world** (cautious;
+   55–75% match).
+4. **Length is heavily confounded with depth/width** (corr(tokens, depth)=0.73,
+   corr(tokens, eff-width)=0.68), confirming the need to record and control for
+   length — at this pilot scale the structural and length effects can't be
+   cleanly separated, so the full run needs ranges/padding that de-correlate
+   them.
+5. **Boundary is only mildly graded by size:** the (depth=16, eff-width=16)
+   corner is barely harder than (2, min) — the *semantics bin* dominates over
+   sheer scale, reinforcing Experiment 11. Folding the cycle into width is the
+   right move, since the cycle is the real load.
 
 ## Takeaway for the proposal
 
