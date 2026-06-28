@@ -620,6 +620,53 @@ Findings → design decisions:
    sheer scale, reinforcing Experiment 11. Folding the cycle into width is the
    right move, since the cycle is the real load.
 
+## Experiment 13 — formal v3 run (fixed cycle, effective-width, length-controlled)
+
+The agreed design: cycle length fixed (**even = 4, odd = 3**), axes **depth ×
+effective-width** (cycle folded into width), all five conditions, two themes,
+and **token length recorded**. 360 prompts × 4 models (`make_v3_full.py`,
+`analyze_v3.py`).
+
+Accuracy (semantic-following, excl. no-instruction): GPT-4.1 **80%**, GPT-4o-mini
+65%, Qwen 65%, Llama 52% — note GPT-4.1 is **no longer at ceiling** once cycles
+are length-3/4 and `closed_world` is included.
+
+**Does effective-width dominate depth?** Standardized OLS of correctness on
+depth, effective-width and bin (pooled over models):
+
+| predictor | without length | controlling for length |
+|---|---|---|
+| z(depth) | +0.011 | −0.038 |
+| z(effective-width) | −0.012 | **−0.045** |
+| z(tokens) | — | +0.062 |
+| bin = even-one-sided | −0.35 | −0.36 |
+| bin = odd | −0.46 | −0.48 |
+| bin = even-both-sided | −0.39 | −0.43 |
+
+![v3 moderation](data/v3_moderation.png)
+
+**Findings (honest):**
+1. **Effective-width edges out depth** as the structural moderator — but only
+   once the **cycle is folded into width** *and* token length is controlled
+   (|−0.045| vs |−0.038|, both negative). Without folding/controlling, the two
+   are a wash. This is the direction Agnieszka predicted, made visible by the
+   corrected width definition.
+2. **The divergence bin dwarfs both** (|coeff| ≈ 0.36–0.48, ~10× depth/width).
+   Which negation phenomenon is present (one-sided even cycle / odd cycle /
+   conjunctive even cycle) is by far the dominant difficulty axis; raw depth and
+   width are weak moderators in the 2–16 range.
+3. **`closed_world` (operational SLDNF/loop→C) is the hardest condition even for
+   GPT-4.1 (39%)** — strong models reason classically and miss the "the engine
+   doesn't terminate" verdict.
+4. **Length is a real confound but not the driver**: with structure controlled,
+   the token coefficient is small/positive, so longer-but-not-structurally-harder
+   prompts are not what hurts — the structure is.
+
+Implication for the design: keep the divergence bin as the primary factor, report
+depth/effective-width as secondary moderators *with length controlled*, and (next)
+widen the ranges or add length-matched padding to separate width from length more
+cleanly.
+
 ## Takeaway for the proposal
 
 Every stage runs on real tools (clingo + SWI-Prolog + Python), the certified
