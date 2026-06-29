@@ -34,7 +34,7 @@ for b in BINS:
                         "effective_width": m["effective_width"],
                         "width_subgoals": m["width"], "theme": th,
                         "gold": None if c == "none" else V2.gold_for(cert["labels"], c),
-                        "labels": cert["labels"], "metrics": cert["metrics"],
+                        "labels": cert["labels"], "n_stable_models": cert["n_stable_models"], "program": prog.pretty(), "metrics": cert["metrics"],
                         "length": MET.length_metrics(prompt),
                         "prompt": prompt,
                     })

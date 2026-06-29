@@ -97,6 +97,45 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
     return prog
 
 
+def build_multi_independent(n_cycles: int) -> Program:
+    """n independent even 2-cycles; q reachable from the first atom of each
+    (q :- x_i0).  (A. Slusarz's 'independent' multi-cycle example, n=2.)
+    Signature stays (T, F, u, loop) but n_stable_models = 2**n_cycles."""
+    rules: List[Rule] = []
+    firsts = []
+    for i in range(n_cycles):
+        a, b = f"x{i}a", f"x{i}b"
+        rules += [Rule(a, neg=(b,)), Rule(b, neg=(a,))]
+        firsts.append(a)
+    for a in firsts:
+        rules.append(Rule("q", pos=(a,)))
+    prog = Program(rules)
+    prog.meta = dict(family="multicycle", subtype="independent", n_cycles=n_cycles,
+                     cycle_len=2, depth=0, width=0, query="q")
+    return prog
+
+
+def build_interdependent(n_cycles: int) -> Program:
+    """n coupled 2-cycles in a chain (A. Slusarz's 'interdependent' example, n=2):
+       h_i :- not a_i.
+       a_i :- not h_i, not h_{i+1}      (last: a_n :- not h_n)
+       q   :- h_1
+    n=2 reproduces x:-not y / y:-not x,not z / z:-not w / w:-not z / q:-x."""
+    rules: List[Rule] = []
+    for i in range(n_cycles):
+        h, a = f"h{i}", f"a{i}"
+        rules.append(Rule(h, neg=(a,)))
+        if i < n_cycles - 1:
+            rules.append(Rule(a, neg=(h, f"h{i + 1}")))
+        else:
+            rules.append(Rule(a, neg=(h,)))
+    rules.append(Rule("q", pos=("h0",)))
+    prog = Program(rules)
+    prog.meta = dict(family="multicycle", subtype="interdependent", n_cycles=n_cycles,
+                     cycle_len=2, depth=0, width=0, query="q")
+    return prog
+
+
 def build_by_effwidth(depth: int, eff_width: int, bin_name: str, cycle_len: int = None):
     """Build an instance at a TARGET effective width (= shared subgoals + cycle len).
 

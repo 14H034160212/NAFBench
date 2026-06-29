@@ -1,0 +1,542 @@
+[
+ {
+  "task_id": "cyc-even_one_sided-k2::cred",
+  "rec_id": "cyc-even_one_sided-k2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1392,
+   "words": 266,
+   "tokens": 367
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k2::skept",
+  "rec_id": "cyc-even_one_sided-k2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1471,
+   "words": 276,
+   "tokens": 382
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k2::wfs",
+  "rec_id": "cyc-even_one_sided-k2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1444,
+   "words": 275,
+   "tokens": 378
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k4::cred",
+  "rec_id": "cyc-even_one_sided-k4",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1524,
+   "words": 294,
+   "tokens": 401
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k4::skept",
+  "rec_id": "cyc-even_one_sided-k4",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1603,
+   "words": 304,
+   "tokens": 416
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k4::wfs",
+  "rec_id": "cyc-even_one_sided-k4",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1576,
+   "words": 303,
+   "tokens": 412
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k6::cred",
+  "rec_id": "cyc-even_one_sided-k6",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1656,
+   "words": 322,
+   "tokens": 435
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k6::skept",
+  "rec_id": "cyc-even_one_sided-k6",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 6,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1735,
+   "words": 332,
+   "tokens": 450
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_one_sided-k6::wfs",
+  "rec_id": "cyc-even_one_sided-k6",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "cycle_len": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1708,
+   "words": 331,
+   "tokens": 446
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k3::cred",
+  "rec_id": "cyc-odd-k3",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "cycle_len": 3,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1458,
+   "words": 280,
+   "tokens": 384
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k3::skept",
+  "rec_id": "cyc-odd-k3",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "cycle_len": 3,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1537,
+   "words": 290,
+   "tokens": 399
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k3::wfs",
+  "rec_id": "cyc-odd-k3",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "cycle_len": 3,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1510,
+   "words": 289,
+   "tokens": 395
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k5::cred",
+  "rec_id": "cyc-odd-k5",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "cycle_len": 5,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1590,
+   "words": 308,
+   "tokens": 418
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k5::skept",
+  "rec_id": "cyc-odd-k5",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "cycle_len": 5,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1669,
+   "words": 318,
+   "tokens": 433
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k5::wfs",
+  "rec_id": "cyc-odd-k5",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "cycle_len": 5,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1642,
+   "words": 317,
+   "tokens": 429
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k7::cred",
+  "rec_id": "cyc-odd-k7",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "cycle_len": 7,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1722,
+   "words": 336,
+   "tokens": 452
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 6 does not sign off. Reviewer 6 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k7::skept",
+  "rec_id": "cyc-odd-k7",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "cycle_len": 7,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1801,
+   "words": 346,
+   "tokens": 467
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 6 does not sign off. Reviewer 6 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-odd-k7::wfs",
+  "rec_id": "cyc-odd-k7",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "cycle_len": 7,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1774,
+   "words": 345,
+   "tokens": 463
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 6 does not sign off. Reviewer 6 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k2::cred",
+  "rec_id": "cyc-even_both_sided-k2",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1445,
+   "words": 275,
+   "tokens": 379
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k2::skept",
+  "rec_id": "cyc-even_both_sided-k2",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1524,
+   "words": 285,
+   "tokens": 394
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k2::wfs",
+  "rec_id": "cyc-even_both_sided-k2",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1497,
+   "words": 284,
+   "tokens": 390
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k4::cred",
+  "rec_id": "cyc-even_both_sided-k4",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1683,
+   "words": 321,
+   "tokens": 437
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k4::skept",
+  "rec_id": "cyc-even_both_sided-k4",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1762,
+   "words": 331,
+   "tokens": 452
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k4::wfs",
+  "rec_id": "cyc-even_both_sided-k4",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1735,
+   "words": 330,
+   "tokens": 448
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k6::cred",
+  "rec_id": "cyc-even_both_sided-k6",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1921,
+   "words": 367,
+   "tokens": 495
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The escalation is WARRANTED if reviewer 4 signs off. The escalation is WARRANTED if reviewer 5 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k6::skept",
+  "rec_id": "cyc-even_both_sided-k6",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 6,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 2000,
+   "words": 377,
+   "tokens": 510
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The escalation is WARRANTED if reviewer 4 signs off. The escalation is WARRANTED if reviewer 5 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "cyc-even_both_sided-k6::wfs",
+  "rec_id": "cyc-even_both_sided-k6",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "cycle_len": 6,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "length": {
+   "chars": 1973,
+   "words": 376,
+   "tokens": 506
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 4 does not sign off. Reviewer 4 signs off if and only if reviewer 5 does not sign off. Reviewer 5 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The escalation is WARRANTED if reviewer 4 signs off. The escalation is WARRANTED if reviewer 5 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]
