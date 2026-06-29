@@ -1,0 +1,33 @@
+{
+ "model": "gpt-4.1",
+ "provider": "openai",
+ "answers": {
+  "cyc-even_one_sided-k2::cred": "A",
+  "cyc-even_one_sided-k2::skept": "B",
+  "cyc-even_one_sided-k2::wfs": "C",
+  "cyc-even_one_sided-k4::wfs": "C",
+  "cyc-even_one_sided-k4::cred": "A",
+  "cyc-even_one_sided-k4::skept": "B",
+  "cyc-even_one_sided-k6::cred": "A",
+  "cyc-even_one_sided-k6::wfs": "C",
+  "cyc-odd-k3::skept": "A",
+  "cyc-even_one_sided-k6::skept": "B",
+  "cyc-odd-k3::cred": "B",
+  "cyc-odd-k5::cred": "B",
+  "cyc-odd-k3::wfs": "C",
+  "cyc-odd-k5::wfs": "C",
+  "cyc-odd-k5::skept": "A",
+  "cyc-even_both_sided-k2::cred": "A",
+  "cyc-odd-k7::cred": "B",
+  "cyc-odd-k7::skept": "A",
+  "cyc-odd-k7::wfs": "C",
+  "cyc-even_both_sided-k2::skept": "A",
+  "cyc-even_both_sided-k2::wfs": "C",
+  "cyc-even_both_sided-k4::cred": "A",
+  "cyc-even_both_sided-k4::skept": "A",
+  "cyc-even_both_sided-k4::wfs": "A",
+  "cyc-even_both_sided-k6::cred": "A",
+  "cyc-even_both_sided-k6::skept": "A",
+  "cyc-even_both_sided-k6::wfs": "C"
+ }
+}

@@ -114,6 +114,11 @@ nafbench/verbalize_v2.py + make_v2_eval.py + analyze_v2_grid.py   v2 NL + grid e
 make_v2_full.py + analyze_v2_full.py   full 4-bin grid + regression
 nafbench/instances.py::build_by_effwidth + nafbench/metrics.py   effective-width (cycle folded in) + token length
 make_pilot.py + analyze_pilot.py   v3 design-screening pilot
+nafbench/instances.py::build_multi_independent/build_interdependent   multi-cycle gadgets
+nafbench/verbalize_generic.py   transparent rule-by-rule verbalizer (label-checkable)
+make_multicycle.py + analyze_multicycle.py   multi-cycle experiment (records program + n_stable_models)
+make_cyclesweep.py + analyze_cyclesweep.py   cycle-length sweep
+make_fewshot.py   few-shot mitigation ; analyze_reversion.py   default-reversion metric
 tests/test_solvers.py   6 textbook cases with known answers (all pass)
 data/auto_answers/      direct-reasoning answers (DeepSeek/Qwen/Llama/GPT-5/4.1/4o-mini)
 data/t2s_answers/       translate-then-solve answers + the emitted programs
@@ -731,6 +736,63 @@ This sharpens the design for the headline study: keep the divergence bin as the
 primary factor, report depth/effective-width as secondary (length-controlled),
 and use a mid/small-model population where the effect is visible (the frontier is
 near ceiling).
+
+## Experiment 16 — further probes (reversion, cycle length, multi-cycle, few-shot)
+
+Four targeted probes, plus dataset upgrades requested by the UK team (each
+instance record now also stores the **underlying logic program** and the
+**number of stable models** for independent label-checking).
+
+**(a) Default-semantics reversion — the proposal's signature metric.** Computed
+from the v3 grid: when the specified semantics conflicts with the model's own
+no-instruction default, how often does it ignore the instruction and stick with
+its default?
+
+| Model | reversion rate | follow rate |
+|---|---|---|
+| Llama3-8B | **50%** | 28% |
+| Qwen2.5-coder 32B | 33% | 46% |
+| GPT-4o-mini | 32% | 45% |
+| GPT-4.1 | 32% | 65% |
+
+Every model's default is **credulous/classical** ("yes-ish"), so reversion =
+failing to adopt the cautious WFS/closed-world reading. Even GPT-4.1 reverts ~1/3
+of the time on conflict items.
+
+**(b) Cycle length** (sweep even 2/4/6, odd 3/5/7): a weak, noisy effect —
+frontier models stay flat at ~100%, weak models hover near the 3-way floor
+regardless of length (only GPT-4o-mini even-one-sided shows a clear k2→k4 drop).
+Cycle *length* is not a strong knob. (`data/cyclesweep.png`)
+
+**(c) Multiple cycles** (A. Slusarz's extended parametrization: `independent`
+and `interdependent` cycle structures, swept over the number of cycles /
+stable-model count). Frontier models are immune (GPT-4.1, GPT-5 = 100%
+throughout). Weak models drop once there is more than one cycle, and
+**interdependent (coupled) cycles are harder than independent ones**:
+
+| | n=1 | n=2 | n=3 | n=4 |
+|---|---|---|---|---|
+| GPT-4o-mini, independent | 100% | 100% | 100% | 100% |
+| GPT-4o-mini, interdependent | 100% | 33% | 67% | 33% |
+| Llama3 / Qwen, independent | 100% | 67% | 67% | 67% |
+
+![multi-cycle](data/multicycle.png)
+
+So multiple cycles are a real additional knob — but, as predicted, it bites the
+less-capable models and coupling matters more than count.
+
+**(d) Few-shot is a strong prompt-only mitigation.** One worked example of the
+target semantics (different surface, no leakage) lifts the mid models sharply:
+
+| Model | zero-shot → few-shot | WFS |
+|---|---|---|
+| GPT-4o-mini | 33% → **89%** | 0% → 100% |
+| Qwen2.5-coder 32B | 22% → **67%** | 33% → 100% |
+| Llama3-8B | 44% → 56% | 0% → 33% |
+
+A single exemplar nearly closes the gap for capable-enough models (complementing
+the LoRA-SFT result in Exp. 8 and translate-then-solve in Exp. 3); the weakest
+model benefits least.
 
 ## Takeaway for the proposal
 

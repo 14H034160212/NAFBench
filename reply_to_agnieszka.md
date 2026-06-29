@@ -1,90 +1,47 @@
-Subject: Re: NAF-Bench — parametrization (implemented + validated)
+Subject: Re: NAF-Bench — multiple cycles added + dataset upgrades + results
 
 Hi Agnieszka,
 
-Thank you — this is exactly the structure the benchmark needed, and I've gone
-ahead and implemented all of it. The code is on GitHub and I've added
-**CaptainPirx** and **kostas-stathis** as collaborators:
+Both of your suggestions are implemented and run. Code/data on GitHub:
+https://github.com/14H034160212/NAFBench
 
-  https://github.com/14H034160212/NAFBench
+Multiple cycles (extended cycle parametrization).
+I added both structures exactly as you wrote them and swept the number of cycles:
+  - independent: n separate even 2-cycles, q :- x1 ; q :- y1 ; ...
+  - interdependent: coupled chain x:-not y / y:-not x,not z / z:-not w / w:-not z
+    / q:-x, generalized to n coupled cycles.
+All certify to (credulous T, skeptical F, WFS u, SLDNF loop) — so cred/skept/WFS
+gold = A/B/C — and the new knob is the number of cycles (= number of stable
+models): independent gives 2/4/8/16 models for n=1..4, interdependent 2/3/4/5.
 
-A short summary of what's now in place, all certified by the solvers.
+Results (over cred/skept/WFS):
+  - Frontier is immune: GPT-4.1 and GPT-5 are 100% across all cycle counts and
+    both structures.
+  - Weak models drop once there's more than one cycle, and coupling matters more
+    than count: e.g. GPT-4o-mini is 100% on independent at every n, but
+    100/33/67/33% on interdependent (n=1..4); Llama/Qwen sit ~67% on independent
+    for n>=2. So, as you anticipated, multiple cycles is a real knob that mainly
+    bites the less-capable models, with interdependent harder than independent.
 
-**1. Four label dimensions.** The certifier (`nafbench/solvers.py::certify_full`)
-now reports the four you specified, with your zero-model conventions:
+Dataset upgrades (both done).
+  - Each instance record now stores n_stable_models (from clingo) and the full
+    underlying logic program (prog.pretty()), so you can double-check the
+    certified labels directly. I also added a transparent rule-by-rule
+    verbalizer ("Proposition X is true if proposition Y is not true.") for the
+    multi-cycle structures, which is easy to read against the program.
 
-  - SLDNF:           {T, F, loop}
-  - WFS:             {T, F, u}
-  - Stable, credulous:  {T, F}   — `any([]) = F`  (no stable model ⇒ F)
-  - Stable, skeptical:  {T, F}   — `all([]) = T`  (no stable model ⇒ T, vacuous)
+I agree on not pushing depth/width past 32 for the frontier — in the extended run
+the curves were flat to 32 and the divergence bin kept dominating, so chasing
+orders-of-magnitude size isn't worth it. The productive axes look like: the
+divergence type (incl. now multi-cycle / coupling) and the default-reversion
+behaviour. On that: the proposal's signature metric is now computed — when the
+specified semantics conflicts with a model's no-instruction default, reversion
+rate is 50% (Llama), ~32% (GPT-4o-mini / Qwen / GPT-4.1); every model's default
+is credulous/classical, so reverting = failing to take the cautious WFS/closed-
+world view. And a single few-shot exemplar is a strong fix for capable-enough
+models (GPT-4o-mini 33%->89%, Qwen 22%->67%).
 
-These fall out of Python's `any`/`all` on the empty model set, so the vacuous
-cases are handled correctly without special-casing.
-
-**2. The four divergence bins reproduce your predicted signatures exactly.**
-`validate_v2.py` builds every bin at several depths/widths and checks the
-certified four-tuple `(cred, skept, WFS, SLDNF)`; all pass:
-
-  | bin                              | (cred, skept, WFS, SLDNF) | distinct |
-  |----------------------------------|---------------------------|----------|
-  | control                          | (T, T, T, T)              | 1        |
-  | even-cycle, one-sided (q:-x)     | (T, F, u, loop)           | 4        |
-  | odd-cycle (no stable model)      | (F, T, u, loop)           | 4        |
-  | even-cycle, both-sided (q:-x;q:-y)| (T, T, u, loop)          | 3        |
-
-One small adjustment worth flagging: in your message the "odd-cycle" snippet was
-written as `x :- not y. y :- not x.`, which is actually a length-2 (even) cycle —
-the (F, T(vacuous), u, loop) signature needs a genuinely *odd* cycle so that no
-stable model exists, so I implemented the odd bin with an odd-length cycle
-(default length 3). `cycle_len` is a parameter, fixed per bin for now exactly as
-you suggested (even bins = 2, odd = 3), and trivial to sweep later.
-
-**3. Depth × width generator.** `G(depth, width, divergence_bin)` is implemented
-in `nafbench/instances.py`. Width uses your shared-subgoal gadget
-(`a :- h1..hk`, `b :- h1..hk`, the `h_i` grounded in independent facts), so the
-reasoner must hold `k` atoms simultaneously. The depth chain and the width block
-are both certified *true*, which means they scale the instance **without**
-changing the divergence signature — I verified this on an 80-instance grid
-(`data/nafbench_v2.jsonl`: 20 control / 40 all-four-differ / 20 three-differ).
-This gives us clean, orthogonal knobs.
-
-**4. Per-instance solver hardness.** Each instance now records **Prolog
-inferences** (`statistics/2`) and **clingo conflicts/choices** as a measure of
-how hard the instance actually is for the solver. Inferences already scale with
-both knobs (control bin: width 0→16 ⇒ 7→73 inferences; depth 0→16 ⇒ 7→23). Plot:
-`data/v2_hardness.png`.
-
-I fully agree with your hypothesis that **width may be the stronger moderator**:
-a linear chain is "apply k rules in sequence", whereas width forces simultaneous
-tracking, which is where I'd expect models to drop back to their default
-semantics. The natural next experiment is to regress model default-reversion on
-`(depth, width, divergence_bin)` and on the solver-hardness metrics — with width
-and depth as separate predictors so we can test exactly that.
-
-For context on whether the phenomenon is even there to study: in the v1 runs the
-divergence cases are already hard for current models. On a held-out
-well-founded set, per-item correctness across nine models (Claude / OpenAI incl.
-GPT-5 / open-source) is in `data/model_heatmap.png`; the conjunction-cycle item
-fools 7 of 9, including GPT-5, which revert to classical "A∧B is impossible →
-false" instead of `undefined ∧ undefined`. Solver-certified LoRA SFT then lifts
-small open models substantially (e.g. 41%→89%). So the signal is real, and the
-v2 grid is what we need to map *where* it breaks.
-
-A few questions to align before I run the LLM evaluation on the v2 grid:
-
-  1. Ranges — what depth/width grid would you like for the first run (I'm
-     thinking depth ∈ {0,2,4,8,16}, width ∈ {0,2,4,8,16}), and a cycle-length
-     sweep (3,4,5,…) or fixed for now?
-  2. Prompt conditions — we now have up to five "specified semantics" to test
-     the model against (credulous, skeptical, WFS, SLDNF/closed-world, plus a
-     no-instruction default). Do you want all five, or a core subset?
-  3. Verbalization — credulous vs skeptical are subtle to phrase in natural
-     language ("could hold in some consistent scenario" vs "must hold in every
-     consistent scenario"). Happy to draft both and have you sanity-check the
-     wording.
-
-Thanks again — this sharpened the design a lot. Everything above is reproducible
-from the repo (`python validate_v2.py`, `python build_v2.py`).
+Happy to send the credulous/skeptical instruction wording for your review next.
 
 Best,
 Qiming

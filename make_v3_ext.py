@@ -29,7 +29,7 @@ for b in BINS:
                     "divergence_bin": b, "cycle_len": CYCLE[b], "depth": d,
                     "effective_width": m["effective_width"], "width_subgoals": m["width"],
                     "gold": None if c == "none" else V2.gold_for(cert["labels"], c),
-                    "labels": cert["labels"], "length": MET.length_metrics(prompt),
+                    "labels": cert["labels"], "n_stable_models": cert["n_stable_models"], "program": prog.pretty(), "length": MET.length_metrics(prompt),
                     "prompt": prompt,
                 })
 

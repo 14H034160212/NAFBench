@@ -1,0 +1,33 @@
+{
+ "model": "qwen2.5-coder:32b",
+ "provider": "ollama",
+ "answers": {
+  "cyc-even_one_sided-k2::cred": "B",
+  "cyc-even_one_sided-k2::skept": "B",
+  "cyc-even_one_sided-k2::wfs": "A",
+  "cyc-even_one_sided-k4::skept": "B",
+  "cyc-even_one_sided-k4::cred": "B",
+  "cyc-even_one_sided-k4::wfs": "B",
+  "cyc-even_one_sided-k6::cred": "A",
+  "cyc-even_one_sided-k6::skept": "B",
+  "cyc-even_one_sided-k6::wfs": "C",
+  "cyc-odd-k3::cred": "A",
+  "cyc-odd-k3::skept": "B",
+  "cyc-odd-k3::wfs": "C",
+  "cyc-odd-k5::cred": "A",
+  "cyc-odd-k5::skept": "B",
+  "cyc-odd-k7::cred": "B",
+  "cyc-odd-k5::wfs": "C",
+  "cyc-odd-k7::skept": "B",
+  "cyc-even_both_sided-k2::cred": "B",
+  "cyc-odd-k7::wfs": "C",
+  "cyc-even_both_sided-k2::wfs": "A",
+  "cyc-even_both_sided-k2::skept": "B",
+  "cyc-even_both_sided-k4::cred": "B",
+  "cyc-even_both_sided-k4::skept": "B",
+  "cyc-even_both_sided-k4::wfs": "B",
+  "cyc-even_both_sided-k6::cred": "A",
+  "cyc-even_both_sided-k6::skept": "B",
+  "cyc-even_both_sided-k6::wfs": "C"
+ }
+}

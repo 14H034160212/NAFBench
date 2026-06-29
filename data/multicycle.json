@@ -1,0 +1,706 @@
+[
+ {
+  "task_id": "mc-independent-n1::none",
+  "rec_id": "mc-independent-n1",
+  "cond": "none",
+  "subtype": "independent",
+  "n_cycles": 1,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nq :- x0a.",
+  "length": {
+   "chars": 433,
+   "words": 75,
+   "tokens": 111
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition q is true if proposition x0a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n1::cred",
+  "rec_id": "mc-independent-n1",
+  "cond": "cred",
+  "subtype": "independent",
+  "n_cycles": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nq :- x0a.",
+  "length": {
+   "chars": 665,
+   "words": 110,
+   "tokens": 170
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition q is true if proposition x0a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n1::skept",
+  "rec_id": "mc-independent-n1",
+  "cond": "skept",
+  "subtype": "independent",
+  "n_cycles": 1,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nq :- x0a.",
+  "length": {
+   "chars": 744,
+   "words": 120,
+   "tokens": 185
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition q is true if proposition x0a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n1::wfs",
+  "rec_id": "mc-independent-n1",
+  "cond": "wfs",
+  "subtype": "independent",
+  "n_cycles": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nq :- x0a.",
+  "length": {
+   "chars": 717,
+   "words": 119,
+   "tokens": 181
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition q is true if proposition x0a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n2::none",
+  "rec_id": "mc-independent-n2",
+  "cond": "none",
+  "subtype": "independent",
+  "n_cycles": 2,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nq :- x0a.\nq :- x1a.",
+  "length": {
+   "chars": 595,
+   "words": 104,
+   "tokens": 153
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n2::cred",
+  "rec_id": "mc-independent-n2",
+  "cond": "cred",
+  "subtype": "independent",
+  "n_cycles": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nq :- x0a.\nq :- x1a.",
+  "length": {
+   "chars": 827,
+   "words": 139,
+   "tokens": 212
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n2::skept",
+  "rec_id": "mc-independent-n2",
+  "cond": "skept",
+  "subtype": "independent",
+  "n_cycles": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nq :- x0a.\nq :- x1a.",
+  "length": {
+   "chars": 906,
+   "words": 149,
+   "tokens": 227
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n2::wfs",
+  "rec_id": "mc-independent-n2",
+  "cond": "wfs",
+  "subtype": "independent",
+  "n_cycles": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nq :- x0a.\nq :- x1a.",
+  "length": {
+   "chars": 879,
+   "words": 148,
+   "tokens": 223
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n3::none",
+  "rec_id": "mc-independent-n3",
+  "cond": "none",
+  "subtype": "independent",
+  "n_cycles": 3,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 8,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nq :- x0a.\nq :- x1a.\nq :- x2a.",
+  "length": {
+   "chars": 757,
+   "words": 133,
+   "tokens": 195
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n3::cred",
+  "rec_id": "mc-independent-n3",
+  "cond": "cred",
+  "subtype": "independent",
+  "n_cycles": 3,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 8,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nq :- x0a.\nq :- x1a.\nq :- x2a.",
+  "length": {
+   "chars": 989,
+   "words": 168,
+   "tokens": 254
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n3::skept",
+  "rec_id": "mc-independent-n3",
+  "cond": "skept",
+  "subtype": "independent",
+  "n_cycles": 3,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 8,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nq :- x0a.\nq :- x1a.\nq :- x2a.",
+  "length": {
+   "chars": 1068,
+   "words": 178,
+   "tokens": 269
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n3::wfs",
+  "rec_id": "mc-independent-n3",
+  "cond": "wfs",
+  "subtype": "independent",
+  "n_cycles": 3,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 8,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nq :- x0a.\nq :- x1a.\nq :- x2a.",
+  "length": {
+   "chars": 1041,
+   "words": 177,
+   "tokens": 265
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n4::none",
+  "rec_id": "mc-independent-n4",
+  "cond": "none",
+  "subtype": "independent",
+  "n_cycles": 4,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 16,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nx3a :- not x3b.\nx3b :- not x3a.\nq :- x0a.\nq :- x1a.\nq :- x2a.\nq :- x3a.",
+  "length": {
+   "chars": 919,
+   "words": 162,
+   "tokens": 237
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition x3a is true if proposition x3b is not true. Proposition x3b is true if proposition x3a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true. Proposition q is true if proposition x3a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n4::cred",
+  "rec_id": "mc-independent-n4",
+  "cond": "cred",
+  "subtype": "independent",
+  "n_cycles": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 16,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nx3a :- not x3b.\nx3b :- not x3a.\nq :- x0a.\nq :- x1a.\nq :- x2a.\nq :- x3a.",
+  "length": {
+   "chars": 1151,
+   "words": 197,
+   "tokens": 296
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition x3a is true if proposition x3b is not true. Proposition x3b is true if proposition x3a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true. Proposition q is true if proposition x3a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n4::skept",
+  "rec_id": "mc-independent-n4",
+  "cond": "skept",
+  "subtype": "independent",
+  "n_cycles": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 16,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nx3a :- not x3b.\nx3b :- not x3a.\nq :- x0a.\nq :- x1a.\nq :- x2a.\nq :- x3a.",
+  "length": {
+   "chars": 1230,
+   "words": 207,
+   "tokens": 311
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition x3a is true if proposition x3b is not true. Proposition x3b is true if proposition x3a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true. Proposition q is true if proposition x3a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-independent-n4::wfs",
+  "rec_id": "mc-independent-n4",
+  "cond": "wfs",
+  "subtype": "independent",
+  "n_cycles": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 16,
+  "program": "x0a :- not x0b.\nx0b :- not x0a.\nx1a :- not x1b.\nx1b :- not x1a.\nx2a :- not x2b.\nx2b :- not x2a.\nx3a :- not x3b.\nx3b :- not x3a.\nq :- x0a.\nq :- x1a.\nq :- x2a.\nq :- x3a.",
+  "length": {
+   "chars": 1203,
+   "words": 206,
+   "tokens": 307
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0a is true if proposition x0b is not true. Proposition x0b is true if proposition x0a is not true. Proposition x1a is true if proposition x1b is not true. Proposition x1b is true if proposition x1a is not true. Proposition x2a is true if proposition x2b is not true. Proposition x2b is true if proposition x2a is not true. Proposition x3a is true if proposition x3b is not true. Proposition x3b is true if proposition x3a is not true. Proposition q is true if proposition x0a is true. Proposition q is true if proposition x1a is true. Proposition q is true if proposition x2a is true. Proposition q is true if proposition x3a is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n1::none",
+  "rec_id": "mc-interdependent-n1",
+  "cond": "none",
+  "subtype": "interdependent",
+  "n_cycles": 1,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "h0 :- not a0.\na0 :- not h0.\nq :- h0.",
+  "length": {
+   "chars": 428,
+   "words": 75,
+   "tokens": 106
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n1::cred",
+  "rec_id": "mc-interdependent-n1",
+  "cond": "cred",
+  "subtype": "interdependent",
+  "n_cycles": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "h0 :- not a0.\na0 :- not h0.\nq :- h0.",
+  "length": {
+   "chars": 660,
+   "words": 110,
+   "tokens": 165
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n1::skept",
+  "rec_id": "mc-interdependent-n1",
+  "cond": "skept",
+  "subtype": "interdependent",
+  "n_cycles": 1,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "h0 :- not a0.\na0 :- not h0.\nq :- h0.",
+  "length": {
+   "chars": 739,
+   "words": 120,
+   "tokens": 180
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n1::wfs",
+  "rec_id": "mc-interdependent-n1",
+  "cond": "wfs",
+  "subtype": "interdependent",
+  "n_cycles": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "h0 :- not a0.\na0 :- not h0.\nq :- h0.",
+  "length": {
+   "chars": 712,
+   "words": 119,
+   "tokens": 176
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n2::none",
+  "rec_id": "mc-interdependent-n2",
+  "cond": "none",
+  "subtype": "interdependent",
+  "n_cycles": 2,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 3,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1.\nq :- h0.",
+  "length": {
+   "chars": 567,
+   "words": 101,
+   "tokens": 139
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n2::cred",
+  "rec_id": "mc-interdependent-n2",
+  "cond": "cred",
+  "subtype": "interdependent",
+  "n_cycles": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 3,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1.\nq :- h0.",
+  "length": {
+   "chars": 799,
+   "words": 136,
+   "tokens": 198
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n2::skept",
+  "rec_id": "mc-interdependent-n2",
+  "cond": "skept",
+  "subtype": "interdependent",
+  "n_cycles": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 3,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1.\nq :- h0.",
+  "length": {
+   "chars": 878,
+   "words": 146,
+   "tokens": 213
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n2::wfs",
+  "rec_id": "mc-interdependent-n2",
+  "cond": "wfs",
+  "subtype": "interdependent",
+  "n_cycles": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 3,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1.\nq :- h0.",
+  "length": {
+   "chars": 851,
+   "words": 145,
+   "tokens": 209
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n3::none",
+  "rec_id": "mc-interdependent-n3",
+  "cond": "none",
+  "subtype": "interdependent",
+  "n_cycles": 3,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2.\nq :- h0.",
+  "length": {
+   "chars": 706,
+   "words": 127,
+   "tokens": 172
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n3::cred",
+  "rec_id": "mc-interdependent-n3",
+  "cond": "cred",
+  "subtype": "interdependent",
+  "n_cycles": 3,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2.\nq :- h0.",
+  "length": {
+   "chars": 938,
+   "words": 162,
+   "tokens": 231
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n3::skept",
+  "rec_id": "mc-interdependent-n3",
+  "cond": "skept",
+  "subtype": "interdependent",
+  "n_cycles": 3,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2.\nq :- h0.",
+  "length": {
+   "chars": 1017,
+   "words": 172,
+   "tokens": 246
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n3::wfs",
+  "rec_id": "mc-interdependent-n3",
+  "cond": "wfs",
+  "subtype": "interdependent",
+  "n_cycles": 3,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 4,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2.\nq :- h0.",
+  "length": {
+   "chars": 990,
+   "words": 171,
+   "tokens": 242
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n4::none",
+  "rec_id": "mc-interdependent-n4",
+  "cond": "none",
+  "subtype": "interdependent",
+  "n_cycles": 4,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 5,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2, not h3.\nh3 :- not a3.\na3 :- not h3.\nq :- h0.",
+  "length": {
+   "chars": 845,
+   "words": 153,
+   "tokens": 205
+  },
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true and proposition h3 is not true. Proposition h3 is true if proposition a3 is not true. Proposition a3 is true if proposition h3 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n4::cred",
+  "rec_id": "mc-interdependent-n4",
+  "cond": "cred",
+  "subtype": "interdependent",
+  "n_cycles": 4,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 5,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2, not h3.\nh3 :- not a3.\na3 :- not h3.\nq :- h0.",
+  "length": {
+   "chars": 1077,
+   "words": 188,
+   "tokens": 264
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true and proposition h3 is not true. Proposition h3 is true if proposition a3 is not true. Proposition a3 is true if proposition h3 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n4::skept",
+  "rec_id": "mc-interdependent-n4",
+  "cond": "skept",
+  "subtype": "interdependent",
+  "n_cycles": 4,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 5,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2, not h3.\nh3 :- not a3.\na3 :- not h3.\nq :- h0.",
+  "length": {
+   "chars": 1156,
+   "words": 198,
+   "tokens": 279
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true and proposition h3 is not true. Proposition h3 is true if proposition a3 is not true. Proposition a3 is true if proposition h3 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "mc-interdependent-n4::wfs",
+  "rec_id": "mc-interdependent-n4",
+  "cond": "wfs",
+  "subtype": "interdependent",
+  "n_cycles": 4,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 5,
+  "program": "h0 :- not a0.\na0 :- not h0, not h1.\nh1 :- not a1.\na1 :- not h1, not h2.\nh2 :- not a2.\na2 :- not h2, not h3.\nh3 :- not a3.\na3 :- not h3.\nq :- h0.",
+  "length": {
+   "chars": 1129,
+   "words": 197,
+   "tokens": 275
+  },
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition h0 is true if proposition a0 is not true. Proposition a0 is true if proposition h0 is not true and proposition h1 is not true. Proposition h1 is true if proposition a1 is not true. Proposition a1 is true if proposition h1 is not true and proposition h2 is not true. Proposition h2 is true if proposition a2 is not true. Proposition a2 is true if proposition h2 is not true and proposition h3 is not true. Proposition h3 is true if proposition a3 is not true. Proposition a3 is true if proposition h3 is not true. Proposition q is true if proposition h0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]

@@ -15,6 +15,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 779,
    "words": 149,
@@ -38,6 +40,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 972,
    "words": 178,
@@ -61,6 +65,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1011,
    "words": 184,
@@ -84,6 +90,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1090,
    "words": 194,
@@ -107,6 +115,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1063,
    "words": 193,
@@ -130,6 +140,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1058,
    "words": 221,
@@ -153,6 +165,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1251,
    "words": 250,
@@ -176,6 +190,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1290,
    "words": 256,
@@ -199,6 +215,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1369,
    "words": 266,
@@ -222,6 +240,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1342,
    "words": 265,
@@ -245,6 +265,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1442,
    "words": 317,
@@ -268,6 +290,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1635,
    "words": 346,
@@ -291,6 +315,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1674,
    "words": 352,
@@ -314,6 +340,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1753,
    "words": 362,
@@ -337,6 +365,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1726,
    "words": 361,
@@ -360,6 +390,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1379,
    "words": 275,
@@ -383,6 +415,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1572,
    "words": 304,
@@ -406,6 +440,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1611,
    "words": 310,
@@ -429,6 +465,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1690,
    "words": 320,
@@ -452,6 +490,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1663,
    "words": 319,
@@ -475,6 +515,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1658,
    "words": 347,
@@ -498,6 +540,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1851,
    "words": 376,
@@ -521,6 +565,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1890,
    "words": 382,
@@ -544,6 +590,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1969,
    "words": 392,
@@ -567,6 +615,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1942,
    "words": 391,
@@ -590,6 +640,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2042,
    "words": 443,
@@ -613,6 +665,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2235,
    "words": 472,
@@ -636,6 +690,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2274,
    "words": 478,
@@ -659,6 +715,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2353,
    "words": 488,
@@ -682,6 +740,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2326,
    "words": 487,
@@ -705,6 +765,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2083,
    "words": 419,
@@ -728,6 +790,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2276,
    "words": 448,
@@ -751,6 +815,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2315,
    "words": 454,
@@ -774,6 +840,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2394,
    "words": 464,
@@ -797,6 +865,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2367,
    "words": 463,
@@ -820,6 +890,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2362,
    "words": 491,
@@ -843,6 +915,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2555,
    "words": 520,
@@ -866,6 +940,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2594,
    "words": 526,
@@ -889,6 +965,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2673,
    "words": 536,
@@ -912,6 +990,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2646,
    "words": 535,
@@ -935,6 +1015,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2746,
    "words": 587,
@@ -958,6 +1040,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2939,
    "words": 616,
@@ -981,6 +1065,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2978,
    "words": 622,
@@ -1004,6 +1090,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3057,
    "words": 632,
@@ -1027,6 +1115,8 @@
    "wfs": "T",
    "sldnf": "T"
   },
+  "n_stable_models": 1,
+  "program": "cq :- not blocked.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\ns29 :- f29.\nf29.\ns30 :- f30.\nf30.\ns31 :- f31.\nf31.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3030,
    "words": 631,
@@ -1050,6 +1140,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 775,
    "words": 147,
@@ -1073,6 +1165,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 968,
    "words": 176,
@@ -1096,6 +1190,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1007,
    "words": 182,
@@ -1119,6 +1215,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1086,
    "words": 192,
@@ -1142,6 +1240,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1059,
    "words": 191,
@@ -1165,6 +1265,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1223,
    "words": 253,
@@ -1188,6 +1290,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1416,
    "words": 282,
@@ -1211,6 +1315,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1455,
    "words": 288,
@@ -1234,6 +1340,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1534,
    "words": 298,
@@ -1257,6 +1365,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1507,
    "words": 297,
@@ -1280,6 +1390,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1607,
    "words": 349,
@@ -1303,6 +1415,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1800,
    "words": 378,
@@ -1326,6 +1440,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1839,
    "words": 384,
@@ -1349,6 +1465,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1918,
    "words": 394,
@@ -1372,6 +1490,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1891,
    "words": 393,
@@ -1395,6 +1515,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1375,
    "words": 273,
@@ -1418,6 +1540,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1568,
    "words": 302,
@@ -1441,6 +1565,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1607,
    "words": 308,
@@ -1464,6 +1590,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1686,
    "words": 318,
@@ -1487,6 +1615,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1659,
    "words": 317,
@@ -1510,6 +1640,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1823,
    "words": 379,
@@ -1533,6 +1665,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2016,
    "words": 408,
@@ -1556,6 +1690,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2055,
    "words": 414,
@@ -1579,6 +1715,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2134,
    "words": 424,
@@ -1602,6 +1740,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2107,
    "words": 423,
@@ -1625,6 +1765,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2207,
    "words": 475,
@@ -1648,6 +1790,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2400,
    "words": 504,
@@ -1671,6 +1815,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2439,
    "words": 510,
@@ -1694,6 +1840,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2518,
    "words": 520,
@@ -1717,6 +1865,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2491,
    "words": 519,
@@ -1740,6 +1890,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2079,
    "words": 417,
@@ -1763,6 +1915,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2272,
    "words": 446,
@@ -1786,6 +1940,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2311,
    "words": 452,
@@ -1809,6 +1965,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2390,
    "words": 462,
@@ -1832,6 +1990,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2363,
    "words": 461,
@@ -1855,6 +2015,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2527,
    "words": 523,
@@ -1878,6 +2040,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2720,
    "words": 552,
@@ -1901,6 +2065,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2759,
    "words": 558,
@@ -1924,6 +2090,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2838,
    "words": 568,
@@ -1947,6 +2115,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2811,
    "words": 567,
@@ -1970,6 +2140,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2911,
    "words": 619,
@@ -1993,6 +2165,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3104,
    "words": 648,
@@ -2016,6 +2190,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3143,
    "words": 654,
@@ -2039,6 +2215,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3222,
    "words": 664,
@@ -2062,6 +2240,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3195,
    "words": 663,
@@ -2085,6 +2265,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 908,
    "words": 173,
@@ -2108,6 +2290,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1101,
    "words": 202,
@@ -2131,6 +2315,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1140,
    "words": 208,
@@ -2154,6 +2340,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1219,
    "words": 218,
@@ -2177,6 +2365,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1192,
    "words": 217,
@@ -2200,6 +2390,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1181,
    "words": 245,
@@ -2223,6 +2415,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1374,
    "words": 274,
@@ -2246,6 +2440,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1413,
    "words": 280,
@@ -2269,6 +2465,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1492,
    "words": 290,
@@ -2292,6 +2490,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1465,
    "words": 289,
@@ -2315,6 +2515,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1565,
    "words": 341,
@@ -2338,6 +2540,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1758,
    "words": 370,
@@ -2361,6 +2565,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1797,
    "words": 376,
@@ -2384,6 +2590,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1876,
    "words": 386,
@@ -2407,6 +2615,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1849,
    "words": 385,
@@ -2430,6 +2640,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1508,
    "words": 299,
@@ -2453,6 +2665,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1701,
    "words": 328,
@@ -2476,6 +2690,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1740,
    "words": 334,
@@ -2499,6 +2715,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1819,
    "words": 344,
@@ -2522,6 +2740,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1792,
    "words": 343,
@@ -2545,6 +2765,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1781,
    "words": 371,
@@ -2568,6 +2790,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1974,
    "words": 400,
@@ -2591,6 +2815,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2013,
    "words": 406,
@@ -2614,6 +2840,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2092,
    "words": 416,
@@ -2637,6 +2865,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2065,
    "words": 415,
@@ -2660,6 +2890,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2165,
    "words": 467,
@@ -2683,6 +2915,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2358,
    "words": 496,
@@ -2706,6 +2940,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2397,
    "words": 502,
@@ -2729,6 +2965,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2476,
    "words": 512,
@@ -2752,6 +2990,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2449,
    "words": 511,
@@ -2775,6 +3015,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2212,
    "words": 443,
@@ -2798,6 +3040,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2405,
    "words": 472,
@@ -2821,6 +3065,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2444,
    "words": 478,
@@ -2844,6 +3090,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2523,
    "words": 488,
@@ -2867,6 +3115,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0.\npb :- s0.\ns0 :- f0.\nf0.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2496,
    "words": 487,
@@ -2890,6 +3140,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2485,
    "words": 515,
@@ -2913,6 +3165,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2678,
    "words": 544,
@@ -2936,6 +3190,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2717,
    "words": 550,
@@ -2959,6 +3215,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2796,
    "words": 560,
@@ -2982,6 +3240,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2769,
    "words": 559,
@@ -3005,6 +3265,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2869,
    "words": 611,
@@ -3028,6 +3290,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3062,
    "words": 640,
@@ -3051,6 +3315,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3101,
    "words": 646,
@@ -3074,6 +3340,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3180,
    "words": 656,
@@ -3097,6 +3365,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\ns28 :- f28.\nf28.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3153,
    "words": 655,
@@ -3120,6 +3390,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 934,
    "words": 174,
@@ -3143,6 +3415,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1127,
    "words": 203,
@@ -3166,6 +3440,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1166,
    "words": 209,
@@ -3189,6 +3465,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1245,
    "words": 219,
@@ -3212,6 +3490,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1218,
    "words": 218,
@@ -3235,6 +3515,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1382,
    "words": 280,
@@ -3258,6 +3540,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1575,
    "words": 309,
@@ -3281,6 +3565,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1614,
    "words": 315,
@@ -3304,6 +3590,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1693,
    "words": 325,
@@ -3327,6 +3615,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1666,
    "words": 324,
@@ -3350,6 +3640,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1766,
    "words": 376,
@@ -3373,6 +3665,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1959,
    "words": 405,
@@ -3396,6 +3690,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 1998,
    "words": 411,
@@ -3419,6 +3715,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 2077,
    "words": 421,
@@ -3442,6 +3740,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- cq, wide.",
   "length": {
    "chars": 2050,
    "words": 420,
@@ -3465,6 +3765,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1534,
    "words": 300,
@@ -3488,6 +3790,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1727,
    "words": 329,
@@ -3511,6 +3815,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1766,
    "words": 335,
@@ -3534,6 +3840,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1845,
    "words": 345,
@@ -3557,6 +3865,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1818,
    "words": 344,
@@ -3580,6 +3890,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 1982,
    "words": 406,
@@ -3603,6 +3915,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2175,
    "words": 435,
@@ -3626,6 +3940,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2214,
    "words": 441,
@@ -3649,6 +3965,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2293,
    "words": 451,
@@ -3672,6 +3990,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2266,
    "words": 450,
@@ -3695,6 +4015,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2366,
    "words": 502,
@@ -3718,6 +4040,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2559,
    "words": 531,
@@ -3741,6 +4065,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2598,
    "words": 537,
@@ -3764,6 +4090,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2677,
    "words": 547,
@@ -3787,6 +4115,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- cq, wide.",
   "length": {
    "chars": 2650,
    "words": 546,
@@ -3810,6 +4140,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2238,
    "words": 444,
@@ -3833,6 +4165,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2431,
    "words": 473,
@@ -3856,6 +4190,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2470,
    "words": 479,
@@ -3879,6 +4215,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2549,
    "words": 489,
@@ -3902,6 +4240,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2522,
    "words": 488,
@@ -3925,6 +4265,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2686,
    "words": 550,
@@ -3948,6 +4290,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2879,
    "words": 579,
@@ -3971,6 +4315,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2918,
    "words": 585,
@@ -3994,6 +4340,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2997,
    "words": 595,
@@ -4017,6 +4365,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 2970,
    "words": 594,
@@ -4040,6 +4390,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3070,
    "words": 646,
@@ -4063,6 +4415,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3263,
    "words": 675,
@@ -4086,6 +4440,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3302,
    "words": 681,
@@ -4109,6 +4465,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3381,
    "words": 691,
@@ -4132,6 +4490,8 @@
    "wfs": "u",
    "sldnf": "loop"
   },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\npb :- s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\ns5 :- f5.\nf5.\ns6 :- f6.\nf6.\ns7 :- f7.\nf7.\ns8 :- f8.\nf8.\ns9 :- f9.\nf9.\ns10 :- f10.\nf10.\ns11 :- f11.\nf11.\ns12 :- f12.\nf12.\ns13 :- f13.\nf13.\ns14 :- f14.\nf14.\ns15 :- f15.\nf15.\ns16 :- f16.\nf16.\ns17 :- f17.\nf17.\ns18 :- f18.\nf18.\ns19 :- f19.\nf19.\ns20 :- f20.\nf20.\ns21 :- f21.\nf21.\ns22 :- f22.\nf22.\ns23 :- f23.\nf23.\ns24 :- f24.\nf24.\ns25 :- f25.\nf25.\ns26 :- f26.\nf26.\ns27 :- f27.\nf27.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- t8.\nt8 :- t9.\nt9 :- t10.\nt10 :- t11.\nt11 :- t12.\nt12 :- t13.\nt13 :- t14.\nt14 :- t15.\nt15 :- t16.\nt16 :- t17.\nt17 :- t18.\nt18 :- t19.\nt19 :- t20.\nt20 :- t21.\nt21 :- t22.\nt22 :- t23.\nt23 :- t24.\nt24 :- t25.\nt25 :- t26.\nt26 :- t27.\nt27 :- t28.\nt28 :- t29.\nt29 :- t30.\nt30 :- t31.\nt31 :- cq, wide.",
   "length": {
    "chars": 3354,
    "words": 690,

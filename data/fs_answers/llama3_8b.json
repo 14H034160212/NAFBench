@@ -1,0 +1,24 @@
+{
+ "model": "llama3:8b",
+ "provider": "ollama",
+ "answers": {
+  "fs-even_one_sided-cred-zeroshot::cred": "A",
+  "fs-even_one_sided-skept-zeroshot::skept": "A",
+  "fs-even_one_sided-cred-fewshot::cred": "A",
+  "fs-even_one_sided-skept-fewshot::skept": "A",
+  "fs-even_one_sided-wfs-zeroshot::wfs": "A",
+  "fs-even_one_sided-wfs-fewshot::wfs": "A",
+  "fs-odd-cred-zeroshot::cred": "A",
+  "fs-odd-cred-fewshot::cred": "A",
+  "fs-odd-skept-zeroshot::skept": "A",
+  "fs-odd-skept-fewshot::skept": "A",
+  "fs-odd-wfs-zeroshot::wfs": "A",
+  "fs-odd-wfs-fewshot::wfs": "C",
+  "fs-even_both_sided-cred-zeroshot::cred": "A",
+  "fs-even_both_sided-cred-fewshot::cred": "A",
+  "fs-even_both_sided-skept-zeroshot::skept": "A",
+  "fs-even_both_sided-wfs-zeroshot::wfs": "A",
+  "fs-even_both_sided-skept-fewshot::skept": "A",
+  "fs-even_both_sided-wfs-fewshot::wfs": "A"
+ }
+}
