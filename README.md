@@ -8,6 +8,36 @@ automated cross-vendor evaluation** of 9 models — Claude, OpenAI (incl. GPT-5)
 and local open-source models (DeepSeek-R1, Qwen2.5, Llama3) — to answer the
 central question: *do frontier models still actually have this problem?*
 
+## In plain terms (read this first)
+
+**A "negation semantics" is just a rulebook for what "not" / "unknown" means.**
+The same rules can give *different* answers under different rulebooks, and we test
+whether an LLM will use the rulebook it was told to — instead of falling back to
+its own default.
+
+Everyday example. Rule: *"an order is APPROVED unless it has been flagged."*
+Order X — nobody said it was flagged. Is it approved?
+- **Closed-world rulebook:** not stated as flagged ⇒ treat it as not flagged ⇒ **approved**.
+- **Open-world rulebook:** not stated ⇒ we don't know if it's flagged ⇒ **cannot determine**.
+
+Same sentence, two legitimate answers. The rulebooks we test are:
+- **credulous** — true if it holds in *at least one* consistent scenario;
+- **skeptical** — true only if it holds in *every* consistent scenario;
+- **well-founded** — "undefined" when something can only be justified by circularly assuming itself;
+- **closed-world** — anything not derivable is taken as false.
+
+**What actually makes a problem hard.** Not how *long* or how *wide* the rules
+are (those barely matter, see Exp. 13–15), but whether the rules contain a
+**cycle** — statements that depend on each other through "not". Example:
+
+> *Alice attends iff Bob does NOT; Bob attends iff Alice does NOT. The meeting is held if either attends. Is the meeting held?*
+
+Alice and Bob prop each other up in a loop, so the rulebooks diverge: credulous
+says **yes** (someone always attends), well-founded says **cannot determine** (the
+loop is ungrounded). Models do fine on cycle-free problems; they trip on these
+loops — and that "which kind of cycle" is the dominant difficulty axis in all our
+experiments. (This is what we mean by *the divergence type / semantics dominates*.)
+
 ## Interactive demo (static, Cloudflare-Pages ready)
 
 A self-contained static site lives in [`site/`](site/) — an interactive
