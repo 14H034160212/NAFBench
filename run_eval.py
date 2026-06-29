@@ -43,7 +43,7 @@ def _is_reasoning(model):
     return any(model.startswith(p) for p in ("gpt-5", "o1", "o3", "o4"))
 
 
-def ask(client, model, prompt, max_retries=3, max_tokens=8192):
+def ask(client, model, prompt, max_retries=3, max_tokens=8192, temperature=0.0):
     msgs = [{"role": "system", "content": SYSTEM},
             {"role": "user", "content": prompt}]
     for attempt in range(max_retries):
@@ -55,7 +55,7 @@ def ask(client, model, prompt, max_retries=3, max_tokens=8192):
                     model=model, messages=msgs, max_completion_tokens=16384)
             else:
                 r = client.chat.completions.create(
-                    model=model, messages=msgs, temperature=0, max_tokens=max_tokens)
+                    model=model, messages=msgs, temperature=temperature, max_tokens=max_tokens)
             content = r.choices[0].message.content
             return content, parse_answer(content)
         except Exception as e:  # noqa
@@ -65,13 +65,13 @@ def ask(client, model, prompt, max_retries=3, max_tokens=8192):
     return None, None
 
 
-def run_model(model, eval_items, base_url, api_key, workers):
+def run_model(model, eval_items, base_url, api_key, workers, temperature=0.0):
     client = OpenAI(base_url=base_url, api_key=api_key)
     results = {}
     raw = {}
 
     def task(item):
-        content, ans = ask(client, model, item["prompt"])
+        content, ans = ask(client, model, item["prompt"], temperature=temperature)
         return item["task_id"], ans, content
 
     t0 = time.time()
@@ -94,6 +94,7 @@ def main():
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--set", default="data/eval_set.json", help="eval set JSON")
     ap.add_argument("--outdir", default="data/auto_answers", help="output dir")
+    ap.add_argument("--temperature", type=float, default=0.0)
     args = ap.parse_args()
 
     if args.provider == "ollama":
@@ -110,7 +111,7 @@ def main():
 
     for model in args.models:
         print(f"=== {args.provider}:{model} ({len(eval_items)} prompts) ===", flush=True)
-        results, raw = run_model(model, eval_items, base_url, api_key, args.workers)
+        results, raw = run_model(model, eval_items, base_url, api_key, args.workers, args.temperature)
         safe = model.replace("/", "_").replace(":", "_")
         out = {"model": model, "provider": args.provider, "answers": results}
         json.dump(out, open(f"{args.outdir}/{safe}.json", "w"), indent=1)
