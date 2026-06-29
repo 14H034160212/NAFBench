@@ -119,6 +119,7 @@ nafbench/verbalize_generic.py   transparent rule-by-rule verbalizer (label-check
 make_multicycle.py + analyze_multicycle.py   multi-cycle experiment (records program + n_stable_models)
 make_cyclesweep.py + analyze_cyclesweep.py   cycle-length sweep
 make_fewshot.py   few-shot mitigation ; analyze_reversion.py   default-reversion metric
+make_headline.py + analyze_headline.py   multi-seed headline metrics with 95% Wilson CIs
 tests/test_solvers.py   6 textbook cases with known answers (all pass)
 data/auto_answers/      direct-reasoning answers (DeepSeek/Qwen/Llama/GPT-5/4.1/4o-mini)
 data/t2s_answers/       translate-then-solve answers + the emitted programs
@@ -793,6 +794,45 @@ target semantics (different surface, no leakage) lifts the mid models sharply:
 A single exemplar nearly closes the gap for capable-enough models (complementing
 the LoRA-SFT result in Exp. 8 and translate-then-solve in Exp. 3); the weakest
 model benefits least.
+
+## Experiment 17 — headline metrics with confidence intervals
+
+To put error bars on the main numbers, a balanced set (3 divergent bins × 3
+themes × 5 conditions at depth 8 / effective-width 8) was run **3 times at
+T = 0.7** per model, and accuracy is reported with 95% Wilson intervals over
+instance × theme × run (n = 27 per condition; `make_headline.py`,
+`analyze_headline.py`). Chance on the 3-way labels is 33%.
+
+| Model | closed-world | credulous | skeptical | WFS |
+|---|---|---|---|---|
+| GPT-4.1 | 30% [16–48] | 93% [77–98] | **100% [88–100]** | 93% [77–98] |
+| GPT-4o-mini | 59% [41–75] | 70% [52–84] | 48% [31–66] | 48% [31–66] |
+| Qwen2.5-coder 32B | 52% [34–69] | 59% [41–75] | 44% [28–63] | 78% [59–89] |
+| Llama3-8B | 19% [8–37] | 63% [44–78] | 59% [41–75] | 15% [6–32] |
+
+**Default-semantics reversion** (proposal's signature metric), with CIs:
+
+| Model | reversion rate |
+|---|---|
+| GPT-4.1 | **18% [10–29]** |
+| Qwen2.5-coder 32B | 26% [17–38] |
+| GPT-4o-mini | 32% [22–44] |
+| Llama3-8B | **68% [57–78]** |
+
+![headline CI](data/headline_ci.png)
+
+**Findings (now with error bars):**
+1. **`closed_world` is the hardest condition for the strongest model** — GPT-4.1
+   is at 30% [16–48] (below or near chance), versus ~93–100% on the stable/WFS
+   conditions. The operational "the engine doesn't terminate → cannot determine"
+   verdict is the one even a strong model misses.
+2. **GPT-4.1 reverts least (18% [10–29]); Llama3 most (68% [57–78])** — the CIs
+   don't overlap, so the default-reversion gap between strong and weak models is
+   statistically clean. Every model's default is credulous/classical, so
+   reverting = failing to adopt the cautious reading.
+3. Mid/small models sit in the 44–78% band on most conditions with wide CIs;
+   the rankings (e.g. Qwen strong on WFS, Llama weak on WFS/closed-world) are
+   stable across the 3 sampling runs.
 
 ## Takeaway for the proposal
 

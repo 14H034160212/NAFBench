@@ -1,0 +1,767 @@
+[
+ {
+  "task_id": "hl-even_one_sided-t0::none",
+  "rec_id": "hl-even_one_sided-t0",
+  "cond": "none",
+  "divergence_bin": "even_one_sided",
+  "theme": 0,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t0::closed_world",
+  "rec_id": "hl-even_one_sided-t0",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t0::cred",
+  "rec_id": "hl-even_one_sided-t0",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "theme": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t0::skept",
+  "rec_id": "hl-even_one_sided-t0",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "theme": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t0::wfs",
+  "rec_id": "hl-even_one_sided-t0",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t1::none",
+  "rec_id": "hl-even_one_sided-t1",
+  "cond": "none",
+  "divergence_bin": "even_one_sided",
+  "theme": 1,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t1::closed_world",
+  "rec_id": "hl-even_one_sided-t1",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t1::cred",
+  "rec_id": "hl-even_one_sided-t1",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "theme": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t1::skept",
+  "rec_id": "hl-even_one_sided-t1",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "theme": 1,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t1::wfs",
+  "rec_id": "hl-even_one_sided-t1",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t2::none",
+  "rec_id": "hl-even_one_sided-t2",
+  "cond": "none",
+  "divergence_bin": "even_one_sided",
+  "theme": 2,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t2::closed_world",
+  "rec_id": "hl-even_one_sided-t2",
+  "cond": "closed_world",
+  "divergence_bin": "even_one_sided",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t2::cred",
+  "rec_id": "hl-even_one_sided-t2",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "theme": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t2::skept",
+  "rec_id": "hl-even_one_sided-t2",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "theme": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_one_sided-t2::wfs",
+  "rec_id": "hl-even_one_sided-t2",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t0::none",
+  "rec_id": "hl-odd-t0",
+  "cond": "none",
+  "divergence_bin": "odd",
+  "theme": 0,
+  "gold": null,
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t0::closed_world",
+  "rec_id": "hl-odd-t0",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t0::cred",
+  "rec_id": "hl-odd-t0",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "theme": 0,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t0::skept",
+  "rec_id": "hl-odd-t0",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "theme": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t0::wfs",
+  "rec_id": "hl-odd-t0",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t1::none",
+  "rec_id": "hl-odd-t1",
+  "cond": "none",
+  "divergence_bin": "odd",
+  "theme": 1,
+  "gold": null,
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. A signal is filed if its channel is signed. Every channel 1..5 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t1::closed_world",
+  "rec_id": "hl-odd-t1",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. A signal is filed if its channel is signed. Every channel 1..5 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t1::cred",
+  "rec_id": "hl-odd-t1",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "theme": 1,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. A signal is filed if its channel is signed. Every channel 1..5 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t1::skept",
+  "rec_id": "hl-odd-t1",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "theme": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. A signal is filed if its channel is signed. Every channel 1..5 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t1::wfs",
+  "rec_id": "hl-odd-t1",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 and signal 5 are all filed. A signal is filed if its channel is signed. Every channel 1..5 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t2::none",
+  "rec_id": "hl-odd-t2",
+  "cond": "none",
+  "divergence_bin": "odd",
+  "theme": 2,
+  "gold": null,
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. A document is filed if its record is signed. Every record 1..5 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t2::closed_world",
+  "rec_id": "hl-odd-t2",
+  "cond": "closed_world",
+  "divergence_bin": "odd",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. A document is filed if its record is signed. Every record 1..5 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t2::cred",
+  "rec_id": "hl-odd-t2",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "theme": 2,
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. A document is filed if its record is signed. Every record 1..5 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t2::skept",
+  "rec_id": "hl-odd-t2",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "theme": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. A document is filed if its record is signed. Every record 1..5 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-odd-t2::wfs",
+  "rec_id": "hl-odd-t2",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 0,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 and document 5 are all filed. A document is filed if its record is signed. Every record 1..5 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t0::none",
+  "rec_id": "hl-even_both_sided-t0",
+  "cond": "none",
+  "divergence_bin": "even_both_sided",
+  "theme": 0,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t0::closed_world",
+  "rec_id": "hl-even_both_sided-t0",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t0::cred",
+  "rec_id": "hl-even_both_sided-t0",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "theme": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t0::skept",
+  "rec_id": "hl-even_both_sided-t0",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "theme": 0,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t0::wfs",
+  "rec_id": "hl-even_both_sided-t0",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "theme": 0,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t1::none",
+  "rec_id": "hl-even_both_sided-t1",
+  "cond": "none",
+  "divergence_bin": "even_both_sided",
+  "theme": 1,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The alarm condition HOLDS if sensor 1 is active. The alarm condition HOLDS if sensor 2 is active. The alarm condition HOLDS if sensor 3 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t1::closed_world",
+  "rec_id": "hl-even_both_sided-t1",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The alarm condition HOLDS if sensor 1 is active. The alarm condition HOLDS if sensor 2 is active. The alarm condition HOLDS if sensor 3 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t1::cred",
+  "rec_id": "hl-even_both_sided-t1",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "theme": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The alarm condition HOLDS if sensor 1 is active. The alarm condition HOLDS if sensor 2 is active. The alarm condition HOLDS if sensor 3 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t1::skept",
+  "rec_id": "hl-even_both_sided-t1",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "theme": 1,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The alarm condition HOLDS if sensor 1 is active. The alarm condition HOLDS if sensor 2 is active. The alarm condition HOLDS if sensor 3 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t1::wfs",
+  "rec_id": "hl-even_both_sided-t1",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "theme": 1,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nSensor 0 is active if and only if sensor 1 is not active. Sensor 1 is active if and only if sensor 2 is not active. Sensor 2 is active if and only if sensor 3 is not active. Sensor 3 is active if and only if sensor 0 is not active. The alarm condition HOLDS if sensor 0 is active. The alarm condition HOLDS if sensor 1 is active. The alarm condition HOLDS if sensor 2 is active. The alarm condition HOLDS if sensor 3 is active. The self-test PASSES if diagnostic A passes and diagnostic B passes. Diagnostic A passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. Diagnostic B passes if signal 1 and signal 2 and signal 3 and signal 4 are all filed. A signal is filed if its channel is signed. Every channel 1..4 is signed. The ALARM is raised if relay 0 is reached. Relay 0 is reached if relay 1 is reached. Relay 1 is reached if relay 2 is reached. Relay 2 is reached if relay 3 is reached. Relay 3 is reached if relay 4 is reached. Relay 4 is reached if relay 5 is reached. Relay 5 is reached if relay 6 is reached. Relay 6 is reached if relay 7 is reached. Relay 7 is reached if the alarm condition HOLDS and the self-test PASSES.\n\nQuestion: Is the ALARM raised?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t2::none",
+  "rec_id": "hl-even_both_sided-t2",
+  "cond": "none",
+  "divergence_bin": "even_both_sided",
+  "theme": 2,
+  "gold": null,
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Answer using ordinary commonsense reasoning about the rules below.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The override is JUSTIFIED if auditor 1 approves. The override is JUSTIFIED if auditor 2 approves. The override is JUSTIFIED if auditor 3 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t2::closed_world",
+  "rec_id": "hl-even_both_sided-t2",
+  "cond": "closed_world",
+  "divergence_bin": "even_both_sided",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is FALSE exactly when it cannot be derived. Treat the rules operationally, as a Prolog engine would; if the reasoning cannot terminate with a definite yes/no, answer 'Cannot be determined'.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The override is JUSTIFIED if auditor 1 approves. The override is JUSTIFIED if auditor 2 approves. The override is JUSTIFIED if auditor 3 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t2::cred",
+  "rec_id": "hl-even_both_sided-t2",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "theme": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The override is JUSTIFIED if auditor 1 approves. The override is JUSTIFIED if auditor 2 approves. The override is JUSTIFIED if auditor 3 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t2::skept",
+  "rec_id": "hl-even_both_sided-t2",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "theme": 2,
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The override is JUSTIFIED if auditor 1 approves. The override is JUSTIFIED if auditor 2 approves. The override is JUSTIFIED if auditor 3 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "hl-even_both_sided-t2::wfs",
+  "rec_id": "hl-even_both_sided-t2",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "theme": 2,
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "n_stable_models": 2,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nAuditor 0 approves if and only if auditor 1 does not approve. Auditor 1 approves if and only if auditor 2 does not approve. Auditor 2 approves if and only if auditor 3 does not approve. Auditor 3 approves if and only if auditor 0 does not approve. The override is JUSTIFIED if auditor 0 approves. The override is JUSTIFIED if auditor 1 approves. The override is JUSTIFIED if auditor 2 approves. The override is JUSTIFIED if auditor 3 approves. The paperwork is IN ORDER if file A is clear and file B is clear. File A is clear if document 1 and document 2 and document 3 and document 4 are all filed. File B is clear if document 1 and document 2 and document 3 and document 4 are all filed. A document is filed if its record is signed. Every record 1..4 is signed. The override is GRANTED if tier 0 is reached. Tier 0 is reached if tier 1 is reached. Tier 1 is reached if tier 2 is reached. Tier 2 is reached if tier 3 is reached. Tier 3 is reached if tier 4 is reached. Tier 4 is reached if tier 5 is reached. Tier 5 is reached if tier 6 is reached. Tier 6 is reached if tier 7 is reached. Tier 7 is reached if the override is JUSTIFIED and the paperwork is IN ORDER.\n\nQuestion: Is the override GRANTED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]
