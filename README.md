@@ -24,6 +24,28 @@ Same sentence, two legitimate answers. The rulebooks we test are:
 
 Alice and Bob prop each other up in a loop, so the rulebooks diverge: credulous says **yes** (someone always attends), well-founded says **cannot determine** (the loop is ungrounded). Models do fine on cycle-free problems; they trip on these loops — and that "which kind of cycle" is the dominant difficulty axis in all our experiments.
 
+## Semantics & labels (terminology)
+
+The four rulebooks we score against, with their synonyms and how they relate to
+clingo — **brave = credulous** and **cautious = skeptical** (same concepts, two
+names); clingo produces the first two, the other two are separate engines:
+
+| our condition | a.k.a. | rule (over answer sets) | engine | zero-model case |
+|---|---|---|---|---|
+| **credulous** | brave | holds in **some** answer set (∃) | clingo `--enum-mode=brave` | F |
+| **skeptical** | cautious | holds in **every** answer set (∀) | clingo `--enum-mode=cautious` | T (vacuous) |
+| **well-founded** | WFS | 3-valued: true / false / **undefined** | our alternating-fixpoint | undefined |
+| **closed-world** | SLDNF | operational; may not terminate | SWI-Prolog | loop |
+
+- **clingo has no single "default" answer** for a query — it enumerates all
+  stable models, and you then ask brave (∃) or cautious (∀). So credulous/
+  skeptical *are* clingo (brave/cautious); WFS and SLDNF are the non-clingo ones.
+- The subtle case is **no stable model** (our odd-cycle bin): skeptical is
+  vacuously **T**, credulous is **F** — the two clingo modes disagree there.
+- Every instance records all four labels plus `distinct_labels` and `odd_label`
+  (which single label, if any, disagrees with the other three), so it's easy to
+  see which semantics diverges on that instance.
+
 ## Interactive demo
 
 A self-contained static site lives in [`site/`](site/) — an interactive per-model correctness panel, a `G(depth, width, bin)` explorer showing the certified four-tuple and the exact prompt per semantics, and the figure gallery. No backend is required; all data is precomputed into `site/data.js`.
