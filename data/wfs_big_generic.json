@@ -1,0 +1,354 @@
+[
+ {
+  "task_id": "gcyc2-disj-meeting::wfs",
+  "rec_id": "gcyc2-disj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-disj-panel::wfs",
+  "rec_id": "gcyc2-disj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-disj-network::wfs",
+  "rec_id": "gcyc2-disj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-disj-committee::wfs",
+  "rec_id": "gcyc2-disj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-conj-meeting::wfs",
+  "rec_id": "gcyc2-conj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-conj-panel::wfs",
+  "rec_id": "gcyc2-conj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-conj-network::wfs",
+  "rec_id": "gcyc2-conj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc2-conj-committee::wfs",
+  "rec_id": "gcyc2-conj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-disj-meeting::wfs",
+  "rec_id": "gcyc4-disj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-disj-panel::wfs",
+  "rec_id": "gcyc4-disj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-disj-network::wfs",
+  "rec_id": "gcyc4-disj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-disj-committee::wfs",
+  "rec_id": "gcyc4-disj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-conj-meeting::wfs",
+  "rec_id": "gcyc4-conj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-conj-panel::wfs",
+  "rec_id": "gcyc4-conj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-conj-network::wfs",
+  "rec_id": "gcyc4-conj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc4-conj-committee::wfs",
+  "rec_id": "gcyc4-conj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-disj-meeting::wfs",
+  "rec_id": "gcyc6-disj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true. Proposition q is true if proposition a4 is true. Proposition q is true if proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-disj-panel::wfs",
+  "rec_id": "gcyc6-disj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true. Proposition q is true if proposition a4 is true. Proposition q is true if proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-disj-network::wfs",
+  "rec_id": "gcyc6-disj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true. Proposition q is true if proposition a4 is true. Proposition q is true if proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-disj-committee::wfs",
+  "rec_id": "gcyc6-disj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true. Proposition q is true if proposition a1 is true. Proposition q is true if proposition a2 is true. Proposition q is true if proposition a3 is true. Proposition q is true if proposition a4 is true. Proposition q is true if proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-conj-meeting::wfs",
+  "rec_id": "gcyc6-conj-meeting",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true and proposition a4 is true and proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-conj-panel::wfs",
+  "rec_id": "gcyc6-conj-panel",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true and proposition a4 is true and proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-conj-network::wfs",
+  "rec_id": "gcyc6-conj-network",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true and proposition a4 is true and proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gcyc6-conj-committee::wfs",
+  "rec_id": "gcyc6-conj-committee",
+  "cond": "wfs",
+  "kind": "divergent",
+  "gold": "C",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition a0 is true if proposition a1 is not true. Proposition a1 is true if proposition a2 is not true. Proposition a2 is true if proposition a3 is not true. Proposition a3 is true if proposition a4 is not true. Proposition a4 is true if proposition a5 is not true. Proposition a5 is true if proposition a0 is not true. Proposition q is true if proposition a0 is true and proposition a1 is true and proposition a2 is true and proposition a3 is true and proposition a4 is true and proposition a5 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-1-0::wfs",
+  "rec_id": "gdef-approval-1-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-1-1::wfs",
+  "rec_id": "gdef-approval-1-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-2-0::wfs",
+  "rec_id": "gdef-approval-2-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-2-1::wfs",
+  "rec_id": "gdef-approval-2-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-3-0::wfs",
+  "rec_id": "gdef-approval-3-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true if proposition p3 is true. Proposition p3 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-approval-3-1::wfs",
+  "rec_id": "gdef-approval-3-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true if proposition p3 is true. Proposition p3 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-1-0::wfs",
+  "rec_id": "gdef-eligibility-1-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-1-1::wfs",
+  "rec_id": "gdef-eligibility-1-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-2-0::wfs",
+  "rec_id": "gdef-eligibility-2-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-2-1::wfs",
+  "rec_id": "gdef-eligibility-2-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-3-0::wfs",
+  "rec_id": "gdef-eligibility-3-0",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "A",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true if proposition p3 is true. Proposition p3 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gdef-eligibility-3-1::wfs",
+  "rec_id": "gdef-eligibility-3-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition p1 is true if proposition p2 is true. Proposition p2 is true if proposition p3 is true. Proposition p3 is true. Proposition q is true if proposition p1 is true and proposition e0 is not true. Proposition e0 is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-authority-1::wfs",
+  "rec_id": "gstk-authority-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-authority-2::wfs",
+  "rec_id": "gstk-authority-2",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-authority-3::wfs",
+  "rec_id": "gstk-authority-3",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true if proposition t3 is not true. Proposition t3 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-authority-4::wfs",
+  "rec_id": "gstk-authority-4",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true if proposition t3 is not true. Proposition t3 is true if proposition t4 is not true. Proposition t4 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-review-1::wfs",
+  "rec_id": "gstk-review-1",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-review-2::wfs",
+  "rec_id": "gstk-review-2",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-review-3::wfs",
+  "rec_id": "gstk-review-3",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true if proposition t3 is not true. Proposition t3 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gstk-review-4::wfs",
+  "rec_id": "gstk-review-4",
+  "cond": "wfs",
+  "kind": "control",
+  "gold": "B",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition t0 is true if proposition t1 is not true. Proposition t1 is true if proposition t2 is not true. Proposition t2 is true if proposition t3 is not true. Proposition t3 is true if proposition t4 is not true. Proposition t4 is true.\n\nQuestion: Is proposition t0 true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]
