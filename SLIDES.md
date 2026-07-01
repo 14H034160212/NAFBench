@@ -15,6 +15,9 @@ Does it obey the rulebook — or fall back to its own default?
 | **well-founded** (is it grounded, or circular?) | **Cannot determine** |
 
 Every answer is machine-checked by real solvers (clingo / well-founded / Prolog).
+*(Labels: **brave = credulous** (∃ answer set) · **cautious = skeptical** (∀ answer
+sets) — these two are clingo's two modes; well-founded & closed-world are separate
+engines. No-stable-model case: skeptical = yes (vacuous), credulous = no.)*
 
 ## Data recipe (auto-generated, 100% solver-certified)
 1. **Generator** `G(depth, width, cycle-type)` builds a tiny logic program.
@@ -35,10 +38,15 @@ Every answer is machine-checked by real solvers (clingo / well-founded / Prolog)
 - **Fixes that work:** translate-then-solve → ~100%; **one few-shot example
   33%→89%**; solver-certified LoRA fine-tune **41%→89%**.
 
-## Next (from today's meeting)
-- **Generalization test set:** different verbalization for train vs test (avoid
-  memorization; check the failure transfers across phrasings).
-- Save **tokens *used*** (model output), not just the answer.
-- Clarify credulous / skeptical / brave-cautious labels; note **which differs
-  from clingo's default (brave/cautious stable-model reasoning)**.
-- Related work to position against: arXiv 2502.01100, 2506.06941.
+## Done since the meeting
+- ✅ **Generalization** (different verbalization train vs test): frontier robust;
+  weak models swing 20–45 pts on rewording; **LoRA gain does *not* transfer to a
+  new framing** (memorization) — but few-shot does.
+- ✅ **Tokens *used*** now logged (not just the answer).
+- ✅ **Labels clarified** (brave=credulous, cautious=skeptical; clingo mapping).
+- ✅ **Related work** positioned vs arXiv 2502.01100 (ZebraLogic) & 2506.06941
+  (Illusion of Thinking): theirs is *size*-driven collapse, ours is *semantics*-driven.
+
+## Open
+- Train the mitigation across **multiple verbalizations** (not one).
+- Final wording sign-off + scale of the production run.
