@@ -1,0 +1,641 @@
+[
+ {
+  "task_id": "gen-even_one_sided-cred-A_narrative::cred",
+  "rec_id": "gen-even_one_sided-cred-A_narrative",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "framing": "A_narrative",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-cred-B_abstract::cred",
+  "rec_id": "gen-even_one_sided-cred-B_abstract",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-cred-B_abstract_fewshotA::cred",
+  "rec_id": "gen-even_one_sided-cred-B_abstract_fewshotA",
+  "cond": "cred",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (credulous): Is the gate OPEN? Reasoning: two answer sets {Guard 0},{Guard 1}; in {Guard 0} the gate is OPEN, so at least one \u2192 yes. ANSWER: A\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-skept-A_narrative::skept",
+  "rec_id": "gen-even_one_sided-skept-A_narrative",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "framing": "A_narrative",
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-skept-B_abstract::skept",
+  "rec_id": "gen-even_one_sided-skept-B_abstract",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract",
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-skept-B_abstract_fewshotA::skept",
+  "rec_id": "gen-even_one_sided-skept-B_abstract_fewshotA",
+  "cond": "skept",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "B",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (skeptical): Is the gate OPEN? Reasoning: in {Guard 1} the gate is not OPEN, so not every set \u2192 no. ANSWER: B\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-wfs-A_narrative::wfs",
+  "rec_id": "gen-even_one_sided-wfs-A_narrative",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "framing": "A_narrative",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-wfs-B_abstract::wfs",
+  "rec_id": "gen-even_one_sided-wfs-B_abstract",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_one_sided-wfs-B_abstract_fewshotA::wfs",
+  "rec_id": "gen-even_one_sided-wfs-B_abstract_fewshotA",
+  "cond": "wfs",
+  "divergence_bin": "even_one_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "F",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (well-founded): Is the gate OPEN? Reasoning: the guards are circular through negation with no grounding, so undefined. ANSWER: C\n\nNow answer this one.\n\nUse WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-cred-A_narrative::cred",
+  "rec_id": "gen-odd-cred-A_narrative",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "framing": "A_narrative",
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-cred-B_abstract::cred",
+  "rec_id": "gen-odd-cred-B_abstract",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "framing": "B_abstract",
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-cred-B_abstract_fewshotA::cred",
+  "rec_id": "gen-odd-cred-B_abstract_fewshotA",
+  "cond": "cred",
+  "divergence_bin": "odd",
+  "framing": "B_abstract_fewshotA",
+  "gold": "B",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (credulous): Is the gate OPEN? Reasoning: two answer sets {Guard 0},{Guard 1}; in {Guard 0} the gate is OPEN, so at least one \u2192 yes. ANSWER: A\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-skept-A_narrative::skept",
+  "rec_id": "gen-odd-skept-A_narrative",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "framing": "A_narrative",
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-skept-B_abstract::skept",
+  "rec_id": "gen-odd-skept-B_abstract",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "framing": "B_abstract",
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-skept-B_abstract_fewshotA::skept",
+  "rec_id": "gen-odd-skept-B_abstract_fewshotA",
+  "cond": "skept",
+  "divergence_bin": "odd",
+  "framing": "B_abstract_fewshotA",
+  "gold": "A",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (skeptical): Is the gate OPEN? Reasoning: in {Guard 1} the gate is not OPEN, so not every set \u2192 no. ANSWER: B\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-wfs-A_narrative::wfs",
+  "rec_id": "gen-odd-wfs-A_narrative",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "framing": "A_narrative",
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 and item 5 are all filed. A item is filed if its form is signed. Every form 1..5 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-wfs-B_abstract::wfs",
+  "rec_id": "gen-odd-wfs-B_abstract",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "framing": "B_abstract",
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-odd-wfs-B_abstract_fewshotA::wfs",
+  "rec_id": "gen-odd-wfs-B_abstract_fewshotA",
+  "cond": "wfs",
+  "divergence_bin": "odd",
+  "framing": "B_abstract_fewshotA",
+  "gold": "C",
+  "labels": {
+   "cred": "F",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "F",
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 4,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x0.\ncq :- x0.\nwide :- pa, pb.\npa :- s0, s1, s2, s3, s4.\npb :- s0, s1, s2, s3, s4.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\ns4 :- f4.\nf4.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (well-founded): Is the gate OPEN? Reasoning: the guards are circular through negation with no grounding, so undefined. ANSWER: C\n\nNow answer this one.\n\nUse WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true and proposition s4 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition s4 is true if proposition f4 is true. Proposition f4 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-cred-A_narrative::cred",
+  "rec_id": "gen-even_both_sided-cred-A_narrative",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "framing": "A_narrative",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-cred-B_abstract::cred",
+  "rec_id": "gen-even_both_sided-cred-B_abstract",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-cred-B_abstract_fewshotA::cred",
+  "rec_id": "gen-even_both_sided-cred-B_abstract_fewshotA",
+  "cond": "cred",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (credulous): Is the gate OPEN? Reasoning: two answer sets {Guard 0},{Guard 1}; in {Guard 0} the gate is OPEN, so at least one \u2192 yes. ANSWER: A\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. Consider every self-consistent scenario that is exactly justified by the rules (an 'answer set'). Answer 'Definitely yes' if the queried statement holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in NONE.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-skept-A_narrative::skept",
+  "rec_id": "gen-even_both_sided-skept-A_narrative",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "framing": "A_narrative",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-skept-B_abstract::skept",
+  "rec_id": "gen-even_both_sided-skept-B_abstract",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-skept-B_abstract_fewshotA::skept",
+  "rec_id": "gen-even_both_sided-skept-B_abstract_fewshotA",
+  "cond": "skept",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "A",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (skeptical): Is the gate OPEN? Reasoning: in {Guard 1} the gate is not OPEN, so not every set \u2192 no. ANSWER: B\n\nNow answer this one.\n\nUse STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) reasoning. Answer 'Definitely yes' only if the queried statement holds in EVERY self-consistent scenario (answer set), and 'Definitely no' if there is even one scenario where it fails. If there are NO self-consistent scenarios at all, the statement counts as holding in every scenario (answer 'Definitely yes').\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-wfs-A_narrative::wfs",
+  "rec_id": "gen-even_both_sided-wfs-A_narrative",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "framing": "A_narrative",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nReviewer 0 signs off if and only if reviewer 1 does not sign off. Reviewer 1 signs off if and only if reviewer 2 does not sign off. Reviewer 2 signs off if and only if reviewer 3 does not sign off. Reviewer 3 signs off if and only if reviewer 0 does not sign off. The escalation is WARRANTED if reviewer 0 signs off. The escalation is WARRANTED if reviewer 1 signs off. The escalation is WARRANTED if reviewer 2 signs off. The escalation is WARRANTED if reviewer 3 signs off. The audit is COMPLETE if checklist A passes and checklist B passes. Checklist A passes if item 1 and item 2 and item 3 and item 4 are all filed. Checklist B passes if item 1 and item 2 and item 3 and item 4 are all filed. A item is filed if its form is signed. Every form 1..4 is signed. The case is ESCALATED if stage 0 is reached. Stage 0 is reached if stage 1 is reached. Stage 1 is reached if stage 2 is reached. Stage 2 is reached if stage 3 is reached. Stage 3 is reached if stage 4 is reached. Stage 4 is reached if stage 5 is reached. Stage 5 is reached if stage 6 is reached. Stage 6 is reached if stage 7 is reached. Stage 7 is reached if the escalation is WARRANTED and the audit is COMPLETE.\n\nQuestion: Is the case ESCALATED?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-wfs-B_abstract::wfs",
+  "rec_id": "gen-even_both_sided-wfs-B_abstract",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "gen-even_both_sided-wfs-B_abstract_fewshotA::wfs",
+  "rec_id": "gen-even_both_sided-wfs-B_abstract_fewshotA",
+  "cond": "wfs",
+  "divergence_bin": "even_both_sided",
+  "framing": "B_abstract_fewshotA",
+  "gold": "C",
+  "labels": {
+   "cred": "T",
+   "skept": "T",
+   "wfs": "u",
+   "sldnf": "loop"
+  },
+  "distinct_labels": [
+   "T",
+   "loop",
+   "u"
+  ],
+  "n_distinct": 3,
+  "odd_label": null,
+  "program": "x0 :- not x1.\nx1 :- not x2.\nx2 :- not x3.\nx3 :- not x0.\ncq :- x0.\ncq :- x1.\ncq :- x2.\ncq :- x3.\nwide :- pa, pb.\npa :- s0, s1, s2, s3.\npb :- s0, s1, s2, s3.\ns0 :- f0.\nf0.\ns1 :- f1.\nf1.\ns2 :- f2.\nf2.\ns3 :- f3.\nf3.\nq :- t0.\nt0 :- t1.\nt1 :- t2.\nt2 :- t3.\nt3 :- t4.\nt4 :- t5.\nt5 :- t6.\nt6 :- t7.\nt7 :- cq, wide.",
+  "prompt": "Worked example. Rules: Guard 0 is on duty iff Guard 1 is not; Guard 1 is on duty iff Guard 0 is not; the gate is OPEN if Guard 0 is on duty. Question (well-founded): Is the gate OPEN? Reasoning: the guards are circular through negation with no grounding, so undefined. ANSWER: C\n\nNow answer this one.\n\nUse WELL-FOUNDED semantics (three-valued: true / false / undefined). A statement is 'true' only if it is ultimately grounded in facts, 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, 'Cannot be determined' for undefined.\n\nRules:\nProposition x0 is true if proposition x1 is not true. Proposition x1 is true if proposition x2 is not true. Proposition x2 is true if proposition x3 is not true. Proposition x3 is true if proposition x0 is not true. Proposition cq is true if proposition x0 is true. Proposition cq is true if proposition x1 is true. Proposition cq is true if proposition x2 is true. Proposition cq is true if proposition x3 is true. Proposition wide is true if proposition pa is true and proposition pb is true. Proposition pa is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition pb is true if proposition s0 is true and proposition s1 is true and proposition s2 is true and proposition s3 is true. Proposition s0 is true if proposition f0 is true. Proposition f0 is true. Proposition s1 is true if proposition f1 is true. Proposition f1 is true. Proposition s2 is true if proposition f2 is true. Proposition f2 is true. Proposition s3 is true if proposition f3 is true. Proposition f3 is true. Proposition q is true if proposition t0 is true. Proposition t0 is true if proposition t1 is true. Proposition t1 is true if proposition t2 is true. Proposition t2 is true if proposition t3 is true. Proposition t3 is true if proposition t4 is true. Proposition t4 is true if proposition t5 is true. Proposition t5 is true if proposition t6 is true. Proposition t6 is true if proposition t7 is true. Proposition t7 is true if proposition cq is true and proposition wide is true.\n\nQuestion: Is proposition q true?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end with a line 'ANSWER: X' where X is A, B, or C."
+ }
+]
