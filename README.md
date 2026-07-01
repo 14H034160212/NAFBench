@@ -356,6 +356,11 @@ Semantic-following accuracy: GPT-4.1 80%, GPT-4o-mini 65%, Qwen 65%, Llama 52%.
 
 Effective-width edges out depth once length is controlled, but the divergence bin still dominates.
 
+Accuracy over the depth × effective-width grid (per model) is nearly flat —
+visual confirmation that size is not the difficulty lever (`make_heatmap_dw.py`):
+
+![depth × width heatmap](data/depthwidth_heatmap.png)
+
 ## Experiment 14 — length vs structure
 
 Length-matched padding shows pure length hurts little, while structure hurts a lot.
