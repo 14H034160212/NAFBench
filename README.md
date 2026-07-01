@@ -407,6 +407,39 @@ records each instance's `distinct_labels`/`odd_label`, and the harness logs the
 - **Cost recorded**: GPT-5 spends ~2.5–3k completion tokens/item vs 350–730 for
   the others.
 
+## Experiment 19 — does the SFT gain transfer to a new verbalization? (no)
+
+The strongest form of the memorization check: take the LoRA adapter trained on
+the **narrative** framing (Exp. 8) and evaluate it on the **abstract** framing of
+the same 44-prompt WFS set (`make_wfs_generic.py`; adapter reused, no retraining).
+
+| Gemma-3-4B-it | trained framing (narrative) | unseen framing (abstract) |
+|---|---|---|
+| base | 18/44 | 30/44 |
+| + LoRA SFT | **39/44 (+21)** | **24/44 (−6)** |
+
+The SFT gain is **specific to the training phrasing**: on an unseen verbalization
+it does not transfer and even hurts — the adapter over-learned to emit "undefined"
+(controls collapse 6→0 / 20). This validates the concern directly and argues that
+the mitigation must be trained *across* verbalizations, not one. (The prompt-only
+fixes behave better — Exp. 18 shows few-shot transfers across framings.)
+
+## Related work (positioning)
+
+Two recent papers study reasoning failure as a function of **raw complexity**:
+**ZebraLogic** (Lin et al., arXiv:2502.01100) — logic-grid CSPs with a "curse of
+complexity" accuracy collapse as size grows; and **The Illusion of Thinking**
+(Shojaee et al., arXiv:2506.06941) — reasoning models collapse beyond a
+complexity threshold, with effort declining near collapse. NAF-Bench is
+**complementary and distinct**: (i) our difficulty is *not* raw size — depth/width
+are flat to 32 (Exp. 13–15) — but *which negation semantics + cycle structure* is
+specified; (ii) every instance is **solver-certified under four different
+rulebooks**, whereas those benchmarks have a single answer key; and (iii) our
+central metric is **default-reversion** (does the model switch rulebook when
+told), not scaling accuracy. Our DeepSeek-R1 non-convergence on cyclic items
+echoes "Illusion of Thinking", and our few-shot / self-verify / translate-then-
+solve fixes parallel their best-of-N / self-verification probes.
+
 ## Takeaway
 
 The project is now end-to-end: certified failure detection, controlled benchmark generation, cross-vendor evaluation, prompt and translation baselines, cross-lingual tests, and a working training mitigation. The remaining work is the final wording on the subtle semantics and the scale of the full production run.
