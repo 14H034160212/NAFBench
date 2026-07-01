@@ -57,34 +57,38 @@ def ask(client, model, prompt, max_retries=3, max_tokens=8192, temperature=0.0):
                 r = client.chat.completions.create(
                     model=model, messages=msgs, temperature=temperature, max_tokens=max_tokens)
             content = r.choices[0].message.content
-            return content, parse_answer(content)
+            usage = getattr(r, "usage", None)
+            ctoks = getattr(usage, "completion_tokens", None) if usage else None
+            return content, parse_answer(content), ctoks
         except Exception as e:  # noqa
             if attempt == max_retries - 1:
-                return f"<error: {e}>", None
+                return f"<error: {e}>", None, None
             time.sleep(2 * (attempt + 1))
-    return None, None
+    return None, None, None
 
 
 def run_model(model, eval_items, base_url, api_key, workers, temperature=0.0):
     client = OpenAI(base_url=base_url, api_key=api_key)
     results = {}
     raw = {}
+    ctokens = {}   # completion tokens the model actually used (per request)
 
     def task(item):
-        content, ans = ask(client, model, item["prompt"], temperature=temperature)
-        return item["task_id"], ans, content
+        content, ans, ct = ask(client, model, item["prompt"], temperature=temperature)
+        return item["task_id"], ans, content, ct
 
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = [ex.submit(task, it) for it in eval_items]
         for i, f in enumerate(as_completed(futs), 1):
-            tid, ans, content = f.result()
+            tid, ans, content, ct = f.result()
             results[tid] = ans
             raw[tid] = content
+            ctokens[tid] = ct
             print(f"  [{model}] {i}/{len(eval_items)} {tid} -> {ans}", flush=True)
     dt = time.time() - t0
     print(f"  [{model}] done in {dt:.0f}s", flush=True)
-    return results, raw
+    return results, raw, ctokens
 
 
 def main():
@@ -111,9 +115,10 @@ def main():
 
     for model in args.models:
         print(f"=== {args.provider}:{model} ({len(eval_items)} prompts) ===", flush=True)
-        results, raw = run_model(model, eval_items, base_url, api_key, args.workers, args.temperature)
+        results, raw, ctokens = run_model(model, eval_items, base_url, api_key, args.workers, args.temperature)
         safe = model.replace("/", "_").replace(":", "_")
-        out = {"model": model, "provider": args.provider, "answers": results}
+        out = {"model": model, "provider": args.provider, "answers": results,
+               "completion_tokens": ctokens}
         json.dump(out, open(f"{args.outdir}/{safe}.json", "w"), indent=1)
         json.dump(raw, open(f"{args.outdir}/{safe}.raw.json", "w"), indent=1)
         print(f"  saved {args.outdir}/{safe}.json", flush=True)
