@@ -2,17 +2,31 @@
  "model": "qwen2.5-coder:32b",
  "provider": "ollama",
  "answers": {
-  "naf-042::wfs": "C",
   "naf-044::wfs": "C",
+  "naf-042::wfs": "C",
   "naf-046::wfs": "C",
-  "naf-050::wfs": "C",
   "naf-048::wfs": "C",
+  "naf-050::wfs": "C",
   "naf-064::wfs": "C",
-  "naf-000::wfs": "C",
-  "naf-001::wfs": "C",
-  "naf-002::wfs": "C",
+  "naf-000::wfs": "A",
+  "naf-001::wfs": "B",
+  "naf-002::wfs": "A",
   "naf-003::wfs": "B",
   "naf-004::wfs": "A",
   "naf-005::wfs": "C"
+ },
+ "completion_tokens": {
+  "naf-044::wfs": 241,
+  "naf-042::wfs": 256,
+  "naf-046::wfs": 327,
+  "naf-048::wfs": 236,
+  "naf-050::wfs": 239,
+  "naf-064::wfs": 250,
+  "naf-000::wfs": 183,
+  "naf-001::wfs": 209,
+  "naf-002::wfs": 248,
+  "naf-003::wfs": 238,
+  "naf-004::wfs": 310,
+  "naf-005::wfs": 308
  }
 }

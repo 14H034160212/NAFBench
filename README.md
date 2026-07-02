@@ -4,6 +4,13 @@ A **solver-certified** benchmark for testing whether LLMs can *follow a specifie
 
 This PoC validates the full proposal pipeline end-to-end and runs a **fully automated cross-vendor evaluation** of 9 models — Claude, OpenAI (incl. GPT-5), and local open-source models (DeepSeek-R1, Qwen2.5, Llama3) — to answer the central question: *do frontier models still actually have this problem?*
 
+> **Audit revision (2026-07-02).** After an independent implementation audit (run with Fable) we fixed two correctness bugs and several statistical/design issues, **regenerated every dataset** (gold labels verified unchanged — *zero* drift; only prompt text moved), **re-ran all models** on the corrected prompts, and **retrained every LoRA adapter** on the corrected training data. What changed materially:
+> - **Prompt bug fixed:** a conjunction rule was verbalized as "only if" (necessity) instead of "if" (sufficiency), affecting 12/44 of the WFS set — the *gold* was always right, the English now matches it.
+> - **CIs are now clustered by program**, not by prompt: the old Wilson intervals pseudoreplicated theme/run copies of a handful of programs, so error bars are honestly wider now.
+> - **"Width beats depth" is retracted:** with a bootstrap CI on the coefficient difference, neither depth nor width is a *significant* moderator — the **divergence bin (which kind of cycle) dominates**, ~10× either size axis.
+> - **SFT transfer is more nuanced:** with a *genuine* held-out framing (the abstract surface is no longer in the training data), multi-verbalization SFT transfers to a held-out *narrative* theme but still collapses on the held-out *abstract* framing (see Exp 19–20).
+> - Answer parsing was hardened (no more "last stray capital letter"), entity names no longer collide with the A/B/C options, and every experiment now logs completion tokens. Adopted A. Słusarz's symmetric credulous/skeptical prompt wording.
+
 ## In plain terms
 
 **A "negation semantics" is just a rulebook for what "not" / "unknown" means.** The same rules can give *different* answers under different rulebooks, and we test whether an LLM will use the rulebook it was told to — instead of falling back to its own default.
@@ -95,10 +102,10 @@ Same program type under WFS (gold = **C**): Alice attends iff Bob doesn't; Bob a
 
 | Model | base | trained |
 |---|---|---|
-| Gemma-3-4B-it | 18/44 = 41% | 39/44 = 89% |
-| Qwen2.5-7B | 57% | 95% |
+| Gemma-3-4B-it | 18/44 = 41% | 40/44 = 91% |
+| Qwen2.5-7B | 26/44 = 59% | 41/44 = 93% |
 
-Training on solver-certified data roughly doubles accuracy and fixes the divergent cases.
+Training on solver-certified data roughly doubles accuracy and fixes the divergent cases (divergent 24/24 for both trained models, in-distribution).
 
 ## What the PoC contains
 
@@ -332,7 +339,7 @@ LoRA SFT on certified data recovers near-perfect WFS performance on held-out ite
 
 Divergent accuracy reaches 96–100%, showing the certifier can generate repair data.
 
-A thinking model probe (Qwen3.5-9B) shows SFT can fix controls fully (10/20 → 20/20) but only partly transfers to divergent cases (12% → 33%), suggesting the next step is think-block-aware targets.
+A thinking-model probe (Qwen3.5-9B, 2048-token budget) shows SFT lifts controls (5/20 → 18/20) and partly recovers divergent cases (0/24 → 14/24, i.e. 0% → 58%), suggesting the next step is think-block-aware targets.
 
 ## Experiment 9 — v2 parametrization
 
@@ -350,11 +357,14 @@ Solver hardness is recorded via Prolog inferences and clingo conflicts/choices.
 
 A 75-prompt grid across depth and width for the even-one-sided bin shows:
 - GPT-5/GPT-4.1: 100%
-- Qwen2.5: 56%
-- GPT-4o-mini: 52%
-- Llama3: 40%
+- GPT-4o-mini: 56%
+- Qwen2.5: 51%
+- Llama3: 32%
 
-Width is a stronger moderator than depth for non-saturated models (`b_width = −0.031 vs b_depth = −0.009`).
+Depth vs width is **not** a significant difference for non-saturated models
+(`b_depth = −0.035`, `b_width = −0.044`; bootstrap 95% CI on `|b_width|−|b_depth|`
+= [−0.072, +0.084], **includes 0**). The earlier "width beats depth" reading was
+a bare point-estimate comparison and does not survive uncertainty.
 
 ## Experiment 11 — full v2 grid
 
@@ -374,9 +384,12 @@ Key design decisions:
 
 360 prompts × 4 models under the agreed design.
 
-Semantic-following accuracy: GPT-4.1 80%, GPT-4o-mini 65%, Qwen 65%, Llama 52%.
+Semantic-following accuracy: GPT-4.1 82%, Qwen 68%, GPT-4o-mini 61%, Llama 55%.
 
-Effective-width edges out depth once length is controlled, but the divergence bin still dominates.
+Depth and effective-width are statistically indistinguishable as moderators
+(`|eff_width|−|depth|` bootstrap CI includes 0, with or without length control);
+the **divergence bin dominates** (bin coefficients −0.4 to −0.5, ~20× the size
+coefficients ≈ ±0.02).
 
 Accuracy over the depth × effective-width grid (per model) is nearly flat —
 visual confirmation that size is not the difficulty lever (`make_heatmap_dw.py`):
@@ -399,45 +412,45 @@ The 32-range run confirms the divergence bin still dominates, and the frontier r
 
 ## Experiment 17 — headline metrics with CIs
 
-A balanced set with Wilson intervals shows:
-- GPT-4.1 reversion 18% [10–29]; Llama3 68% [57–78].
+A balanced set with **program-clustered** 95% CIs (bootstrap over the 9 distinct
+programs, not the theme/run replicates) shows:
+- default-semantics reversion: GPT-4.1 21% [8–38], GPT-4o-mini 24% [13–34],
+  Qwen 16% [10–21], **Llama3 59% [45–71]** — the frontier reverts far less.
 - closed-world is the hardest condition even for GPT-4.1.
 
-**Token cost** (completion tokens per item, mean on this set; the harness now
-logs tokens *used*, not just the answer): GPT-5 **2547** (reasoning overhead),
-GPT-4.1 709, GPT-4o-mini 485, Qwen 484, Llama3 354 — closed-world costs the most
-across models.
+**Token cost** (mean completion tokens per item on this set; the harness now logs
+tokens *used*, not just the answer): GPT-4.1 695, GPT-4o-mini 517, Qwen 428,
+Llama3 325 — closed-world costs the most across models. (GPT-5's reasoning
+overhead, ~2.5k tokens/item, shows up on the sets it was run on.)
 
 ## Experiment 18 — generalization across verbalization (memorization check)
 
 Per the UK team's concern that testing on the *same* phrasing used for training
 rewards memorization, the **same certified programs** are rendered in two very
-different framings: **A = narrative** (reviewers/audit/escalation) and
-**B = abstract** ("proposition X is true if proposition Y is not true", unlike
-anything used for few-shot exemplars or LoRA training). The dataset now also
-records each instance's `distinct_labels`/`odd_label`, and the harness logs the
-**completion tokens used**, not just the answer.
+different framings, **both held out of the LoRA training** (which uses narrative
+themes 0,1): **A = narrative theme 2** (a reviewer/audit surface not trained on)
+and **B = abstract** ("proposition X is true if proposition Y is not true"). The
+dataset also records each instance's `distinct_labels`/`odd_label`, and the
+harness logs the **completion tokens used**, not just the answer.
 
-| Model | narrative (A) | abstract (B) | few-shot transfer* |
+| Model | narrative (A, 9) | abstract (B, 9) | few-shot transfer* |
 |---|---|---|---|
 | GPT-5 | 100% | 100% | 100% |
-| GPT-4.1 | 89% | 89% | 89% |
-| GPT-4o-mini | 33% | 67% | 67% |
-| Qwen2.5-coder 32B | 22% | 67% | 78% |
-| Llama3-8B | 44% | 22% | **78%** |
+| GPT-4.1 | 100% | 100% | 89% |
+| Qwen2.5-coder 32B | 78% | 78% | 78% |
+| GPT-4o-mini | 56% | 56% | 67% |
+| Llama3-8B | 44% | 44% | **67%** |
 
-\* narrative exemplar (framing A) in front of an abstract (framing B) question.
+\* narrative exemplar in front of an abstract (framing B) question.
 
-- **Frontier models are verbalization-robust** (GPT-5 100/100, GPT-4.1 89/89) —
+- **Frontier models are verbalization-robust** (GPT-5 100/100, GPT-4.1 100/100) —
   genuine competence, not memorized phrasing.
-- **Weak/mid models are phrasing-dependent** — accuracy swings 20–45 points when
-  only the wording changes, so cross-verbalization testing is necessary (a
-  single-phrasing benchmark would mis-rank them).
-- **The few-shot fix transfers across framing** (narrative exemplar → abstract
-  test still lifts Llama +56, Qwen +11): the exemplar teaches the semantics, not
-  the surface.
-- **Cost recorded**: GPT-5 spends ~2.5–3k completion tokens/item vs 350–730 for
-  the others.
+- **Weak/mid models are phrasing-dependent** and near a floor on these divergent
+  probes, so cross-verbalization testing is necessary (a single-phrasing
+  benchmark would mis-rank them).
+- **The few-shot fix helps the weak models transfer** (narrative exemplar →
+  abstract test lifts Llama +23, GPT-4o-mini +11): the exemplar teaches the
+  semantics, not the surface.
 
 ## Experiment 19 — does the SFT gain transfer to a new verbalization? (no)
 
@@ -448,35 +461,47 @@ the same 44-prompt WFS set (`make_wfs_generic.py`; adapter reused, no retraining
 | Gemma-3-4B-it | trained framing (narrative) | unseen framing (abstract) |
 |---|---|---|
 | base | 18/44 | 30/44 |
-| + LoRA SFT | **39/44 (+21)** | **24/44 (−6)** |
+| + LoRA SFT | **40/44 (+22)** | **28/44 (−2)** |
 
-The SFT gain is **specific to the training phrasing**: on an unseen verbalization
-it does not transfer and even hurts — the adapter over-learned to emit "undefined"
-(controls collapse 6→0 / 20). This validates the concern directly and argues that
-the mitigation must be trained *across* verbalizations, not one. (The prompt-only
-fixes behave better — Exp. 18 shows few-shot transfers across framings.)
+The SFT gain is **specific to the training phrasing**: it nearly saturates the
+trained narrative framing (+22) but does not transfer to the abstract one and
+slightly hurts (controls collapse 6→4 / 20 as the adapter over-emits
+"undefined"). This validates the concern directly and argues that the mitigation
+must be trained *across* verbalizations, not one. (The prompt-only fixes behave
+better — Exp. 18 shows few-shot transfers across framings.)
 
 ## Experiment 20 — training across verbalizations improves transfer
 
-Direct follow-up to Exp. 19: instead of one phrasing, the SFT data now renders
-each certified (program, condition) in **three framings** — two narrative
-surfaces + the abstract one — with a framing-agnostic certified rationale
-(`make_sft_multi.py`, 192 examples). We then test on a framing **held out of
-training** (a third narrative theme) and on the abstract set.
+Direct follow-up to Exp. 19: instead of one phrasing, the SFT data renders each
+certified (program, condition) in **two narrative surfaces** (v2 themes 0,1) with
+a framing-agnostic certified rationale (`make_sft_multi.py`, 128 examples). We
+then test on framings **genuinely held out of training** — a *third* narrative
+theme (theme 2) *and* the abstract surface — both at a larger held-out size
+(audit finding #4: previously the abstract framing was itself in the training
+data, which inflated the transfer claim).
 
-| Gemma-3-4B-it | unseen framing (theme-2, 12) | abstract set (44) |
+| Gemma-3-4B-it | held-out narrative (theme-2, 12) | held-out abstract set (44) |
 |---|---|---|
-| base | 6/12 | 30/44 |
-| single-verbalization SFT (Exp. 19) | 8/12 | 24/44 (collapsed) |
-| **multi-verbalization SFT** | **9/12** | **28/44** (divergent 24/24) |
+| base | 5/12 | 30/44 |
+| single-verbalization SFT (Exp. 19) | 3/12 | 28/44 |
+| **multi-verbalization SFT** | **7/12** | 24/44 (collapses to all-C) |
 
-Training across verbalizations **improves transfer to an unseen framing**
-(6→9/12) and **undoes the abstract-set collapse** that single-phrasing SFT
-suffered (24→28/44, i.e. no longer worse than base). The gain is modest at this
-scale and a residual "over-predict *undefined*" artifact remains on controls, so
-the recommendation is to keep broadening training framings — but the direction
-confirms the fix: diversity of verbalization, not one, is what the mitigation
-needs.
+The honest, corrected picture is **split**:
+- **Transfer to a held-out *narrative* surface works.** Multi-verbalization SFT
+  (7/12) beats both base (5/12) and single-verbalization SFT (3/12) — training on
+  two narrative surfaces generalizes to a third, whereas one surface *hurts*
+  (memorization).
+- **Transfer to a structurally-different *abstract* framing does not.** Once the
+  abstract surface is truly held out, the multi-verbalization adapter collapses
+  to answering "undefined" everywhere (24/44, controls 0/20) — *worse* than base.
+  The earlier "24→28, collapse undone" result was an artifact of the abstract
+  framing being present in training.
+
+Takeaway: verbalization diversity in training buys transfer within a *family* of
+surfaces (narrative→narrative) but not across a large representational gap
+(narrative→abstract). The mitigation needs training framings that span the
+representational range it will be tested on — more surfaces, including abstract
+ones, not just more narrative themes.
 
 ## Related work (positioning)
 

@@ -30,11 +30,47 @@
   "naf-004::none": "A",
   "naf-004::closed_world": "A"
  },
+ "completion_tokens": {
+  "naf-042::stable": 26,
+  "naf-042::wfs": 26,
+  "naf-044::stable": 23,
+  "naf-044::wfs": 23,
+  "naf-046::stable": 38,
+  "naf-046::wfs": 38,
+  "naf-048::stable": 36,
+  "naf-048::wfs": 36,
+  "naf-050::stable": 34,
+  "naf-050::wfs": 34,
+  "naf-064::stable": 37,
+  "naf-064::wfs": 37,
+  "naf-000::wfs": 19,
+  "naf-001::wfs": 25,
+  "naf-002::wfs": 27,
+  "naf-003::wfs": 31,
+  "naf-004::wfs": 35,
+  "naf-005::wfs": 39,
+  "naf-000::none": 19,
+  "naf-000::closed_world": 19,
+  "naf-002::none": 27,
+  "naf-002::closed_world": 27,
+  "naf-004::none": 35,
+  "naf-004::closed_world": 35
+ },
  "translations": {
   "naf-042": {
    "text": "a_yes :- not b_yes.\nb_yes :- not a_yes.\nmotion_passes :- a_yes.\nQUERY: motion_passes",
    "ok": true,
    "query": "motion_passes"
+  },
+  "naf-050": {
+   "text": "n1_online :- not n2_online.\nn2_online :- not n1_online.\noutage_alert :- n1_online, n2_online.\nQUERY: outage_alert",
+   "ok": true,
+   "query": "outage_alert"
+  },
+  "naf-064": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\ns0 :- alice.\nheld :- s0.\nQUERY: held",
+   "ok": true,
+   "query": "held"
   },
   "naf-044": {
    "text": "alice :- not bob.\nbob :- not alice.\ns0 :- alice.\nmeeting :- s0.\nQUERY: meeting",
@@ -42,14 +78,9 @@
    "query": "meeting"
   },
   "naf-048": {
-   "text": "n1_online :- not n2_online.\nn2_online :- not n1_online.\nservice_avail :- n1_online.\nservice_avail :- n2_online.\nQUERY: service_avail",
+   "text": "n1_online :- not n2_online.\nn2_online :- not n1_online.\nservice_available :- n1_online.\nservice_available :- n2_online.\nQUERY: service_available",
    "ok": true,
-   "query": "service_avail"
-  },
-  "naf-050": {
-   "text": "online1 :- not online2.\nonline2 :- not online1.\noutage :- online1, online2.\nQUERY: outage",
-   "ok": true,
-   "query": "outage"
+   "query": "service_available"
   },
   "naf-046": {
    "text": "a_yes :- not b_yes.\nb_yes :- not a_yes.\ns0 :- a_yes.\ns1 :- s0.\nmotion_passes :- s1.\nQUERY: motion_passes",
@@ -61,33 +92,28 @@
    "ok": true,
    "query": "approved_x"
   },
-  "naf-064": {
-   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\ns0 :- alice.\nheld :- s0.\nQUERY: held",
-   "ok": true,
-   "query": "held"
-  },
   "naf-001": {
-   "text": "in_c1_x.\nflagged_x.\napproved_x :- in_c1_x, not flagged_x.\nQUERY: approved_x",
+   "text": "cat1(x).\nflagged(x).\napproved(x) :- cat1(x), not flagged(x).\nQUERY: approved(x)",
    "ok": true,
-   "query": "approved_x"
+   "query": "approved(x)"
   },
   "naf-002": {
-   "text": "c2_x.\nc1_x :- c2_x.\napproved_x :- c1_x, not flagged_x.\nQUERY: approved_x",
+   "text": "c2x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
    "ok": true,
-   "query": "approved_x"
+   "query": "approvedx"
   },
   "naf-004": {
    "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
    "ok": true,
    "query": "approvedx"
   },
-  "naf-003": {
-   "text": "c2x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nflaggedx.\nQUERY: approvedx",
+  "naf-005": {
+   "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nflaggedx.\nQUERY: approvedx",
    "ok": true,
    "query": "approvedx"
   },
-  "naf-005": {
-   "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nflaggedx.\nQUERY: approvedx",
+  "naf-003": {
+   "text": "c2x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nflaggedx.\nQUERY: approvedx",
    "ok": true,
    "query": "approvedx"
   }

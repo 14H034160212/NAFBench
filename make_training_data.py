@@ -1,5 +1,14 @@
 """Generate solver-certified training data for the mitigation arm.
 
+Disjointness caveat (audit finding #4): generate_dataset's structural grid is
+identical across seeds -- only cycle *themes* vary -- so a structurally-disjoint
+train pool is not available from this generator. The holdout here is therefore
+SURFACE-level (different theme draw + exact-prompt-string disjointness), and the
+single-framing SFT result (Exp 19) is accordingly a control for surface-theme
+memorization, NOT a cross-structure generalization claim. The genuine transfer
+claim lives in Exp 20 (make_sft_multi: trained on narrative themes 0,1, tested
+on held-out abstract framing + narrative theme 2 + a larger held-out size).
+
 Produces, from a TRAIN pool of programs disjoint (by exact prompt string) from
 the evaluation sets:
 

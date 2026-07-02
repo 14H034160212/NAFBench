@@ -34,16 +34,32 @@ tok = np.array([r[2] for r in R], float); y = np.array([r[4] for r in R], float)
 binm = np.array([[1.0 if r[3] == b else 0.0 for b in BINS[1:]] for r in R])
 def z(x): return (x - x.mean()) / (x.std() + 1e-9)
 print("\n=== standardized OLS (range up to 32) ===")
+rng = np.random.default_rng(0)
 for label, cols, names in [
     ("no length", [z(dep), z(ew)], ["z(depth)", "z(eff_width)"]),
     ("+length",   [z(dep), z(ew), z(tok)], ["z(depth)", "z(eff_width)", "z(tokens)"]),
 ]:
-    X = np.column_stack([np.ones(len(R))] + cols + [binm])
-    b, *_ = np.linalg.lstsq(X, y, rcond=None)
+    Xcols = cols
+    def fit(sel):
+        X = np.column_stack([np.ones(len(sel))] + [c[sel] for c in Xcols] + [binm[sel]])
+        b, *_ = np.linalg.lstsq(X, y[sel], rcond=None)
+        return b
+    allidx = np.arange(len(R))
+    b = fit(allidx)
     nm = ["intercept"] + names + [f"bin={x}" for x in BINS[1:]]
     print(f"  [{label}] " + "  ".join(f"{n}={v:+.3f}" for n, v in zip(nm, b)))
+    # audit #7: uncertainty on the eff_width-vs-depth verdict via bootstrap
+    # (one resample per iteration, used for BOTH coefficients).
+    diff_samples = []
+    for _ in range(1000):
+        bb = fit(rng.integers(0, len(R), len(R)))
+        diff_samples.append(abs(bb[2]) - abs(bb[1]))
+    diffs = np.sort(diff_samples)
+    dlo, dhi = diffs[int(.025*len(diffs))], diffs[int(.975*len(diffs))-1]
+    sig = "excludes 0" if (dlo > 0 or dhi < 0) else "includes 0 (NS)"
     print(f"     -> {'EFF_WIDTH' if abs(b[2])>abs(b[1]) else 'DEPTH'} stronger "
-          f"(|ew|={abs(b[2]):.3f} vs |d|={abs(b[1]):.3f})")
+          f"(|ew|={abs(b[2]):.3f} vs |d|={abs(b[1]):.3f}); "
+          f"|ew|-|d| 95% CI [{dlo:+.3f},{dhi:+.3f}] {sig}")
 
 print("\n=== per-condition accuracy (full panel) ===")
 for m in MM:

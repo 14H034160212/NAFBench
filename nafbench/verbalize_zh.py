@@ -19,7 +19,7 @@ CYCLE_ZH = {
     "network": dict(actors=["节点1", "节点2", "节点3", "节点4", "节点5", "节点6"], verb="在线",
                     trigger="服务可用", q_trigger="服务可用吗？",
                     conj_event="触发故障警报", q_conj="会触发故障警报吗？"),
-    "committee": dict(actors=["委员A", "委员B", "委员C", "委员D", "委员E", "委员F"], verb="投赞成票",
+    "committee": dict(actors=["委员1", "委员2", "委员3", "委员4", "委员5", "委员6"], verb="投赞成票",
                       trigger="动议通过", q_trigger="动议会通过吗？",
                       conj_event="记录僵局", q_conj="会记录僵局吗？"),
 }
@@ -103,7 +103,9 @@ def _cycle_gadget(prog):
         return "".join(lines), th["q_trigger"]
     if mode == "conj":
         conj = "且".join(f"{a}{v}" for a in actors)
-        lines.append(f"只有当{conj}时，才{th['conj_event']}。")
+        # 规则体是充分条件（q :- a0,...,ak-1），用“如果…就”，不用“只有当…才”
+        # （后者表达必要条件，会把程序语义反过来）。
+        lines.append(f"如果{conj}，就{th['conj_event']}。")
         return "".join(lines), th["q_conj"]
     raise ValueError(mode)
 

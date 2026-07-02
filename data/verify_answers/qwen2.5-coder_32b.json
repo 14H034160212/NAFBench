@@ -5,8 +5,8 @@
   "naf-044::wfs": "C",
   "naf-042::wfs": "C",
   "naf-046::wfs": "C",
-  "naf-048::wfs": "C",
   "naf-050::wfs": "C",
+  "naf-048::wfs": "C",
   "naf-064::wfs": "C",
   "naf-000::wfs": "C",
   "naf-001::wfs": "B",
@@ -14,5 +14,19 @@
   "naf-003::wfs": "B",
   "naf-004::wfs": "C",
   "naf-005::wfs": "B"
+ },
+ "completion_tokens": {
+  "naf-044::wfs": 254,
+  "naf-042::wfs": 277,
+  "naf-046::wfs": 449,
+  "naf-050::wfs": 276,
+  "naf-048::wfs": 308,
+  "naf-064::wfs": 261,
+  "naf-000::wfs": 208,
+  "naf-001::wfs": 227,
+  "naf-002::wfs": 264,
+  "naf-003::wfs": 268,
+  "naf-004::wfs": 336,
+  "naf-005::wfs": 264
  }
 }

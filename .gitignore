@@ -11,3 +11,8 @@ runs/
 # verbose raw model-output dumps (not needed to read results)
 *.raw.json
 .claude/
+
+# collaborator email drafts — never commit (per user)
+reply_to_agnieszka.md
+audit.md
+data/*.log

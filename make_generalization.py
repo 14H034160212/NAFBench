@@ -1,14 +1,15 @@
 """Generalization test (per A. Slusarz's memorization concern): does semantic-
 following transfer across verbalizations?
 
-Same certified programs, rendered in TWO different framings:
-  A = narrative  (nafbench/verbalize_v2: reviewers / audit / escalation)
-  B = abstract   (nafbench/verbalize_generic: 'proposition X is true if ...')
+Same certified programs, rendered in framings that are ALL held out of the
+multi-verbalization LoRA training (audit finding #4 -- training uses narrative
+themes 0,1 only):
+  A = narrative theme 2 (auditor)  -- a narrative surface NOT trained on
+  B = abstract  (nafbench/verbalize_generic: 'proposition X is true if ...')
 
-Framing B is deliberately unlike anything used for the few-shot exemplars or the
-LoRA training data, so B measures transfer, not memorized phrasing. We also test
-few-shot TRANSFER: a narrative exemplar (framing A) in front of an abstract
-(framing B) question.
+So both A and B measure genuine transfer, not memorized phrasing. We also test
+few-shot TRANSFER: a narrative exemplar in front of an abstract (framing B)
+question.
 """
 import json
 from nafbench.instances import build_by_effwidth
@@ -52,8 +53,8 @@ for b in BINS:
     li = label_info(cert["labels"])
     for c in CONDS:
         gold = VA.gold_for(cert["labels"], c)
-        pA = VA.build_prompt(prog, c, theme=0)          # narrative
-        pB = VB.build_prompt(prog, c)                   # abstract
+        pA = VA.build_prompt(prog, c, theme=2)          # narrative (held-out theme 2)
+        pB = VB.build_prompt(prog, c)                   # abstract (held-out framing)
         pBfs = EXEMPLAR[c] + "\n\nNow answer this one.\n\n" + pB
         for framing, prompt in [("A_narrative", pA), ("B_abstract", pB),
                                 ("B_abstract_fewshotA", pBfs)]:

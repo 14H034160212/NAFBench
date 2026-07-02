@@ -34,6 +34,12 @@ for m in sorted(models):
     r = rows(m)
     print(f"  {m:20s} overall {r[:,3].mean():.0%}  (n={len(r)})")
 
+# ceiling-saturated models add no gradient to the moderator OLS and are excluded
+# here to match analyze_v2_full / analyze_v3 / analyze_ext (audit #7: consistency).
+SAT = 0.92
+nonsat = [m for m in sorted(models) if rows(m)[:, 3].mean() < SAT]
+print(f"\nOLS pool (accuracy < {SAT:.0%}): {nonsat}")
+
 print("\n=== marginal accuracy vs DEPTH (avg over width) ===")
 for m in sorted(models):
     r = rows(m)
@@ -45,16 +51,32 @@ for m in sorted(models):
     line = "  ".join(f"w{int(w)}:{r[r[:,1]==w,3].mean():.0%}" for w in WIDTHS)
     print(f"  {m:20s} {line}")
 
-# pooled standardized OLS: correct ~ z(depth) + z(width)
-allr = np.vstack([rows(m) for m in models])
+# pooled standardized OLS: correct ~ z(depth) + z(width), over non-saturated models
+pool = nonsat or sorted(models)
+allr = np.vstack([rows(m) for m in pool])
 def z(x): return (x - x.mean()) / (x.std() + 1e-9)
-X = np.column_stack([np.ones(len(allr)), z(allr[:,0]), z(allr[:,1])])
-y = allr[:,3]
-beta, *_ = np.linalg.lstsq(X, y, rcond=None)
-print(f"\n=== pooled OLS  correct ~ b0 + b_depth*z(depth) + b_width*z(width) ===")
+def fit(r):
+    X = np.column_stack([np.ones(len(r)), z(r[:,0]), z(r[:,1])])
+    b, *_ = np.linalg.lstsq(X, r[:,3], rcond=None)
+    return b
+beta = fit(allr)
+print(f"\n=== pooled OLS  correct ~ b0 + b_depth*z(depth) + b_width*z(width) "
+      f"(n={len(allr)} items over {len(pool)} models) ===")
 print(f"  b_depth = {beta[1]:+.3f}   b_width = {beta[2]:+.3f}   "
       f"(more negative = stronger degradation)")
-print(f"  => stronger moderator: {'WIDTH' if abs(beta[2])>abs(beta[1]) else 'DEPTH'}")
+# audit #7: the width-vs-depth verdict needs uncertainty, not a bare point compare.
+rng = np.random.default_rng(0)
+diffs = []
+for _ in range(2000):
+    idx = rng.integers(0, len(allr), len(allr))
+    b = fit(allr[idx])
+    diffs.append(abs(b[2]) - abs(b[1]))   # |width| - |depth|
+diffs = np.sort(diffs)
+dlo, dhi = diffs[int(.025*len(diffs))], diffs[int(.975*len(diffs))-1]
+verdict = "WIDTH" if abs(beta[2]) > abs(beta[1]) else "DEPTH"
+sig = "excludes 0 (significant)" if (dlo > 0 or dhi < 0) else "includes 0 (NOT significant)"
+print(f"  => stronger moderator: {verdict}; |width|-|depth| = "
+      f"{abs(beta[2])-abs(beta[1]):+.3f}  95% CI [{dlo:+.3f}, {dhi:+.3f}] -> {sig}")
 # correlation with solver hardness
 cc = np.corrcoef(allr[:,2], allr[:,3])[0,1]
 print(f"  corr(correct, prolog_inferences) = {cc:+.3f}")

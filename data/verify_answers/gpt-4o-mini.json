@@ -2,17 +2,31 @@
  "model": "gpt-4o-mini",
  "provider": "openai",
  "answers": {
+  "naf-044::wfs": "C",
   "naf-048::wfs": "C",
   "naf-046::wfs": "C",
-  "naf-044::wfs": "C",
+  "naf-050::wfs": "C",
+  "naf-064::wfs": "C",
   "naf-042::wfs": "C",
   "naf-001::wfs": "B",
-  "naf-000::wfs": "C",
-  "naf-050::wfs": "C",
-  "naf-064::wfs": "A",
   "naf-003::wfs": "B",
-  "naf-002::wfs": "A",
+  "naf-002::wfs": "C",
+  "naf-000::wfs": "C",
   "naf-004::wfs": "C",
   "naf-005::wfs": "B"
+ },
+ "completion_tokens": {
+  "naf-044::wfs": 299,
+  "naf-048::wfs": 311,
+  "naf-046::wfs": 331,
+  "naf-050::wfs": 380,
+  "naf-064::wfs": 420,
+  "naf-042::wfs": 310,
+  "naf-001::wfs": 266,
+  "naf-003::wfs": 203,
+  "naf-002::wfs": 257,
+  "naf-000::wfs": 330,
+  "naf-004::wfs": 279,
+  "naf-005::wfs": 276
  }
 }

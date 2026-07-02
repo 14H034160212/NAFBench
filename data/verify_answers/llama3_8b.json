@@ -2,17 +2,31 @@
  "model": "llama3:8b",
  "provider": "ollama",
  "answers": {
-  "naf-042::wfs": "C",
-  "naf-046::wfs": "C",
   "naf-044::wfs": "C",
+  "naf-046::wfs": "C",
+  "naf-042::wfs": "C",
+  "naf-050::wfs": null,
   "naf-048::wfs": "C",
-  "naf-050::wfs": "C",
   "naf-064::wfs": "C",
-  "naf-001::wfs": "B",
   "naf-000::wfs": "A",
+  "naf-001::wfs": "B",
   "naf-002::wfs": "C",
-  "naf-003::wfs": "B",
-  "naf-004::wfs": "A",
+  "naf-004::wfs": "C",
+  "naf-003::wfs": "C",
   "naf-005::wfs": "B"
+ },
+ "completion_tokens": {
+  "naf-044::wfs": 243,
+  "naf-046::wfs": 283,
+  "naf-042::wfs": 358,
+  "naf-050::wfs": 310,
+  "naf-048::wfs": 374,
+  "naf-064::wfs": 394,
+  "naf-000::wfs": 223,
+  "naf-001::wfs": 202,
+  "naf-002::wfs": 310,
+  "naf-004::wfs": 273,
+  "naf-003::wfs": 355,
+  "naf-005::wfs": 289
  }
 }

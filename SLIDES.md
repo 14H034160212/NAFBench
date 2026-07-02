@@ -27,26 +27,33 @@ engines. No-stable-model case: skeptical = yes (vacuous), credulous = no.)*
 4. **Knobs:** depth · effective-width (cycle counted in) · #cycles
    (independent / coupled) · cycle length. Each record saves the program + #models.
 
-## Headline results  (95% CI, 3 sampling runs)
+## Headline results  (95% CI clustered by program, 3 sampling runs)
 - **Strong models obey; weak models lock into one answer.**
-  GPT-4.1 / GPT-5 ≈ 100% on credulous/skeptical/WFS; Llama3 almost always says "yes".
-- **Hard even for the best:** closed-world / non-termination → GPT-4.1 only **30%**.
+  GPT-4.1 / GPT-5 ≈ 100% on credulous/skeptical/WFS; Llama3 far lower.
+- **Hard even for the best:** closed-world / non-termination is the worst condition.
 - **Default-reversion** (proposal's key metric): when told a rulebook that clashes
-  with its default, GPT-4.1 reverts **18%**, Llama3 **68%** (CIs don't overlap).
-- **What drives difficulty = the *cycle type*, not size.** depth/width barely
-  matter (flat to 32); padding proves **length is inert, structure isn't**.
-- **Fixes that work:** translate-then-solve → ~100%; **one few-shot example
-  33%→89%**; solver-certified LoRA fine-tune **41%→89%**.
+  with its default, GPT-4.1 reverts **21%**, Llama3 **59%** (frontier reverts less).
+- **What drives difficulty = the *cycle type*, not size.** depth vs width is **not
+  significant** (bootstrap CI includes 0); the divergence bin dominates ~10–20×.
+  Padding proves **length is inert, structure isn't**.
+- **Fixes that work:** translate-then-solve → ~100%; **one few-shot example lifts
+  weak models double-digits**; solver-certified LoRA fine-tune **41%→91%** (in-dist).
 
 ## Done since the meeting
-- ✅ **Generalization** (different verbalization train vs test): frontier robust;
-  weak models swing 20–45 pts on rewording; **LoRA gain does *not* transfer to a
-  new framing** (memorization) — but few-shot does.
-- ✅ **Tokens *used*** now logged (not just the answer).
-- ✅ **Labels clarified** (brave=credulous, cautious=skeptical; clingo mapping).
-- ✅ **Related work** positioned vs arXiv 2502.01100 (ZebraLogic) & 2506.06941
-  (Illusion of Thinking): theirs is *size*-driven collapse, ours is *semantics*-driven.
+- ✅ **Independent audit** (Fable): fixed a conj "only if"→"if" prompt bug + a
+  Prolog loop-detection race; **regenerated all data (gold unchanged), re-ran all
+  models, retrained all adapters**; CIs now clustered by program.
+- ✅ **Generalization / transfer (honest holdout):** frontier verbalization-robust;
+  multi-verbalization LoRA transfers to a held-out *narrative* surface (beats base
+  & single-framing) but **collapses on a held-out *abstract* framing** — the
+  earlier "transfer solved" reading was an artifact of the test framing being in
+  training.
+- ✅ Adopted your **symmetric credulous/skeptical** prompt wording.
+- ✅ **Tokens *used*** now logged (not just the answer); labels clarified
+  (brave=credulous, cautious=skeptical); related work positioned vs ZebraLogic /
+  Illusion of Thinking (size-driven) — ours is semantics-driven.
 
 ## Open
-- Train the mitigation across **multiple verbalizations** (not one).
+- Broaden training framings to span the representational range (narrative **and**
+  abstract), not just more narrative themes.
 - Final wording sign-off + scale of the production run.

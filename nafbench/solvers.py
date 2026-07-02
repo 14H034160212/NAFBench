@@ -138,9 +138,16 @@ def prolog_query(prog: Program, query: str, timeout_s: float = 2.5) -> str:
     failure mode on negative cycles) and report it as LOOP.
     """
     program_text = prog.to_prolog()
-    # library(time) / call_with_time_limit is unavailable in some SWI builds,
-    # so we detect SLDNF non-termination with the OS-level subprocess timeout.
-    goal = "( {q} -> R = true ; R = false ), write(R), nl, halt.".format(q=query)
+    # library(time) / call_with_time_limit is unavailable in some SWI builds, so
+    # we detect SLDNF non-termination two ways: (a) the OS-level subprocess
+    # timeout for a quiet infinite loop, and (b) a catch/3 around the goal so a
+    # negative cycle that exhausts the Prolog stack is reported as LOOP rather
+    # than racing the timeout. Crucially, empty stdout / a nonzero exit is NOT
+    # treated as a confident FALSE (the old default silently flipped every
+    # stack-overflowing negative cycle to "false"): we return LOOP.
+    goal = ("catch( ( {q} -> R = true ; R = false ), "
+            "error(resource_error(_), _), R = loop ), "
+            "write(R), nl, halt.").format(q=query)
 
     with tempfile.NamedTemporaryFile("w", suffix=".pl", delete=False) as f:
         f.write(program_text + "\n")
@@ -152,9 +159,10 @@ def prolog_query(prog: Program, query: str, timeout_s: float = 2.5) -> str:
         )
         out = proc.stdout.strip().splitlines()
         if not out:
-            return FALSE
+            # no verdict written -> stack blow-up / crash before catch fired
+            return LOOP
         last = out[-1].strip()
-        return {"true": TRUE, "false": FALSE}.get(last, FALSE)
+        return {"true": TRUE, "false": FALSE, "loop": LOOP}.get(last, LOOP)
     except subprocess.TimeoutExpired:
         return LOOP
     finally:
@@ -239,8 +247,11 @@ def prolog_query_metrics(prog: Program, query: str, timeout_s: float = 2.5):
     resolving the query -- the operational analogue of solver hardness.
     """
     program_text = prog.to_prolog()
+    # catch a stack-exhausting negative cycle as loop (see prolog_query); on a
+    # loop we have no inference count, so report None.
     goal = ("statistics(inferences, I0), "
-            "( {q} -> R = t ; R = f ), "
+            "catch( ( {q} -> R = t ; R = f ), "
+            "error(resource_error(_), _), R = loop ), "
             "statistics(inferences, I1), Inf is I1 - I0, "
             "format('~w ~w~n', [R, Inf]), halt.").format(q=query)
     with tempfile.NamedTemporaryFile("w", suffix=".pl", delete=False) as f:
@@ -253,9 +264,10 @@ def prolog_query_metrics(prog: Program, query: str, timeout_s: float = 2.5):
         )
         out = proc.stdout.strip().splitlines()
         if not out:
-            return "F", None
+            # no verdict written -> stack blow-up / crash before catch fired
+            return "loop", None
         parts = out[-1].split()
-        label = {"t": "T", "f": "F"}.get(parts[0], "F")
+        label = {"t": "T", "f": "F", "loop": "loop"}.get(parts[0], "loop")
         inf = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else None
         return label, inf
     except subprocess.TimeoutExpired:

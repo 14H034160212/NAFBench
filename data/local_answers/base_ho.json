@@ -6,14 +6,28 @@
   "ho-control-cred::cred": "A",
   "ho-control-skept::skept": "A",
   "ho-control-wfs::wfs": "A",
-  "ho-even_one_sided-cred::cred": "B",
+  "ho-even_one_sided-cred::cred": "A",
   "ho-even_one_sided-skept::skept": null,
-  "ho-even_one_sided-wfs::wfs": "B",
-  "ho-odd-cred::cred": "B",
+  "ho-even_one_sided-wfs::wfs": "C",
+  "ho-odd-cred::cred": null,
   "ho-odd-skept::skept": "B",
-  "ho-odd-wfs::wfs": "C",
+  "ho-odd-wfs::wfs": null,
   "ho-even_both_sided-cred::cred": "B",
   "ho-even_both_sided-skept::skept": "B",
-  "ho-even_both_sided-wfs::wfs": "C"
+  "ho-even_both_sided-wfs::wfs": null
+ },
+ "completion_tokens": {
+  "ho-control-cred::cred": 469,
+  "ho-control-skept::skept": 416,
+  "ho-control-wfs::wfs": 416,
+  "ho-even_one_sided-cred::cred": 554,
+  "ho-even_one_sided-skept::skept": 600,
+  "ho-even_one_sided-wfs::wfs": 400,
+  "ho-odd-cred::cred": 600,
+  "ho-odd-skept::skept": 521,
+  "ho-odd-wfs::wfs": 600,
+  "ho-even_both_sided-cred::cred": 359,
+  "ho-even_both_sided-skept::skept": 333,
+  "ho-even_both_sided-wfs::wfs": 600
  }
 }

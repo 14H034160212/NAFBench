@@ -38,12 +38,14 @@ SEMANTICS_INSTRUCTIONS = {
         "Consider every self-consistent scenario that is exactly justified by the "
         "rules (an 'answer set'). Answer 'Definitely yes' if the queried statement "
         "holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in "
-        "NONE."),
+        "NONE. If there are NO self-consistent scenarios at all, answer "
+        "'Definitely no'."),
     "skept": (
         "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) "
-        "reasoning. Answer 'Definitely yes' only if the queried statement holds in "
-        "EVERY self-consistent scenario (answer set), and 'Definitely no' if there "
-        "is even one scenario where it fails. If there are NO self-consistent "
+        "reasoning. Consider every self-consistent scenario that is exactly "
+        "justified by the rules (an 'answer set'). Answer 'Definitely yes' only if "
+        "the queried statement holds in EVERY such scenario, and 'Definitely no' if "
+        "there is even one scenario where it fails. If there are NO self-consistent "
         "scenarios at all, the statement counts as holding in every scenario "
         "(answer 'Definitely yes')."),
     "wfs": (
@@ -59,17 +61,17 @@ SEMANTICS_INSTRUCTIONS = {
 THEMES_V2 = [
     dict(actor="reviewer", verb="signs off", notverb="does not sign off",
          warranted="the escalation is WARRANTED",
-         audit="the audit is COMPLETE", clA="checklist A passes", clB="checklist B passes",
+         audit="the audit is COMPLETE", clA="checklist 1 passes", clB="checklist 2 passes",
          item="item", form="form", stage="stage", query="the case is ESCALATED",
          qword="Is the case ESCALATED?"),
     dict(actor="sensor", verb="is active", notverb="is not active",
          warranted="the alarm condition HOLDS",
-         audit="the self-test PASSES", clA="diagnostic A passes", clB="diagnostic B passes",
+         audit="the self-test PASSES", clA="diagnostic 1 passes", clB="diagnostic 2 passes",
          item="signal", form="channel", stage="relay", query="the ALARM is raised",
          qword="Is the ALARM raised?"),
     dict(actor="auditor", verb="approves", notverb="does not approve",
          warranted="the override is JUSTIFIED",
-         audit="the paperwork is IN ORDER", clA="file A is clear", clB="file B is clear",
+         audit="the paperwork is IN ORDER", clA="file 1 is clear", clB="file 2 is clear",
          item="document", form="record", stage="tier", query="the override is GRANTED",
          qword="Is the override GRANTED?"),
 ]
@@ -77,7 +79,7 @@ _ORD = ["0", "1", "2", "3", "4", "5", "6"]
 
 
 def _cap(s: str) -> str:
-    """Capitalize only the first character (preserve intentional CAPS / 'A','B')."""
+    """Capitalize only the first character (preserve intentional CAPS)."""
     return s[:1].upper() + s[1:]
 
 
@@ -148,6 +150,9 @@ def build_prompt(prog: Program, semantics: str, theme: int = 0,
         # target token count -> length-match an easy instance to a hard one,
         # separating structure from sheer length (A. Slusarz's confound concern).
         from . import metrics as MET
+        if MET.length_metrics("probe")["tokens"] is None:
+            raise RuntimeError("pad_to_tokens requires tiktoken (pip install "
+                               "tiktoken); token counting is unavailable.")
         extra, i = [], 0
         while MET.length_metrics(_assemble(instr, rules, qword))["tokens"] < pad_to_tokens:
             extra.append(f"For reference, archived note {i} concerns an unrelated "

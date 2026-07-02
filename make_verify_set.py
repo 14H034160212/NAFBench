@@ -31,6 +31,11 @@ for e in json.load(open("data/eval_set.json")):
     if not e["task_id"].endswith("::wfs"):
         continue
     prompt = e["prompt"].replace(OLD_TAIL, SCAFFOLD)
+    # guard: the substitution must actually happen, else the self-verify prompt
+    # is byte-identical to 'direct' and the condition reads as a null result.
+    assert OLD_TAIL in e["prompt"], (
+        f"OLD_TAIL not found in {e['task_id']}; verify-set scaffold not applied "
+        f"(is this a v2-style set with a different tail?)")
     items.append({**{k: e[k] for k in ("task_id", "rec_id", "cond", "family",
                                        "divergent", "gold", "certified")},
                   "method": "self_verify", "prompt": prompt})
