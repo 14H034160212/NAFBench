@@ -451,6 +451,28 @@ it does not transfer and even hurts — the adapter over-learned to emit "undefi
 the mitigation must be trained *across* verbalizations, not one. (The prompt-only
 fixes behave better — Exp. 18 shows few-shot transfers across framings.)
 
+## Experiment 20 — training across verbalizations improves transfer
+
+Direct follow-up to Exp. 19: instead of one phrasing, the SFT data now renders
+each certified (program, condition) in **three framings** — two narrative
+surfaces + the abstract one — with a framing-agnostic certified rationale
+(`make_sft_multi.py`, 192 examples). We then test on a framing **held out of
+training** (a third narrative theme) and on the abstract set.
+
+| Gemma-3-4B-it | unseen framing (theme-2, 12) | abstract set (44) |
+|---|---|---|
+| base | 6/12 | 30/44 |
+| single-verbalization SFT (Exp. 19) | 8/12 | 24/44 (collapsed) |
+| **multi-verbalization SFT** | **9/12** | **28/44** (divergent 24/24) |
+
+Training across verbalizations **improves transfer to an unseen framing**
+(6→9/12) and **undoes the abstract-set collapse** that single-phrasing SFT
+suffered (24→28/44, i.e. no longer worse than base). The gain is modest at this
+scale and a residual "over-predict *undefined*" artifact remains on controls, so
+the recommendation is to keep broadening training framings — but the direction
+confirms the fix: diversity of verbalization, not one, is what the mitigation
+needs.
+
 ## Related work (positioning)
 
 Two recent papers study reasoning failure as a function of **raw complexity**:
