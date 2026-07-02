@@ -403,6 +403,11 @@ A balanced set with Wilson intervals shows:
 - GPT-4.1 reversion 18% [10–29]; Llama3 68% [57–78].
 - closed-world is the hardest condition even for GPT-4.1.
 
+**Token cost** (completion tokens per item, mean on this set; the harness now
+logs tokens *used*, not just the answer): GPT-5 **2547** (reasoning overhead),
+GPT-4.1 709, GPT-4o-mini 485, Qwen 484, Llama3 354 — closed-world costs the most
+across models.
+
 ## Experiment 18 — generalization across verbalization (memorization check)
 
 Per the UK team's concern that testing on the *same* phrasing used for training
