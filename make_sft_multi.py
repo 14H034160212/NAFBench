@@ -1,15 +1,21 @@
 """Multi-verbalization SFT data (fixes Exp 19's memorization).
 
-Same solver-certified programs, each (program, condition) rendered in MULTIPLE
-framings (two narrative surfaces + abstract), with a framing-AGNOSTIC certified
+Same solver-certified programs, each (program, condition) rendered in the TWO
+NARRATIVE surfaces (v2 themes 0 and 1), with a framing-AGNOSTIC certified
 chain-of-thought. Trained this way, the model should learn the semantics rather
-than one phrasing. Held-out test uses a framing NOT in training (Exp 20).
+than one phrasing.
+
+Genuine held-out test (Exp 20), audit finding #4 -- the test framings are NOT
+in training:
+  * abstract 'generic' framing (verbalize_generic) -- never trained here;
+  * narrative theme 2 (auditor) -- themes 0,1 trained, theme 2 held out;
+and TRAIN sizes (depth 2,4 / ew 4,6) are disjoint from the TEST size (depth 8 /
+ew 8). So transfer is measured across BOTH surface and size, not memorized.
 """
 import json, os
 from nafbench.instances import build_by_effwidth, BIN_SIGNATURE
 from nafbench import solvers as S
 from nafbench import verbalize_v2 as VA
-from nafbench import verbalize_generic as VB
 from run_eval import parse_answer
 
 SYSTEM = ("You are a careful reasoning test subject. Solve the problem using only "
@@ -49,10 +55,11 @@ def cot(bin_name, cond, gold):
             "not skeptically (no).\nANSWER: B")
 
 
-# training framings: two narrative surfaces (v2 themes 0,1) + abstract (generic)
+# training framings: the TWO narrative surfaces only (v2 themes 0,1). The
+# abstract 'generic' framing and narrative theme 2 are deliberately withheld so
+# Exp 20 measures genuine cross-verbalization transfer (audit #4).
 FRAMINGS = [("v2t0", lambda p, c: VA.build_prompt(p, c, theme=0)),
-            ("v2t1", lambda p, c: VA.build_prompt(p, c, theme=1)),
-            ("generic", lambda p, c: VB.build_prompt(p, c))]
+            ("v2t1", lambda p, c: VA.build_prompt(p, c, theme=1))]
 
 os.makedirs("data/train", exist_ok=True)
 rows = []

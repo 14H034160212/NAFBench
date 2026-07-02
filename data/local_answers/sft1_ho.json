@@ -3,17 +3,31 @@
  "adapter": "runs/sft",
  "tag": "sft1_ho",
  "answers": {
-  "ho-control-cred::cred": "A",
-  "ho-control-skept::skept": "A",
-  "ho-control-wfs::wfs": "C",
+  "ho-control-cred::cred": "C",
+  "ho-control-skept::skept": "B",
+  "ho-control-wfs::wfs": "A",
   "ho-even_one_sided-cred::cred": "A",
   "ho-even_one_sided-skept::skept": "B",
-  "ho-even_one_sided-wfs::wfs": "C",
+  "ho-even_one_sided-wfs::wfs": "A",
   "ho-odd-cred::cred": "A",
-  "ho-odd-skept::skept": "C",
-  "ho-odd-wfs::wfs": "C",
-  "ho-even_both_sided-cred::cred": "C",
-  "ho-even_both_sided-skept::skept": "A",
-  "ho-even_both_sided-wfs::wfs": "C"
+  "ho-odd-skept::skept": "B",
+  "ho-odd-wfs::wfs": "A",
+  "ho-even_both_sided-cred::cred": "B",
+  "ho-even_both_sided-skept::skept": "B",
+  "ho-even_both_sided-wfs::wfs": "A"
+ },
+ "completion_tokens": {
+  "ho-control-cred::cred": 80,
+  "ho-control-skept::skept": 38,
+  "ho-control-wfs::wfs": 40,
+  "ho-even_one_sided-cred::cred": 57,
+  "ho-even_one_sided-skept::skept": 38,
+  "ho-even_one_sided-wfs::wfs": 43,
+  "ho-odd-cred::cred": 61,
+  "ho-odd-skept::skept": 38,
+  "ho-odd-wfs::wfs": 43,
+  "ho-even_both_sided-cred::cred": 64,
+  "ho-even_both_sided-skept::skept": 38,
+  "ho-even_both_sided-wfs::wfs": 67
  }
 }

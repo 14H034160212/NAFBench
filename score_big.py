@@ -1,26 +1,25 @@
-"""Score the 44-item WFS set with 95% Wilson confidence intervals.
+"""Score the 44-item WFS set with 95% CIs CLUSTERED BY PROGRAM.
 
-Reports overall WFS accuracy and the divergent / control breakdown, with error
-bars, addressing the small-sample caveat of the 12-prompt headline.
+Audit finding #3: the 44 prompts are theme-replicates of ~11 distinct program
+structures, so a prompt-level Wilson interval pseudoreplicates. We bootstrap
+over structures instead (nafbench.clusterstats).
 """
 import json
 import glob
-import math
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from nafbench.clusterstats import cluster_bootstrap_ci
 
 items = {e["task_id"]: e for e in json.load(open("data/wfs_big.json"))}
+THEMES = ("meeting", "panel", "network", "committee")
 
 
-def wilson(k, n, z=1.96):
-    if n == 0:
-        return 0, 0, 0
-    p = k / n
-    d = 1 + z * z / n
-    c = (p + z * z / (2 * n)) / d
-    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
-    return p, max(0, c - h), min(1, c + h)
+def structure_of(task_id):
+    """Cluster key: task_id minus '::cond' and the trailing theme token."""
+    base = task_id.split("::", 1)[0]
+    parts = base.rsplit("-", 1)
+    return parts[0] if len(parts) == 2 and parts[1] in THEMES else base
 
 
 rows = []
@@ -30,32 +29,38 @@ for f in glob.glob("data/big_answers/*.json"):
     d = json.load(open(f))
     a = d["answers"]
     allt = [t for t in items if t in a]
-    k = sum(a[t] == items[t]["gold"] for t in allt)
-    div = [t for t in allt if items[t]["kind"] == "divergent"]
-    ctl = [t for t in allt if items[t]["kind"] == "control"]
-    kd = sum(a[t] == items[t]["gold"] for t in div)
-    kc = sum(a[t] == items[t]["gold"] for t in ctl)
-    rows.append((d["model"], k, len(allt), kd, len(div), kc, len(ctl)))
+    by_prog, by_prog_div, by_prog_ctl = {}, {}, {}
+    for t in allt:
+        s = structure_of(t)
+        outcome = int(a[t] == items[t]["gold"])
+        by_prog.setdefault(s, []).append(outcome)
+        (by_prog_div if items[t]["kind"] == "divergent" else by_prog_ctl).setdefault(s, []).append(outcome)
+    p, lo, hi, k, n, npr = cluster_bootstrap_ci(by_prog)
+    _, _, _, kd, nd, _ = cluster_bootstrap_ci(by_prog_div)
+    _, _, _, kc, nc, _ = cluster_bootstrap_ci(by_prog_ctl)
+    rows.append((d["model"], p, lo, hi, k, n, npr, kd, nd, kc, nc))
 
-rows.sort(key=lambda r: r[1] / r[2])
-print(f"{'model':22s} overall(95% CI)        divergent      control")
-for m, k, n, kd, nd, kc, nc in rows:
-    p, lo, hi = wilson(k, n)
-    print(f"{m:22s} {k}/{n} {p:.0%} [{lo:.0%},{hi:.0%}]   {kd}/{nd} {kd/nd:.0%}   {kc}/{nc} {kc/nc:.0%}")
+rows.sort(key=lambda r: r[1])
+print(f"{'model':22s} overall (95% CI, clustered)     divergent      control")
+for m, p, lo, hi, k, n, npr, kd, nd, kc, nc in rows:
+    dv = f"{kd}/{nd} {kd/nd:.0%}" if nd else "--"
+    cv = f"{kc}/{nc} {kc/nc:.0%}" if nc else "--"
+    print(f"{m:22s} {k}/{n} {p:.0%} [{lo:.0%},{hi:.0%}] ({npr}p)   {dv}   {cv}")
 
-# plot overall accuracy with Wilson CIs
+# plot overall accuracy with program-clustered CIs
 labels = [r[0] for r in rows]
-ps = [r[1] / r[2] for r in rows]
-errs = [wilson(r[1], r[2]) for r in rows]
-lo = [p - e[1] for p, e in zip(ps, errs)]
-hi = [e[2] - p for p, e in zip(ps, errs)]
+ps = [r[1] for r in rows]
+lo = [r[1] - r[2] for r in rows]
+hi = [r[3] - r[1] for r in rows]
+n_struct = rows[0][6] if rows else 0
 fig, ax = plt.subplots(figsize=(10, 5.2))
 ax.bar(range(len(labels)), ps, yerr=[lo, hi], capsize=5, color="#4c72b0")
 ax.set_xticks(range(len(labels))); ax.set_xticklabels(labels, rotation=20, ha="right")
-ax.set_ylim(0, 1.08); ax.set_ylabel("WFS accuracy (44 prompts) ± 95% Wilson CI")
+ax.set_ylim(0, 1.08); ax.set_ylabel("WFS accuracy (44 prompts) ± 95% CI (clustered)")
 ax.axhline(24 / 44, ls="--", color="gray", lw=1)
 ax.text(0, 24 / 44 + 0.01, "always-C baseline (24/44)", color="gray", fontsize=8)
-ax.set_title("Scaled WFS evaluation with confidence intervals (44 prompts: 24 divergent + 20 control)")
+ax.set_title(f"Scaled WFS evaluation, 95% CI clustered by program "
+             f"({n_struct} structures x 4 themes = 44 prompts)")
 plt.tight_layout()
 plt.savefig("data/wfs_big_ci.png", dpi=130)
 print("\nSaved -> data/wfs_big_ci.png")

@@ -60,10 +60,12 @@ def ask_translation(client, model, prompt):
                     messages=[{"role": "system", "content": TRANSLATE_SYS},
                               {"role": "user", "content": prompt}],
                     temperature=0, max_tokens=2048)
-            return r.choices[0].message.content
+            usage = getattr(r, "usage", None)
+            ctoks = getattr(usage, "completion_tokens", None) if usage else None
+            return r.choices[0].message.content, ctoks
         except Exception as e:  # noqa
             if attempt == 2:
-                return f"<error: {e}>"
+                return f"<error: {e}>", None
             time.sleep(2 * (attempt + 1))
 
 
@@ -108,20 +110,22 @@ def main():
         client = OpenAI(base_url=base_url, api_key=api_key)
         print(f"=== translate-then-solve {model} ({len(progs)} programs) ===", flush=True)
         translations = {}
+        rec_completion_tokens = {}
 
         def do(rid_rec):
             rid, rec = rid_rec
-            txt = ask_translation(client, model,
-                                  translate_prompt(rec["premises_nl"], rec["query_nl"]))
+            txt, ctoks = ask_translation(client, model,
+                                         translate_prompt(rec["premises_nl"], rec["query_nl"]))
             prog, q = parse_program(txt)
-            return rid, txt, prog, q
+            return rid, txt, prog, q, ctoks
 
         parsed_ok = 0
         with ThreadPoolExecutor(max_workers=args.workers) as ex:
             futs = [ex.submit(do, item) for item in progs.items()]
             for f in as_completed(futs):
-                rid, txt, prog, q = f.result()
+                rid, txt, prog, q, ctoks = f.result()
                 translations[rid] = {"text": txt, "ok": prog is not None, "query": q}
+                rec_completion_tokens[rid] = ctoks
                 if prog is not None:
                     parsed_ok += 1
                     translations[rid]["program"] = prog
@@ -129,21 +133,25 @@ def main():
 
         # score every eval task with the solver applied to the translated program
         answers = {}
+        completion_tokens = {}
         for e in eval_items:
             tr = translations.get(e["rec_id"])
             if not tr or not tr["ok"]:
                 answers[e["task_id"]] = None
+                completion_tokens[e["task_id"]] = rec_completion_tokens.get(e["rec_id"])
                 continue
             try:
                 answers[e["task_id"]] = solve_label(tr["program"], tr["query"], e["cond"])
             except Exception:  # noqa
                 answers[e["task_id"]] = None
+            completion_tokens[e["task_id"]] = rec_completion_tokens.get(e["rec_id"])
 
         safe = model.replace("/", "_").replace(":", "_")
         out = {"model": model, "provider": args.provider,
                "method": "translate_then_solve",
                "parsed_ok": parsed_ok, "n_programs": len(progs),
                "answers": answers,
+               "completion_tokens": completion_tokens,
                "translations": {k: {"text": v["text"], "ok": v["ok"], "query": v["query"]}
                                 for k, v in translations.items()}}
         json.dump(out, open(f"data/t2s_answers/{safe}.json", "w"), indent=1)

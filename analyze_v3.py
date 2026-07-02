@@ -21,10 +21,10 @@ def bal(m):
             g.setdefault((e["divergence_bin"], e["cond"]), []).append(ok(m, e))
     return np.mean([np.mean(v) for v in g.values()])
 
-print("=== accuracy (excl. no-instruction) ===")
+print(f"=== accuracy (excl. no-instruction); coverage n of {len(scored)} scored ===")
 for m in MM:
     r = [ok(m, e) for e in scored if e["task_id"] in models[m]]
-    print(f"  {m:20s} raw {np.mean(r):.0%}   balanced {bal(m):.0%}")
+    print(f"  {m:20s} raw {np.mean(r):.0%}   balanced {bal(m):.0%}   (n={len(r)}/{len(scored)})")
 
 def design(ms):
     rows = []

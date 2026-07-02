@@ -30,10 +30,11 @@ def balanced_acc(model):
         groups.setdefault((e["divergence_bin"], e["cond"]), []).append(a[t] == e["gold"])
     return np.mean([np.mean(v) for v in groups.values()])
 
-print("=== overall / balanced accuracy (324 prompts) ===")
+N_TOTAL = len(ev)
+print(f"=== overall / balanced accuracy ({N_TOTAL} prompts; coverage n reported) ===")
 for m in sorted(models):
     r = np.array([x[-1] for x in recs(m)], float)
-    print(f"  {m:20s} raw {r.mean():.0%}   balanced {balanced_acc(m):.0%}")
+    print(f"  {m:20s} raw {r.mean():.0%}   balanced {balanced_acc(m):.0%}   (n={len(r)}/{N_TOTAL})")
 
 print("\n=== per (bin, condition) accuracy — does the model FOLLOW that semantics? ===")
 hdr = "  ".join(f"{b[:5]}/{c[:2]}" for b in BINS for c in CONDS)

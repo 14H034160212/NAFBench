@@ -30,6 +30,32 @@
   "naf-004::none": "B",
   "naf-004::closed_world": "B"
  },
+ "completion_tokens": {
+  "naf-042::stable": 18,
+  "naf-042::wfs": 18,
+  "naf-044::stable": 24,
+  "naf-044::wfs": 24,
+  "naf-046::stable": 30,
+  "naf-046::wfs": 30,
+  "naf-048::stable": 28,
+  "naf-048::wfs": 28,
+  "naf-050::stable": 27,
+  "naf-050::wfs": 27,
+  "naf-064::stable": 38,
+  "naf-064::wfs": 38,
+  "naf-000::wfs": 14,
+  "naf-001::wfs": 22,
+  "naf-002::wfs": 23,
+  "naf-003::wfs": 28,
+  "naf-004::wfs": 29,
+  "naf-005::wfs": 34,
+  "naf-000::none": 14,
+  "naf-000::closed_world": 14,
+  "naf-002::none": 23,
+  "naf-002::closed_world": 23,
+  "naf-004::none": 29,
+  "naf-004::closed_world": 29
+ },
  "translations": {
   "naf-042": {
    "text": "a :- not b.\nb :- not a.\npass :- a.\nQUERY: pass",

@@ -115,7 +115,9 @@ def _cycle_gadget(prog: Program):
 
     if mode == "conj":
         conj = " and ".join(f"{a} {verb}" for a in actors)
-        lines.append(f"{th['conj_event'].capitalize()} only if {conj}.")
+        # body is SUFFICIENT for the head (q :- a0,...,ak-1): render as "if",
+        # not "only if" (which would assert necessity and invert the program).
+        lines.append(f"{th['conj_event'].capitalize()} if {conj}.")
         return " ".join(lines), th["q_conj"]
 
     raise ValueError(mode)

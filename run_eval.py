@@ -20,23 +20,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from openai import OpenAI
 
-ANSWER_RE = re.compile(r"ANSWER:\s*([ABC])", re.IGNORECASE)
+from nafbench.answer import parse_answer  # canonical parser (single source of truth)
+
 SYSTEM = ("You are a careful reasoning test subject. Solve the problem using "
           "only your own reasoning. Do not use external tools. Reason step by "
           "step, then end with exactly one line 'ANSWER: X' where X is A, B, or C.")
-
-
-def parse_answer(text: str):
-    if text is None:
-        return None
-    # drop <think>...</think> (deepseek-r1) so we read the post-thought answer
-    visible = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
-    cands = ANSWER_RE.findall(visible) or ANSWER_RE.findall(text)
-    if cands:
-        return cands[-1].upper()
-    # fallback: last standalone A/B/C token
-    toks = re.findall(r"\b([ABC])\b", visible)
-    return toks[-1].upper() if toks else None
 
 
 def _is_reasoning(model):

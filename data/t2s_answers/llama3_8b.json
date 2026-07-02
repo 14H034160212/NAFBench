@@ -30,6 +30,32 @@
   "naf-004::none": "B",
   "naf-004::closed_world": "B"
  },
+ "completion_tokens": {
+  "naf-042::stable": 17,
+  "naf-042::wfs": 17,
+  "naf-044::stable": 47,
+  "naf-044::wfs": 47,
+  "naf-046::stable": 36,
+  "naf-046::wfs": 36,
+  "naf-048::stable": 37,
+  "naf-048::wfs": 37,
+  "naf-050::stable": 38,
+  "naf-050::wfs": 38,
+  "naf-064::stable": 43,
+  "naf-064::wfs": 43,
+  "naf-000::wfs": 28,
+  "naf-001::wfs": 24,
+  "naf-002::wfs": 33,
+  "naf-003::wfs": 38,
+  "naf-004::wfs": 46,
+  "naf-005::wfs": 54,
+  "naf-000::none": 28,
+  "naf-000::closed_world": 28,
+  "naf-002::none": 33,
+  "naf-002::closed_world": 33,
+  "naf-004::none": 46,
+  "naf-004::closed_world": 46
+ },
  "translations": {
   "naf-042": {
    "text": "fact.\na :- not b.\nb :- not a.\npass :- a.",
@@ -51,15 +77,15 @@
    "ok": true,
    "query": "available"
   },
-  "naf-000": {
-   "text": "fact.\nin_category_c1(x).\napproved_in_c1 :- not flagged, fact.\nQUERY: approved(x).",
-   "ok": true,
-   "query": "approved(x)"
-  },
   "naf-050": {
-   "text": "fact.\nonline_1 :- not online_2.\nonline_2 :- not online_1.\noutage_alert :- online_1, online_2, not outage_alert.\nQUERY: outage_alert.",
+   "text": "fact.\nonline_1 :- not online_2.\nonline_2 :- not online_1.\noutage_alert :- online_1, online_2.\nQUERY: outage_alert.",
    "ok": true,
    "query": "outage_alert"
+  },
+  "naf-000": {
+   "text": "fact.\nin_category_c1(x).\napproved_in_c1 :- not flagged, in_category_c1(x).\nQUERY: approved(x).",
+   "ok": true,
+   "query": "approved(x)"
   },
   "naf-064": {
    "text": "fact.\nalice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\nstep_s0 :- alice.\nmeeting :- step_s0.\nQUERY: meeting.",
@@ -67,29 +93,29 @@
    "query": "meeting"
   },
   "naf-001": {
-   "text": "fact.\nin_c1(x).\napproved_in_c1 :- not flagged.\nflagged.\nQUERY: approved(x).",
+   "text": "fact.\nin_c1 :- .\napproved_in_c1 :- not flagged.\nflagged.\nQUERY: approved(X).",
    "ok": true,
    "query": "approved(x)"
   },
   "naf-002": {
-   "text": "fact.\nin_c2(x).\nin_c1 :- in_c2(_), not flagged.\nAPPROVED :- in_c1, not flagged.\nQUERY: APPROVED(x).",
+   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, in_c2.\nAPPROVED :- in_c1.\nQUERY: APPROVED(X).",
    "ok": true,
-   "query": "APPROVED(x)"
+   "query": "approved(x)"
   },
   "naf-003": {
-   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, approved.\nin_c1 :- flagged.\napproved :- in_c2.\nQUERY: approved(X).",
+   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, in_c2.\nin_c1 :- flagged, not approved.\napproved :- not flagged.\nQUERY: approved(x).",
    "ok": true,
-   "query": "approved(X)"
+   "query": "approved(x)"
   },
   "naf-004": {
    "text": "fact.\nin_c3 :- .\nin_c2 :- not in_c3.\nin_c1 :- not in_c2.\nin_c3.\nin_c1 :- in_c2, not flagged.\nQUERY: approved(X).",
    "ok": true,
-   "query": "approved(X)"
+   "query": "approved(x)"
   },
   "naf-005": {
-   "text": "fact.\nin_c3 :- .\nin_c2 :- in_c3, not flagged.\nin_c1 :- in_c2, not flagged.\nin_c3.\nflagged.\nQUERY: approved(X).",
+   "text": "fact.\nin_c3 :- .\nin_c2 :- not in_c3.\nin_c1 :- not in_c2.\nin_c3.\nflagged.\napproved_in_c1 :- not flagged, not in_c2.\nQUERY: approved_in_c1(X).",
    "ok": true,
-   "query": "approved(X)"
+   "query": "approved_in_c1(x)"
   }
  }
 }
