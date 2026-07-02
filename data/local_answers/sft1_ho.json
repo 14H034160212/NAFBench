@@ -1,0 +1,19 @@
+{
+ "model": "google/gemma-3-4b-it",
+ "adapter": "runs/sft",
+ "tag": "sft1_ho",
+ "answers": {
+  "ho-control-cred::cred": "A",
+  "ho-control-skept::skept": "A",
+  "ho-control-wfs::wfs": "C",
+  "ho-even_one_sided-cred::cred": "A",
+  "ho-even_one_sided-skept::skept": "B",
+  "ho-even_one_sided-wfs::wfs": "C",
+  "ho-odd-cred::cred": "A",
+  "ho-odd-skept::skept": "C",
+  "ho-odd-wfs::wfs": "C",
+  "ho-even_both_sided-cred::cred": "C",
+  "ho-even_both_sided-skept::skept": "A",
+  "ho-even_both_sided-wfs::wfs": "C"
+ }
+}
