@@ -23,6 +23,7 @@ model.eval()
 
 items = json.load(open(args.set))
 ans = {}
+ctokens = {}
 for e in items:
     msgs = [{"role": "user", "content": e["prompt"]}]
     enc = tok.apply_chat_template(msgs, add_generation_prompt=True,
@@ -34,9 +35,11 @@ for e in items:
                              pad_token_id=tok.eos_token_id)
     txt = tok.decode(out[0, plen:], skip_special_tokens=True)
     ans[e["task_id"]] = parse_answer(txt)
+    ctokens[e["task_id"]] = int(out.shape[1] - plen)   # generated (completion) tokens
 
 os.makedirs("data/local_answers", exist_ok=True)
-json.dump({"model": args.model, "adapter": args.adapter, "tag": args.tag, "answers": ans},
+json.dump({"model": args.model, "adapter": args.adapter, "tag": args.tag,
+           "answers": ans, "completion_tokens": ctokens},
           open(f"data/local_answers/{args.tag}.json", "w"), indent=1)
 
 # score
