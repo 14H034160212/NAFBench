@@ -6,27 +6,27 @@
   "naf-046::wfs": "C",
   "naf-042::wfs": "C",
   "naf-050::wfs": null,
-  "naf-048::wfs": "C",
-  "naf-064::wfs": "C",
+  "naf-048::wfs": null,
+  "naf-064::wfs": "A",
   "naf-000::wfs": "A",
-  "naf-001::wfs": "B",
+  "naf-001::wfs": "C",
   "naf-002::wfs": "C",
+  "naf-003::wfs": "B",
   "naf-004::wfs": "C",
-  "naf-003::wfs": "C",
-  "naf-005::wfs": "B"
+  "naf-005::wfs": null
  },
  "completion_tokens": {
   "naf-044::wfs": 243,
-  "naf-046::wfs": 283,
-  "naf-042::wfs": 358,
-  "naf-050::wfs": 310,
-  "naf-048::wfs": 374,
-  "naf-064::wfs": 394,
-  "naf-000::wfs": 223,
-  "naf-001::wfs": 202,
-  "naf-002::wfs": 310,
-  "naf-004::wfs": 273,
-  "naf-003::wfs": 355,
-  "naf-005::wfs": 289
+  "naf-046::wfs": 288,
+  "naf-042::wfs": 342,
+  "naf-050::wfs": 272,
+  "naf-048::wfs": 320,
+  "naf-064::wfs": 351,
+  "naf-000::wfs": 207,
+  "naf-001::wfs": 305,
+  "naf-002::wfs": 278,
+  "naf-003::wfs": 246,
+  "naf-004::wfs": 274,
+  "naf-005::wfs": 379
  }
 }
