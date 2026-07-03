@@ -2,14 +2,14 @@
  "model": "llama3:8b",
  "provider": "ollama",
  "method": "translate_then_solve",
- "parsed_ok": 11,
+ "parsed_ok": 12,
  "n_programs": 12,
  "answers": {
-  "naf-042::stable": null,
-  "naf-042::wfs": null,
+  "naf-042::stable": "C",
+  "naf-042::wfs": "C",
   "naf-044::stable": "C",
   "naf-044::wfs": "C",
-  "naf-046::stable": "C",
+  "naf-046::stable": "B",
   "naf-046::wfs": "C",
   "naf-048::stable": "A",
   "naf-048::wfs": "C",
@@ -23,34 +23,34 @@
   "naf-003::wfs": "B",
   "naf-004::wfs": "B",
   "naf-005::wfs": "B",
-  "naf-000::none": "B",
-  "naf-000::closed_world": "B",
-  "naf-002::none": "B",
-  "naf-002::closed_world": "B",
-  "naf-004::none": "B",
-  "naf-004::closed_world": "B"
+  "naf-000::none": "C",
+  "naf-000::closed_world": "C",
+  "naf-002::none": "C",
+  "naf-002::closed_world": "C",
+  "naf-004::none": "C",
+  "naf-004::closed_world": "C"
  },
  "completion_tokens": {
-  "naf-042::stable": 17,
-  "naf-042::wfs": 17,
+  "naf-042::stable": 26,
+  "naf-042::wfs": 26,
   "naf-044::stable": 47,
   "naf-044::wfs": 47,
-  "naf-046::stable": 36,
-  "naf-046::wfs": 36,
+  "naf-046::stable": 41,
+  "naf-046::wfs": 41,
   "naf-048::stable": 37,
   "naf-048::wfs": 37,
   "naf-050::stable": 38,
   "naf-050::wfs": 38,
   "naf-064::stable": 43,
   "naf-064::wfs": 43,
-  "naf-000::wfs": 28,
+  "naf-000::wfs": 24,
   "naf-001::wfs": 24,
   "naf-002::wfs": 33,
-  "naf-003::wfs": 38,
+  "naf-003::wfs": 31,
   "naf-004::wfs": 46,
-  "naf-005::wfs": 54,
-  "naf-000::none": 28,
-  "naf-000::closed_world": 28,
+  "naf-005::wfs": 42,
+  "naf-000::none": 24,
+  "naf-000::closed_world": 24,
   "naf-002::none": 33,
   "naf-002::closed_world": 33,
   "naf-004::none": 46,
@@ -58,12 +58,12 @@
  },
  "translations": {
   "naf-042": {
-   "text": "fact.\na :- not b.\nb :- not a.\npass :- a.",
-   "ok": false,
-   "query": null
+   "text": "fact.\nv1 :- not v2.\nv2 :- not v1.\np :- v1.\n\nQUERY: p.",
+   "ok": true,
+   "query": "p"
   },
   "naf-046": {
-   "text": "fact.\na :- not b.\nb :- not a.\ns0 :- a.\ns1 :- s0.\npass :- s1, not fail.\nQUERY: pass.",
+   "text": "fact.\nv1 :- not v2.\nv2 :- not v1.\ns0 :- v1.\ns1 :- s0.\npass :- s1, not pass.\nQUERY: pass.",
    "ok": true,
    "query": "pass"
   },
@@ -83,7 +83,7 @@
    "query": "outage_alert"
   },
   "naf-000": {
-   "text": "fact.\nin_category_c1(x).\napproved_in_c1 :- not flagged, in_category_c1(x).\nQUERY: approved(x).",
+   "text": "fact.\nin_category_c1(x).\napproved_in_c1 :- not flagged, fact.\nQUERY: approved(x).",
    "ok": true,
    "query": "approved(x)"
   },
@@ -97,13 +97,13 @@
    "ok": true,
    "query": "approved(x)"
   },
-  "naf-002": {
-   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, in_c2.\nAPPROVED :- in_c1.\nQUERY: APPROVED(X).",
+  "naf-003": {
+   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, approved.\napproved :- in_c2.\nflagged.\nQUERY: approved(X).",
    "ok": true,
    "query": "approved(x)"
   },
-  "naf-003": {
-   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, in_c2.\nin_c1 :- flagged, not approved.\napproved :- not flagged.\nQUERY: approved(x).",
+  "naf-002": {
+   "text": "fact.\nin_c2 :- .\nin_c1 :- not flagged, in_c2.\nAPPROVED :- in_c1.\nQUERY: APPROVED(X).",
    "ok": true,
    "query": "approved(x)"
   },
@@ -113,9 +113,9 @@
    "query": "approved(x)"
   },
   "naf-005": {
-   "text": "fact.\nin_c3 :- .\nin_c2 :- not in_c3.\nin_c1 :- not in_c2.\nin_c3.\nflagged.\napproved_in_c1 :- not flagged, not in_c2.\nQUERY: approved_in_c1(X).",
+   "text": "fact.\nin_c3 :- .\nin_c2 :- in_c3, not flagged.\nin_c1 :- in_c2, not flagged.\nin_c3.\nflagged.\nQUERY: approved(X).",
    "ok": true,
-   "query": "approved_in_c1(x)"
+   "query": "approved(x)"
   }
  }
 }

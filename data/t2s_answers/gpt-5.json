@@ -31,69 +31,79 @@
   "naf-004::closed_world": "A"
  },
  "completion_tokens": {
-  "naf-042::stable": 730,
-  "naf-042::wfs": 730,
-  "naf-044::stable": 608,
-  "naf-044::wfs": 608,
-  "naf-046::stable": 550,
-  "naf-046::wfs": 550,
-  "naf-048::stable": 740,
-  "naf-048::wfs": 740,
-  "naf-050::stable": 738,
-  "naf-050::wfs": 738,
-  "naf-064::stable": 618,
-  "naf-064::wfs": 618,
-  "naf-000::wfs": 540,
-  "naf-001::wfs": 544,
-  "naf-002::wfs": 676,
-  "naf-003::wfs": 1063,
-  "naf-004::wfs": 617,
-  "naf-005::wfs": 560,
-  "naf-000::none": 540,
-  "naf-000::closed_world": 540,
-  "naf-002::none": 676,
-  "naf-002::closed_world": 676,
-  "naf-004::none": 617,
-  "naf-004::closed_world": 617
+  "naf-042::stable": 804,
+  "naf-042::wfs": 804,
+  "naf-044::stable": 480,
+  "naf-044::wfs": 480,
+  "naf-046::stable": 432,
+  "naf-046::wfs": 432,
+  "naf-048::stable": 804,
+  "naf-048::wfs": 804,
+  "naf-050::stable": 866,
+  "naf-050::wfs": 866,
+  "naf-064::stable": 554,
+  "naf-064::wfs": 554,
+  "naf-000::wfs": 604,
+  "naf-001::wfs": 480,
+  "naf-002::wfs": 548,
+  "naf-003::wfs": 744,
+  "naf-004::wfs": 940,
+  "naf-005::wfs": 688,
+  "naf-000::none": 604,
+  "naf-000::closed_world": 604,
+  "naf-002::none": 548,
+  "naf-002::closed_world": 548,
+  "naf-004::none": 940,
+  "naf-004::closed_world": 940
  },
  "translations": {
+  "naf-046": {
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\ns0 :- m1y.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
   "naf-044": {
    "text": "a :- not b.\nb :- not a.\ns0 :- a.\nm :- s0.\nQUERY: m",
    "ok": true,
    "query": "m"
   },
-  "naf-046": {
-   "text": "ay :- not by.\nby :- not ay.\ns0 :- ay.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
+  "naf-064": {
+   "text": "a :- not b.\nb :- not c.\nc :- not d.\nd :- not a.\ns0 :- a.\nm :- s0.\nQUERY: m",
+   "ok": true,
+   "query": "m"
+  },
+  "naf-050": {
+   "text": "n1 :- not n2.\nn2 :- not n1.\nout :- n1, n2.\nQUERY: out",
+   "ok": true,
+   "query": "out"
+  },
+  "naf-042": {
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\npass :- m1y.\nQUERY: pass",
    "ok": true,
    "query": "pass"
   },
-  "naf-064": {
-   "text": "a :- not b.\nb :- not c.\nc :- not d.\nd :- not a.\ns0 :- a.\nheld :- s0.\nQUERY: held",
-   "ok": true,
-   "query": "held"
-  },
-  "naf-050": {
-   "text": "n1 :- not n2.\nn2 :- not n1.\na :- n1, n2.\nQUERY: a",
-   "ok": true,
-   "query": "a"
-  },
-  "naf-042": {
-   "text": "a :- not b.\nb :- not a.\np :- a.\nQUERY: p",
-   "ok": true,
-   "query": "p"
-  },
   "naf-048": {
-   "text": "n1 :- not n2.\nn2 :- not n1.\na :- n1.\na :- n2.\nQUERY: a",
+   "text": "n1 :- not n2.\nn2 :- not n1.\ns :- n1.\ns :- n2.\nQUERY: s",
    "ok": true,
-   "query": "a"
+   "query": "s"
   },
-  "naf-000": {
-   "text": "c1x.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
+  "naf-001": {
+   "text": "c1x.\nflaggedx.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
    "ok": true,
    "query": "approvedx"
   },
-  "naf-001": {
-   "text": "c1x.\nflgx.\napprx :- c1x, not flgx.\nQUERY: apprx",
+  "naf-002": {
+   "text": "c2x.\nc1x :- c2x.\napprovedx :- c1x, not flaggedx.\nQUERY: approvedx",
+   "ok": true,
+   "query": "approvedx"
+  },
+  "naf-000": {
+   "text": "c1x.\nappx :- c1x, not flagx.\nQUERY: appx",
+   "ok": true,
+   "query": "appx"
+  },
+  "naf-003": {
+   "text": "c2x.\nc1x :- c2x.\napprx :- c1x, not flagx.\nflagx.\nQUERY: apprx",
    "ok": true,
    "query": "apprx"
   },
@@ -102,20 +112,10 @@
    "ok": true,
    "query": "apprx"
   },
-  "naf-002": {
-   "text": "c2x.\nc1x :- c2x.\nappx :- c1x, not flagx.\nQUERY: appx",
-   "ok": true,
-   "query": "appx"
-  },
   "naf-004": {
-   "text": "c3x.\nc2x :- c3x.\nc1x :- c2x.\nax :- c1x, not fx.\nQUERY: ax",
+   "text": "c2x :- c3x.\nc1x :- c2x.\nc3x.\naprx :- c1x, not flaggedx.\nQUERY: aprx",
    "ok": true,
-   "query": "ax"
-  },
-  "naf-003": {
-   "text": "c2x.\nc1x :- c2x.\nflagx.\nappx :- c1x, not flagx.\nQUERY: appx",
-   "ok": true,
-   "query": "appx"
+   "query": "aprx"
   }
  }
 }

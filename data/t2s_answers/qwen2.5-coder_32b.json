@@ -31,20 +31,20 @@
   "naf-004::closed_world": "B"
  },
  "completion_tokens": {
-  "naf-042::stable": 18,
-  "naf-042::wfs": 18,
+  "naf-042::stable": 28,
+  "naf-042::wfs": 28,
   "naf-044::stable": 24,
   "naf-044::wfs": 24,
-  "naf-046::stable": 30,
-  "naf-046::wfs": 30,
+  "naf-046::stable": 40,
+  "naf-046::wfs": 40,
   "naf-048::stable": 28,
   "naf-048::wfs": 28,
-  "naf-050::stable": 27,
-  "naf-050::wfs": 27,
+  "naf-050::stable": 29,
+  "naf-050::wfs": 29,
   "naf-064::stable": 38,
   "naf-064::wfs": 38,
   "naf-000::wfs": 14,
-  "naf-001::wfs": 22,
+  "naf-001::wfs": 17,
   "naf-002::wfs": 23,
   "naf-003::wfs": 28,
   "naf-004::wfs": 29,
@@ -57,18 +57,18 @@
   "naf-004::closed_world": 29
  },
  "translations": {
-  "naf-042": {
-   "text": "a :- not b.\nb :- not a.\npass :- a.\nQUERY: pass",
-   "ok": true,
-   "query": "pass"
-  },
   "naf-044": {
    "text": "alice :- not bob.\nbob :- not alice.\ns0 :- alice.\nmeeting :- s0.\nQUERY: meeting",
    "ok": true,
    "query": "meeting"
   },
+  "naf-042": {
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\npass :- m1y.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
   "naf-046": {
-   "text": "a :- not b.\nb :- not a.\ns0 :- a.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\ns0 :- m1y.\ns1 :- s0.\npass :- s1.\nQUERY: pass",
    "ok": true,
    "query": "pass"
   },
@@ -78,12 +78,17 @@
    "query": "available"
   },
   "naf-050": {
-   "text": "online1 :- not online2.\nonline2 :- not online1.\noutage :- online1, online2.\nQUERY: outage",
+   "text": "online1 :- not online2.\nonline2 :- not online1.\noutage_alert :- online1, online2.\nQUERY: outage_alert",
    "ok": true,
-   "query": "outage"
+   "query": "outage_alert"
   },
   "naf-000": {
    "text": "x.\napproved :- c1, not flagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "naf-001": {
+   "text": "x.\napproved :- c1, not flagged.\nflagged.\nQUERY: approved",
    "ok": true,
    "query": "approved"
   },
@@ -91,11 +96,6 @@
    "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\ns0 :- alice.\nmeeting :- s0.\nQUERY: meeting",
    "ok": true,
    "query": "meeting"
-  },
-  "naf-001": {
-   "text": "x_in_c1.\napproved :- x_in_c1, not flagged.\nflagged.\nQUERY: approved",
-   "ok": true,
-   "query": "approved"
   },
   "naf-002": {
    "text": "c1 :- c2.\nx :- c2.\napproved :- c1, not flagged.\nQUERY: approved",

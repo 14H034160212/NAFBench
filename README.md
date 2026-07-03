@@ -77,9 +77,9 @@ Asked under **well-founded** semantics (gold = **C**), the models answer:
 
 | Opus 4.8 | GPT-4.1 | GPT-5 | Sonnet 4.6 | Haiku 4.5 | GPT-4o-mini | Qwen2.5-32B | DeepSeek-R1 | Llama3-8B |
 |---|---|---|---|---|---|---|---|---|
-| **C ✓** | **C ✓** | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ |
+| **C ✓** | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ | B ✗ | A ✗ |
 
-Seven of nine — including GPT-5 — reason "Node 1 and Node 2 can't both be online, so the alert is impossible → Definitely no." That is classical two-valued logic; well-founded semantics says `undefined ∧ undefined = undefined`.
+Eight of nine — including GPT-5 and GPT-4.1 — get it wrong: most reason "Node 1 and Node 2 can't both be online, so the alert is impossible → Definitely no." That is classical two-valued logic; well-founded semantics says `undefined ∧ undefined = undefined`. (Only Claude Opus answers C. On the *corrected* "…fires **if** both are online" wording, even GPT-4.1 now falls for the trap.)
 
 ### Example 2 — No model assumes a closed world by default; only the strong ones can be told to
 
@@ -222,12 +222,12 @@ A fixed, stratified **24-prompt eval set** is scored against solver-certified go
 | Claude Opus 4.8 | Claude | **12/12 (100%)** |
 | GPT-5 | OpenAI | 11/12 (92%) |
 | Claude Sonnet 4.6 | Claude | 11/12 (92%) |
-| GPT-4.1 | OpenAI | 9/12 (75%) |
 | GPT-4o-mini | OpenAI | 9/12 (75%) |
-| Qwen2.5-coder 32B | open-source | 8/12 (67%) |
+| GPT-4.1 | OpenAI | 8/12 (67%) |
 | Claude Haiku 4.5 | Claude | 7/12 (58%) |
+| Qwen2.5-coder 32B | open-source | 7/12 (58%) |
 | DeepSeek-R1 32B | open-source | 6/12 (50%) |
-| Llama3 8B | open-source | 5/12 (42%) |
+| Llama3 8B | open-source | 6/12 (50%) |
 
 *Trivial "always-C" baseline = 6/12 (50%).*
 
@@ -236,16 +236,16 @@ A fixed, stratified **24-prompt eval set** is scored against solver-certified go
 | Model | closed-world (explicit CWA) | stable | well-founded | CWA by default |
 |---|---|---|---|---|
 | GPT-5 | 3/3 | 6/6 | 11/12 | 0/3 |
-| GPT-4.1 | 3/3 | 6/6 | 9/12 | 0/3 |
-| GPT-4o-mini | 0/3 | 5/6 | 9/12 | 0/3 |
-| DeepSeek-R1 32B | 3/3 | 4/6 | 6/12 | 1/3 |
-| Qwen2.5-coder 32B | 1/3 | 6/6 | 8/12 | 0/3 |
-| Llama3 8B | 1/3 | 6/6 | 5/12 | 1/3 |
+| GPT-4.1 | 3/3 | 6/6 | 8/12 | 0/3 |
+| GPT-4o-mini | 0/3 | 6/6 | 9/12 | 0/3 |
+| DeepSeek-R1 32B | 3/3 | 5/6 | 6/12 | 1/3 |
+| Qwen2.5-coder 32B | 1/3 | 6/6 | 7/12 | 0/3 |
+| Llama3 8B | 1/3 | 1/6 | 6/12 | 1/3 |
 
 ### Findings
 
-1. **Well-founded semantics is a clean capability/vendor axis.** Accuracy spans 100% (Opus) → 42% (Llama3, below the always-C baseline).
-2. **Stable-model semantics is easy for almost everyone** (5–6 of 6).
+1. **Well-founded semantics is a clean capability/vendor axis.** Accuracy spans 100% (Opus) → 50% (Llama3, at the always-C baseline).
+2. **Stable-model semantics is easy for most** (5–6 of 6) — except Llama3 (1/6), which mostly ignores the credulous/skeptical distinction.
 3. **No model applies CWA by default.** Every model says open-world unless explicitly told otherwise.
 4. **Explicit CWA repairs only stronger models.** GPT-5/4.1/DeepSeek-R1 reach 3/3; GPT-4o-mini/Qwen/Llama do not.
 5. **Translation vs semantics.** Translate-then-solve lifts strong models to perfect accuracy but exposes translation fidelity as a residual bottleneck.
@@ -261,7 +261,7 @@ a :- not b.   b :- not a.   q :- a, b.
 
 Verbalization:
 
-> Node 1 is ONLINE iff Node 2 is NOT. Node 2 is ONLINE iff Node 1 is NOT. An outage alert fires only if Node 1 is ONLINE and Node 2 is ONLINE.
+> Node 1 is ONLINE iff Node 2 is NOT. Node 2 is ONLINE iff Node 1 is NOT. An outage alert fires if Node 1 is ONLINE and Node 2 is ONLINE.
 
 Only Opus 4.8 and GPT-4.1 answer the certified WFS verdict `C`; the others answer `B`.
 
@@ -282,12 +282,12 @@ Asking the model to translate the rules into a logic program and letting the cer
 | Model | direct WFS | translate-then-solve WFS | T2S overall | programs parsed |
 |---|---|---|---|---|
 | GPT-5 | 11/12 | 12/12 | 24/24 | 12/12 |
-| GPT-4.1 | 9/12 | 12/12 | 24/24 | 12/12 |
+| GPT-4.1 | 8/12 | 12/12 | 24/24 | 12/12 |
 | Claude Opus 4.8 | 12/12 | 11/12 | 21/24 | 12/12 |
-| GPT-4o-mini | 9/12 | 11/12 | 23/24 | 12/12 |
-| Qwen2.5-coder 32B | 8/12 | 9/12 | 15/24 | 12/12 |
-| DeepSeek-R1 32B | 6/12 | 9/12 | 9/24 | 9/12 |
-| Llama3 8B | 5/12 | 8/12 | 13/24 | 11/12 |
+| GPT-4o-mini | 9/12 | 11/12 | 22/24 | 11/12 |
+| Qwen2.5-coder 32B | 7/12 | 9/12 | 15/24 | 12/12 |
+| DeepSeek-R1 32B | 6/12 | 11/12 | 16/24 | 11/12 |
+| Llama3 8B | 6/12 | 9/12 | 14/24 | 12/12 |
 
 The strong translators are perfect under solver delegation; the remaining errors are mostly translation fidelity.
 
@@ -406,7 +406,7 @@ The 32-range run confirms the divergence bin still dominates, and the frontier r
 
 ## Experiment 16 — further probes
 
-- Reversion rates on conflict items: Llama3 50%, Qwen 33%, GPT-4o-mini 32%, GPT-4.1 32%.
+- Reversion rates on conflict items (v3 grid): Llama3 54%, GPT-4o-mini 37%, Qwen 29%, GPT-4.1 28%.
 - Cycle length has a weak effect; interdependent multi-cycle structure is harder.
 - Few-shot mitigation strongly helps mid models.
 

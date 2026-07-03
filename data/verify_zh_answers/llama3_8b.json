@@ -3,30 +3,30 @@
  "provider": "ollama",
  "answers": {
   "naf-044::wfs": "A",
-  "naf-042::wfs": "A",
-  "naf-046::wfs": "B",
+  "naf-046::wfs": "A",
+  "naf-042::wfs": null,
+  "naf-048::wfs": null,
   "naf-050::wfs": "C",
-  "naf-048::wfs": "C",
   "naf-064::wfs": "C",
   "naf-000::wfs": "A",
+  "naf-001::wfs": "A",
   "naf-002::wfs": "A",
-  "naf-001::wfs": "B",
-  "naf-004::wfs": "B",
-  "naf-003::wfs": "C",
-  "naf-005::wfs": "C"
+  "naf-003::wfs": "A",
+  "naf-004::wfs": "A",
+  "naf-005::wfs": "A"
  },
  "completion_tokens": {
-  "naf-044::wfs": 432,
-  "naf-042::wfs": 440,
-  "naf-046::wfs": 481,
-  "naf-050::wfs": 408,
-  "naf-048::wfs": 417,
+  "naf-044::wfs": 412,
+  "naf-046::wfs": 479,
+  "naf-042::wfs": 527,
+  "naf-048::wfs": 294,
+  "naf-050::wfs": 385,
   "naf-064::wfs": 431,
-  "naf-000::wfs": 403,
-  "naf-002::wfs": 344,
-  "naf-001::wfs": 429,
-  "naf-004::wfs": 289,
-  "naf-003::wfs": 376,
-  "naf-005::wfs": 532
+  "naf-000::wfs": 361,
+  "naf-001::wfs": 376,
+  "naf-002::wfs": 323,
+  "naf-003::wfs": 368,
+  "naf-004::wfs": 373,
+  "naf-005::wfs": 422
  }
 }
