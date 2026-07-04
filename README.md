@@ -537,6 +537,15 @@ told), not scaling accuracy. Our DeepSeek-R1 non-convergence on cyclic items
 echoes "Illusion of Thinking", and our few-shot / self-verify / translate-then-
 solve fixes parallel their best-of-N / self-verification probes.
 
+Most directly related is **ASPBench** (Ren et al., arXiv:2507.19749), which
+benchmarks 14 LLMs on Answer Set Programming — ASP entailment, answer-set
+verification, and answer-set computation — and finds models handle the first two
+but **struggle to actually compute answer sets**. NAF-Bench is complementary:
+ASPBench measures ASP task-solving broadly, whereas we hold the program fixed and
+ask whether a model will *follow a specified* negation semantics when several
+legitimate ones (credulous / skeptical / well-founded / SLDNF) diverge on the
+same rules — with every item solver-certified under all four.
+
 ## Takeaway
 
 The project is now end-to-end: certified failure detection, controlled benchmark generation, cross-vendor evaluation, prompt and translation baselines, cross-lingual tests, and a working training mitigation. The remaining work is the final wording on the subtle semantics and the scale of the full production run.
