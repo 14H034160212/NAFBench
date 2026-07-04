@@ -393,17 +393,17 @@ models** (the frontier models sit near ceiling on the divergent probes and are
 run at the fixed production size instead).
 
 Semantic-following accuracy (excl. no-instruction): Qwen2.5-coder 32B 67%,
-Llama3-8B 50%.
+DeepSeek-R1 32B 56%, Llama3-8B 50%.
 
 Reverting width to shared-subgoals-only did **not** change the conclusion: depth
-and width are both negligible moderators (standardized `z(depth) = −0.005`,
-`z(width) = −0.015`; with length controlled, −0.14 and −0.10), while the
-**divergence bin dominates** (bin coefficients −0.32 to −0.59, ~20–100× the size
+and width are both negligible moderators (standardized `z(depth) = −0.024`,
+`z(width) = −0.006`; with length controlled, −0.16 and −0.10), while the
+**divergence bin dominates** (bin coefficients −0.42 to −0.63, ~20–80× the size
 coefficients). Accuracy is essentially independent of depth *and* width.
 
 Accuracy over the depth × width grid (per model) is nearly flat (Qwen cells
-59–75%, Llama3 47–56%) — visual confirmation that size is not the difficulty
-lever (`make_heatmap_dw.py`):
+59–75%, DeepSeek 44–69%, Llama3 47–56%) — visual confirmation that size is not
+the difficulty lever (`make_heatmap_dw.py`):
 
 ![depth × width heatmap](data/depthwidth_heatmap.png)
 
@@ -413,12 +413,14 @@ Length-matched padding shows pure length hurts little, while structure hurts a l
 
 ## Experiment 15 — extended ranges to 32
 
-The 32-range run (depth and plain width pushed to 32, local models) confirms the
-divergence bin still dominates: neither depth nor width is a significant
-moderator (`|width|−|depth|` bootstrap CI includes 0, with or without length
-control), and accuracy stays flat while the bin coefficients run −0.32 to −0.66.
-On the earlier full-panel folded-width run the frontier was near ceiling (GPT-5
-100%, Opus 100% slice).
+The 32-range run (depth and plain width pushed to 32, three local models)
+confirms the divergence bin still dominates. Without length control, depth and
+width are indistinguishable moderators (`|width|−|depth|` bootstrap CI includes
+0) and both are tiny (≈ ±0.02) next to the bin coefficients (−0.43 to −0.47);
+accuracy stays flat. (Controlling for length, depth edges width slightly, but
+that is token collinearity — deeper/wider instances have more tokens — and both
+remain dwarfed by the bin.) On the earlier full-panel folded-width run the
+frontier was near ceiling (GPT-5 100%, Opus 100% slice).
 
 ## Experiment 16 — further probes
 
