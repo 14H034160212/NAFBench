@@ -132,7 +132,7 @@ validate_v2.py + build_v2.py   v2 bin validation, hardness grid, data/nafbench_v
 heatmap.py   9-model x 12-prompt correctness heatmap
 nafbench/verbalize_v2.py + make_v2_eval.py + analyze_v2_grid.py   v2 NL + grid eval + width/depth analysis
 make_v2_full.py + analyze_v2_full.py   full 4-bin grid + regression
-nafbench/instances.py::build_by_effwidth + nafbench/metrics.py   effective-width (cycle folded in) + token length
+nafbench/instances.py::build_instance + nafbench/metrics.py   G(depth, width=shared-subgoals, bin); cycle length separate + token length
 make_pilot.py + analyze_pilot.py   v3 design-screening pilot
 nafbench/instances.py::build_multi_independent/build_interdependent   multi-cycle gadgets
 nafbench/verbalize_generic.py   transparent rule-by-rule verbalizer (label-checkable)
@@ -372,27 +372,38 @@ A 324-prompt grid evaluated on four models shows bin type dominates, with depth 
 
 ## Experiment 12 — v3 pilot
 
-The pilot folds cycle length into effective width and records token length to control length confounds.
+The pilot records token length to control length confounds.
 
 Key design decisions:
 - fix cycle lengths to even=4 and odd=3;
 - keep all five conditions (credulous, skeptical, WFS, closed-world, no-instruction);
 - record and control token length;
-- effective width is the right load metric.
+- **width = shared subgoals only, with cycle length as a separate per-bin knob**
+  (revised per A. Słusarz: tracking shared subgoals and resolving a negative
+  cycle are different loads, and a cycle's parity is already fixed by the bin, so
+  folding cycle length into "width" conflated two axes). The grid below sweeps
+  plain width, identical across bins.
 
-## Experiment 13 — formal v3 run
+## Experiment 13 — formal v3 run (plain-width grid, local models)
 
-360 prompts × 4 models under the agreed design.
+360 prompts over the depth × **plain width** grid (depth ∈ {2, 8, 16}, width =
+shared subgoals ∈ {0, 4, 8}, identical across bins; cycle length is a separate
+per-bin knob). Following the agreed plan, the grid is run with the **local
+models** (the frontier models sit near ceiling on the divergent probes and are
+run at the fixed production size instead).
 
-Semantic-following accuracy: GPT-4.1 82%, Qwen 68%, GPT-4o-mini 61%, Llama 55%.
+Semantic-following accuracy (excl. no-instruction): Qwen2.5-coder 32B 67%,
+Llama3-8B 50%.
 
-Depth and effective-width are statistically indistinguishable as moderators
-(`|eff_width|−|depth|` bootstrap CI includes 0, with or without length control);
-the **divergence bin dominates** (bin coefficients −0.4 to −0.5, ~20× the size
-coefficients ≈ ±0.02).
+Reverting width to shared-subgoals-only did **not** change the conclusion: depth
+and width are both negligible moderators (standardized `z(depth) = −0.005`,
+`z(width) = −0.015`; with length controlled, −0.14 and −0.10), while the
+**divergence bin dominates** (bin coefficients −0.32 to −0.59, ~20–100× the size
+coefficients). Accuracy is essentially independent of depth *and* width.
 
-Accuracy over the depth × effective-width grid (per model) is nearly flat —
-visual confirmation that size is not the difficulty lever (`make_heatmap_dw.py`):
+Accuracy over the depth × width grid (per model) is nearly flat (Qwen cells
+59–75%, Llama3 47–56%) — visual confirmation that size is not the difficulty
+lever (`make_heatmap_dw.py`):
 
 ![depth × width heatmap](data/depthwidth_heatmap.png)
 
@@ -402,7 +413,12 @@ Length-matched padding shows pure length hurts little, while structure hurts a l
 
 ## Experiment 15 — extended ranges to 32
 
-The 32-range run confirms the divergence bin still dominates, and the frontier remains near ceiling (GPT-5 98%, Opus 100% slice).
+The 32-range run (depth and plain width pushed to 32, local models) confirms the
+divergence bin still dominates: neither depth nor width is a significant
+moderator (`|width|−|depth|` bootstrap CI includes 0, with or without length
+control), and accuracy stays flat while the bin coefficients run −0.32 to −0.66.
+On the earlier full-panel folded-width run the frontier was near ceiling (GPT-5
+100%, Opus 100% slice).
 
 ## Experiment 16 — further probes
 

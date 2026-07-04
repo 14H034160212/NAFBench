@@ -1,4 +1,4 @@
-"""Full v3 analysis: does effective_width (cycle folded in) dominate depth,
+"""Full v3 analysis: does width (shared subgoals) dominate depth,
 controlling for instance length? Plus per-condition / default behaviour."""
 import json, glob
 import numpy as np
@@ -31,7 +31,7 @@ def design(ms):
     for m in ms:
         for e in scored:
             if e["task_id"] in models[m]:
-                rows.append((e["depth"], e["effective_width"], e["length"]["tokens"],
+                rows.append((e["depth"], e["width"], e["length"]["tokens"],
                              e["divergence_bin"], ok(m, e)))
     return rows
 
@@ -44,8 +44,8 @@ binm = np.array([[1.0 if r[3] == b else 0.0 for b in BINS[1:]] for r in R])
 
 print(f"\n=== standardized OLS on non-saturated models {nonsat} ===")
 for label, cols, names in [
-    ("without length", [z(dep), z(ew)], ["z(depth)", "z(eff_width)"]),
-    ("controlling for length", [z(dep), z(ew), z(tok)], ["z(depth)", "z(eff_width)", "z(tokens)"]),
+    ("without length", [z(dep), z(ew)], ["z(depth)", "z(width)"]),
+    ("controlling for length", [z(dep), z(ew), z(tok)], ["z(depth)", "z(width)", "z(tokens)"]),
 ]:
     X = np.column_stack([np.ones(len(R))] + cols + [binm])
     beta, *_ = np.linalg.lstsq(X, y, rcond=None)
@@ -54,8 +54,8 @@ for label, cols, names in [
     for n, b in zip(alln, beta):
         print(f"     {n:16s} {b:+.3f}")
     bd, bw = beta[1], beta[2]
-    print(f"     -> stronger: {'EFF_WIDTH' if abs(bw) > abs(bd) else 'DEPTH'} "
-          f"(|eff_width|={abs(bw):.3f} vs |depth|={abs(bd):.3f})")
+    print(f"     -> stronger: {'WIDTH' if abs(bw) > abs(bd) else 'DEPTH'} "
+          f"(|width|={abs(bw):.3f} vs |depth|={abs(bd):.3f})")
 
 print("\n=== per-condition accuracy ===")
 for m in MM:
@@ -63,11 +63,11 @@ for m in MM:
              for c in ["closed_world", "cred", "skept", "wfs"]]
     print(f"  {m:20s} " + "  ".join(cells))
 
-# moderation plot (eff_width vs depth) with theme error bars, non-saturated
+# moderation plot (width vs depth) with theme error bars, non-saturated
 fig, ax = plt.subplots(1, 2, figsize=(13, 5))
 for m in (nonsat or MM):
     for idx, A in [(0, ax[0]), (1, ax[1])]:
-        key = "depth" if idx == 0 else "effective_width"
+        key = "depth" if idx == 0 else "width"
         xs = sorted({e[key] for e in scored})
         mu, er = [], []
         for v in xs:
