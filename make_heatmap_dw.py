@@ -12,12 +12,12 @@ for f in glob.glob("data/v3_answers/*.json"):
     d = json.load(open(f)); models[d["model"]] = d["answers"]
 
 DEPTHS = sorted({e["depth"] for e in ev.values()})
-WIDTHS = sorted({e["effective_width"] for e in ev.values()})
+WIDTHS = sorted({e["width"] for e in ev.values()})
 scored = [e for e in ev.values() if e["cond"] != "none"]   # cred/skept/wfs/closed_world
 
 def cell_acc(m, d, w):
     sub = [models[m].get(e["task_id"]) == e["gold"]
-           for e in scored if e["depth"] == d and e["effective_width"] == w
+           for e in scored if e["depth"] == d and e["width"] == w
            and e["task_id"] in models[m]]
     return np.mean(sub) if sub else np.nan
 

@@ -1,6 +1,6 @@
-"""Extended-range analysis (depth/eff_width up to 32): do the structural
-moderators grow with range, and does effective-width dominate depth once length
-is controlled? Plus the fuller model panel (incl. GPT-5; Opus on a slice)."""
+"""Extended-range analysis (depth/width up to 32): do the structural
+moderators grow with range, and does width dominate depth once length is
+controlled? Plus the fuller model panel (incl. GPT-5; Opus on a slice)."""
 import json, glob
 import numpy as np
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ full = [m for m in MM if cover(m) >= len(scored) - 2]
 nonsat = [m for m in full if np.mean([ok(m, e) for e in scored if e["task_id"] in models[m]]) < 0.92]
 print(f"\nfull-coverage models: {full}\nnon-saturated: {nonsat}")
 
-R = [(e["depth"], e["effective_width"], e["length"]["tokens"], e["divergence_bin"], ok(m, e))
+R = [(e["depth"], e["width"], e["length"]["tokens"], e["divergence_bin"], ok(m, e))
      for m in (nonsat or full) for e in scored if e["task_id"] in models[m]]
 dep = np.array([r[0] for r in R], float); ew = np.array([r[1] for r in R], float)
 tok = np.array([r[2] for r in R], float); y = np.array([r[4] for r in R], float)
@@ -36,8 +36,8 @@ def z(x): return (x - x.mean()) / (x.std() + 1e-9)
 print("\n=== standardized OLS (range up to 32) ===")
 rng = np.random.default_rng(0)
 for label, cols, names in [
-    ("no length", [z(dep), z(ew)], ["z(depth)", "z(eff_width)"]),
-    ("+length",   [z(dep), z(ew), z(tok)], ["z(depth)", "z(eff_width)", "z(tokens)"]),
+    ("no length", [z(dep), z(ew)], ["z(depth)", "z(width)"]),
+    ("+length",   [z(dep), z(ew), z(tok)], ["z(depth)", "z(width)", "z(tokens)"]),
 ]:
     Xcols = cols
     def fit(sel):
@@ -48,7 +48,7 @@ for label, cols, names in [
     b = fit(allidx)
     nm = ["intercept"] + names + [f"bin={x}" for x in BINS[1:]]
     print(f"  [{label}] " + "  ".join(f"{n}={v:+.3f}" for n, v in zip(nm, b)))
-    # audit #7: uncertainty on the eff_width-vs-depth verdict via bootstrap
+    # audit #7: uncertainty on the width-vs-depth verdict via bootstrap
     # (one resample per iteration, used for BOTH coefficients).
     diff_samples = []
     for _ in range(1000):
@@ -57,7 +57,7 @@ for label, cols, names in [
     diffs = np.sort(diff_samples)
     dlo, dhi = diffs[int(.025*len(diffs))], diffs[int(.975*len(diffs))-1]
     sig = "excludes 0" if (dlo > 0 or dhi < 0) else "includes 0 (NS)"
-    print(f"     -> {'EFF_WIDTH' if abs(b[2])>abs(b[1]) else 'DEPTH'} stronger "
+    print(f"     -> {'WIDTH' if abs(b[2])>abs(b[1]) else 'DEPTH'} stronger "
           f"(|ew|={abs(b[2]):.3f} vs |d|={abs(b[1]):.3f}); "
           f"|ew|-|d| 95% CI [{dlo:+.3f},{dhi:+.3f}] {sig}")
 
@@ -69,16 +69,16 @@ for m in MM:
         cells.append(f"{c}:{np.mean(sub):.0%}" if sub else f"{c}:--")
     print(f"  {m:20s} " + "  ".join(cells))
 
-# moderation vs depth and vs eff_width (full-coverage models)
+# moderation vs depth and vs width (full-coverage models)
 fig, ax = plt.subplots(1, 2, figsize=(13, 5))
 for m in full:
     for idx, A in [(0, ax[0]), (1, ax[1])]:
-        key = "depth" if idx == 0 else "effective_width"
+        key = "depth" if idx == 0 else "width"
         xs = sorted({e[key] for e in scored})
         ys = [np.mean([ok(m, e) for e in scored if e[key] == v and e["task_id"] in models[m]]) for v in xs]
         A.plot(xs, ys, marker="o", label=m)
 ax[0].set_title("Accuracy vs DEPTH (to 32)"); ax[0].set_xlabel("depth")
-ax[1].set_title("Accuracy vs EFFECTIVE WIDTH (to 32)"); ax[1].set_xlabel("effective width")
+ax[1].set_title("Accuracy vs WIDTH (to 32)"); ax[1].set_xlabel("width (shared subgoals)")
 for a in ax: a.set_ylim(0, 1.05); a.set_ylabel("semantic-following accuracy"); a.grid(alpha=.3); a.legend(fontsize=8)
 plt.tight_layout(); plt.savefig("data/ext_moderation.png", dpi=130)
 print("\nSaved -> data/ext_moderation.png")
