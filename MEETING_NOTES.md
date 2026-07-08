@@ -42,6 +42,15 @@ The discussion circled three things: (1) **framing** — what the benchmark is a
 - **Claim to test:** rule order does **not** change the semantics (gold is invariant), but it may change (a) LLM accuracy and (b) solver hardness. A benchmark should show the model is order-robust — or quantify that it isn't.
 - **Design:** for each instance, emit K random permutations of the rule order (and/or a few canonical orders: as-written / reversed / cycle-last); score accuracy variance across permutations per model; log solver hardness (Prolog inferences, clingo conflicts) per order. Report as a robustness axis alongside verbalization.
 - Small, self-contained; I can implement a `--reorder` knob in the verbalizer + a `make_reorder.py` set and run it locally first (cheap).
+- **DONE (preliminary, local models).** `make_reorder.py` (4 bins × 4 conds × 5 orderings: as-written / reversed / 3 seeded shuffles; gold invariant) + `analyze_reorder.py`. Result — models are **strongly order-sensitive** even though the semantics is unchanged:
+
+  | model | accuracy | order-sensitivity (groups whose answer flips with rule order) |
+  |---|---|---|
+  | gpt-4o-mini | 36/80 (45%) | **12/16 (75%)** |
+  | Qwen2.5-coder 32B | 56/80 (70%) | **11/16 (69%)** |
+  | Llama3-8B | 32/80 (40%) | **8/16 (50%)** |
+
+  Even the cycle-free *control* bin flips. This is a real robustness gap and a strong candidate axis for the paper (a semantics-preserving perturbation the model should be invariant to, but isn't). Next: fold into the production run (report order-sensitivity per model) and add a solver-hardness-vs-order check.
 
 ### C3. Other ideas (park for later)
 - **Improvement arm:** fine-tuning and **auto-formalization**; use the benchmark to evaluate whether fine-tuning *helps formalization* (we already have SFT + translate-then-solve; auto-formalization is the natural extension).
