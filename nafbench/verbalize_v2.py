@@ -26,34 +26,63 @@ def gold_for(labels: dict, cond: str) -> str:
     return _COND_GOLD[cond][labels[_COND_DIM[cond]]]
 
 
+# Revised prompts from A. Słusarz (2026-07): matched level of detail across the
+# four semantics; each gives a self-contained operational definition so we test
+# whether a model can FOLLOW the specified semantics, not whether it already
+# knows it. Kept verbatim (straight quotes for codebase consistency).
 SEMANTICS_INSTRUCTIONS = {
     "none": "Answer using ordinary commonsense reasoning about the rules below.",
     "closed_world": (
-        "Use the CLOSED-WORLD ASSUMPTION with negation-as-failure: a statement is "
-        "FALSE exactly when it cannot be derived. Treat the rules operationally, as "
-        "a Prolog engine would; if the reasoning cannot terminate with a definite "
-        "yes/no, answer 'Cannot be determined'."),
+        "Use the CLOSED-WORLD ASSUMPTION with NEGATION-AS-FAILURE, interpreted "
+        "operationally as in Prolog-style reasoning. A positive goal is 'true' if "
+        "it can be derived by a terminating proof from the rules. A positive goal "
+        "is 'false' if every attempted proof of it finitely fails. The "
+        "default-negated goal not G is 'true' if the goal G finitely fails, and "
+        "'false' if G succeeds. If evaluating the goal does not terminate, gets "
+        "stuck because of negation (flounders), or otherwise cannot produce a "
+        "definite success or finite failure, answer 'Cannot be determined.' Answer "
+        "'Definitely yes' for true, 'Definitely no' for 'false', and 'Cannot be "
+        "determined' when no definite operational result is obtained."),
     "cred": (
-        "Use STABLE-MODEL (answer-set) semantics with CREDULOUS (brave) reasoning. "
-        "Consider every self-consistent scenario that is exactly justified by the "
-        "rules (an 'answer set'). Answer 'Definitely yes' if the queried statement "
-        "holds in AT LEAST ONE such scenario, and 'Definitely no' if it holds in "
-        "NONE. If there are NO self-consistent scenarios at all, answer "
-        "'Definitely no'."),
+        "Use STABLE-MODEL, also called ANSWER-SET, semantics with CREDULOUS, also "
+        "called BRAVE, reasoning. An answer set is a self-consistent set of atoms "
+        "that is closed under the program rules and contains exactly the atoms "
+        "justified by those rules under the assumptions made in that same set. "
+        "Equivalently, after evaluating each default-negated condition not A "
+        "relative to a candidate set, the candidate must be exactly the minimal set "
+        "of atoms derivable from the remaining rules. For the queried statement: "
+        "Answer 'Definitely yes' if the statement holds in AT LEAST ONE answer set. "
+        "Answer 'Definitely no' if the statement holds in no answer sets. If the "
+        "program has no answer sets, answer 'Definitely no.'"),
     "skept": (
-        "Use STABLE-MODEL (answer-set) semantics with SKEPTICAL (cautious) "
-        "reasoning. Consider every self-consistent scenario that is exactly "
-        "justified by the rules (an 'answer set'). Answer 'Definitely yes' only if "
-        "the queried statement holds in EVERY such scenario, and 'Definitely no' if "
-        "there is even one scenario where it fails. If there are NO self-consistent "
-        "scenarios at all, the statement counts as holding in every scenario "
-        "(answer 'Definitely yes')."),
+        "Use STABLE-MODEL, also called ANSWER-SET, semantics with SKEPTICAL, also "
+        "called CAUTIOUS, reasoning. Consider all answer sets of the program. Each "
+        "answer set is a self-consistent scenario that is closed under the rules "
+        "and contains exactly the atoms justified by those rules under its own "
+        "assumptions about default negation. Equivalently, after evaluating each "
+        "default-negated condition not A relative to a candidate set, the candidate "
+        "must be exactly the minimal set of atoms derivable from the remaining "
+        "rules. For the queried statement: Answer 'Definitely yes' only if the "
+        "statement holds in EVERY answer set. Answer 'Definitely no' if there is at "
+        "least one answer set in which the statement does not hold. If the program "
+        "has no answer sets, then the statement vacuously holds in every answer "
+        "set; answer 'Definitely yes.'"),
     "wfs": (
-        "Use WELL-FOUNDED semantics (three-valued: true / false / undefined). A "
-        "statement is 'true' only if it is ultimately grounded in facts, 'false' if "
-        "it can never be supported, and 'undefined' if its support depends "
-        "circularly on assumptions about itself. Answer 'Definitely yes' for true, "
-        "'Definitely no' for false, 'Cannot be determined' for undefined."),
+        "Use WELL-FOUNDED semantics, with three truth values: 'true', 'false', and "
+        "'undefined'. A statement is 'true' if it has founded support: that is, it "
+        "follows from rules whose positive conditions are 'true' and whose "
+        "default-negated conditions are 'false', with the justification ultimately "
+        "grounded rather than relying only on unsupported circular reasoning. A "
+        "statement is 'false' if all possible rules that could derive it are "
+        "defeated, inapplicable, or depend only on unfounded circular support. A "
+        "statement is 'undefined' if it is neither founded true nor founded false, "
+        "typically because its truth depends on an unresolved cycle through default "
+        "negation or on other undefined statements. Answer 'Definitely yes' if the "
+        "statement is 'true'. Answer 'Definitely no' if the statement is 'false'. "
+        "Answer 'Cannot be determined' if the statement is 'undefined'. For a "
+        "default-negated query not G, evaluate it using the well-founded truth "
+        "value of G: not G is 'true' when G is 'false', 'false' when G is 'true', "
+        "and 'undefined' when G is 'undefined'."),
 }
 
 # surface themes (replicates) — same logical structure, different vocabulary;
@@ -83,7 +112,8 @@ def _cap(s: str) -> str:
     return s[:1].upper() + s[1:]
 
 
-def _premises(prog: Program, theme: int = 0) -> str:
+def _premise_lines(prog: Program, theme: int = 0):
+    """Return the rule sentences as a LIST (so callers can reorder them)."""
     m = prog.meta
     b, k, d, w = m["divergence_bin"], m["cycle_len"], m["depth"], m["width"]
     th = THEMES_V2[theme % len(THEMES_V2)]
@@ -125,7 +155,24 @@ def _premises(prog: Program, theme: int = 0) -> str:
         for j in range(d - 1):
             L.append(f"{_cap(th['stage'])} {j} is reached if {th['stage']} {j + 1} is reached.")
         L.append(f"{_cap(th['stage'])} {d - 1} is reached if {warr} and {aud}.")
+    return L
+
+
+def _premises(prog: Program, theme: int = 0, order=None) -> str:
+    """Rule sentences joined into a block. `order` (a permutation of indices over
+    the rule lines) reorders them WITHOUT changing the logic -- the gold labels
+    are invariant, so this isolates whether rule ORDER affects the model."""
+    L = _premise_lines(prog, theme)
+    if order is not None:
+        assert sorted(order) == list(range(len(L))), \
+            f"order must be a permutation of 0..{len(L) - 1}"
+        L = [L[i] for i in order]
     return " ".join(L)
+
+
+def n_rule_lines(prog: Program, theme: int = 0) -> int:
+    """How many reorderable rule sentences this instance has."""
+    return len(_premise_lines(prog, theme))
 
 
 def _assemble(instr, rules, qword):
@@ -141,10 +188,10 @@ def _assemble(instr, rules, qword):
 
 
 def build_prompt(prog: Program, semantics: str, theme: int = 0,
-                 pad_to_tokens: int = None) -> str:
+                 pad_to_tokens: int = None, order=None) -> str:
     instr = SEMANTICS_INSTRUCTIONS[semantics]
     qword = THEMES_V2[theme % len(THEMES_V2)]["qword"]
-    rules = _premises(prog, theme)
+    rules = _premises(prog, theme, order=order)
     if pad_to_tokens:
         # add inert, query-irrelevant filler until the WHOLE prompt reaches the
         # target token count -> length-match an easy instance to a hard one,
@@ -157,7 +204,7 @@ def build_prompt(prog: Program, semantics: str, theme: int = 0,
         while MET.length_metrics(_assemble(instr, rules, qword))["tokens"] < pad_to_tokens:
             extra.append(f"For reference, archived note {i} concerns an unrelated "
                          f"matter and does not bear on the question.")
-            rules = (_premises(prog, theme) +
+            rules = (_premises(prog, theme, order=order) +
                      "\nBackground (not part of the rules, irrelevant to the question): "
                      + " ".join(extra))
             i += 1

@@ -31,6 +31,20 @@ Same sentence, two legitimate answers. The rulebooks we test are:
 
 Alice and Bob prop each other up in a loop, so the rulebooks diverge: credulous says **yes** (someone always attends), well-founded says **cannot determine** (the loop is ungrounded). Models do fine on cycle-free problems; they trip on these loops — and that "which kind of cycle" is the dominant difficulty axis in all our experiments.
 
+## Why this matters (motivation)
+
+Which negation semantics you apply is not academic hair-splitting — it decides the answer in **rule-based, high-stakes domains** where "not" and "unknown" carry legal or safety weight:
+
+- **Regulation / law.** A regulation may leave a case genuinely *undefined* (well-founded) rather than false; a court may ask whether guilt holds in *every* consistent reading (skeptical) or merely *some* reading (credulous). These are different verdicts from the *same* text.
+- **Eligibility / benefits.** *"A claimant gets housing support unless they get income support, and income support unless they get housing support; a payment is due under either."* Two mutually-exclusive readings both yield a payment (credulous *yes*), but no single reading is guaranteed (skeptical *no*) — exactly our `even_both_sided` bin.
+- **Fault diagnosis.** *"The sensor is faulty if the actuator is not, and vice-versa"* — a classic self-referential loop where an operational (closed-world) engine may simply not terminate.
+
+A system that silently reverts to one default reading of "not" will be confidently wrong in all three. NAF-Bench measures precisely that: **told which rulebook to use, does the model apply it?**
+
+**Why an *artificial* language?** The instances are synthetic on purpose. It (i) **isolates the variable** — the same certified program is re-verbalized so accuracy differences are attributable to the semantics and structure, not to topic familiarity; and (ii) **prevents data-leakage / contamination** — a model cannot have memorized an answer to a freshly generated program. Real regulatory and clinical text is ecologically valid but confounded and leak-prone; **applying these prompts to real regulatory text is the natural journal-extension / future-work step**, on top of the contamination-free synthetic core here.
+
+This also sets us apart from existing negation work in NLP, which tests whether models *detect or understand* negation in a sentence (e.g. xNot360, Thunder-NUBench — see Related work); we instead test whether a model will **apply a specified formal negation semantics** over structured rules, with every gold answer solver-certified.
+
 ## Semantics & labels (terminology)
 
 The four rulebooks we score against, with their synonyms and how they relate to
@@ -536,6 +550,15 @@ central metric is **default-reversion** (does the model switch rulebook when
 told), not scaling accuracy. Our DeepSeek-R1 non-convergence on cyclic items
 echoes "Illusion of Thinking", and our few-shot / self-verify / translate-then-
 solve fixes parallel their best-of-N / self-verification probes.
+
+A separate NLP line benchmarks whether LLMs **detect or understand** negation at
+the sentence level: **xNot360** (Nguyen, Goebel, Toni, Stathis, Satoh,
+arXiv:2306.16638) finds GPTs only modestly proficient at spotting when one
+sentence negates another, and **Thunder-NUBench** (So et al., EACL 2026 Findings)
+contrasts negation against contradiction/paraphrase for sentence-level
+understanding. NAF-Bench targets a different competence: not *detecting* negation
+in prose, but **applying a specified formal negation semantics** to structured
+rules whose answer legitimately depends on which semantics is named.
 
 Most directly related is **ASPBench** (Ren et al., arXiv:2507.19749), which
 benchmarks 14 LLMs on Answer Set Programming — ASP entailment, answer-set
