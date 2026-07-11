@@ -74,15 +74,17 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
     wide_rules, wide = _width_block(width)
     rules: List[Rule] = list(core_rules) + list(wide_rules)
 
-    # positive chain of length `depth` from (cq AND wide) up to the query q
+    # positive chain of length `depth` from (width AND cq) up to the query q.
+    # `wide` is listed before `cq` so width is evaluated before the cycle
+    # (A. Slusarz).
     if depth <= 0:
-        rules.append(Rule("q", pos=(cq, wide)))
+        rules.append(Rule("q", pos=(wide, cq)))
     else:
         chain = [f"t{j}" for j in range(depth)]
         rules.append(Rule("q", pos=(chain[0],)))
         for j in range(depth - 1):
             rules.append(Rule(chain[j], pos=(chain[j + 1],)))
-        rules.append(Rule(chain[-1], pos=(cq, wide)))   # deepest step needs core + width
+        rules.append(Rule(chain[-1], pos=(wide, cq)))   # deepest step needs width + core
 
     # Effective width (per A. Slusarz): a negative cycle cannot be resolved, so
     # its length contributes to the atoms that must be held in working memory at
@@ -134,6 +136,136 @@ def build_interdependent(n_cycles: int) -> Program:
     prog.meta = dict(family="multicycle", subtype="interdependent", n_cycles=n_cycles,
                      cycle_len=2, depth=0, width=0, query="q")
     return prog
+
+
+def build_variant(depth: int, width: int, bin_name: str, cycle_len: int, seed: int) -> Program:
+    """A structurally DISTINCT instance at the SAME (bin, depth, width, cycle_len),
+    for "30 distinct programs per cell" (A. Słusarz's option (b)). All variation
+    is gold-preserving -- every returned program still certifies to the bin
+    signature -- so only incidental structure differs. Axes (seeded):
+
+      (i)   `wide` and `cq` are required at (possibly different) chain steps t_i;
+      (ii)  a variable number of aggregator predicates p_i over the SAME shared
+            subgoals s_j, each s_j given >= 2 parents;
+      (iii) each subgoal s_j is supported by a variable number of facts, with the
+            TOTAL number of support facts held fixed;
+      (iv)  cycle rules may carry an extra always-true literal (x_i :- not x_{i+1}, e);
+      (v)   the final rule list is shuffled (order is semantics-irrelevant).
+
+    `wide` is always listed before `cq` in a shared body (per A. Słusarz).
+    """
+    import random as _random
+    rng = _random.Random(seed)
+    rules: List[Rule] = []
+
+    # --- divergence core (+ axis iv: optional true literal on cycle rules) ---
+    if bin_name == "control":
+        cq = "cq"
+        rules.append(Rule("cq", neg=("blocked",)))
+    else:
+        k = cycle_len
+        extra = rng.random() < 0.5           # axis (iv)
+        if extra:
+            rules.append(Rule("etrue"))       # an always-true guard atom
+        for i in range(k):
+            pos = ("etrue",) if extra else ()
+            rules.append(Rule(f"x{i}", pos=pos, neg=(f"x{(i + 1) % k}",)))
+        cq = "cq"
+        if bin_name == "even_both_sided":
+            for i in range(k):
+                rules.append(Rule("cq", pos=(f"x{i}",)))
+        else:
+            rules.append(Rule("cq", pos=("x0",)))
+
+    # --- width block: axis (ii) aggregators + axis (iii) support distribution ---
+    subgoals = [f"s{j}" for j in range(width)] if width > 0 else []
+    if not subgoals:
+        rules.append(Rule("wide"))
+    else:
+        n_agg = rng.randint(2, max(2, min(4, width)))     # (ii) number of p_i
+        # assign each subgoal to a random subset of aggregators, each s_j >= 2 parents
+        parents = {j: set() for j in range(width)}
+        for j in range(width):
+            m = rng.randint(2, n_agg)
+            for a in rng.sample(range(n_agg), m):
+                parents[j].add(a)
+        agg_members = {a: [f"s{j}" for j in range(width) if a in parents[j]]
+                       for a in range(n_agg)}
+        # ensure no empty aggregator (give it one subgoal if empty)
+        for a in range(n_agg):
+            if not agg_members[a]:
+                agg_members[a].append(f"s{rng.randrange(width)}")
+        aggs = [f"p{a}" for a in range(n_agg)]
+        for a in range(n_agg):
+            rules.append(Rule(aggs[a], pos=tuple(agg_members[a])))
+        rules.append(Rule("wide", pos=tuple(aggs)))
+        # (iii) distribute a fixed TOTAL of support facts among subgoals, each >= 1
+        total = 2 * width                                  # fixed budget
+        counts = [1] * width
+        for _ in range(total - width):
+            counts[rng.randrange(width)] += 1
+        for j in range(width):
+            supports = [f"g{j}_{c}" for c in range(counts[j])]
+            for g in supports:
+                rules.append(Rule(g))                      # a fact
+            rules.append(Rule(f"s{j}", pos=tuple(supports)))
+
+    # --- depth chain: axis (i) attach cq / wide at chosen steps ---
+    wide = "wide"
+    if depth <= 0:
+        rules.append(Rule("q", pos=(wide, cq)))
+    else:
+        chain = [f"t{j}" for j in range(depth)]
+        cq_at = rng.randrange(depth)
+        wide_at = rng.randrange(depth)
+        rules.append(Rule("btrue"))                        # grounding base fact
+        rules.append(Rule("q", pos=(chain[0],)))
+        for j in range(depth):
+            body = []
+            if j < depth - 1:
+                body.append(chain[j + 1])
+            else:
+                body.append("btrue")                        # deepest step grounds out
+            if j == wide_at:
+                body.append(wide)
+            if j == cq_at:
+                body.append(cq)
+            # keep `wide` before `cq` if both present
+            rules.append(Rule(chain[j], pos=tuple(body)))
+
+    # --- axis (v): shuffle rule order (semantics-irrelevant) ---
+    rng.shuffle(rules)
+
+    cyc_contrib = 0 if bin_name == "control" else cycle_len
+    prog = Program(rules)
+    prog.meta = dict(family="v2var", divergence_bin=bin_name, depth=depth,
+                     width=width, cycle_len=cycle_len,
+                     effective_width=width + cyc_contrib,
+                     query="q", expected=BIN_SIGNATURE[bin_name], variant_seed=seed)
+    return prog
+
+
+def canonical_key(prog: Program) -> str:
+    """Isomorphism-insensitive key: rename atoms to a canonical order-independent
+    scheme and return a sorted-rule signature, so structurally-identical programs
+    (incl. mere reorderings / atom renamings) collapse to the same key."""
+    # canonical atom names by (is-fact, out-degree, sorted neighbour roles) is
+    # hard in general; we use a pragmatic key: multiset of rules with atoms
+    # replaced by structural roles derived from name prefixes (x/s/p/g/t/cq/wide/
+    # q/etrue/btrue/blocked), which is stable under our generator's renamings and
+    # under reordering (rules are sorted).
+    def role(a):
+        for pre in ("blocked", "etrue", "btrue", "wide", "cq", "q",
+                    "x", "s", "p", "g", "t"):
+            if a == pre or a.startswith(pre):
+                return pre
+        return a
+    sig = []
+    for r in prog.rules:
+        pos = tuple(sorted(role(b) for b in r.pos))
+        neg = tuple(sorted(role(c) for c in r.neg))
+        sig.append((role(r.head), pos, neg))
+    return repr(sorted(sig))
 
 
 def build_by_effwidth(depth: int, eff_width: int, bin_name: str, cycle_len: int = None):
