@@ -535,6 +535,32 @@ surfaces (narrative→narrative) but not across a large representational gap
 representational range it will be tested on — more surfaces, including abstract
 ones, not just more narrative themes.
 
+## Experiment 21 — production run (open-source panel)
+
+The production design agreed with A. Słusarz: a fixed cell (**depth 8, width 4**,
+cycle even=4/odd=3), one verbalization, and **30 *distinct* programs per cell** —
+structurally varied but gold-preserving (`nafbench/instances.build_variant`:
+varied cq/wide attach points, aggregator count, support-fact distribution, cycle
+guard literals, rule order; isomorphic duplicates filtered). 600 prompts = 4 bins
+× 30 distinct programs × 5 conditions (120 programs), rendered rule-by-rule so the
+structural variety shows in the language. CIs are clustered over the ~110 distinct
+programs per model/condition — a real improvement over the pilots' handful.
+
+OpenAI budget was exhausted, so this run is the **open-source panel only**
+(`run_production.sh`, single pass, T=0):
+
+| Model | credulous | skeptical | well-founded | closed-world | default-reversion |
+|---|---|---|---|---|---|
+| Qwen2.5-coder 32B | 72% [64,81] | 61% [52,69] | 74% [66,82] | 59% [51,69] | 30% [25,34] |
+| Llama3-8B | 62% [54,71] | 67% [59,75] | 36% [27,44] | 31% [23,40] | 61% [53,69] |
+
+*DeepSeek-R1 32B is omitted from the headline: it returned a parseable `ANSWER:`
+on only 110/600 items (18%) — not truncation (it finishes reasoning under the
+8k-token budget) but output-format non-compliance (it ends in its own format,
+e.g. `\boxed{q}`). A reasoning-model answer extractor is the fix (future work).*
+
+Frontier models (GPT-4.1/GPT-5, Claude) are pending API budget.
+
 ## Related work (positioning)
 
 Two recent papers study reasoning failure as a function of **raw complexity**:
