@@ -553,11 +553,16 @@ OpenAI budget was exhausted, so this run is the **open-source panel only**
 |---|---|---|---|---|---|
 | Qwen2.5-coder 32B | 72% [64,81] | 61% [52,69] | 74% [66,82] | 59% [51,69] | 30% [25,34] |
 | Llama3-8B | 62% [54,71] | 67% [59,75] | 36% [27,44] | 31% [23,40] | 61% [53,69] |
+| DeepSeek-R1 32B | 72% [64,81] | 64% [55,74] | 31% [23,39] | 43% [34,52] | 32% [26,39] |
 
-*DeepSeek-R1 32B is omitted from the headline: it returned a parseable `ANSWER:`
-on only 110/600 items (18%) — not truncation (it finishes reasoning under the
-8k-token budget) but output-format non-compliance (it ends in its own format,
-e.g. `\boxed{q}`). A reasoning-model answer extractor is the fix (future work).*
+DeepSeek-R1 needed a **reasoning-model answer extractor**
+(`nafbench/answer.parse_answer_reasoning`, applied by `rescue_deepseek.py`): the
+strict parser resolved only 110/600 because R1 ignores "ANSWER: X" and concludes
+in its own format (`\boxed{q}`, "q is undefined", …). Re-parsing the *saved* raw
+outputs (no re-run) — mapping the free-form conclusion about the query to A/B/C,
+and verified to agree with the strict parser on all items it had already resolved
+— lifts coverage to 536/600. Notably R1 does *worst* on well-founded (31%): a
+reasoning model tends to force a definite true/false rather than "undefined".
 
 Frontier models (GPT-4.1/GPT-5, Claude) are pending API budget.
 

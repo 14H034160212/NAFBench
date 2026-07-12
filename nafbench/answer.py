@@ -35,3 +35,52 @@ def parse_answer(text):
         if m:
             return m.group(1).upper()
     return None
+
+
+# --- reasoning-model fallback (e.g. DeepSeek-R1) -----------------------------
+# Reasoning models often ignore "ANSWER: X" and instead conclude in their own
+# format about the QUERY atom (e.g. \boxed{q}, \boxed{True}, "q is undefined",
+# "Cannot determine"). This maps such a free-form conclusion to A/B/C. Kept
+# separate from parse_answer so the strict parser is unchanged for other models.
+_BOX_RE = re.compile(r"\\boxed\{([^}]*)\}")
+_C_KEYS = ("cannot be determined", "cannot determine", "cannot be established",
+           "cannot conclude", "not be determined", "undefined", "unknown",
+           "insufficient", "indeterminate")
+_B_KEYS = ("not true", "is false", "\\bfalse\\b", "does not hold",
+           "cannot be true", "\\bno\\b")
+_A_KEYS = ("is true", "\\btrue\\b", "\\byes\\b", "holds", "must be true",
+           "definitely yes")
+
+
+def parse_answer_reasoning(text, query="q"):
+    """parse_answer first; if that fails, map a reasoning model's free-form
+    conclusion about the query to A/B/C. Order: C (undefined) -> B (false/no)
+    -> A (true/yes / the bare query atom). Returns None if still ambiguous."""
+    std = parse_answer(text)
+    if std is not None:
+        return std
+    if not text:
+        return None
+    visible = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    boxes = _BOX_RE.findall(visible)
+    if boxes:
+        cand = boxes[-1].strip()
+    else:
+        m = list(re.finditer(r"(?:final answer|answer|conclusion)\b\s*[:\-]?\s*",
+                             visible, re.IGNORECASE))
+        cand = visible[m[-1].end():][:160] if m else visible[-200:]
+    # a bare option letter or a bare "yes/no"
+    bare = cand.strip().strip(".):(").upper()
+    if bare in ("A", "B", "C"):
+        return bare
+    c = cand.lower()
+
+    def has(keys):
+        return any((re.search(k, c) if k.startswith("\\b") else (k in c)) for k in keys)
+    if has(_C_KEYS):
+        return "C"
+    if has(_B_KEYS):
+        return "B"
+    if has(_A_KEYS) or re.search(rf"\b{re.escape(query)}\b", cand):
+        return "A"
+    return None
