@@ -1,0 +1,42 @@
+[
+ {
+  "task_id": "naf-042::stable",
+  "rec_id": "naf-042",
+  "cond": "stable",
+  "family": "cycle_gadget",
+  "axes": {
+   "rule_depth": 1,
+   "negation_depth": 1,
+   "cycle": "even",
+   "stratified": false
+  },
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "prompt": "Use STABLE-MODEL (answer-set) semantics. Consider every self-consistent way of assigning truth values that is exactly justified by the rules (each such assignment is an 'answer set'). Answer 'Definitely yes' only if the queried statement holds in EVERY answer set; 'Definitely no' if it holds in NO answer set; and 'Cannot be determined' if it holds in some answer sets but not others, OR if there is no answer set at all.\n\nRules:\nMember 1 votes YES if and only if Member 2 does NOT. Member 2 votes YES if and only if Member 1 does NOT. The motion passes if Member 1 votes YES.\n\nQuestion: Does the motion PASS?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ },
+ {
+  "task_id": "naf-042::wfs",
+  "rec_id": "naf-042",
+  "cond": "wfs",
+  "family": "cycle_gadget",
+  "axes": {
+   "rule_depth": 1,
+   "negation_depth": 1,
+   "cycle": "even",
+   "stratified": false
+  },
+  "divergent": true,
+  "gold": "C",
+  "certified": {
+   "stable": "brave",
+   "wfs": "undefined",
+   "sldnf": "loop"
+  },
+  "prompt": "Use WELL-FOUNDED semantics, which is three-valued (true, false, or undefined). A statement is 'true' only if it is well-founded (ultimately grounded in facts), 'false' if it can never be supported, and 'undefined' if its support depends circularly on assumptions about itself. Answer 'Definitely yes' for true, 'Definitely no' for false, and 'Cannot be determined' for undefined.\n\nRules:\nMember 1 votes YES if and only if Member 2 does NOT. Member 2 votes YES if and only if Member 1 does NOT. The motion passes if Member 1 votes YES.\n\nQuestion: Does the motion PASS?\n\nChoose exactly one:\n  A. Definitely yes\n  B. Definitely no\n  C. Cannot be determined\n\nThink step by step, then end your answer with a line of the form 'ANSWER: X' where X is A, B, or C."
+ }
+]
