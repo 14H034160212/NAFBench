@@ -4,6 +4,7 @@ numpy>=1.23
 tiktoken>=0.7          # prompt-length metrics (o200k) + pad_to_tokens length control
 # external system dependency: SWI-Prolog (swipl) on PATH
 openai>=1.40
+anthropic>=0.92        # native Message Batches API (run_eval_batch.py)
 peft>=0.10
 trl>=0.9
 datasets>=2.18
