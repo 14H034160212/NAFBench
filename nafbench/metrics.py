@@ -1,4 +1,4 @@
-"""Instance-length metrics (per A. Slusarz: control for length as a confound,
+"""Instance-length metrics (per A. Mensfelt: control for length as a confound,
 since depth and width both inflate prompt length)."""
 from __future__ import annotations
 

@@ -3,7 +3,7 @@
 Axes: depth x WIDTH, where width = shared subgoals ONLY (identical across bins).
 Cycle length is a SEPARATE, per-bin knob (even=4, odd=3, control=none) and is no
 longer folded into width -- tracking shared subgoals and resolving a cycle are
-different loads (A. Slusarz). All five conditions; two surface themes as
+different loads (A. Mensfelt). All five conditions; two surface themes as
 replicates. Instance length (tokens) recorded for confound control.
 """
 import json
