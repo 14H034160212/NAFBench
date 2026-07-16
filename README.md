@@ -566,6 +566,27 @@ reasoning model tends to force a definite true/false rather than "undefined".
 
 Frontier models (GPT-4.1/GPT-5, Claude) are pending API budget.
 
+## Experiment 22 — rule-order robustness
+
+A semantics-preserving perturbation: take a program and present its rules in
+several **different orders**. Reordering never changes the logic, so the certified
+gold is invariant within a group — any change in the model's answer across orders
+is pure order-sensitivity. Production scale: 4 bins × 10 distinct programs × 4
+conditions × 4 rule orderings = 640 prompts over **160 (program, condition)
+groups** (`make_reorder_prod.py`; scored by `analyze_reorder_prod.py`;
+`data/reorder_prod_set.json`, `data/reorder_prod_answers/`).
+
+| Model | accuracy | order-sensitivity (groups whose answer flips with rule order) |
+|---|---|---|
+| Qwen2.5-coder 32B | 68% | 87/160 = **54%** |
+| Llama3-8B | 48% | 99/160 = **62%** |
+| DeepSeek-R1 32B | 55% | 106/158 = **67%** |
+
+All three open-source models change their answer on **more than half** of the
+groups purely from reordering identical rules — a substantial robustness gap under
+a perturbation they should be invariant to. (DeepSeek-R1 scored via the reasoning
+extractor, coverage 556/640.) Frontier models on this set are pending API budget.
+
 ## Related work (positioning)
 
 Two recent papers study reasoning failure as a function of **raw complexity**:
