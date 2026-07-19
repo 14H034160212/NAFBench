@@ -1,8 +1,12 @@
 """Standalone answer parser (no heavy deps), shared by run_eval and eval_local."""
 import re
 
-# 1. the instructed form: a line 'ANSWER: X' (optionally parenthesized)
-ANSWER_RE = re.compile(r"ANSWER:\s*\(?([ABC])\)?", re.IGNORECASE)
+# 1. the instructed form: a line 'ANSWER: X' (optionally parenthesized).
+# (?![A-Za-z]) stops the captured letter from being the start of a longer word:
+# without it, a prose "we answer:" right before the final "ANSWER: C" line made
+# the case-insensitive match grab the 'A' of "ANSWER" as the choice.
+# (Fix proposed by A. Mensfelt after mis-parses in the o4-mini outputs.)
+ANSWER_RE = re.compile(r"ANSWER:\s*\(?([ABC])\)?(?![A-Za-z])", re.IGNORECASE)
 # 2. an explicit answer phrase: "the answer is A", "final answer: B", "answer = C".
 # Requires a connector after "answer" so we don't grab "option A" mid-reasoning.
 PHRASE_RE = re.compile(
