@@ -187,6 +187,13 @@ python run_eval.py --provider ollama --models deepseek-r1:32b qwen2.5-coder:32b 
 OPENAI_API_KEY=... python run_eval.py --provider openai --models gpt-5 gpt-4.1 gpt-4o-mini
 python score_all.py                      # -> data/cross_vendor_wfs.png
 
+# same evaluation via the Batch APIs (50% cheaper; identical output files):
+OPENAI_API_KEY=... python run_eval_batch.py --provider openai --models gpt-4o-mini o4-mini
+ANTHROPIC_API_KEY=... python run_eval_batch.py --provider anthropic \
+    --models claude-opus-4-8 --max-tokens 16384
+# blocks until the batch ends; Ctrl-C is safe — rerunning the same command resumes.
+# --submit-only submits and exits; rerun without it later to collect results.
+
 # translate-then-solve baseline:
 python translate_solve.py --provider ollama --models qwen2.5-coder:32b llama3:8b deepseek-r1:32b
 OPENAI_API_KEY=... python translate_solve.py --provider openai --models gpt-5 gpt-4.1 gpt-4o-mini
