@@ -314,7 +314,7 @@
   "prod-odd-i2-none::none": "C",
   "prod-odd-i1-closed_world::closed_world": "A",
   "prod-odd-i2-closed_world::closed_world": "A",
-  "prod-odd-i2-cred::cred": "C",
+  "prod-odd-i2-cred::cred": "A",
   "prod-odd-i2-skept::skept": "A",
   "prod-odd-i2-wfs::wfs": "C",
   "prod-odd-i3-none::none": "C",
@@ -333,7 +333,7 @@
   "prod-odd-i5-wfs::wfs": "C",
   "prod-odd-i6-none::none": "C",
   "prod-odd-i6-cred::cred": "A",
-  "prod-odd-i5-skept::skept": "B",
+  "prod-odd-i5-skept::skept": "A",
   "prod-odd-i6-wfs::wfs": "C",
   "prod-odd-i6-closed_world::closed_world": "A",
   "prod-odd-i7-none::none": "A",
@@ -372,7 +372,7 @@
   "prod-odd-i13-wfs::wfs": "A",
   "prod-odd-i13-skept::skept": "A",
   "prod-odd-i14-none::none": "A",
-  "prod-odd-i14-closed_world::closed_world": "B",
+  "prod-odd-i14-closed_world::closed_world": "A",
   "prod-odd-i14-cred::cred": "A",
   "prod-odd-i14-skept::skept": "A",
   "prod-odd-i11-cred::cred": null,
@@ -537,14 +537,14 @@
   "prod-even_both_sided-i16-none::none": "C",
   "prod-even_both_sided-i16-wfs::wfs": "A",
   "prod-even_both_sided-i17-closed_world::closed_world": "C",
-  "prod-even_both_sided-i16-skept::skept": "B",
+  "prod-even_both_sided-i16-skept::skept": "A",
   "prod-even_both_sided-i17-none::none": "A",
   "prod-even_both_sided-i17-cred::cred": "A",
   "prod-even_both_sided-i17-wfs::wfs": "A",
   "prod-even_both_sided-i17-skept::skept": "A",
   "prod-even_both_sided-i18-closed_world::closed_world": "A",
   "prod-even_both_sided-i18-none::none": "A",
-  "prod-even_both_sided-i18-skept::skept": "C",
+  "prod-even_both_sided-i18-skept::skept": "A",
   "prod-even_both_sided-i18-wfs::wfs": "C",
   "prod-even_both_sided-i19-none::none": "A",
   "prod-even_both_sided-i18-cred::cred": "A",
@@ -1204,13 +1204,5 @@
   "prod-even_both_sided-i29-cred::cred": 466,
   "prod-even_both_sided-i29-skept::skept": 467,
   "prod-even_both_sided-i29-wfs::wfs": 336
- },
- "reparsed_answer_re_fix": true,
- "reparsed_changed_task_ids": [
-  "prod-even_both_sided-i16-skept::skept",
-  "prod-even_both_sided-i18-skept::skept",
-  "prod-odd-i14-closed_world::closed_world",
-  "prod-odd-i2-cred::cred",
-  "prod-odd-i5-skept::skept"
- ]
+ }
 }

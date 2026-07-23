@@ -16,3 +16,7 @@ runs/
 reply_to_agnieszka.md
 audit.md
 data/*.log
+
+# anonymous AAAI submission — do NOT commit to the public repo
+negbench_paper/
+Negbench*.zip

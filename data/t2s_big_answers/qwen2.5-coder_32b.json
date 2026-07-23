@@ -1,0 +1,322 @@
+{
+ "model": "qwen2.5-coder:32b",
+ "provider": "ollama",
+ "method": "translate_then_solve",
+ "set": "data/wfs_big.json",
+ "parsed_ok": 44,
+ "n_programs": 44,
+ "answers": {
+  "cyc2-disj-meeting::wfs": "C",
+  "cyc2-disj-panel::wfs": "C",
+  "cyc2-disj-network::wfs": "C",
+  "cyc2-disj-committee::wfs": "C",
+  "cyc2-conj-meeting::wfs": "C",
+  "cyc2-conj-panel::wfs": "C",
+  "cyc2-conj-network::wfs": "C",
+  "cyc2-conj-committee::wfs": "C",
+  "cyc4-disj-meeting::wfs": "C",
+  "cyc4-disj-panel::wfs": "C",
+  "cyc4-disj-network::wfs": "C",
+  "cyc4-disj-committee::wfs": "C",
+  "cyc4-conj-meeting::wfs": "C",
+  "cyc4-conj-panel::wfs": "C",
+  "cyc4-conj-network::wfs": "C",
+  "cyc4-conj-committee::wfs": "C",
+  "cyc6-disj-meeting::wfs": "C",
+  "cyc6-disj-panel::wfs": "C",
+  "cyc6-disj-network::wfs": "C",
+  "cyc6-disj-committee::wfs": "C",
+  "cyc6-conj-meeting::wfs": "C",
+  "cyc6-conj-panel::wfs": "C",
+  "cyc6-conj-network::wfs": "C",
+  "cyc6-conj-committee::wfs": "C",
+  "def-approval-1-0::wfs": "A",
+  "def-approval-1-1::wfs": "B",
+  "def-approval-2-0::wfs": "A",
+  "def-approval-2-1::wfs": "B",
+  "def-approval-3-0::wfs": "A",
+  "def-approval-3-1::wfs": "B",
+  "def-eligibility-1-0::wfs": "A",
+  "def-eligibility-1-1::wfs": "B",
+  "def-eligibility-2-0::wfs": "C",
+  "def-eligibility-2-1::wfs": "B",
+  "def-eligibility-3-0::wfs": "A",
+  "def-eligibility-3-1::wfs": "B",
+  "stk-authority-1::wfs": "B",
+  "stk-authority-2::wfs": "C",
+  "stk-authority-3::wfs": "B",
+  "stk-authority-4::wfs": "A",
+  "stk-review-1::wfs": "B",
+  "stk-review-2::wfs": "A",
+  "stk-review-3::wfs": "B",
+  "stk-review-4::wfs": "A"
+ },
+ "completion_tokens": {
+  "cyc2-disj-meeting::wfs": 22,
+  "cyc2-disj-panel::wfs": 22,
+  "cyc2-disj-network::wfs": 28,
+  "cyc2-disj-committee::wfs": 34,
+  "cyc2-conj-meeting::wfs": 21,
+  "cyc2-conj-panel::wfs": 22,
+  "cyc2-conj-network::wfs": 29,
+  "cyc2-conj-committee::wfs": 33,
+  "cyc4-disj-meeting::wfs": 46,
+  "cyc4-disj-panel::wfs": 40,
+  "cyc4-disj-network::wfs": 52,
+  "cyc4-disj-committee::wfs": 52,
+  "cyc4-conj-meeting::wfs": 41,
+  "cyc4-conj-panel::wfs": 36,
+  "cyc4-conj-network::wfs": 49,
+  "cyc4-conj-committee::wfs": 59,
+  "cyc6-disj-meeting::wfs": 67,
+  "cyc6-disj-panel::wfs": 58,
+  "cyc6-disj-network::wfs": 76,
+  "cyc6-disj-committee::wfs": 76,
+  "cyc6-conj-meeting::wfs": 58,
+  "cyc6-conj-panel::wfs": 50,
+  "cyc6-conj-network::wfs": 69,
+  "cyc6-conj-committee::wfs": 85,
+  "def-approval-1-0::wfs": 21,
+  "def-approval-1-1::wfs": 24,
+  "def-approval-2-0::wfs": 28,
+  "def-approval-2-1::wfs": 32,
+  "def-approval-3-0::wfs": 36,
+  "def-approval-3-1::wfs": 40,
+  "def-eligibility-1-0::wfs": 27,
+  "def-eligibility-1-1::wfs": 46,
+  "def-eligibility-2-0::wfs": 36,
+  "def-eligibility-2-1::wfs": 32,
+  "def-eligibility-3-0::wfs": 36,
+  "def-eligibility-3-1::wfs": 41,
+  "stk-authority-1::wfs": 19,
+  "stk-authority-2::wfs": 36,
+  "stk-authority-3::wfs": 50,
+  "stk-authority-4::wfs": 46,
+  "stk-review-1::wfs": 36,
+  "stk-review-2::wfs": 22,
+  "stk-review-3::wfs": 29,
+  "stk-review-4::wfs": 36
+ },
+ "translations": {
+  "cyc2-disj-meeting": {
+   "text": "alice :- not bob.\nbob :- not alice.\nheld :- alice.\nheld :- bob.\nQUERY: held",
+   "ok": true,
+   "query": "held"
+  },
+  "cyc2-disj-panel": {
+   "text": "p :- not q.\nq :- not p.\nreported :- p.\nreported :- q.\nQUERY: reported",
+   "ok": true,
+   "query": "reported"
+  },
+  "cyc2-disj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online1.\navailable :- online1.\navailable :- online2.\nQUERY: available",
+   "ok": true,
+   "query": "available"
+  },
+  "cyc2-disj-committee": {
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\npass :- m1y.\npass :- m2y.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "cyc2-conj-meeting": {
+   "text": "alice :- not bob.\nbob :- not alice.\nfiled :- alice, bob.\nQUERY: filed",
+   "ok": true,
+   "query": "filed"
+  },
+  "cyc2-conj-panel": {
+   "text": "p :- not q.\nq :- not p.\nmistrial :- p, q.\nQUERY: mistrial",
+   "ok": true,
+   "query": "mistrial"
+  },
+  "cyc2-conj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online1.\noutage_alert :- online1, online2.\nQUERY: outage_alert",
+   "ok": true,
+   "query": "outage_alert"
+  },
+  "cyc2-conj-committee": {
+   "text": "m1y :- not m2y.\nm2y :- not m1y.\ndeadlock :- m1y, m2y.\nQUERY: deadlock",
+   "ok": true,
+   "query": "deadlock"
+  },
+  "cyc4-disj-meeting": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\nheld :- alice.\nheld :- bob.\nheld :- carol.\nheld :- dave.\nQUERY: held",
+   "ok": true,
+   "query": "held"
+  },
+  "cyc4-disj-panel": {
+   "text": "p :- not q.\nq :- not r.\nr :- not s.\ns :- not p.\nreported :- p.\nreported :- q.\nreported :- r.\nreported :- s.\nQUERY: reported",
+   "ok": true,
+   "query": "reported"
+  },
+  "cyc4-disj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online3.\nonline3 :- not online4.\nonline4 :- not online1.\navailable :- online1.\navailable :- online2.\navailable :- online3.\navailable :- online4.\nQUERY: available",
+   "ok": true,
+   "query": "available"
+  },
+  "cyc4-disj-committee": {
+   "text": "m1 :- not m2.\nm2 :- not m3.\nm3 :- not m4.\nm4 :- not m1.\npass :- m1.\npass :- m2.\npass :- m3.\npass :- m4.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "cyc4-conj-meeting": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not alice.\nfiled :- alice, bob, carol, dave.\nQUERY: filed",
+   "ok": true,
+   "query": "filed"
+  },
+  "cyc4-conj-panel": {
+   "text": "p :- not q.\nq :- not r.\nr :- not s.\ns :- not p.\nmistrial :- p, q, r, s.\nQUERY: mistrial",
+   "ok": true,
+   "query": "mistrial"
+  },
+  "cyc4-conj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online3.\nonline3 :- not online4.\nonline4 :- not online1.\noutage_alert :- online1, online2, online3, online4.\nQUERY: outage_alert",
+   "ok": true,
+   "query": "outage_alert"
+  },
+  "cyc4-conj-committee": {
+   "text": "m1y :- not m2y.\nm2y :- not m3y.\nm3y :- not m4y.\nm4y :- not m1y.\ndeadlock :- m1y, m2y, m3y, m4y.\nQUERY: deadlock",
+   "ok": true,
+   "query": "deadlock"
+  },
+  "cyc6-disj-meeting": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not erin.\nerin :- not frank.\nfrank :- not alice.\nmeeting :- alice.\nmeeting :- bob.\nmeeting :- carol.\nmeeting :- dave.\nmeeting :- erin.\nmeeting :- frank.\nQUERY: meeting",
+   "ok": true,
+   "query": "meeting"
+  },
+  "cyc6-disj-panel": {
+   "text": "p :- not q.\nq :- not r.\nr :- not s.\ns :- not t.\nt :- not u.\nu :- not p.\nreported :- p.\nreported :- q.\nreported :- r.\nreported :- s.\nreported :- t.\nreported :- u.\nQUERY: reported",
+   "ok": true,
+   "query": "reported"
+  },
+  "cyc6-disj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online3.\nonline3 :- not online4.\nonline4 :- not online5.\nonline5 :- not online6.\nonline6 :- not online1.\navailable :- online1.\navailable :- online2.\navailable :- online3.\navailable :- online4.\navailable :- online5.\navailable :- online6.\nQUERY: available",
+   "ok": true,
+   "query": "available"
+  },
+  "cyc6-disj-committee": {
+   "text": "m1 :- not m2.\nm2 :- not m3.\nm3 :- not m4.\nm4 :- not m5.\nm5 :- not m6.\nm6 :- not m1.\npass :- m1.\npass :- m2.\npass :- m3.\npass :- m4.\npass :- m5.\npass :- m6.\nQUERY: pass",
+   "ok": true,
+   "query": "pass"
+  },
+  "cyc6-conj-panel": {
+   "text": "p :- not q.\nq :- not r.\nr :- not s.\ns :- not t.\nt :- not u.\nu :- not p.\nmistrial :- p, q, r, s, t, u.\nQUERY: mistrial",
+   "ok": true,
+   "query": "mistrial"
+  },
+  "cyc6-conj-meeting": {
+   "text": "alice :- not bob.\nbob :- not carol.\ncarol :- not dave.\ndave :- not erin.\nerin :- not frank.\nfrank :- not alice.\nfiled :- alice, bob, carol, dave, erin, frank.\nQUERY: filed",
+   "ok": true,
+   "query": "filed"
+  },
+  "cyc6-conj-network": {
+   "text": "online1 :- not online2.\nonline2 :- not online3.\nonline3 :- not online4.\nonline4 :- not online5.\nonline5 :- not online6.\nonline6 :- not online1.\noutage_alert :- online1, online2, online3, online4, online5, online6.\nQUERY: outage_alert",
+   "ok": true,
+   "query": "outage_alert"
+  },
+  "cyc6-conj-committee": {
+   "text": "m1y :- not m2y.\nm2y :- not m3y.\nm3y :- not m4y.\nm4y :- not m5y.\nm5y :- not m6y.\nm6y :- not m1y.\ndeadlock :- m1y, m2y, m3y, m4y, m5y, m6y.\nQUERY: deadlock",
+   "ok": true,
+   "query": "deadlock"
+  },
+  "def-approval-1-0": {
+   "text": "item_x_in_c1.\napproved :- item_x_in_c1, not flagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "def-approval-1-1": {
+   "text": "item_x_in_c1.\napproved :- item_x_in_c1, not flagged.\nflagged.\nQUERY: approved",
+   "ok": true,
+   "query": "approved"
+  },
+  "def-approval-2-0": {
+   "text": "c2_x.\nc1_x :- c2_x.\napproved_x :- c1_x, not flagged_x.\nQUERY: approved_x",
+   "ok": true,
+   "query": "approved_x"
+  },
+  "def-approval-2-1": {
+   "text": "c2_x.\nc1_x :- c2_x.\napproved_x :- c1_x, not flagged_x.\nflagged_x.\nQUERY: approved_x",
+   "ok": true,
+   "query": "approved_x"
+  },
+  "def-approval-3-0": {
+   "text": "c3_x.\nc2_x :- c3_x.\nc1_x :- c2_x.\napproved_x :- c1_x, not flagged_x.\nQUERY: approved_x",
+   "ok": true,
+   "query": "approved_x"
+  },
+  "def-eligibility-1-0": {
+   "text": "applicant_y_in_t1.\nitem_eligible :- applicant_y_in_t1, not disqualified.\nQUERY: item_eligible",
+   "ok": true,
+   "query": "item_eligible"
+  },
+  "def-approval-3-1": {
+   "text": "c3_x.\nc2_x :- c3_x.\nc1_x :- c2_x.\napproved_x :- c1_x, not flagged_x.\nflagged_x.\nQUERY: approved_x",
+   "ok": true,
+   "query": "approved_x"
+  },
+  "def-eligibility-2-0": {
+   "text": "t2_y.\nt1_y :- t2_y.\ndisqualified_y :- not eligible_y.\neligible_y :- t1_y, not disqualified_y.\nQUERY: eligible_y",
+   "ok": true,
+   "query": "eligible_y"
+  },
+  "def-eligibility-1-1": {
+   "text": "applicant_y_in_tier_t1.\nitem_in_tier_t1_is_eligible :- applicant_y_in_tier_t1, not disqualified.\ndisqualified.\nQUERY: item_in_tier_t1_is_eligible",
+   "ok": true,
+   "query": "item_in_tier_t1_is_eligible"
+  },
+  "def-eligibility-2-1": {
+   "text": "t2_y.\nt1_y :- t2_y.\ndisqualified_y.\neligible_y :- t1_y, not disqualified_y.\nQUERY: eligible_y",
+   "ok": true,
+   "query": "eligible_y"
+  },
+  "def-eligibility-3-0": {
+   "text": "t3_y.\nt2_y :- t3_y.\nt1_y :- t2_y.\neligible_y :- t1_y, not disqualified_y.\nQUERY: eligible_y",
+   "ok": true,
+   "query": "eligible_y"
+  },
+  "stk-authority-1": {
+   "text": "acts1.\nacts :- not acts1.\nnot acts :- acts1.\nQUERY: acts",
+   "ok": true,
+   "query": "acts"
+  },
+  "def-eligibility-3-1": {
+   "text": "t3_y.\nt2_y :- t3_y.\nt1_y :- t2_y.\ndisqualified_y.\neligible_y :- t1_y, not disqualified_y.\nQUERY: eligible_y.",
+   "ok": true,
+   "query": "eligible_y"
+  },
+  "stk-authority-2": {
+   "text": "acts2.\nacts1 :- not acts2.\nacts2 :- not acts1.\nacts0 :- not acts1.\nacts1 :- not acts0.\nQUERY: acts0",
+   "ok": true,
+   "query": "acts0"
+  },
+  "stk-authority-3": {
+   "text": "acts3.\nnot acts2 :- acts3.\nacts2 :- not acts3.\nnot acts1 :- acts2.\nacts1 :- not acts2.\nnot acts0 :- acts1.\nacts0 :- not acts1.\nQUERY: acts0",
+   "ok": true,
+   "query": "acts0"
+  },
+  "stk-authority-4": {
+   "text": "acts_l4.\nacts_l3 :- not acts_l4.\nacts_l2 :- not acts_l3.\nacts_l1 :- not acts_l2.\nacts_l0 :- not acts_l1.\nQUERY: acts_l0",
+   "ok": true,
+   "query": "acts_l0"
+  },
+  "stk-review-1": {
+   "text": "signs_off_1.\nsigns_off_0 :- not signs_off_1.\nnot signs_off_0 :- signs_off_1.\nQUERY: signs_off_0",
+   "ok": true,
+   "query": "signs_off_0"
+  },
+  "stk-review-2": {
+   "text": "r2.\nr0 :- not r1.\nr1 :- not r2.\nQUERY: r0",
+   "ok": true,
+   "query": "r0"
+  },
+  "stk-review-3": {
+   "text": "r3.\nr0 :- not r1.\nr1 :- not r2.\nr2 :- not r3.\nQUERY: r0",
+   "ok": true,
+   "query": "r0"
+  },
+  "stk-review-4": {
+   "text": "r0 :- not r1.\nr1 :- not r2.\nr2 :- not r3.\nr3 :- not r4.\nr4.\nQUERY: r0",
+   "ok": true,
+   "query": "r0"
+  }
+ }
+}
