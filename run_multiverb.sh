@@ -1,4 +1,4 @@
-set -e; cd /data/qbao775/NAFBench
+set -e; cd "$(dirname "$0")"
 export HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=7
 echo "### TRAIN multi-verbalization SFT"
 python3 train_sft.py --data data/train/sft_multi.jsonl --out runs/sft_multi --epochs 3

@@ -1,4 +1,4 @@
-"""Larger-sample depth x width grid (A. Mensfelt's 'larger sample' request).
+"""Larger-sample depth x width grid (a collaborator's 'larger sample' request).
 
 Extends the single-program-per-cell v2 grid (make_v2_eval) to N distinct,
 gold-preserving programs per (depth, width) cell, so the marginal accuracies in

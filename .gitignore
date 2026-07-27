@@ -20,3 +20,9 @@ data/*.log
 # anonymous AAAI submission — do NOT commit to the public repo
 negbench_paper/
 Negbench*.zip
+
+# internal planning/meeting notes — not part of the public release
+MEETING.md
+MEETING_zh.md
+MEETING_NOTES.md
+WEEKLY_UPDATE.md

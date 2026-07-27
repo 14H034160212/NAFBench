@@ -3,9 +3,9 @@
 # Sequential to avoid two 32B models contending on GPU. Logs completion tokens
 # (run_eval / translate_solve_set both record them).
 set -u
-cd /data/qbao775/NAFBench
+cd "$(dirname "$0")"
 MODELS="qwen2.5-coder:32b llama3:8b deepseek-r1:32b"
-LOG=/tmp/claude-1022/-data-qbao775-NAFBench/1d1bd52a-b041-4cd7-aedf-93bf1fc8e7fc/scratchpad
+LOG=${TMPDIR:-/tmp}
 echo "START $(date)"
 
 echo "=== [1/3] DIRECT baseline (wfs_big) ==="

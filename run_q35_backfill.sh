@@ -2,9 +2,9 @@
 # Backfill completion tokens for the 4 Qwen3.5-9B local files.
 # Deterministic (do_sample=False) so answers reproduce; only tokens get added.
 set -euo pipefail
-cd /data/qbao775/NAFBench
+cd "$(dirname "$0")"
 export CUDA_VISIBLE_DEVICES=1
-PY=/data/qbao775/miniconda3/envs/gemma4-rl/bin/python
+PY="${PYTHON:-python3}"
 M=Qwen/Qwen3.5-9B
 S=data/wfs_big.json
 

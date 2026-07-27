@@ -1,4 +1,4 @@
-"""Verbalization-comparison set (A. Mensfelt's question: compare the influence of
+"""Verbalization-comparison set (a collaborator's question: compare the influence of
 different verbalizations on local models).
 
 Renders the SAME canonical program under the three surface framings (THEMES_V2:

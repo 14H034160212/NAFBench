@@ -1,4 +1,4 @@
-"""Analyze the pilot to make the design decisions in A. Mensfelt's note."""
+"""Analyze the pilot to make the design decisions in a collaborator's note."""
 import json, glob
 import numpy as np
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt

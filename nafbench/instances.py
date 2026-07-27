@@ -1,4 +1,4 @@
-"""G(depth, width, divergence_bin) — Agnieszka's complexity parametrization.
+"""G(depth, width, divergence_bin) — a collaborator's complexity parametrization.
 
 A v2 generator that decouples three knobs:
 
@@ -76,7 +76,7 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
 
     # positive chain of length `depth` from (width AND cq) up to the query q.
     # `wide` is listed before `cq` so width is evaluated before the cycle
-    # (A. Mensfelt).
+    # (a collaborator).
     if depth <= 0:
         rules.append(Rule("q", pos=(wide, cq)))
     else:
@@ -86,7 +86,7 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
             rules.append(Rule(chain[j], pos=(chain[j + 1],)))
         rules.append(Rule(chain[-1], pos=(wide, cq)))   # deepest step needs width + core
 
-    # Effective width (per A. Mensfelt): a negative cycle cannot be resolved, so
+    # Effective width (per a collaborator): a negative cycle cannot be resolved, so
     # its length contributes to the atoms that must be held in working memory at
     # once. control has no cycle -> contributes 0.
     cyc_contrib = 0 if bin_name == "control" else cycle_len
@@ -101,7 +101,7 @@ def build_instance(depth: int, width: int, bin_name: str, cycle_len: int = None)
 
 def build_multi_independent(n_cycles: int) -> Program:
     """n independent even 2-cycles; q reachable from the first atom of each
-    (q :- x_i0).  (A. Mensfelt's 'independent' multi-cycle example, n=2.)
+    (q :- x_i0).  (a collaborator's 'independent' multi-cycle example, n=2.)
     Signature stays (T, F, u, loop) but n_stable_models = 2**n_cycles."""
     rules: List[Rule] = []
     firsts = []
@@ -118,7 +118,7 @@ def build_multi_independent(n_cycles: int) -> Program:
 
 
 def build_interdependent(n_cycles: int) -> Program:
-    """n coupled 2-cycles in a chain (A. Mensfelt's 'interdependent' example, n=2):
+    """n coupled 2-cycles in a chain (a collaborator's 'interdependent' example, n=2):
        h_i :- not a_i.
        a_i :- not h_i, not h_{i+1}      (last: a_n :- not h_n)
        q   :- h_1
@@ -140,7 +140,7 @@ def build_interdependent(n_cycles: int) -> Program:
 
 def build_variant(depth: int, width: int, bin_name: str, cycle_len: int, seed: int) -> Program:
     """A structurally DISTINCT instance at the SAME (bin, depth, width, cycle_len),
-    for "30 distinct programs per cell" (A. Mensfelt's option (b)). All variation
+    for "30 distinct programs per cell" (a collaborator's option (b)). All variation
     is gold-preserving -- every returned program still certifies to the bin
     signature -- so only incidental structure differs. Axes (seeded):
 
@@ -152,7 +152,7 @@ def build_variant(depth: int, width: int, bin_name: str, cycle_len: int, seed: i
       (iv)  cycle rules may carry an extra always-true literal (x_i :- not x_{i+1}, e);
       (v)   the final rule list is shuffled (order is semantics-irrelevant).
 
-    `wide` is always listed before `cq` in a shared body (per A. Mensfelt).
+    `wide` is always listed before `cq` in a shared body (per a collaborator).
     """
     import random as _random
     rng = _random.Random(seed)

@@ -2,10 +2,10 @@
 # Production run driver (option b). The 30 instances per cell are DISTINCT
 # programs baked into data/production_set.json (600 prompts, 120 programs), so we
 # do a single deterministic pass per model (add repeats only for decode-noise
-# CIs). Prompts are final; A. Mensfelt confirmed option (b).
+# CIs). Prompts are final; a collaborator confirmed option (b).
 #
 # Usage: bash run_production.sh [N_REPEATS=1] [temperature=0.0]
-set -e; cd /data/qbao775/NAFBench
+set -e; cd "$(dirname "$0")"
 N="${1:-1}"; T="${2:-0.0}"
 SET=data/production_set.json
 # Open-source models only (no OpenAI budget).

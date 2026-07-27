@@ -1,4 +1,4 @@
-"""Generalization test (per A. Mensfelt's memorization concern): does semantic-
+"""Generalization test (per a collaborator's memorization concern): does semantic-
 following transfer across verbalizations?
 
 Same certified programs, rendered in framings that are ALL held out of the

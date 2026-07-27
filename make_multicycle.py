@@ -1,4 +1,4 @@
-"""Multi-cycle experiment (A. Mensfelt's extended cycle parametrization).
+"""Multi-cycle experiment (a collaborator's extended cycle parametrization).
 
 Independent and interdependent multi-cycle structures, swept over the number of
 cycles. All share signature (T,F,u,loop) so cred/skept/wfs gold = A/B/C; the new

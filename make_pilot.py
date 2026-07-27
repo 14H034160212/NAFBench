@@ -1,4 +1,4 @@
-"""Pilot set for the decisions in A. Mensfelt's latest note:
+"""Pilot set for the decisions in a collaborator's latest note:
 
   (1) cycle-length shortcut: even bins at cycle 2 vs 4, odd at 1 vs 3
       (do models pattern-match trivial cycles like a:-not b,b:-not a?)

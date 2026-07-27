@@ -1,6 +1,6 @@
 """Analyze the v2 grid: semantic-following accuracy vs depth and width.
 
-Tests Agnieszka's hypothesis that WIDTH (simultaneous tracking) is a stronger
+Tests a collaborator's hypothesis that WIDTH (simultaneous tracking) is a stronger
 moderator of model failure than DEPTH (linear chaining), via:
   - marginal accuracy curves vs depth and vs width (per model),
   - a standardized OLS of per-item correctness ~ depth + width (pooled), so the

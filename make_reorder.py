@@ -1,4 +1,4 @@
-"""Rule-reordering robustness set (meeting 2026-07-08, A. Mensfelt / K. Stathis).
+"""Rule-reordering robustness set (meeting 2026-07-08, collaborators).
 
 Reordering the rule sentences does NOT change the program's semantics, so the
 certified gold is invariant. This set therefore isolates whether an LLM's answer

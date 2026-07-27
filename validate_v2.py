@@ -1,4 +1,4 @@
-"""Validate Agnieszka's v2 parametrization.
+"""Validate a collaborator's v2 parametrization.
 
 (1) For every (bin, depth, width), the certified four-tuple
     (credulous, skeptical, WFS, SLDNF) must equal the bin's predicted signature.

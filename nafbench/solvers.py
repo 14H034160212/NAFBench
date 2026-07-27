@@ -201,7 +201,7 @@ def certify(prog: Program, query: str) -> Dict:
 
 
 # ==========================================================================
-# v2 certification (per Agnieszka): four label dimensions + solver-hardness
+# v2 certification (per a collaborator): four label dimensions + solver-hardness
 #   SLDNF                 -> {T, F, loop}
 #   WFS                   -> {T, F, u}
 #   Stable, credulous     -> {T, F}   (q in SOME stable model; zero models -> F)

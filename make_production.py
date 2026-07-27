@@ -1,6 +1,6 @@
 """Production headline set — option (b): 30 DISTINCT programs per cell.
 
-Per A. Mensfelt (2026-07): fixed (depth, width), one verbalization, 30 distinct
+Per a collaborator (2026-07): fixed (depth, width), one verbalization, 30 distinct
 programs per cell. A "cell" is a divergence bin at the fixed size; the 30
 instances are structurally distinct, gold-preserving variants (nafbench.instances
 .build_variant: variable aggregators / support distribution / cq&wide attach

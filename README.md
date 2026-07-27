@@ -9,7 +9,7 @@ This PoC validates the full proposal pipeline end-to-end and runs a **fully auto
 > - **CIs are now clustered by program**, not by prompt: the old Wilson intervals pseudoreplicated theme/run copies of a handful of programs, so error bars are honestly wider now.
 > - **"Width beats depth" is retracted:** with a bootstrap CI on the coefficient difference, neither depth nor width is a *significant* moderator — the **divergence bin (which kind of cycle) dominates**, ~10× either size axis.
 > - **SFT transfer is more nuanced:** with a *genuine* held-out framing (the abstract surface is no longer in the training data), multi-verbalization SFT transfers to a held-out *narrative* theme but still collapses on the held-out *abstract* framing (see Exp 19–20).
-> - Answer parsing was hardened (no more "last stray capital letter"), entity names no longer collide with the A/B/C options, and every experiment now logs completion tokens. Adopted A. Mensfelt's symmetric credulous/skeptical prompt wording.
+> - Answer parsing was hardened (no more "last stray capital letter"), entity names no longer collide with the A/B/C options, and every experiment now logs completion tokens. Adopted a collaborator's symmetric credulous/skeptical prompt wording.
 
 ## In plain terms
 
@@ -400,7 +400,7 @@ Key design decisions:
 - keep all five conditions (credulous, skeptical, WFS, closed-world, no-instruction);
 - record and control token length;
 - **width = shared subgoals only, with cycle length as a separate per-bin knob**
-  (revised per A. Mensfelt: tracking shared subgoals and resolving a negative
+  (revised per a collaborator: tracking shared subgoals and resolving a negative
   cycle are different loads, and a cycle's parity is already fixed by the bin, so
   folding cycle length into "width" conflated two axes). The grid below sweeps
   plain width, identical across bins.
@@ -544,7 +544,7 @@ ones, not just more narrative themes.
 
 ## Experiment 21 — production run (open-source panel)
 
-The production design agreed with A. Mensfelt: a fixed cell (**depth 8, width 4**,
+The production design agreed with a collaborator: a fixed cell (**depth 8, width 4**,
 cycle even=4/odd=3), one verbalization, and **30 *distinct* programs per cell** —
 structurally varied but gold-preserving (`nafbench/instances.build_variant`:
 varied cq/wide attach points, aggregator count, support-fact distribution, cycle
@@ -611,7 +611,7 @@ echoes "Illusion of Thinking", and our few-shot / self-verify / translate-then-
 solve fixes parallel their best-of-N / self-verification probes.
 
 A separate NLP line benchmarks whether LLMs **detect or understand** negation at
-the sentence level: **xNot360** (Nguyen, Goebel, Toni, Stathis, Satoh,
+the sentence level: **xNot360** (Nguyen et al.,
 arXiv:2306.16638) finds GPTs only modestly proficient at spotting when one
 sentence negates another, and **Thunder-NUBench** (So et al., EACL 2026 Findings)
 contrasts negation against contradiction/paraphrase for sentence-level

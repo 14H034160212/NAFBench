@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Qwen2.5-7B lane: retrain 3 SFT seeds + DPO on corrected data, then re-eval.
-set -e; cd /data/qbao775/NAFBench
+set -e; cd "$(dirname "$0")"
 export HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0
 M=Qwen/Qwen2.5-7B-Instruct
 for s in 1 2 3; do

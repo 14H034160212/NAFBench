@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Gemma-3-4b lane: retrain single-framing + multi-framing SFT on corrected data,
 # then re-eval base/sft/sftM on wfs_big, generic, and held-out theme-2.
-set -e; cd /data/qbao775/NAFBench
+set -e; cd "$(dirname "$0")"
 export HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=7
 M=google/gemma-3-4b-it
 echo "### TRAIN gemma sft (single-framing)"

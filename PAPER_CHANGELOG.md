@@ -6,7 +6,7 @@ change are committed under `data/` and the repo root.
 
 ## 2026-07-23 — trace analysis + collaborator review round
 
-**Reasoning-trace analysis (Agnieszka / Opus-4.8 audit).**
+**Reasoning-trace analysis (a collaborator / Opus-4.8 audit).**
 - §12 parser artifact fixed: re-parsed llama3 production answers with the fixed
   `ANSWER_RE`; 5 items change (3 spuriously-correct → wrong), llama3 strict 47→46%.
   Table 1 (skept 67→64, rev 69→68), Table 2 (odd 37→36, even-2 51→50) updated.

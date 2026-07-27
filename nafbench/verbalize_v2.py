@@ -26,7 +26,7 @@ def gold_for(labels: dict, cond: str) -> str:
     return _COND_GOLD[cond][labels[_COND_DIM[cond]]]
 
 
-# Revised prompts from A. Mensfelt (2026-07): matched level of detail across the
+# Revised prompts from a collaborator (2026-07): matched level of detail across the
 # four semantics; each gives a self-contained operational definition so we test
 # whether a model can FOLLOW the specified semantics, not whether it already
 # knows it. Kept verbatim (straight quotes for codebase consistency).
@@ -195,7 +195,7 @@ def build_prompt(prog: Program, semantics: str, theme: int = 0,
     if pad_to_tokens:
         # add inert, query-irrelevant filler until the WHOLE prompt reaches the
         # target token count -> length-match an easy instance to a hard one,
-        # separating structure from sheer length (A. Mensfelt's confound concern).
+        # separating structure from sheer length (a collaborator's confound concern).
         from . import metrics as MET
         if MET.length_metrics("probe")["tokens"] is None:
             raise RuntimeError("pad_to_tokens requires tiktoken (pip install "

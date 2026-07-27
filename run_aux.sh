@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /data/qbao775/NAFBench
+cd "$(dirname "$0")"
 # wait for the original deepseek grid run to release the GPU
 while pgrep -f "run_eval.py.*deepseek-r1:32b.*v2_eval" >/dev/null; do sleep 20; done
 echo "[aux] original grid done, starting aux runs at $(date)"
