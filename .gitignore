@@ -12,8 +12,8 @@ runs/
 *.raw.json
 .claude/
 
-# collaborator email drafts — never commit (per user)
-reply_to_agnieszka.md
+# private local drafts / notes — never commit
+reply_to_*.md
 audit.md
 data/*.log
 
