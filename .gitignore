@@ -26,3 +26,7 @@ MEETING.md
 MEETING_zh.md
 MEETING_NOTES.md
 WEEKLY_UPDATE.md
+
+# leaderboard hidden test set — regenerate with leaderboard/make_leaderboard.py; never publish
+leaderboard/data/test_gold.json
+leaderboard/data/test_public.jsonl

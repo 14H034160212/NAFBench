@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NAF-Bench leaderboard submission metadata",
+  "description": "Required alongside every submission (submitted as metadata.json). Determines the track and lets results be interpreted and reproduced.",
+  "type": "object",
+  "required": ["model_name", "track", "prompt_setting", "reasoning_mode", "external_tools"],
+  "properties": {
+    "model_name": {"type": "string", "description": "e.g. 'Qwen2.5-Coder-32B', 'GPT-5.6 Sol'"},
+    "model_version": {"type": "string", "description": "checkpoint id or API version/date"},
+    "open_weights": {"type": "boolean", "description": "true if weights are public"},
+    "params_billions": {"type": ["number", "null"], "description": "parameter count in B, or null if unknown/closed"},
+    "track": {"type": "string", "enum": ["standard", "enhanced"],
+              "description": "standard: fixed prompt, single generation, no tools, temp 0; enhanced: CoT/self-consistency/solvers/agents/fine-tuning allowed (must disclose)"},
+    "prompt_setting": {"type": "string", "enum": ["zero-shot", "few-shot"]},
+    "reasoning_mode": {"type": "string", "enum": ["direct", "cot", "self-consistency", "agent", "other"]},
+    "external_tools": {"type": "boolean", "description": "true if a solver/search/tool was called"},
+    "external_tools_detail": {"type": "string", "description": "e.g. 'clingo', 'Prolog', 'none'"},
+    "temperature": {"type": ["number", "null"]},
+    "max_tokens": {"type": ["integer", "null"]},
+    "samples_per_item": {"type": "integer", "description": "model calls per prompt (standard track must be 1)"},
+    "evaluation_date": {"type": "string", "description": "YYYY-MM-DD"},
+    "contact": {"type": "string", "description": "optional; may be omitted for anonymity"},
+    "method_url": {"type": "string", "description": "paper / code / model card link (required for enhanced track)"}
+  }
+}
