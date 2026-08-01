@@ -31,3 +31,4 @@ WEEKLY_UPDATE.md
 leaderboard/data/test_gold.json
 leaderboard/data/test_public.jsonl
 leaderboard/data/hard_ladder.jsonl
+leaderboard/submissions/

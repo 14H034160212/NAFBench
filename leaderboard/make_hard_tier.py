@@ -76,15 +76,16 @@ def main():
                 seen.add(key)
                 emit(items, prog, b, "cyclen", cyc, kept, nmods)
                 kept += 1
-    # Axis B: number of independent / interdependent cycles (combinatorial)
-    for n in MULTI_N:
-        prog = build_multi_independent(n)
-        _, nmods = certify(prog, "even_one_sided")
-        emit(items, prog, "multi", "multi", "indep_n%d" % n, 0, nmods)
-    for n in INTERDEP_N:
-        prog = build_interdependent(n)
-        _, nmods = certify(prog, "even_one_sided")
-        emit(items, prog, "multi", "multi", "interdep_n%d" % n, 0, nmods)
+    # Axis B: number of independent / interdependent cycles (combinatorial).
+    # Each level uses N_VARIANTS structurally-distinct programs at the same
+    # 2**n stable-model difficulty (leaderboard.hard_instances).
+    from leaderboard.hard_instances import gen_multi_variants
+    for sub, tag, levels in [("independent", "indep", MULTI_N),
+                             ("interdependent", "interd", INTERDEP_N)]:
+        for n in levels:
+            for idx, (prog, labels, nmods) in enumerate(
+                    gen_multi_variants(sub, n, N_VARIANTS, seed0=n * 1000)):
+                emit(items, prog, "multi", "multi", f"{tag}_n{n}", idx, nmods)
 
     os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
     out = os.path.join(HERE, "data/hard_ladder.jsonl")
