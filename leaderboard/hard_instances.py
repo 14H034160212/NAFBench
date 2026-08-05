@@ -24,13 +24,16 @@ WMAP = {"true": "T", "false": "F", "undefined": "u"}
 def _core(subtype, n):
     """Multi-cycle core producing atom `qcore` with signature (T, F, u, loop)."""
     rules, firsts = [], []
-    if subtype == "independent":
+    if subtype in ("independent", "conjunctive"):
         for i in range(n):
             a, b = f"x{i}a", f"x{i}b"
             rules += [Rule(a, neg=(b,)), Rule(b, neg=(a,))]
             firsts.append(a)
-        for a in firsts:
-            rules.append(Rule("qcore", pos=(a,)))
+        if subtype == "independent":          # q true if ANY cycle picks 'a' (skeptical-hard)
+            for a in firsts:
+                rules.append(Rule("qcore", pos=(a,)))
+        else:                                  # conjunctive: q true only if ALL pick 'a' (credulous-hard)
+            rules.append(Rule("qcore", pos=tuple(firsts)))
     else:  # interdependent (coupled chain of 2-cycles)
         for i in range(n):
             h, a = f"h{i}", f"a{i}"
