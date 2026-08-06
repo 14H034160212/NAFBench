@@ -27,9 +27,10 @@ MEETING_zh.md
 MEETING_NOTES.md
 WEEKLY_UPDATE.md
 
-# leaderboard hidden test set — regenerate with leaderboard/make_leaderboard.py; never publish
+# leaderboard COMPETITION hidden test set — regenerate with make_leaderboard.py; never publish
 leaderboard/data/test_gold.json
 leaderboard/data/test_public.jsonl
-leaderboard/data/hard_ladder.jsonl
 leaderboard/submissions/
-leaderboard/data/hard_v2.jsonl
+
+# internal Chinese planning doc — keep local, not for the public repo
+leaderboard/PLAN_zh.md
