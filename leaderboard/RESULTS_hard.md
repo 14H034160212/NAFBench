@@ -6,6 +6,26 @@ per-reading detail: **skeptical (gold B)** is the discriminating reading;
 credulous (A) and WFS (C) are often reachable by defaulting.
 Sample: 126 prompts (combo axis, cred/skept/wfs, 3 programs/level).
 
+## Base set vs hard set (per-reading, per-prompt)
+
+Same readings on the paper's base set vs this hard sample. Overall
+looks similar, but that is misleading: on the all-divergent hard set
+credulous (A) and WFS (C) are *more* reachable by defaulting, which
+masks a clear drop on **skeptical (B)** — the reading that actually
+requires finding the one counterexample among 2^n worlds.
+
+| Model | reading | base | hard |
+|---|---|---|---|
+| Qwen2.5-Coder 32B | cred | 72% | 86% |
+|  | **skept** | 61% | **40%** ↓ |
+|  | wfs | 74% | 88% |
+| Llama3 8B | cred | 62% | 90% |
+|  | **skept** | 64% | **31%** ↓ |
+|  | wfs | 36% | 67% |
+| DeepSeek-R1 32B | cred | 72% | 55% |
+|  | **skept** | 64% | **50%** ↓ |
+|  | wfs | 31% | 52% |
+
 ## Qwen2.5-Coder 32B
 
 | level | stable models | overall | cred (A) | skept (B) | WFS (C) |
