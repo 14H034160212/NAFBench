@@ -1,0 +1,101 @@
+{
+ "model": "o4-mini",
+ "provider": "openai",
+ "mode": "batch",
+ "n_calls": 720,
+ "wall_s": 845.8,
+ "prompt_tokens": 360020,
+ "completion_tokens": 1588898,
+ "reasoning_tokens": 1295680,
+ "cached_prompt_tokens": 0,
+ "cache_write_tokens": 0,
+ "n_reasoning_traces": 0,
+ "latency_s": null,
+ "n_errors": 0,
+ "n_refusals": 0,
+ "n_retried": 0,
+ "n_truncated": 0,
+ "n_unparsed": 0,
+ "batch_id": "batch_6a775ec1de3c8190a70a08483a0eba94",
+ "batch_status": "completed",
+ "submitted_at": "2026-08-08T16:52:18.413374+00:00",
+ "set": "leaderboard/data/hard_v2.jsonl",
+ "submission": "leaderboard/submissions_batch/o4-mini.jsonl",
+ "raw_log": "leaderboard/submissions_batch/logs/o4-mini.raw.jsonl",
+ "joint_accuracy": 83.3,
+ "per_prompt_accuracy": 95.3,
+ "by_difficulty": {
+  "combo/conj_n2": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/conj_n3": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/conj_n4": {
+   "joint": 8,
+   "n": 8
+  },
+  "combo/conj_n5": {
+   "joint": 8,
+   "n": 8
+  },
+  "combo/conj_n6": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/coupled_n2": {
+   "joint": 6,
+   "n": 8
+  },
+  "combo/coupled_n3": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/coupled_n4": {
+   "joint": 8,
+   "n": 8
+  },
+  "combo/coupled_n5": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/disj_n2": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/disj_n3": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/disj_n4": {
+   "joint": 5,
+   "n": 8
+  },
+  "combo/disj_n5": {
+   "joint": 7,
+   "n": 8
+  },
+  "combo/disj_n6": {
+   "joint": 7,
+   "n": 8
+  },
+  "cyclen/even_one_sided_k4": {
+   "joint": 5,
+   "n": 8
+  },
+  "cyclen/even_one_sided_k8": {
+   "joint": 5,
+   "n": 8
+  },
+  "cyclen/odd_k4": {
+   "joint": 6,
+   "n": 8
+  },
+  "cyclen/odd_k8": {
+   "joint": 6,
+   "n": 8
+  }
+ }
+}
