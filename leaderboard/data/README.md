@@ -9,21 +9,33 @@ All items are solver-certified. Each line is JSON. Fields: `id`, `prompt`,
 determined. The **JOINT** metric credits a program only if all four specified
 readings (`closed_world`/`cred`/`skept`/`wfs`) are answered correctly.
 
-| file | what | gold |
-|---|---|---|
-| `dev.jsonl` | public dev split (the paper's production set: 120 programs) | included |
-| `hard_ladder.jsonl` | difficulty ladder — cycle length {4,6,8,10} + independent/interdependent cycles n=2..4 | included |
-| `hard_v2.jsonl` | harder tier — combinatorial axis pushed to n=6 (2⁶=64 stable models); disjunctive (skeptical-hard), conjunctive (credulous-hard), interdependent, + cycle-length control | included |
+| file | what | gold | status |
+|---|---|---|---|
+| `dev.jsonl` | public dev split (the paper's production set: 120 programs) | included | active |
+| `hard_v3.jsonl` | **current hard set.** Mixed certified signatures (gold not guessable from the condition) + a real search family. Families: `cnf` (3-SAT near the phase transition — genuine search), `parity` (bookkeeping), `coupled` (entanglement), `decided` (stratified, gives A/B on closed-world/wfs), `loopy`, `control` | included | **active** |
+| `hard_ladder.jsonl` | early difficulty ladder — cycle length + independent/interdependent cycles | included | superseded |
+| `hard_v2.jsonl` | combinatorial tier (n up to 6) | included | **superseded — see below** |
 
-Regenerate any of these with the scripts one level up
-(`make_leaderboard.py`, `make_hard_tier.py`, `make_hard_v2.py`).
+Regenerate with the scripts one level up (`make_hard_v3.py`, `make_leaderboard.py`, …).
 
-**Difficulty design.** A negation cycle is a "coin" with two stable states; the
-query's answer under skeptical/credulous semantics requires reasoning over all
-2ⁿ stable models of n independent cycles. The **combinatorial axis (number of
-cycles)** is the intended hardening lever — skeptical must find the single world
-in 2ⁿ where the query fails, which is where models are expected to drop as n
-grows. **Cycle length** (a longer single loop, still 2 models) is a control.
+**Why v2 was superseded (found by running it).** Every hard_v2 program certifies
+to the *same* signature `(cred=T, skept=F, wfs=u, sldnf=loop)`, so its gold is a
+pure function of the condition name (`cred`→A, `skept`→B, `wfs`/`cw`→C). A
+program-blind constant guesser therefore scores 100% JOINT, and o4-mini's 83.3%
+was *below* that baseline — v2 did not test reading the program. Its
+"combinatorial" axis (2ⁿ stable models) is also decided by propagation, not
+search (clingo solves it with 0–1 conflicts), so it never stressed the frontier.
+
+**hard_v3 fixes both:** it mixes certified signatures across families so the gold
+varies within each condition (you must read the program), and adds `cnf` — 3-SAT
+instances near the phase transition, a genuine search problem where solver
+conflicts grow with size. On v3 o4-mini drops to 54.5% JOINT (cnf ≈ 0–1/11),
+i.e. it finally discriminates at the frontier. Note: clingo conflicts and LLM
+effort are *not* the same axis (conflict-free `coupled`/`parity` still cost the
+most effort), so the difficulty filter is applied per family.
+
+*(The paper's production set is unaffected: its four bins have different
+signatures, so gold varies within each condition there — only v2 collapsed.)*
 
 **Note.** The gold is recoverable by running a solver on the prompt, so these
 files are for research / difficulty study and for driving the frontier
