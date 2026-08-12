@@ -87,8 +87,11 @@ def build_openai_body(model, prompt, args):
         # reasoning models reject temperature; the budget covers hidden reasoning
         return {"model": model, "messages": msgs,
                 "max_completion_tokens": args.max_completion_tokens}
-    return {"model": model, "messages": msgs,
-            "temperature": 0, "max_tokens": args.max_tokens}
+    body = {"model": model, "messages": msgs,
+            "temperature": args.temperature, "max_tokens": args.max_tokens}
+    if args.top_p is not None:
+        body["top_p"] = args.top_p
+    return body
 
 
 def thinking_config(model, args):
@@ -541,6 +544,10 @@ def main():
                     help="reasoning models and all Anthropic models: thinking + answer")
     ap.add_argument("--max-tokens", type=int, default=2048,
                     help="non-reasoning OpenAI-compatible models")
+    ap.add_argument("--temperature", type=float, default=0,
+                    help="openai/ollama sampling temperature (default 0 = greedy)")
+    ap.add_argument("--top-p", type=float, default=None,
+                    help="openai/ollama top_p (unset = provider default)")
     ap.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"], default=None,
                     help="anthropic: output_config.effort (unset = model default, high)")
     ap.add_argument("--no-thinking", action="store_true",

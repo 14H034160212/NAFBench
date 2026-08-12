@@ -14,8 +14,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # display name, stats.json path, open?
 SOURCES = [
     ("o4-mini", "submissions_v3_full/logs/o4-mini.stats.json", False),
+    ("DeepSeek-V4-Flash", "submissions_v3_open/logs/deepseek-v4-flash.stats.json", True),
     ("Qwen2.5-Coder 32B", "submissions_v3_open/logs/qwen2.5-coder_32b.stats.json", True),
     ("DeepSeek-R1 32B", "submissions_v3_open/logs/deepseek-r1_32b.stats.json", True),
+    ("Qwen3.6", "submissions_v3_open/logs/qwen3.6_latest.stats.json", True),
+    ("Qwen3.5 35B", "submissions_v3_open/logs/qwen3.5_35b.stats.json", True),
+    ("Gemma4 31B", "submissions_v3_open/logs/gemma4_31b.stats.json", True),
     ("Llama3 8B", "submissions_v3_open/logs/llama3_8b.stats.json", True),
 ]
 FAMILIES = ["cnf", "parity", "coupled", "loopy", "decided", "easy_pad"]
@@ -49,6 +53,10 @@ def main():
         "family `cnf` = 3-SAT near the phase transition). o4-mini is Agnieszka's",
         "frontier run; the open models are local (ollama).",
         "",
+        "Decoding: temperature 0 (greedy) for all models, with a token budget large",
+        "enough for each model to conclude (verbose reasoning models get up to 16k).",
+        "`Qwen3.6`* is the sole exception, run at its recommended temp 0.6 — see note.",
+        "",
         "| Model | open | JOINT % | per-prompt % |",
         "|---|---|---|---|",
     ]
@@ -72,10 +80,24 @@ def main():
                 cells.append("—")
         lines.append(f"| {disp} | " + " | ".join(cells) + " |")
     lines += ["",
-              "`cnf` (search) and `loopy` crush every model; `decided` (stratified,",
-              "answer varies by program) is where reading the program actually pays off",
-              "— note Qwen's JOINT is almost entirely `decided`. v3 gives a real spread",
-              "(o4-mini > Qwen > Llama3), unlike v2 whose answer key was guessable."]
+              "**Read of the board.** v3 gives a genuine spread with a *tight frontier",
+              "gap*: o4-mini leads (54.5) but three open models cluster right behind —",
+              "DeepSeek-V4-Flash 48.5, Gemma4 45.5, Qwen3.5 42.4 — far closer than on",
+              "easier sets.",
+              "",
+              "Per family: `cnf` (3-SAT search) defeats every open model (0/33); only",
+              "o4-mini cracks it (2/33). The combinatorial families `parity`/`coupled`",
+              "are also almost exclusively o4-mini's (4/6, 4/4), with **Qwen3.5 the only",
+              "open model to score there** (1/6, 2/4). On `loopy`, open models actually",
+              "*win*: **V4-Flash (19/20) and Gemma4 (16/20) beat o4-mini's 11/20**.",
+              "`decided` (stratified, answer varies by program) is where most models",
+              "earn their score — reading the program pays off there.",
+              "",
+              "\\* **Qwen3.6 (1.0) is a non-termination result, not a reasoning score.**",
+              "It is extraordinarily verbose: even at its recommended temp 0.6 with a",
+              "16k-token budget, ~50% of readings never finish, so the all-four JOINT",
+              "metric collapses (per-reading it concludes ~49%). Reported for",
+              "completeness with this caveat rather than as a capability estimate."]
 
     out = os.path.join(HERE, "RESULTS_v3.md")
     open(out, "w").write("\n".join(lines) + "\n")

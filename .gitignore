@@ -10,6 +10,9 @@ runs/
 *.safetensors
 # verbose raw model-output dumps (not needed to read results)
 *.raw.json
+*.raw.jsonl
+# archived invalid/superseded runs (truncated, wrong-version, etc.)
+leaderboard/submissions_v3_open/logs/_invalid_truncated/
 .claude/
 
 # private local drafts / notes — never commit
