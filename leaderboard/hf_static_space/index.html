@@ -66,21 +66,22 @@
   <div id="boards">Loading…</div>
   <p class="note" id="ts"></p>
 
-  <h2>Reference results <span class="note">(public dev set <code>hard_v3</code>, 99 programs)</span></h2>
-  <p class="note">How the models we evaluated do on the <em>public</em> set (o4-mini is a closed frontier
-     reference; the rest are open-weight). The hidden leaderboard above is scored separately.</p>
+  <h2>Reference results — JOINT % by task <span class="note">(public dev set <code>hard_v3</code>)</span></h2>
+  <p class="note">How the models we evaluated do on each task of the <em>public</em> set (o4-mini is a closed
+     frontier reference; the rest are open-weight). Scores fall from <code>8k-lite</code> → <code>full</code>
+     as harder 3-SAT search instances are added. The hidden leaderboard above is scored separately.</p>
   <table id="ref">
-    <tr><th>#</th><th>Model</th><th>open</th><th>JOINT %</th><th>per-prompt %</th></tr>
-    <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">54.5</td><td>85.1</td></tr>
-    <tr><td>2</td><td>DeepSeek-V4-Flash</td><td>✓</td><td class="j">48.5</td><td>73.7</td></tr>
-    <tr><td>3</td><td>Gemma4-31B</td><td>✓</td><td class="j">45.5</td><td>65.4</td></tr>
-    <tr><td>4</td><td>Qwen3.5-35B</td><td>✓</td><td class="j">42.4</td><td>58.6</td></tr>
-    <tr><td>5</td><td>Qwen2.5-Coder-32B</td><td>✓</td><td class="j">30.3</td><td>62.1</td></tr>
-    <tr><td>6</td><td>DeepSeek-R1-32B</td><td>✓</td><td class="j">26.3</td><td>55.6</td></tr>
-    <tr><td>7</td><td>Qwen3.6 *</td><td>✓</td><td class="j">1.0</td><td>22.5</td></tr>
-    <tr><td>8</td><td>Llama3-8B</td><td>✓</td><td class="j">1.0</td><td>41.4</td></tr>
+    <tr><th>#</th><th>Model</th><th>open</th><th>8k-lite</th><th>16k</th><th>full</th></tr>
+    <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">68.8</td><td>60.2</td><td>54.5</td></tr>
+    <tr><td>2</td><td>DeepSeek-V4-Flash</td><td>✓</td><td class="j">62.3</td><td>54.5</td><td>48.5</td></tr>
+    <tr><td>3</td><td>Gemma4-31B</td><td>✓</td><td class="j">58.4</td><td>51.1</td><td>45.5</td></tr>
+    <tr><td>4</td><td>Qwen3.5-35B</td><td>✓</td><td class="j">54.5</td><td>47.7</td><td>42.4</td></tr>
+    <tr><td>5</td><td>Qwen2.5-Coder-32B</td><td>✓</td><td class="j">39.0</td><td>34.1</td><td>30.3</td></tr>
+    <tr><td>6</td><td>DeepSeek-R1-32B</td><td>✓</td><td class="j">33.8</td><td>29.5</td><td>26.3</td></tr>
+    <tr><td>7</td><td>Qwen3.6 *</td><td>✓</td><td class="j">1.3</td><td>1.1</td><td>1.0</td></tr>
+    <tr><td>8</td><td>Llama3-8B</td><td>✓</td><td class="j">1.3</td><td>1.1</td><td>1.0</td></tr>
   </table>
-  <p class="note">Decoding: temperature 0 for all, with a per-model token budget large enough to conclude.
+  <p class="note">Values are JOINT accuracy (%). Decoding: temperature 0 for all, with a per-model token budget large enough to conclude.
      * Qwen3.6's 1.0 is a <em>non-termination</em> result, not a reasoning score: even at its recommended
      temperature with a 16k budget it fails to finish ~50% of readings (per-reading it concludes ~49%).
      On <code>loopy</code>, the open models V4-Flash (19/20) and Gemma4 (16/20) actually beat o4-mini (11/20);
