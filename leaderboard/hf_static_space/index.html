@@ -49,9 +49,11 @@
      determined). The primary metric is <b>JOINT accuracy</b>: a program counts <em>only if all four readings
      are correct</em> — this strips the lucky/vacuous coincidences a per-prompt average would reward.</p>
 
-  <h2>The three tasks (by context budget)</h2>
-  <p>Same benchmark, three tiers of how much reasoning length a solution needs — <code>8k-lite</code> ⊂
-     <code>16k</code> ⊂ <code>full</code>. Pick the one your model's context can handle.</p>
+  <h2>The three tasks (context-budget tiers of <code>hard_v3</code>)</h2>
+  <p>All three tasks are drawn from the one solver-certified <code>hard_v3</code> set; they differ only in how
+     much reasoning length a solution needs — <code>8k-lite</code> ⊂ <code>16k</code> ⊂ <code>full</code>.
+     Pick the tier your model's context can handle. (Earlier "combinatorial" sets were dropped: their answer
+     key was guessable from the condition, so they measured nothing.)</p>
   <table>
     <tr><th>Task</th><th>What it is</th><th>Programs</th><th>Notes</th></tr>
     <tr><td><code>8k-lite</code></td><td>Signal families + the smallest search tier</td><td>77</td><td>solvable within ~8k tokens</td></tr>
@@ -66,9 +68,10 @@
   <div id="boards">Loading…</div>
   <p class="note" id="ts"></p>
 
-  <h2>Reference results — JOINT % by task <span class="note">(public dev set <code>hard_v3</code>)</span></h2>
-  <p class="note">How the models we evaluated do on each task of the <em>public</em> set (o4-mini is a closed
-     frontier reference; the rest are open-weight). Scores fall from <code>8k-lite</code> → <code>full</code>
+  <h2>Reference results — JOINT % on each of the three tasks <span class="note">(public <code>hard_v3</code> dev set)</span></h2>
+  <p class="note">The three columns <code>8k-lite</code> / <code>16k</code> / <code>full</code> <em>are</em> the three
+     tasks (context-budget tiers of <code>hard_v3</code>). This is how the models we evaluated do on the
+     <em>public</em> set (o4-mini is a closed frontier reference; the rest are open-weight). Scores fall left→right
      as harder 3-SAT search instances are added. The hidden leaderboard above is scored separately.</p>
   <table id="ref">
     <tr><th>#</th><th>Model</th><th>open</th><th>8k-lite</th><th>16k</th><th>full</th></tr>
