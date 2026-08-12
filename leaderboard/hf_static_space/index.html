@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NAF-Bench Leaderboard</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+         max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+  h1 { margin-bottom: .2rem; }
+  .sub { color: #888; margin-top: 0; }
+  h2 { margin-top: 2rem; border-bottom: 1px solid #8884; padding-bottom: .2rem; }
+  table { border-collapse: collapse; width: 100%; margin-top: .5rem; }
+  th, td { padding: .4rem .6rem; text-align: right; border-bottom: 1px solid #8883; }
+  th:nth-child(2), td:nth-child(2) { text-align: left; }
+  th { font-weight: 600; }
+  td.joint { font-weight: 700; }
+  tr:first-child td.joint { color: #2a8; }
+  a { color: #48c; }
+  code { background: #8882; padding: .1rem .3rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <h1>NAF-Bench Leaderboard 🧠</h1>
+  <p class="sub">Can an LLM follow a <b>specified</b> negation semantics? Primary metric:
+     <b>JOINT accuracy</b> (a program counts only if all four specified readings —
+     SLDNF / well-founded / credulous / skeptical — are correct). Scored server-side
+     against a hidden test set.</p>
+  <p>Subtasks by context budget: <code>8k-lite</code> ⊂ <code>16k</code> ⊂ <code>full</code>.
+     &nbsp;·&nbsp; <a href="https://github.com/14H034160212/NAFBench/tree/main/submissions">How to submit</a>
+     &nbsp;·&nbsp; <a href="https://huggingface.co/datasets/qbao775/naf-bench">Inputs</a></p>
+  <div id="boards">Loading…</div>
+  <p class="sub" id="ts"></p>
+<script>
+const SRC = "https://raw.githubusercontent.com/14H034160212/NAFBench/main/leaderboard/leaderboard.json";
+const ORDER = ["8k-lite", "16k", "full"];
+const COLS = [["per_prompt_accuracy","per-prompt"],["sldnf_accuracy","sldnf"],
+              ["cred_accuracy","cred"],["skept_accuracy","skept"],["wfs_accuracy","wfs"]];
+fetch(SRC + "?t=" + Date.now()).then(r => r.json()).then(rows => {
+  const el = document.getElementById("boards"); el.innerHTML = "";
+  for (const st of ORDER) {
+    const rs = rows.filter(r => r.subtask === st).sort((a,b)=>b.joint_accuracy-a.joint_accuracy);
+    const h = document.createElement("h2"); h.textContent = "Subtask: " + st; el.appendChild(h);
+    if (!rs.length) { const p=document.createElement("p"); p.className="sub"; p.textContent="No submissions yet."; el.appendChild(p); continue; }
+    const t = document.createElement("table");
+    t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th>" +
+      COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";
+    rs.forEach((r,i)=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML = `<td>${i+1}</td><td>${r.team}</td><td class="joint">${r.joint_accuracy}</td>` +
+        COLS.map(c=>`<td>${r[c[0]]??""}</td>`).join("");
+      t.appendChild(tr);
+    });
+    el.appendChild(t);
+  }
+  document.getElementById("ts").textContent = "Updated from GitHub · " + new Date().toLocaleString();
+}).catch(e => { document.getElementById("boards").textContent = "Could not load leaderboard: " + e; });
+</script>
+</body>
+</html>

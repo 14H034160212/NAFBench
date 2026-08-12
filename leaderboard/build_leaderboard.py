@@ -57,6 +57,14 @@ def main():
 
     out = os.path.join(HERE, "LEADERBOARD.md")
     open(out, "w").write("\n".join(lines) + "\n")
+
+    # machine-readable feed for the static HF Space
+    feed = [{"team": t, "subtask": s, **{k: m[k] for k in (
+        "joint_accuracy", "per_prompt_accuracy", "sldnf_accuracy",
+        "cred_accuracy", "skept_accuracy", "wfs_accuracy")}}
+        for (t, s), m in best.items()]
+    feed.sort(key=lambda r: (r["subtask"], -r["joint_accuracy"]))
+    open(os.path.join(HERE, "leaderboard.json"), "w").write(json.dumps(feed, indent=1))
     print(f"wrote {out} ({len(best)} entries over {len(subs)} submissions)")
 
 
