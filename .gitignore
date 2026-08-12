@@ -37,3 +37,16 @@ leaderboard/submissions/
 
 # internal Chinese planning doc — keep local, not for the public repo
 leaderboard/PLAN_zh.md
+
+# internal collaboration/proposal planning — keep local
+NEXT_PROPOSAL_planning.md
+
+# COMPETITION hidden test set (contains gold) — lives only on the private HF dataset, NEVER commit
+leaderboard/data/hidden_v3.jsonl
+leaderboard/data/*hidden*
+leaderboard/data/gold_*.json
+
+# internal meeting notes (any) + collaborators' proposal drafts — never commit
+MEETING*.md
+APP*.pdf
+*Vision and Approach*.pdf

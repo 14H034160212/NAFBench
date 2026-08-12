@@ -123,7 +123,7 @@ def make_accept(family, quota):
     return accept
 
 
-def build(n_variants):
+def build(n_variants, seed_offset=0, id_prefix="hv3"):
     items, programs = [], []
     for family, tier, size, mult in TIERS:
         want = max(2, int(round(n_variants * mult)))
@@ -137,23 +137,24 @@ def build(n_variants):
             else Counter()
         # crc32, not hash(): Python randomizes string hashes per process, so
         # hash(tier) would silently produce a different benchmark on every run
-        got = gen_certified(family, size, want, seed0=zlib.crc32(tier.encode()) % 100000,
+        got = gen_certified(family, size, want,
+                            seed0=(zlib.crc32(tier.encode()) + seed_offset) % 100000,
                             max_seeds=6000, accept=make_accept(family, quota), **kw)
         print(f"  {tier:14} {family:9} want={want:3} got={len(got):3} "
               f"sigs={sorted(Counter(signature(c) for _, c in got).items())}", flush=True)
         for idx, (prog, cert) in enumerate(got):
             programs.append((tier, family, prog, cert))
-            emit(items, prog, cert, family, tier, idx)
+            emit(items, prog, cert, family, tier, idx, id_prefix)
     return items, programs
 
 
-def emit(items, prog, cert, family, tier, idx):
+def emit(items, prog, cert, family, tier, idx, id_prefix="hv3"):
     labels = cert["labels"]
     sig = signature(cert)
     for c in CONDS:
         items.append({
-            "id": f"hv3-{tier}-i{idx}-{c}::{c}",
-            "rec_id": f"hv3-{tier}-i{idx}",
+            "id": f"{id_prefix}-{tier}-i{idx}-{c}::{c}",
+            "rec_id": f"{id_prefix}-{tier}-i{idx}",
             "axis": family,
             "difficulty": tier,
             "hardness_kind": HARDNESS_KIND[family],
@@ -192,11 +193,17 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "data/hard_v3.jsonl"))
     ap.add_argument("--variants", type=int, default=8,
                     help="base variants per tier (scaled by each tier's multiplier)")
+    ap.add_argument("--seed-offset", type=int, default=0,
+                    help="offset added to each tier's seed -> disjoint instances "
+                         "(use a nonzero value to generate a fresh hidden test set)")
+    ap.add_argument("--id-prefix", default="hv3",
+                    help="id/rec_id prefix (use e.g. 'hv3hid' for the hidden set)")
     args = ap.parse_args()
 
     print("generating (clingo + WFS per candidate; SWI-Prolog only on accepted):",
           flush=True)
-    items, programs = build(args.variants)
+    items, programs = build(args.variants, seed_offset=args.seed_offset,
+                            id_prefix=args.id_prefix)
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w") as f:

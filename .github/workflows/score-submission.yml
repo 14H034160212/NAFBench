@@ -1,0 +1,59 @@
+name: Score submission
+
+# Scores a PR that adds/updates submissions/*.jsonl and comments the JOINT score.
+# pull_request_target so the HF_TOKEN secret (to read the private gold) is
+# available even for fork PRs. We check out the trusted base repo for the scorer
+# and pull ONLY the submission DATA files from the PR head (never run PR code).
+on:
+  pull_request_target:
+    paths:
+      - "submissions/**.jsonl"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base (trusted scorer)
+        uses: actions/checkout@v4
+
+      - name: Fetch submission data files from the PR (data only)
+        run: |
+          git fetch origin "pull/${{ github.event.pull_request.number }}/head:prhead"
+          FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} prhead -- 'submissions/*.jsonl' | tr '\n' ' ')
+          echo "Changed submission files: $FILES"
+          if [ -n "$FILES" ]; then git checkout prhead -- $FILES; fi
+          echo "FILES=$FILES" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet huggingface_hub
+
+      - name: Score each submission
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          echo "## NAF-Bench scoring" > /tmp/comment.md
+          for f in $FILES; do
+            base=$(basename "$f" .jsonl)         # <team>__<subtask>
+            team="${base%__*}"; sub="${base##*__}"
+            echo "### \`$f\`" >> /tmp/comment.md
+            echo '```' >> /tmp/comment.md
+            if python leaderboard/score_submission.py --submission "$f" --subtask "$sub" --team "$team" >> /tmp/comment.md 2>&1; then :; else
+              echo "Scoring failed. Check the filename (<team>__<8k-lite|16k|full>.jsonl) and format." >> /tmp/comment.md
+            fi
+            echo '```' >> /tmp/comment.md
+          done
+
+      - name: Comment results on the PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = require('fs').readFileSync('/tmp/comment.md', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number, body });
