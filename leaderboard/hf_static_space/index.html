@@ -5,33 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NAF-Bench Leaderboard</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root { color-scheme: light dark; --fg:#1a1a1a; --muted:#666; --line:#8883; --accent:#2a8; --card:#8881; }
+  @media (prefers-color-scheme: dark){ :root{ --fg:#e8e8e8; --muted:#9aa; } }
   body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-         max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
-  h1 { margin-bottom: .2rem; }
-  .sub { color: #888; margin-top: 0; }
-  h2 { margin-top: 2rem; border-bottom: 1px solid #8884; padding-bottom: .2rem; }
-  table { border-collapse: collapse; width: 100%; margin-top: .5rem; }
-  th, td { padding: .4rem .6rem; text-align: right; border-bottom: 1px solid #8883; }
-  th:nth-child(2), td:nth-child(2) { text-align: left; }
-  th { font-weight: 600; }
-  td.joint { font-weight: 700; }
-  tr:first-child td.joint { color: #2a8; }
-  a { color: #48c; }
-  code { background: #8882; padding: .1rem .3rem; border-radius: 4px; }
+         max-width: 940px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: var(--fg); }
+  h1 { margin-bottom: .1rem; } h2 { margin-top: 2.2rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+  h3 { margin-bottom: .3rem; }
+  .sub { color: var(--muted); margin-top: .2rem; }
+  p, li { color: var(--fg); }
+  code { background: var(--card); padding: .1rem .35rem; border-radius: 5px; font-size: .92em; }
+  table { border-collapse: collapse; width: 100%; margin: .6rem 0; overflow-x: auto; display: block; }
+  th, td { padding: .38rem .6rem; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th:nth-child(-n+2), td:nth-child(-n+2) { text-align: left; }
+  th { font-weight: 600; } td.j { font-weight: 700; } tr:first-child td.j { color: var(--accent); }
+  a { color: #48c; } .pill{display:inline-block;background:var(--card);border-radius:999px;padding:.05rem .5rem;font-size:.8rem;color:var(--muted)}
+  .note{color:var(--muted);font-size:.9rem}
 </style>
 </head>
 <body>
   <h1>NAF-Bench Leaderboard 🧠</h1>
-  <p class="sub">Can an LLM follow a <b>specified</b> negation semantics? Primary metric:
-     <b>JOINT accuracy</b> (a program counts only if all four specified readings —
-     SLDNF / well-founded / credulous / skeptical — are correct). Scored server-side
-     against a hidden test set.</p>
-  <p>Subtasks by context budget: <code>8k-lite</code> ⊂ <code>16k</code> ⊂ <code>full</code>.
-     &nbsp;·&nbsp; <a href="https://github.com/14H034160212/NAFBench/tree/main/submissions">How to submit</a>
-     &nbsp;·&nbsp; <a href="https://huggingface.co/datasets/qbao775/naf-bench">Inputs</a></p>
+  <p class="sub">Can a language model follow a <b>specified</b> reading of negation — instead of falling back on its own default?</p>
+  <p><span class="pill">solver-certified</span> <span class="pill">contamination-free (fresh hidden set)</span>
+     <span class="pill">JOINT accuracy</span> &nbsp;·&nbsp;
+     <a href="https://github.com/14H034160212/NAFBench">GitHub</a> ·
+     <a href="https://huggingface.co/datasets/qbao775/naf-bench">Inputs</a> ·
+     <a href="https://github.com/14H034160212/NAFBench/tree/main/submissions">Submit</a></p>
+
+  <h2>What it tests</h2>
+  <p>The word "not" doesn't mean one thing. In law, regulation, and medicine, the intended meaning
+     depends on the <em>reading in force</em>: open- vs closed-world, two- vs three-valued, credulous vs
+     skeptical. NAF-Bench gives a model a small logic program <em>and tells it which reading to use</em>,
+     then checks whether it applies that reading rather than its gut default. Every instance is generated
+     and <b>certified by solvers</b> (SWI-Prolog, a well-founded solver, and clingo), so the answer key is
+     ground truth, and the test set is regenerated with fresh seeds to stay contamination-free.</p>
+  <p>Each program is asked under <b>four specified readings</b>:</p>
+  <ul>
+    <li><b>closed_world</b> (SLDNF / negation-as-failure)</li>
+    <li><b>cred</b> — credulous stable-model: true in <em>at least one</em> answer set</li>
+    <li><b>skept</b> — skeptical stable-model: true in <em>every</em> answer set</li>
+    <li><b>wfs</b> — the well-founded (three-valued) model</li>
+  </ul>
+  <p>Answers are <code>A</code> (definitely yes), <code>B</code> (definitely no), or <code>C</code> (cannot be
+     determined). The primary metric is <b>JOINT accuracy</b>: a program counts <em>only if all four readings
+     are correct</em> — this strips the lucky/vacuous coincidences a per-prompt average would reward.</p>
+
+  <h2>The three tasks (by context budget)</h2>
+  <p>Same benchmark, three tiers of how much reasoning length a solution needs — <code>8k-lite</code> ⊂
+     <code>16k</code> ⊂ <code>full</code>. Pick the one your model's context can handle.</p>
+  <table>
+    <tr><th>Task</th><th>What it is</th><th>Programs</th><th>Notes</th></tr>
+    <tr><td><code>8k-lite</code></td><td>Signal families + the smallest search tier</td><td>77</td><td>solvable within ~8k tokens</td></tr>
+    <tr><td><code>16k</code></td><td>+ a larger search tier</td><td>88</td><td>solvable within ~16k tokens</td></tr>
+    <tr><td><code>full</code></td><td>+ the largest 3-SAT search instances</td><td>99</td><td>may need long context</td></tr>
+  </table>
+  <p class="note">Families: <code>decided</code>/<code>loopy</code> (read the program, resolve a negation cycle),
+     <code>parity</code>/<code>coupled</code> (combinatorial bookkeeping), <code>cnf</code> (genuine 3-SAT search —
+     where even the frontier struggles), plus a propagation-decidable control.</p>
+
+  <h2>Live leaderboard <span class="note">(hidden test set — auto-scored on submission)</span></h2>
   <div id="boards">Loading…</div>
-  <p class="sub" id="ts"></p>
+  <p class="note" id="ts"></p>
+
+  <h2>Reference results <span class="note">(public dev set <code>hard_v3</code>, 99 programs)</span></h2>
+  <p class="note">How the models we evaluated do on the <em>public</em> set (o4-mini is a closed frontier
+     reference; the rest are open-weight). The hidden leaderboard above is scored separately.</p>
+  <table id="ref">
+    <tr><th>#</th><th>Model</th><th>open</th><th>JOINT %</th><th>per-prompt %</th></tr>
+    <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">54.5</td><td>85.1</td></tr>
+    <tr><td>2</td><td>DeepSeek-V4-Flash</td><td>✓</td><td class="j">48.5</td><td>73.7</td></tr>
+    <tr><td>3</td><td>Gemma4-31B</td><td>✓</td><td class="j">45.5</td><td>65.4</td></tr>
+    <tr><td>4</td><td>Qwen3.5-35B</td><td>✓</td><td class="j">42.4</td><td>58.6</td></tr>
+    <tr><td>5</td><td>Qwen2.5-Coder-32B</td><td>✓</td><td class="j">30.3</td><td>62.1</td></tr>
+    <tr><td>6</td><td>DeepSeek-R1-32B</td><td>✓</td><td class="j">26.3</td><td>55.6</td></tr>
+    <tr><td>7</td><td>Qwen3.6 *</td><td>✓</td><td class="j">1.0</td><td>22.5</td></tr>
+    <tr><td>8</td><td>Llama3-8B</td><td>✓</td><td class="j">1.0</td><td>41.4</td></tr>
+  </table>
+  <p class="note">Decoding: temperature 0 for all, with a per-model token budget large enough to conclude.
+     * Qwen3.6's 1.0 is a <em>non-termination</em> result, not a reasoning score: even at its recommended
+     temperature with a 16k budget it fails to finish ~50% of readings (per-reading it concludes ~49%).
+     On <code>loopy</code>, the open models V4-Flash (19/20) and Gemma4 (16/20) actually beat o4-mini (11/20);
+     o4-mini's edge is the search family <code>cnf</code>.</p>
+
+  <h2>Submit</h2>
+  <p>Run your model on the public inputs, produce a JSONL of <code>{"id": ..., "prediction": "A|B|C"}</code>,
+     add it as <code>submissions/&lt;team&gt;__&lt;subtask&gt;.jsonl</code> and open a PR on
+     <a href="https://github.com/14H034160212/NAFBench/tree/main/submissions">GitHub</a>. A GitHub Action
+     scores it against the hidden gold (never public) and updates this board automatically.</p>
+
 <script>
 const SRC = "https://raw.githubusercontent.com/14H034160212/NAFBench/main/leaderboard/leaderboard.json";
 const ORDER = ["8k-lite", "16k", "full"];
@@ -41,21 +101,17 @@ fetch(SRC + "?t=" + Date.now()).then(r => r.json()).then(rows => {
   const el = document.getElementById("boards"); el.innerHTML = "";
   for (const st of ORDER) {
     const rs = rows.filter(r => r.subtask === st).sort((a,b)=>b.joint_accuracy-a.joint_accuracy);
-    const h = document.createElement("h2"); h.textContent = "Subtask: " + st; el.appendChild(h);
-    if (!rs.length) { const p=document.createElement("p"); p.className="sub"; p.textContent="No submissions yet."; el.appendChild(p); continue; }
+    const h = document.createElement("h3"); h.textContent = "Subtask: " + st; el.appendChild(h);
+    if (!rs.length) { const p=document.createElement("p"); p.className="note"; p.textContent="No submissions yet."; el.appendChild(p); continue; }
     const t = document.createElement("table");
-    t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th>" +
-      COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";
-    rs.forEach((r,i)=>{
-      const tr=document.createElement("tr");
-      tr.innerHTML = `<td>${i+1}</td><td>${r.team}</td><td class="joint">${r.joint_accuracy}</td>` +
-        COLS.map(c=>`<td>${r[c[0]]??""}</td>`).join("");
-      t.appendChild(tr);
-    });
+    t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th>" + COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";
+    rs.forEach((r,i)=>{ const tr=document.createElement("tr");
+      tr.innerHTML = `<td>${i+1}</td><td>${r.team}</td><td class="j">${r.joint_accuracy}</td>` +
+        COLS.map(c=>`<td>${r[c[0]]??""}</td>`).join(""); t.appendChild(tr); });
     el.appendChild(t);
   }
   document.getElementById("ts").textContent = "Updated from GitHub · " + new Date().toLocaleString();
-}).catch(e => { document.getElementById("boards").textContent = "Could not load leaderboard: " + e; });
+}).catch(e => { document.getElementById("boards").textContent = "Could not load live leaderboard: " + e; });
 </script>
 </body>
 </html>
