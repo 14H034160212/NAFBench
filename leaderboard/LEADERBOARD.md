@@ -8,17 +8,20 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 | # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|
-| 1 | constant-baseline | **22.1** | 53.6 | 61.0 | 57.1 | 61.0 | 35.1 |
+| 1 | qwen2.5-coder-32b | **31.2** | 65.3 | 74.0 | 59.7 | 59.7 | 67.5 |
+| 2 | constant-baseline | **22.1** | 53.6 | 61.0 | 57.1 | 61.0 | 35.1 |
 
 ## Subtask: `16k`
 
 | # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|
-| 1 | constant-baseline | **20.5** | 55.7 | 65.9 | 55.7 | 58.0 | 43.2 |
+| 1 | qwen2.5-coder-32b | **29.5** | 65.9 | 77.3 | 59.1 | 55.7 | 71.6 |
+| 2 | constant-baseline | **20.5** | 55.7 | 65.9 | 55.7 | 58.0 | 43.2 |
 
 ## Subtask: `full`
 
 | # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|
-| 1 | constant-baseline | **19.2** | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
+| 1 | qwen2.5-coder-32b | **27.3** | 66.4 | 79.8 | 58.6 | 52.5 | 74.7 |
+| 2 | constant-baseline | **19.2** | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
 
