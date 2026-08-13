@@ -28,10 +28,11 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 | # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|---|
-| 1 | deepseek-r1-32b | **32.3** | 69.3 | 63.4 | 85.9 | 54.5 | 49.5 | 63.6 |
-| 2 | qwen2.5-coder-32b | **27.3** | 38.4 | 66.4 | 79.8 | 58.6 | 52.5 | 74.7 |
-| 3 | constant-baseline | **19.2** | – | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
-| 4 | llama3-8b | **3.0** | 22.6 | 44.7 | 35.4 | 49.5 | 45.5 | 48.5 |
+| 1 | gemma4-31b | **58.6** | 84.6 | 82.1 | 98.0 | 68.7 | 62.6 | 99.0 |
+| 2 | deepseek-r1-32b | **32.3** | 69.3 | 63.4 | 85.9 | 54.5 | 49.5 | 63.6 |
+| 3 | qwen2.5-coder-32b | **27.3** | 38.4 | 66.4 | 79.8 | 58.6 | 52.5 | 74.7 |
+| 4 | constant-baseline | **19.2** | – | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
+| 5 | llama3-8b | **3.0** | 22.6 | 44.7 | 35.4 | 49.5 | 45.5 | 48.5 |
 
 > **reasoned soundly %** (v1): of the programs a model got right *and* submitted a reasoning `trace` for, the share whose trace commits to the certified query verdict (and, on odd cycles, registers that there is no stable model). `–` = answer-only submission. Audits the query verdict + odd-cycle recognition against the private certification; the fuller per-atom audit is a follow-up.
 

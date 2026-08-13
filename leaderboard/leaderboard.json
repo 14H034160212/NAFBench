@@ -120,6 +120,18 @@
   "wfs_accuracy": 44.2
  },
  {
+  "team": "gemma4-31b",
+  "subtask": "full",
+  "reasoned_soundly": 84.6,
+  "trace_coverage": 396,
+  "joint_accuracy": 58.6,
+  "per_prompt_accuracy": 82.1,
+  "sldnf_accuracy": 98.0,
+  "cred_accuracy": 68.7,
+  "skept_accuracy": 62.6,
+  "wfs_accuracy": 99.0
+ },
+ {
   "team": "deepseek-r1-32b",
   "subtask": "full",
   "reasoned_soundly": 69.3,
