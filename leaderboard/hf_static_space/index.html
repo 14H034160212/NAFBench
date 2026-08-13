@@ -83,9 +83,10 @@
   <p class="note" id="ts"></p>
 
   <h2>Reference results — <code>hard_v3</code> by context tier <span class="note">(public dev set)</span></h2>
-  <p class="note">How the models we evaluated do on the <em>public</em> <code>hard_v3</code> set, at each of its
-     three context tiers (o4-mini is a closed frontier reference; the rest are open-weight). Scores fall
-     left→right as harder 3-SAT search instances are added. The live competition above uses the hidden set.</p>
+  <p class="note"><b>These are baselines, not a ceiling</b> — initial reference points we measured on the
+     <em>public</em> <code>hard_v3</code> set, at each of its three context tiers (o4-mini is a closed frontier
+     reference; the rest are open-weight). Beat them by submitting to the live competition above. Scores fall
+     left→right as harder 3-SAT search instances are added.</p>
   <table id="ref">
     <tr><th>#</th><th>Model</th><th>open</th><th>8k-lite</th><th>16k</th><th>full</th></tr>
     <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">68.8</td><td>60.2</td><td>54.5</td></tr>
@@ -102,6 +103,17 @@
      temperature with a 16k budget it fails to finish ~50% of readings (per-reading it concludes ~49%).
      On <code>loopy</code>, the open models V4-Flash (19/20) and Gemma4 (16/20) actually beat o4-mini (11/20);
      o4-mini's edge is the search family <code>cnf</code>.</p>
+
+  <h2>Data &amp; downloads</h2>
+  <ul>
+    <li><b>Dev set — public, with gold.</b> <code>hard_v3</code> (and v1/v2, base) ship in the
+       <a href="https://github.com/14H034160212/NAFBench">GitHub repo</a> with labels; develop and self-check here.</li>
+    <li><b>Test inputs — public, no gold.</b> On <a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 qbao775/naf-bench</a>
+       (<code>inputs_8k-lite/16k/full.jsonl</code>) — predict on these and submit.</li>
+    <li><b>Test gold — private.</b> Held on a server-side dataset only, so the competition stays contamination-free.</li>
+    <li><b>Training data — no fixed split.</b> The <b>generator is open-source</b>: regenerate unlimited fresh,
+       solver-certified, contamination-free instances (new seeds) for training or your own evaluation.</li>
+  </ul>
 
   <h2>Submit</h2>
   <p>Run your model on the public inputs, produce a JSONL of <code>{"id": ..., "prediction": "A|B|C"}</code>,
