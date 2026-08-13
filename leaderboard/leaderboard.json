@@ -24,6 +24,18 @@
   "wfs_accuracy": 43.2
  },
  {
+  "team": "llama3-8b",
+  "subtask": "16k",
+  "reasoned_soundly": 24.7,
+  "trace_coverage": 352,
+  "joint_accuracy": 3.4,
+  "per_prompt_accuracy": 44.9,
+  "sldnf_accuracy": 33.0,
+  "cred_accuracy": 52.3,
+  "skept_accuracy": 45.5,
+  "wfs_accuracy": 48.9
+ },
+ {
   "team": "qwen2.5-coder-32b",
   "subtask": "8k-lite",
   "reasoned_soundly": 41.8,
@@ -48,6 +60,18 @@
   "wfs_accuracy": 35.1
  },
  {
+  "team": "llama3-8b",
+  "subtask": "8k-lite",
+  "reasoned_soundly": 24.6,
+  "trace_coverage": 308,
+  "joint_accuracy": 2.6,
+  "per_prompt_accuracy": 43.5,
+  "sldnf_accuracy": 35.1,
+  "cred_accuracy": 51.9,
+  "skept_accuracy": 42.9,
+  "wfs_accuracy": 44.2
+ },
+ {
   "team": "qwen2.5-coder-32b",
   "subtask": "full",
   "reasoned_soundly": 38.4,
@@ -70,5 +94,17 @@
   "cred_accuracy": 54.5,
   "skept_accuracy": 55.6,
   "wfs_accuracy": 49.5
+ },
+ {
+  "team": "llama3-8b",
+  "subtask": "full",
+  "reasoned_soundly": 22.6,
+  "trace_coverage": 396,
+  "joint_accuracy": 3.0,
+  "per_prompt_accuracy": 44.7,
+  "sldnf_accuracy": 35.4,
+  "cred_accuracy": 49.5,
+  "skept_accuracy": 45.5,
+  "wfs_accuracy": 48.5
  }
 ]
