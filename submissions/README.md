@@ -37,10 +37,17 @@ GitHub Action.
    `<subtask>` is one of `8k-lite`, `16k`, `full`
    (e.g. `submissions/my-model__8k-lite.jsonl`), and open a Pull Request.
 
-4. A GitHub Action scores it against the hidden gold and **comments your JOINT
-   accuracy** on the PR. When a maintainer merges it, the public
-   [`leaderboard/LEADERBOARD.md`](../leaderboard/LEADERBOARD.md) updates
-   automatically (best JOINT per team per subtask is kept).
+4. A GitHub Action scores it against the hidden gold and **comments your score**
+   (JOINT + reasoned soundly) on the PR within a minute or two.
+
+5. **Auto-merge:** if your PR changes *only* `submissions/<team>__<subtask>.jsonl`
+   file(s) and scored cleanly, it is **merged automatically** and the public
+   leaderboard ([`LEADERBOARD.md`](../leaderboard/LEADERBOARD.md), the
+   [`leaderboard.json`](https://huggingface.co/datasets/qbao775/naf-bench) feed,
+   and the [live board](https://huggingface.co/spaces/qbao775/naf-bench-leaderboard))
+   updates on its own — no maintainer action needed. Best JOINT per team per
+   subtask is kept. A PR that touches anything else (code, workflows, …) is held
+   for manual maintainer review instead.
 
 ## Metric
 

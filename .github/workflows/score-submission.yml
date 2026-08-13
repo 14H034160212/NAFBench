@@ -1,16 +1,27 @@
 name: Score submission
 
-# Scores a PR that adds/updates submissions/*.jsonl and comments the JOINT score.
+# Scores a PR that adds/updates submissions/*.jsonl, comments the score, and
+# AUTO-MERGES it when it is safe to do so.
+#
 # pull_request_target so the HF_TOKEN secret (to read the private gold) is
-# available even for fork PRs. We check out the trusted base repo for the scorer
-# and pull ONLY the submission DATA files from the PR head (never run PR code).
+# available even for fork PRs. The workflow file itself always comes from the
+# trusted base branch; the PR head code is NEVER executed — we only copy the
+# submission DATA files out of it.
+#
+# Auto-merge guardrail: a PR is auto-merged only if EVERY changed file matches
+# submissions/<team>__<8k-lite|16k|full>.jsonl (no code, no workflows, nothing
+# else) AND scoring succeeded. Any other change falls back to manual review, so
+# a PR can never auto-merge a workflow/code edit that could exfiltrate secrets.
+# Because an auto-merged PR is guaranteed to touch data only, the post-merge tree
+# is byte-identical to the trusted base for all code, so we rebuild the board
+# inline (a bot merge push does not trigger the update-leaderboard workflow).
 on:
   pull_request_target:
     paths:
       - "submissions/**.jsonl"
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -19,14 +30,34 @@ jobs:
     steps:
       - name: Checkout base (trusted scorer)
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
 
-      - name: Fetch submission data files from the PR (data only)
+      - name: Fetch PR head + compute changed files
         run: |
           git fetch origin "pull/${{ github.event.pull_request.number }}/head:prhead"
-          FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} prhead -- 'submissions/*.jsonl' | tr '\n' ' ')
-          echo "Changed submission files: $FILES"
+          BASE="origin/${{ github.event.pull_request.base.ref }}"
+          # ALL changed files (for the guardrail) and the submission subset (to score)
+          ALL=$(git diff --name-only "$BASE" prhead | tr '\n' ' ')
+          FILES=$(git diff --name-only "$BASE" prhead -- 'submissions/*.jsonl' | tr '\n' ' ')
+          echo "All changed files: $ALL"
+          echo "Submission files:  $FILES"
           if [ -n "$FILES" ]; then git checkout prhead -- $FILES; fi
           echo "FILES=$FILES" >> "$GITHUB_ENV"
+          echo "ALL=$ALL" >> "$GITHUB_ENV"
+
+      - name: Guardrail — only submissions/<team>__<subtask>.jsonl may change
+        run: |
+          SAFE=true
+          for p in $ALL; do
+            if ! echo "$p" | grep -Eq '^submissions/[A-Za-z0-9._-]+__(8k-lite|16k|full)\.jsonl$'; then
+              echo "  ✗ '$p' is outside submissions/<team>__<subtask>.jsonl"
+              SAFE=false
+            fi
+          done
+          if [ -z "$ALL" ]; then SAFE=false; fi
+          echo "SAFE=$SAFE" >> "$GITHUB_ENV"
+          echo "Auto-merge eligible (submissions-only): $SAFE"
 
       - uses: actions/setup-python@v5
         with:
@@ -38,6 +69,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           echo "## NAF-Bench scoring" > /tmp/comment.md
+          SCORE_OK=true
           for f in $FILES; do
             base=$(basename "$f" .jsonl)         # <team>__<subtask>
             team="${base%__*}"; sub="${base##*__}"
@@ -45,11 +77,59 @@ jobs:
             echo '```' >> /tmp/comment.md
             if python leaderboard/score_submission.py --submission "$f" --subtask "$sub" --team "$team" >> /tmp/comment.md 2>&1; then :; else
               echo "Scoring failed. Check the filename (<team>__<8k-lite|16k|full>.jsonl) and format." >> /tmp/comment.md
+              SCORE_OK=false
             fi
             echo '```' >> /tmp/comment.md
           done
+          echo "SCORE_OK=$SCORE_OK" >> "$GITHUB_ENV"
+
+      - name: Auto-merge (submissions-only PR that scored cleanly)
+        id: merge
+        if: env.SAFE == 'true' && env.SCORE_OK == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge "${{ github.event.pull_request.number }}" --squash --repo "${{ github.repository }}"
+          echo "✅ Submissions-only PR, scored cleanly — auto-merged." >> /tmp/comment.md
+
+      - name: Rebuild + publish leaderboard after auto-merge
+        if: steps.merge.outcome == 'success'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+          python leaderboard/build_leaderboard.py
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard/LEADERBOARD.md leaderboard/leaderboard.json
+          git diff --staged --quiet || git commit -m "update leaderboard [skip ci]"
+          git push origin main
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          HfApi(token=os.environ["HF_TOKEN"]).upload_file(
+              path_or_fileobj="leaderboard/leaderboard.json", path_in_repo="leaderboard.json",
+              repo_id="qbao775/naf-bench", repo_type="dataset",
+              commit_message="sync leaderboard.json (auto-merge)")
+          PY
+          echo "🏆 Leaderboard updated on GitHub + Hugging Face." >> /tmp/comment.md
+
+      - name: Note manual review needed
+        if: env.SAFE != 'true'
+        run: |
+          echo "" >> /tmp/comment.md
+          echo "⚠️ This PR changes files outside \`submissions/<team>__<subtask>.jsonl\`, so it was **not** auto-merged. A maintainer will review it." >> /tmp/comment.md
+
+      - name: Note auto-merge blocked
+        if: env.SAFE == 'true' && env.SCORE_OK == 'true' && steps.merge.outcome == 'failure'
+        run: |
+          echo "" >> /tmp/comment.md
+          echo "ℹ️ Scored cleanly but the automatic merge did not go through (branch protection or a conflict). A maintainer will merge it — the leaderboard updates automatically on merge." >> /tmp/comment.md
 
       - name: Comment results on the PR
+        if: always()
         uses: actions/github-script@v7
         with:
           script: |
