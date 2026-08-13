@@ -91,6 +91,7 @@
      where even the frontier struggles), plus a propagation-decidable control.</p>
 
   <h2>Live competition — <code>hard_v3</code> <span class="note">(hidden test set, by context tier — auto-scored on submission)</span></h2>
+  <p class="note">Ranked by <b>JOINT %</b>. The <b>reasoned soundly %</b> column scores <em>whether the model reasoned correctly, not just answered correctly</em>: submit a <code>trace</code> and we check it against the private certification (a lucky guesser can top JOINT but not this). <code>–</code> = answer-only submission.</p>
   <div id="boards">Loading…</div>
   <p class="note" id="ts"></p>
 
@@ -155,9 +156,10 @@ fetch(SRC + "?t=" + Date.now()).then(r => r.json()).then(rows => {
     const h = document.createElement("h3"); h.textContent = "Subtask: " + st; el.appendChild(h);
     if (!rs.length) { const p=document.createElement("p"); p.className="note"; p.textContent="No submissions yet."; el.appendChild(p); continue; }
     const t = document.createElement("table");
-    t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th>" + COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";
+    t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th><th title='Of the programs a model got right AND submitted a reasoning trace for, the share whose trace is sound under the specified semantics — checked against the private certification. Answer-only submissions show –.'>reasoned soundly %</th>" + COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";
     rs.forEach((r,i)=>{ const tr=document.createElement("tr");
-      tr.innerHTML = `<td>${i+1}</td><td>${r.team}</td><td class="j">${r.joint_accuracy}</td>` +
+      const rs2 = (r.reasoned_soundly==null) ? "<span class='note'>–</span>" : `<b>${r.reasoned_soundly}</b>`;
+      tr.innerHTML = `<td>${i+1}</td><td>${r.team}</td><td class="j">${r.joint_accuracy}</td><td>${rs2}</td>` +
         COLS.map(c=>`<td>${r[c[0]]??""}</td>`).join(""); t.appendChild(tr); });
     el.appendChild(t);
   }

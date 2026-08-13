@@ -6,22 +6,24 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 ## Subtask: `8k-lite`
 
-| # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
-|---|---|---|---|---|---|---|---|
-| 1 | qwen2.5-coder-32b | **31.2** | 65.3 | 74.0 | 59.7 | 59.7 | 67.5 |
-| 2 | constant-baseline | **22.1** | 53.6 | 61.0 | 57.1 | 61.0 | 35.1 |
+| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+|---|---|---|---|---|---|---|---|---|
+| 1 | qwen2.5-coder-32b | **31.2** | 41.8 | 65.3 | 74.0 | 59.7 | 59.7 | 67.5 |
+| 2 | constant-baseline | **22.1** | – | 53.6 | 61.0 | 57.1 | 61.0 | 35.1 |
 
 ## Subtask: `16k`
 
-| # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
-|---|---|---|---|---|---|---|---|
-| 1 | qwen2.5-coder-32b | **29.5** | 65.9 | 77.3 | 59.1 | 55.7 | 71.6 |
-| 2 | constant-baseline | **20.5** | 55.7 | 65.9 | 55.7 | 58.0 | 43.2 |
+| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+|---|---|---|---|---|---|---|---|---|
+| 1 | qwen2.5-coder-32b | **29.5** | 40.1 | 65.9 | 77.3 | 59.1 | 55.7 | 71.6 |
+| 2 | constant-baseline | **20.5** | – | 55.7 | 65.9 | 55.7 | 58.0 | 43.2 |
 
 ## Subtask: `full`
 
-| # | team | JOINT % | per-prompt % | sldnf | cred | skept | wfs |
-|---|---|---|---|---|---|---|---|
-| 1 | qwen2.5-coder-32b | **27.3** | 66.4 | 79.8 | 58.6 | 52.5 | 74.7 |
-| 2 | constant-baseline | **19.2** | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
+| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+|---|---|---|---|---|---|---|---|---|
+| 1 | qwen2.5-coder-32b | **27.3** | 38.4 | 66.4 | 79.8 | 58.6 | 52.5 | 74.7 |
+| 2 | constant-baseline | **19.2** | – | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
+
+> **reasoned soundly %** (v1): of the programs a model got right *and* submitted a reasoning `trace` for, the share whose trace commits to the certified query verdict (and, on odd cycles, registers that there is no stable model). `–` = answer-only submission. Audits the query verdict + odd-cycle recognition against the private certification; the fuller per-atom audit is a follow-up.
 

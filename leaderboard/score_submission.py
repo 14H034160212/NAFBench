@@ -16,7 +16,21 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from evaluate import evaluate, load_submission  # noqa: E402
+from evaluate import evaluate  # noqa: E402
+from score_traces import trace_stats  # noqa: E402
+
+
+def load_submission_objects(path):
+    """id -> full record ({prediction, trace?}); backward compatible with answer-only."""
+    out = {}
+    for line in open(path):
+        line = line.strip()
+        if not line:
+            continue
+        r = json.loads(line)
+        if r.get("id") is not None:
+            out[r["id"]] = r
+    return out
 
 GOLD_REPO = os.environ.get("GOLD_REPO", "qbao775/naf-bench-gold")
 SUBTASKS = ["8k-lite", "16k", "full"]
@@ -39,8 +53,10 @@ def main():
     args = ap.parse_args()
 
     gold = load_gold(args.subtask)
-    sub = load_submission(args.submission)
-    m = evaluate(sub, gold)
+    objs = load_submission_objects(args.submission)
+    preds = {rid: r.get("prediction") for rid, r in objs.items()}
+    m = evaluate(preds, gold)
+    ts = trace_stats(objs, gold)  # None for answer-only submissions
 
     print(f"Subtask: {args.subtask}")
     print(f"  JOINT accuracy : {m['joint_accuracy']}%   <-- primary")
@@ -48,6 +64,11 @@ def main():
     print(f"  coverage       : {m['coverage']}%   format-valid: {m['format_valid_rate']}%")
     print(f"  by reading     : sldnf {m['sldnf_accuracy']} / cred {m['cred_accuracy']} "
           f"/ skept {m['skept_accuracy']} / wfs {m['wfs_accuracy']}")
+    if ts:
+        print(f"  reasoned soundly: {ts['reasoned_soundly']}%   "
+              f"(traces on {ts['trace_coverage']} prompts)")
+    else:
+        print("  reasoned soundly: – (answer-only submission; add a `trace` field to score it)")
     print(f"  programs       : {m['n_programs']}")
 
     if args.json:
@@ -55,6 +76,8 @@ def main():
                "joint_accuracy": m["joint_accuracy"],
                "per_prompt_accuracy": m["per_prompt_accuracy"],
                "coverage": m["coverage"],
+               "reasoned_soundly": ts["reasoned_soundly"] if ts else None,
+               "trace_coverage": ts["trace_coverage"] if ts else 0,
                "sldnf": m["sldnf_accuracy"], "cred": m["cred_accuracy"],
                "skept": m["skept_accuracy"], "wfs": m["wfs_accuracy"]}
         print("METRICS_JSON " + json.dumps(row))
