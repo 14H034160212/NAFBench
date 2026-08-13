@@ -4,6 +4,27 @@ A **solver-certified** benchmark for testing whether LLMs can *follow a specifie
 
 This PoC validates the full proposal pipeline end-to-end and runs a **fully automated cross-vendor evaluation** of 9 models — Claude, OpenAI (incl. GPT-5), and local open-source models (DeepSeek-R1, Qwen2.5, Llama3) — to answer the central question: *do frontier models still actually have this problem?*
 
+## 🏆 Leaderboard &amp; dataset
+
+**Live leaderboard:** <https://huggingface.co/spaces/qbao775/naf-bench-leaderboard> — submissions are scored **server-side** (primary metric: **JOINT accuracy**) against a **hidden** test set and the board updates automatically.
+
+**One-click dataset** — already split into `train` / `validation` / `test`:
+
+```python
+from datasets import load_dataset
+ds = load_dataset("qbao775/naf-bench")
+ds["train"]        # 1320 rows, WITH gold  (fresh instances, for training)
+ds["validation"]   #  495 rows, WITH gold  (public hard_v3 dev)
+ds["test"]         #  495 rows, gold hidden (competition test)
+```
+
+The three splits are solver-certified and mutually **disjoint** (no contamination).
+[Dataset page →](https://huggingface.co/datasets/qbao775/naf-bench)
+
+**Submit:** run your model on the test inputs, write `{"id": ..., "prediction": "A|B|C"}` per line, add it as `submissions/<team>__<subtask>.jsonl` and open a PR — a GitHub Action scores it against the hidden gold and updates the board. Three context-budget subtasks: `8k-lite ⊂ 16k ⊂ full`. See [`submissions/`](submissions/) and the [leaderboard page](leaderboard/LEADERBOARD.md).
+
+---
+
 > **Audit revision (2026-07-02).** After an independent implementation audit (run with Fable) we fixed two correctness bugs and several statistical/design issues, **regenerated every dataset** (gold labels verified unchanged — *zero* drift; only prompt text moved), **re-ran all models** on the corrected prompts, and **retrained every LoRA adapter** on the corrected training data. What changed materially:
 > - **Prompt bug fixed:** a conjunction rule was verbalized as "only if" (necessity) instead of "if" (sufficiency), affecting 12/44 of the WFS set — the *gold* was always right, the English now matches it.
 > - **CIs are now clustered by program**, not by prompt: the old Wilson intervals pseudoreplicated theme/run copies of a handful of programs, so error bars are honestly wider now.
