@@ -96,18 +96,6 @@
   "wfs_accuracy": 67.5
  },
  {
-  "team": "ci-selftest",
-  "subtask": "8k-lite",
-  "reasoned_soundly": null,
-  "trace_coverage": 0,
-  "joint_accuracy": 22.1,
-  "per_prompt_accuracy": 53.6,
-  "sldnf_accuracy": 61.0,
-  "cred_accuracy": 57.1,
-  "skept_accuracy": 61.0,
-  "wfs_accuracy": 35.1
- },
- {
   "team": "constant-baseline",
   "subtask": "8k-lite",
   "reasoned_soundly": null,
