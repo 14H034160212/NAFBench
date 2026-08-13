@@ -1,5 +1,17 @@
 [
  {
+  "team": "deepseek-r1-32b",
+  "subtask": "16k",
+  "reasoned_soundly": 69.7,
+  "trace_coverage": 352,
+  "joint_accuracy": 36.4,
+  "per_prompt_accuracy": 64.8,
+  "sldnf_accuracy": 85.2,
+  "cred_accuracy": 58.0,
+  "skept_accuracy": 53.4,
+  "wfs_accuracy": 62.5
+ },
+ {
   "team": "qwen2.5-coder-32b",
   "subtask": "16k",
   "reasoned_soundly": 40.1,
@@ -36,6 +48,18 @@
   "wfs_accuracy": 48.9
  },
  {
+  "team": "deepseek-r1-32b",
+  "subtask": "8k-lite",
+  "reasoned_soundly": 72.2,
+  "trace_coverage": 308,
+  "joint_accuracy": 41.6,
+  "per_prompt_accuracy": 67.9,
+  "sldnf_accuracy": 85.7,
+  "cred_accuracy": 62.3,
+  "skept_accuracy": 58.4,
+  "wfs_accuracy": 64.9
+ },
+ {
   "team": "qwen2.5-coder-32b",
   "subtask": "8k-lite",
   "reasoned_soundly": 41.8,
@@ -70,6 +94,18 @@
   "cred_accuracy": 51.9,
   "skept_accuracy": 42.9,
   "wfs_accuracy": 44.2
+ },
+ {
+  "team": "deepseek-r1-32b",
+  "subtask": "full",
+  "reasoned_soundly": 69.3,
+  "trace_coverage": 396,
+  "joint_accuracy": 32.3,
+  "per_prompt_accuracy": 63.4,
+  "sldnf_accuracy": 85.9,
+  "cred_accuracy": 54.5,
+  "skept_accuracy": 49.5,
+  "wfs_accuracy": 63.6
  },
  {
   "team": "qwen2.5-coder-32b",
