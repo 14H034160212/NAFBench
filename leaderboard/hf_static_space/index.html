@@ -20,6 +20,13 @@
   th { font-weight: 600; } td.j { font-weight: 700; } tr:first-child td.j { color: var(--accent); }
   a { color: #48c; } .pill{display:inline-block;background:var(--card);border-radius:999px;padding:.05rem .5rem;font-size:.8rem;color:var(--muted)}
   .note{color:var(--muted);font-size:.9rem}
+  .flow{margin:1rem 0}
+  .gen{border:1px solid var(--line);border-radius:10px;padding:.6rem .9rem;text-align:center;background:var(--card);max-width:520px;margin:0 auto}
+  .split{text-align:center;color:var(--muted);margin:.35rem 0;font-size:.9rem}
+  .cards{display:flex;gap:.8rem;flex-wrap:wrap}
+  .card{flex:1;min-width:210px;border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem}
+  .card b{font-size:1.05rem} .card .k{color:var(--muted);font-size:.88rem;margin:.2rem 0}
+  .open{color:var(--accent)} .priv{color:#c66}
 </style>
 </head>
 <body>
@@ -105,15 +112,23 @@
      o4-mini's edge is the search family <code>cnf</code>.</p>
 
   <h2>Data &amp; downloads</h2>
-  <ul>
-    <li><b>Dev set — public, with gold.</b> <code>hard_v3</code> (and v1/v2, base) ship in the
-       <a href="https://github.com/14H034160212/NAFBench">GitHub repo</a> with labels; develop and self-check here.</li>
-    <li><b>Test inputs — public, no gold.</b> On <a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 qbao775/naf-bench</a>
-       (<code>inputs_8k-lite/16k/full.jsonl</code>) — predict on these and submit.</li>
-    <li><b>Test gold — private.</b> Held on a server-side dataset only, so the competition stays contamination-free.</li>
-    <li><b>Training data — no fixed split.</b> The <b>generator is open-source</b>: regenerate unlimited fresh,
-       solver-certified, contamination-free instances (new seeds) for training or your own evaluation.</li>
-  </ul>
+  <p class="note">Everything flows from one open-source generator, so data is unlimited and contamination-free —
+     the test gold is the only thing held back.</p>
+  <div class="flow">
+    <div class="gen">🛠️ <b>Open-source generator</b><br><span class="note">solver-certified (SWI-Prolog · WFS · clingo) · fresh seeds · regenerable</span></div>
+    <div class="split">↓ &nbsp; splits into &nbsp; ↓</div>
+    <div class="cards">
+      <div class="card"><b>TRAIN</b>
+        <div class="k">No fixed split — <b>generate your own</b>, unlimited, with new seeds.</div>
+        <div class="k"><a href="https://github.com/14H034160212/NAFBench">generator on GitHub</a></div></div>
+      <div class="card"><b>DEV</b> <span class="open">🌐 public · with gold</span>
+        <div class="k"><code>hard_v3</code> (+ v1/v2, base) with labels — develop &amp; self-check.</div>
+        <div class="k"><a href="https://github.com/14H034160212/NAFBench">GitHub repo</a></div></div>
+      <div class="card"><b>TEST</b> <span class="open">🌐 inputs public</span> · <span class="priv">🔒 gold private</span>
+        <div class="k">Predict on the public inputs; gold is server-side only (contamination-free).</div>
+        <div class="k"><a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 inputs on HF</a></div></div>
+    </div>
+  </div>
 
   <h2>Submit</h2>
   <p>Run your model on the public inputs, produce a JSONL of <code>{"id": ..., "prediction": "A|B|C"}</code>,
