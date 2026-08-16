@@ -66,7 +66,7 @@ def main():
         rows = sorted(((t, m) for (t, s), m in best.items() if s == subtask),
                       key=lambda x: -x[1]["joint_accuracy"])
         lines += [f"## Subtask: `{subtask}`", "",
-                  "| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |",
+                  "| # | team | JOINT % | trace-sound %ᵃᵘˣ | per-prompt % | sldnf | cred | skept | wfs |",
                   "|---|---|---|---|---|---|---|---|---|"]
         if not rows:
             lines.append("| — | _(no submissions yet)_ | | | | | | | |")
@@ -77,12 +77,13 @@ def main():
                          f"{m['per_prompt_accuracy']} | {m['sldnf_accuracy']} | "
                          f"{m['cred_accuracy']} | {m['skept_accuracy']} | {m['wfs_accuracy']} |")
         lines.append("")
-    lines += ["> **reasoned soundly %** (v1): of the programs a model got right *and*"
-              " submitted a reasoning `trace` for, the share whose trace commits to the"
-              " certified query verdict (and, on odd cycles, registers that there is no"
-              " stable model). `–` = answer-only submission. Audits the query verdict +"
-              " odd-cycle recognition against the private certification; the fuller"
-              " per-atom audit is a follow-up.", ""]
+    lines += ["> Ranking is by **JOINT %** only.", "",
+              "> **trace-sound %ᵃᵘˣ** is *auxiliary information, not a ranking criterion.*"
+              " Of the programs a model got right *and* submitted a reasoning `trace` for,"
+              " the share whose trace commits to the certified query verdict (and, on odd"
+              " cycles, registers that there is no stable model). The check is **regex-based"
+              " and imperfect — a rough approximation of soundness**, not a verified proof"
+              " audit. `–` = answer-only submission.", ""]
 
     out = os.path.join(HERE, "LEADERBOARD.md")
     open(out, "w").write("\n".join(lines) + "\n")

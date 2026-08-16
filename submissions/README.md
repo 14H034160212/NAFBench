@@ -27,10 +27,10 @@ GitHub Action.
    {"id": "hv3hid-decided_d1-i0-cred::cred", "prediction": "A", "trace": "Under the credulous reading we look for a stable model in which q holds ... "}
    ```
 
-   Traced submissions get a second scored column, **reasoned soundly %** (see
-   Metric): of the programs you got right, how many your `trace` actually justified
-   under the specified semantics — checked against the private certification, not by
-   string match. Answer-only submissions are still fully accepted and simply show
+   Traced submissions get an **auxiliary** column, **trace-sound %** (see Metric):
+   a rough, regex-based approximation of how often your `trace` actually justified a
+   correct answer under the specified semantics. It is auxiliary information only and
+   does **not** affect ranking. Answer-only submissions are fully accepted and show
    `–` in that column.
 
 3. Add your file here as **`submissions/<team>__<subtask>.jsonl`**, where
@@ -38,7 +38,7 @@ GitHub Action.
    (e.g. `submissions/my-model__8k-lite.jsonl`), and open a Pull Request.
 
 4. A GitHub Action scores it against the hidden gold and **comments your score**
-   (JOINT + reasoned soundly) on the PR within a minute or two.
+   (JOINT, plus the auxiliary trace-sound signal) on the PR within a minute or two.
 
 5. **Auto-merge:** if your PR changes *only* `submissions/<team>__<subtask>.jsonl`
    file(s) and scored cleanly, it is **merged automatically** and the public
@@ -55,13 +55,13 @@ GitHub Action.
 readings (SLDNF / well-founded / credulous / skeptical) are answered correctly.
 Diagnostic columns (per-prompt, per-reading) are shown too but do not rank.
 
-**reasoned soundly %** (secondary, traced submissions only) — of the programs you
-answered correctly *and* supplied a `trace` for, the share whose trace commits to
-the certified query verdict (and, on odd cycles, registers that the program admits
-no stable model). This is a v1 soundness audit: it catches "right answer, wrong (or
-absent) reasoning" — a constant-guesser can score well on JOINT but cannot score
-here. It audits the query verdict + odd-cycle recognition against the private
-per-instance certification; a fuller per-atom proof audit is planned.
+**trace-sound %** (auxiliary, *not* a ranking criterion; traced submissions only) —
+of the programs you answered correctly *and* supplied a `trace` for, the share whose
+trace commits to the certified query verdict (and, on odd cycles, registers that the
+program admits no stable model). The check is **regex-based and imperfect — a rough
+approximation of soundness**, not a verified proof audit, so it is reported as
+auxiliary information only and does not affect ranking. It gives a coarse signal for
+"right answer, unsound/absent reasoning." Ranking is by JOINT alone.
 
 ## Subtasks (by context budget)
 

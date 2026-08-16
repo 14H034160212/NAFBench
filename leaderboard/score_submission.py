@@ -65,10 +65,10 @@ def main():
     print(f"  by reading     : sldnf {m['sldnf_accuracy']} / cred {m['cred_accuracy']} "
           f"/ skept {m['skept_accuracy']} / wfs {m['wfs_accuracy']}")
     if ts:
-        print(f"  reasoned soundly: {ts['reasoned_soundly']}%   "
-              f"(traces on {ts['trace_coverage']} prompts)")
+        print(f"  trace-sound (aux): {ts['reasoned_soundly']}%   "
+              f"(regex approx; traces on {ts['trace_coverage']} prompts)")
     else:
-        print("  reasoned soundly: – (answer-only submission; add a `trace` field to score it)")
+        print("  trace-sound (aux): – (answer-only submission; add a `trace` field for this auxiliary signal)")
     print(f"  programs       : {m['n_programs']}")
 
     if args.json:

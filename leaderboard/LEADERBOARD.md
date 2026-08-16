@@ -6,7 +6,7 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 ## Subtask: `8k-lite`
 
-| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+| # | team | JOINT % | trace-sound %ᵃᵘˣ | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|---|
 | 1 | gemma4-31b | **75.3** | 84.9 | 90.6 | 100.0 | 85.7 | 77.9 | 98.7 |
 | 2 | deepseek-r1-32b | **41.6** | 72.2 | 67.9 | 85.7 | 62.3 | 58.4 | 64.9 |
@@ -16,7 +16,7 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 ## Subtask: `16k`
 
-| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+| # | team | JOINT % | trace-sound %ᵃᵘˣ | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|---|
 | 1 | gemma4-31b | **65.9** | 85.0 | 85.5 | 100.0 | 75.0 | 68.2 | 98.9 |
 | 2 | deepseek-r1-32b | **36.4** | 69.7 | 64.8 | 85.2 | 58.0 | 53.4 | 62.5 |
@@ -26,7 +26,7 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 
 ## Subtask: `full`
 
-| # | team | JOINT % | reasoned soundly % | per-prompt % | sldnf | cred | skept | wfs |
+| # | team | JOINT % | trace-sound %ᵃᵘˣ | per-prompt % | sldnf | cred | skept | wfs |
 |---|---|---|---|---|---|---|---|---|
 | 1 | gemma4-31b | **58.6** | 84.6 | 82.1 | 98.0 | 68.7 | 62.6 | 99.0 |
 | 2 | deepseek-r1-32b | **32.3** | 69.3 | 63.4 | 85.9 | 54.5 | 49.5 | 63.6 |
@@ -34,5 +34,7 @@ set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.
 | 4 | constant-baseline | **19.2** | – | 57.3 | 69.7 | 54.5 | 55.6 | 49.5 |
 | 5 | llama3-8b | **3.0** | 22.6 | 44.7 | 35.4 | 49.5 | 45.5 | 48.5 |
 
-> **reasoned soundly %** (v1): of the programs a model got right *and* submitted a reasoning `trace` for, the share whose trace commits to the certified query verdict (and, on odd cycles, registers that there is no stable model). `–` = answer-only submission. Audits the query verdict + odd-cycle recognition against the private certification; the fuller per-atom audit is a follow-up.
+> Ranking is by **JOINT %** only.
+
+> **trace-sound %ᵃᵘˣ** is *auxiliary information, not a ranking criterion.* Of the programs a model got right *and* submitted a reasoning `trace` for, the share whose trace commits to the certified query verdict (and, on odd cycles, registers that there is no stable model). The check is **regex-based and imperfect — a rough approximation of soundness**, not a verified proof audit. `–` = answer-only submission.
 
