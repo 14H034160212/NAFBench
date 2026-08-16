@@ -21,7 +21,7 @@ ds["test"]         #  495 rows, gold hidden (competition test)
 The three splits are solver-certified and mutually **disjoint** (no contamination).
 [Dataset page →](https://huggingface.co/datasets/qbao775/naf-bench)
 
-**Submit:** run your model on the test inputs, write `{"id": ..., "prediction": "A|B|C"}` per line, add it as `submissions/<team>__<subtask>.jsonl` and open a PR — a GitHub Action scores it against the hidden gold and updates the board. Three context-budget subtasks: `8k-lite ⊂ 16k ⊂ full`. See [`submissions/`](submissions/) and the [leaderboard page](leaderboard/LEADERBOARD.md).
+**Submit:** run your model on the test inputs, write `{"id": ..., "prediction": "A|B|C"}` per line (optionally add a `trace`), add it as `submissions/<team>__hard.jsonl` and open a PR — a GitHub Action scores it against the hidden gold and, if it's a clean submissions-only PR, auto-merges and updates the board. Single task `hard` (77 programs; the prohibitively-large 3-SAT instances `cnf_n14`/`cnf_n22` are excluded). See [`submissions/`](submissions/) and the [leaderboard page](leaderboard/LEADERBOARD.md).
 
 ---
 

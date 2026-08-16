@@ -51,3 +51,4 @@ MEETING*.md
 APP*.pdf
 *Vision and Approach*.pdf
 leaderboard/submissions_hidden/
+leaderboard/data/*.prev

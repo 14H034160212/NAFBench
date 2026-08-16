@@ -50,8 +50,8 @@ jobs:
         run: |
           SAFE=true
           for p in $ALL; do
-            if ! echo "$p" | grep -Eq '^submissions/[A-Za-z0-9._-]+__(8k-lite|16k|full)\.jsonl$'; then
-              echo "  ✗ '$p' is outside submissions/<team>__<subtask>.jsonl"
+            if ! echo "$p" | grep -Eq '^submissions/[A-Za-z0-9._-]+__hard\.jsonl$'; then
+              echo "  ✗ '$p' is outside submissions/<team>__hard.jsonl"
               SAFE=false
             fi
           done

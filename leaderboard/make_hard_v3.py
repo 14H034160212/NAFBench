@@ -55,10 +55,16 @@ SPEC = ["closed_world", "cred", "skept", "wfs"]
 # measured curves in hard_instances_v3.__main__: cnf conflicts run ~4/5/10 at
 # n=8/14/22, parity/coupled stay at 0 by design, decided alternates T/F on the
 # parity of the stack depth.
+# NOTE: the large 3-SAT tiers cnf_n14 / cnf_n22 (search spaces 2^14 / 2^22) were
+# dropped — they are not informative (every model just fails or runs out of
+# context), so keeping them blurred the cnf signal rather than sharpening it. Only
+# the bounded cnf_n8 tier is kept. The length-matched controls control_n14/n22 stay
+# as a pure length-robustness probe. Restore the two lines below to regenerate the
+# old tiered set.
 TIERS = [
     ("cnf",      "cnf_n8",       8,  1.5),
-    ("cnf",      "cnf_n14",     14,  1.5),
-    ("cnf",      "cnf_n22",     22,  1.5),
+    # ("cnf",      "cnf_n14",     14,  1.5),   # dropped: 2^14 search space, uninformative
+    # ("cnf",      "cnf_n22",     22,  1.5),   # dropped: 2^22 search space, uninformative
     ("parity",   "parity_n4",    4,  0.25),
     ("parity",   "parity_n6",    6,  0.25),
     ("parity",   "parity_n8",    8,  0.25),

@@ -1,67 +1,7 @@
 [
  {
   "team": "gemma4-31b",
-  "subtask": "16k",
-  "reasoned_soundly": 85.0,
-  "trace_coverage": 352,
-  "joint_accuracy": 65.9,
-  "per_prompt_accuracy": 85.5,
-  "sldnf_accuracy": 100.0,
-  "cred_accuracy": 75.0,
-  "skept_accuracy": 68.2,
-  "wfs_accuracy": 98.9
- },
- {
-  "team": "deepseek-r1-32b",
-  "subtask": "16k",
-  "reasoned_soundly": 69.7,
-  "trace_coverage": 352,
-  "joint_accuracy": 36.4,
-  "per_prompt_accuracy": 64.8,
-  "sldnf_accuracy": 85.2,
-  "cred_accuracy": 58.0,
-  "skept_accuracy": 53.4,
-  "wfs_accuracy": 62.5
- },
- {
-  "team": "qwen2.5-coder-32b",
-  "subtask": "16k",
-  "reasoned_soundly": 40.1,
-  "trace_coverage": 352,
-  "joint_accuracy": 29.5,
-  "per_prompt_accuracy": 65.9,
-  "sldnf_accuracy": 77.3,
-  "cred_accuracy": 59.1,
-  "skept_accuracy": 55.7,
-  "wfs_accuracy": 71.6
- },
- {
-  "team": "constant-baseline",
-  "subtask": "16k",
-  "reasoned_soundly": null,
-  "trace_coverage": 0,
-  "joint_accuracy": 20.5,
-  "per_prompt_accuracy": 55.7,
-  "sldnf_accuracy": 65.9,
-  "cred_accuracy": 55.7,
-  "skept_accuracy": 58.0,
-  "wfs_accuracy": 43.2
- },
- {
-  "team": "llama3-8b",
-  "subtask": "16k",
-  "reasoned_soundly": 24.7,
-  "trace_coverage": 352,
-  "joint_accuracy": 3.4,
-  "per_prompt_accuracy": 44.9,
-  "sldnf_accuracy": 33.0,
-  "cred_accuracy": 52.3,
-  "skept_accuracy": 45.5,
-  "wfs_accuracy": 48.9
- },
- {
-  "team": "gemma4-31b",
-  "subtask": "8k-lite",
+  "subtask": "hard",
   "reasoned_soundly": 84.9,
   "trace_coverage": 308,
   "joint_accuracy": 75.3,
@@ -73,7 +13,7 @@
  },
  {
   "team": "deepseek-r1-32b",
-  "subtask": "8k-lite",
+  "subtask": "hard",
   "reasoned_soundly": 72.2,
   "trace_coverage": 308,
   "joint_accuracy": 41.6,
@@ -85,7 +25,7 @@
  },
  {
   "team": "qwen2.5-coder-32b",
-  "subtask": "8k-lite",
+  "subtask": "hard",
   "reasoned_soundly": 41.8,
   "trace_coverage": 308,
   "joint_accuracy": 31.2,
@@ -97,7 +37,7 @@
  },
  {
   "team": "constant-baseline",
-  "subtask": "8k-lite",
+  "subtask": "hard",
   "reasoned_soundly": null,
   "trace_coverage": 0,
   "joint_accuracy": 22.1,
@@ -109,7 +49,7 @@
  },
  {
   "team": "llama3-8b",
-  "subtask": "8k-lite",
+  "subtask": "hard",
   "reasoned_soundly": 24.6,
   "trace_coverage": 308,
   "joint_accuracy": 2.6,
@@ -118,65 +58,5 @@
   "cred_accuracy": 51.9,
   "skept_accuracy": 42.9,
   "wfs_accuracy": 44.2
- },
- {
-  "team": "gemma4-31b",
-  "subtask": "full",
-  "reasoned_soundly": 84.6,
-  "trace_coverage": 396,
-  "joint_accuracy": 58.6,
-  "per_prompt_accuracy": 82.1,
-  "sldnf_accuracy": 98.0,
-  "cred_accuracy": 68.7,
-  "skept_accuracy": 62.6,
-  "wfs_accuracy": 99.0
- },
- {
-  "team": "deepseek-r1-32b",
-  "subtask": "full",
-  "reasoned_soundly": 69.3,
-  "trace_coverage": 396,
-  "joint_accuracy": 32.3,
-  "per_prompt_accuracy": 63.4,
-  "sldnf_accuracy": 85.9,
-  "cred_accuracy": 54.5,
-  "skept_accuracy": 49.5,
-  "wfs_accuracy": 63.6
- },
- {
-  "team": "qwen2.5-coder-32b",
-  "subtask": "full",
-  "reasoned_soundly": 38.4,
-  "trace_coverage": 396,
-  "joint_accuracy": 27.3,
-  "per_prompt_accuracy": 66.4,
-  "sldnf_accuracy": 79.8,
-  "cred_accuracy": 58.6,
-  "skept_accuracy": 52.5,
-  "wfs_accuracy": 74.7
- },
- {
-  "team": "constant-baseline",
-  "subtask": "full",
-  "reasoned_soundly": null,
-  "trace_coverage": 0,
-  "joint_accuracy": 19.2,
-  "per_prompt_accuracy": 57.3,
-  "sldnf_accuracy": 69.7,
-  "cred_accuracy": 54.5,
-  "skept_accuracy": 55.6,
-  "wfs_accuracy": 49.5
- },
- {
-  "team": "llama3-8b",
-  "subtask": "full",
-  "reasoned_soundly": 22.6,
-  "trace_coverage": 396,
-  "joint_accuracy": 3.0,
-  "per_prompt_accuracy": 44.7,
-  "sldnf_accuracy": 35.4,
-  "cred_accuracy": 49.5,
-  "skept_accuracy": 45.5,
-  "wfs_accuracy": 48.5
  }
 ]

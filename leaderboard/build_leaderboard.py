@@ -61,11 +61,12 @@ def main():
     lines = ["# NAF-Bench Leaderboard", "",
              "Primary metric: **JOINT accuracy** (a program counts only if all four",
              "specified readings are correct). Scored server-side against a hidden test",
-             "set. Three subtasks by context budget: `8k-lite` ⊂ `16k` ⊂ `full`.", ""]
+             "set (`hard`: 385 prompts; the prohibitively-large 3-SAT instances",
+             "`cnf_n14`/`cnf_n22` are excluded as uninformative).", ""]
     for subtask in SUBTASKS:
         rows = sorted(((t, m) for (t, s), m in best.items() if s == subtask),
                       key=lambda x: -x[1]["joint_accuracy"])
-        lines += [f"## Subtask: `{subtask}`", "",
+        lines += ["## Results", "",
                   "| # | team | JOINT % | trace-sound %ᵃᵘˣ | per-prompt % | sldnf | cred | skept | wfs |",
                   "|---|---|---|---|---|---|---|---|---|"]
         if not rows:

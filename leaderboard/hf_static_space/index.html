@@ -41,7 +41,7 @@
      <a href="https://huggingface.co/datasets/qbao775/naf-bench">Inputs</a> ·
      <a href="https://github.com/14H034160212/NAFBench/tree/main/submissions">Submit</a></p>
   <p><a class="dl" href="https://huggingface.co/datasets/qbao775/naf-bench/resolve/main/naf-bench-data.zip">⬇️ Download all data + submit guide (one zip)</a>
-     <span class="note">train · validation · test (hidden-set inputs) · all tiers · README with submit steps</span></p>
+     <span class="note">train · validation · test (hidden-set inputs) · README with submit steps</span></p>
 
   <h2>What it tests</h2>
   <p>The word "not" doesn't mean one thing. In law, regulation, and medicine, the intended meaning
@@ -69,53 +69,47 @@
     <tr><th>Subtask</th><th>What it varies</th><th>Programs</th><th>Guess-baseline</th><th>Frontier (o4-mini)</th><th>Status</th></tr>
     <tr><td><code>v1</code></td><td>cycle length + number of independent cycles</td><td>136</td><td>76.5%</td><td>—</td><td>diagnostic (largely guessable)</td></tr>
     <tr><td><code>v2</code></td><td>combinatorial (2ⁿ stable models)</td><td>144</td><td>100.0%</td><td>83.3% ⟵ <em>below baseline</em></td><td>superseded (a constant wins)</td></tr>
-    <tr><td><b><code>hard_v3</code></b></td><td>mixed certified signatures + genuine 3-SAT search</td><td>99</td><td><b>19.2%</b></td><td><b>54.5% ⟵ beats baseline</b></td><td><b>active — the live competition</b></td></tr>
+    <tr><td><b><code>hard_v3</code></b></td><td>mixed certified signatures + bounded 3-SAT search (<code>cnf_n8</code>)</td><td>77</td><td><b>22.1%</b></td><td><b>68.8% ⟵ beats baseline</b></td><td><b>active — the live competition</b></td></tr>
   </table>
   <p class="note">The <em>Frontier</em> column is the tell: on <code>v2</code> even o4-mini (83.3%) scores
      <b>below</b> the 100% constant — a frontier model loses to a program-blind guess, so the subtask measures
-     nothing. On <code>hard_v3</code> o4-mini (54.5%) clearly clears the 19.2% baseline, so the subtask is real.
+     nothing. On <code>hard_v3</code> o4-mini (68.8%) clearly clears the 22.1% baseline, so the subtask is real.
      That is why <code>hard_v3</code> is the scored competition; <code>v1</code>/<code>v2</code> are kept for
      provenance. (Open models track the same story: 5.8–12.5% on the paper's base set, and no better than the
      guess on v1/v2.)</p>
-  <p class="note"><code>hard_v3</code> is further split into three <b>context-budget tiers</b> —
-     <code>8k-lite</code> (77 progs) ⊂ <code>16k</code> (88) ⊂ <code>full</code> (99) — differing only in how much
-     reasoning length a solution needs; pick the tier your model's context can handle.</p>
-  <table>
-    <tr><th>Task</th><th>What it is</th><th>Programs</th><th>Notes</th></tr>
-    <tr><td><code>8k-lite</code></td><td>Signal families + the smallest search tier</td><td>77</td><td>solvable within ~8k tokens</td></tr>
-    <tr><td><code>16k</code></td><td>+ a larger search tier</td><td>88</td><td>solvable within ~16k tokens</td></tr>
-    <tr><td><code>full</code></td><td>+ the largest 3-SAT search instances</td><td>99</td><td>may need long context</td></tr>
-  </table>
+  <p class="note"><code>hard_v3</code> is a single set of <b>77 programs</b> (385 prompts). It keeps the small
+     3-SAT search tier <code>cnf_n8</code> but <b>excludes the prohibitively-large instances</b>
+     <code>cnf_n14</code>/<code>cnf_n22</code> (search spaces of 2¹⁴–2²²): those are not informative — every model
+     just fails or runs out of context — so dropping them makes the <code>cnf</code> condition sharper.</p>
   <p class="note">Families: <code>decided</code>/<code>loopy</code> (read the program, resolve a negation cycle),
-     <code>parity</code>/<code>coupled</code> (combinatorial bookkeeping), <code>cnf</code> (genuine 3-SAT search —
-     where even the frontier struggles), plus a propagation-decidable control.</p>
+     <code>parity</code>/<code>coupled</code> (combinatorial bookkeeping), <code>cnf_n8</code> (genuine but bounded
+     3-SAT search), plus a propagation-decidable control.</p>
 
-  <h2>Live competition — <code>hard_v3</code> <span class="note">(hidden test set, by context tier — auto-scored on submission)</span></h2>
+  <h2>Live competition — <code>hard_v3</code> <span class="note">(hidden test set — auto-scored on submission)</span></h2>
   <p class="note">Ranked by <b>JOINT %</b> only. The <b>trace-sound %</b> column is <em>auxiliary information, not a ranking criterion</em>: if you submit a <code>trace</code>, we check whether its reasoning commits to the certified query verdict. The check is <em>regex-based and imperfect — a rough approximation of soundness</em>, not a verified proof audit. <code>–</code> = answer-only submission.</p>
   <div id="boards">Loading…</div>
   <p class="note" id="ts"></p>
 
-  <h2>Reference results — <code>hard_v3</code> by context tier <span class="note">(public dev set)</span></h2>
+  <h2>Reference results — <code>hard_v3</code> <span class="note">(public dev set)</span></h2>
   <p class="note"><b>These are baselines, not a ceiling</b> — initial reference points we measured on the
-     <em>public</em> <code>hard_v3</code> set, at each of its three context tiers (o4-mini is a closed frontier
-     reference; the rest are open-weight). Beat them by submitting to the live competition above. Scores fall
-     left→right as harder 3-SAT search instances are added.</p>
+     <em>public</em> <code>hard_v3</code> set (o4-mini is a closed frontier reference; the rest are open-weight).
+     Beat them by submitting to the live competition above.</p>
   <table id="ref">
-    <tr><th>#</th><th>Model</th><th>open</th><th>8k-lite</th><th>16k</th><th>full</th></tr>
-    <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">68.8</td><td>60.2</td><td>54.5</td></tr>
-    <tr><td>2</td><td>DeepSeek-V4-Flash</td><td>✓</td><td class="j">62.3</td><td>54.5</td><td>48.5</td></tr>
-    <tr><td>3</td><td>Gemma4-31B</td><td>✓</td><td class="j">58.4</td><td>51.1</td><td>45.5</td></tr>
-    <tr><td>4</td><td>Qwen3.5-35B</td><td>✓</td><td class="j">54.5</td><td>47.7</td><td>42.4</td></tr>
-    <tr><td>5</td><td>Qwen2.5-Coder-32B</td><td>✓</td><td class="j">39.0</td><td>34.1</td><td>30.3</td></tr>
-    <tr><td>6</td><td>DeepSeek-R1-32B</td><td>✓</td><td class="j">33.8</td><td>29.5</td><td>26.3</td></tr>
-    <tr><td>7</td><td>Qwen3.6 *</td><td>✓</td><td class="j">1.3</td><td>1.1</td><td>1.0</td></tr>
-    <tr><td>8</td><td>Llama3-8B</td><td>✓</td><td class="j">1.3</td><td>1.1</td><td>1.0</td></tr>
+    <tr><th>#</th><th>Model</th><th>open</th><th>JOINT %</th></tr>
+    <tr><td>1</td><td>o4-mini <span class="note">(frontier ref)</span></td><td>—</td><td class="j">68.8</td></tr>
+    <tr><td>2</td><td>DeepSeek-V4-Flash</td><td>✓</td><td class="j">62.3</td></tr>
+    <tr><td>3</td><td>Gemma4-31B</td><td>✓</td><td class="j">58.4</td></tr>
+    <tr><td>4</td><td>Qwen3.5-35B</td><td>✓</td><td class="j">54.5</td></tr>
+    <tr><td>5</td><td>Qwen2.5-Coder-32B</td><td>✓</td><td class="j">39.0</td></tr>
+    <tr><td>6</td><td>DeepSeek-R1-32B</td><td>✓</td><td class="j">33.8</td></tr>
+    <tr><td>7</td><td>Qwen3.6 *</td><td>✓</td><td class="j">1.3</td></tr>
+    <tr><td>8</td><td>Llama3-8B</td><td>✓</td><td class="j">1.3</td></tr>
   </table>
-  <p class="note">Values are JOINT accuracy (%). Decoding: temperature 0 for all, with a per-model token budget large enough to conclude.
-     * Qwen3.6's 1.0 is a <em>non-termination</em> result, not a reasoning score: even at its recommended
+  <p class="note">Values are JOINT accuracy (%) on the public dev set. Decoding: temperature 0 for all, with a per-model token budget large enough to conclude.
+     * Qwen3.6's 1.3 is a <em>non-termination</em> result, not a reasoning score: even at its recommended
      temperature with a 16k budget it fails to finish ~50% of readings (per-reading it concludes ~49%).
      On <code>loopy</code>, the open models V4-Flash (19/20) and Gemma4 (16/20) actually beat o4-mini (11/20);
-     o4-mini's edge is the search family <code>cnf</code>.</p>
+     o4-mini's edge is the search family <code>cnf_n8</code>.</p>
 
   <h2>Data &amp; downloads</h2>
   <p class="note">Everything flows from one open-source generator, so data is unlimited and contamination-free —
@@ -134,7 +128,7 @@
         <div class="k"><a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 download on HF</a> (<code>validation.jsonl</code>, <code>dev_v1/v2</code>)</div></div>
       <div class="card"><b>TEST</b> <span class="open">🌐 inputs public</span> · <span class="priv">🔒 gold private</span>
         <div class="k">Predict on the public inputs; gold is server-side only (contamination-free).</div>
-        <div class="k"><a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 inputs on HF</a> (<code>test.jsonl</code>, <code>inputs_*</code>)</div></div>
+        <div class="k"><a href="https://huggingface.co/datasets/qbao775/naf-bench">🤗 inputs on HF</a> (<code>test.jsonl</code>, <code>inputs_hard.jsonl</code>)</div></div>
     </div>
   </div>
 
@@ -146,14 +140,14 @@
 
 <script>
 const SRC = "https://huggingface.co/datasets/qbao775/naf-bench/resolve/main/leaderboard.json";
-const ORDER = ["8k-lite", "16k", "full"];
+const ORDER = ["hard"];
 const COLS = [["per_prompt_accuracy","per-prompt"],["sldnf_accuracy","sldnf"],
               ["cred_accuracy","cred"],["skept_accuracy","skept"],["wfs_accuracy","wfs"]];
 fetch(SRC + "?t=" + Date.now()).then(r => r.json()).then(rows => {
   const el = document.getElementById("boards"); el.innerHTML = "";
   for (const st of ORDER) {
     const rs = rows.filter(r => r.subtask === st).sort((a,b)=>b.joint_accuracy-a.joint_accuracy);
-    const h = document.createElement("h3"); h.textContent = "Subtask: " + st; el.appendChild(h);
+    if (ORDER.length > 1) { const h = document.createElement("h3"); h.textContent = "Subtask: " + st; el.appendChild(h); }
     if (!rs.length) { const p=document.createElement("p"); p.className="note"; p.textContent="No submissions yet."; el.appendChild(p); continue; }
     const t = document.createElement("table");
     t.innerHTML = "<tr><th>#</th><th>team</th><th>JOINT %</th><th title='AUXILIARY, not a ranking criterion. Of the programs a model got right AND submitted a trace for, the share whose trace commits to the certified query verdict. Regex-based and imperfect — a rough approximation of soundness. Answer-only submissions show –.'>trace-sound %<sup>aux</sup></th>" + COLS.map(c=>"<th>"+c[1]+"</th>").join("") + "</tr>";

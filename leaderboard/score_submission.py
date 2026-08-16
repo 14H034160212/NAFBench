@@ -33,7 +33,10 @@ def load_submission_objects(path):
     return out
 
 GOLD_REPO = os.environ.get("GOLD_REPO", "qbao775/naf-bench-gold")
-SUBTASKS = ["8k-lite", "16k", "full"]
+# Single task after dropping the prohibitively-large cnf instances (cnf_n14,
+# cnf_n22): with those gone the old context-budget tiers (8k-lite/16k/full)
+# coincided, so they collapse into one set.
+SUBTASKS = ["hard"]
 
 
 def load_gold(subtask):

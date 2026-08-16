@@ -8,7 +8,7 @@ GitHub Action.
 
 1. Get the test **inputs** from the public dataset
    [`qbao775/naf-bench`](https://huggingface.co/datasets/qbao775/naf-bench):
-   `inputs_8k-lite.jsonl`, `inputs_16k.jsonl`, or `inputs_full.jsonl`.
+   `inputs_hard.jsonl` (or the `test` split).
    (`sample_with_gold.jsonl` shows the format and label space.)
 
 2. Run your model and produce a **JSONL**, one line per prompt:
@@ -33,21 +33,20 @@ GitHub Action.
    does **not** affect ranking. Answer-only submissions are fully accepted and show
    `–` in that column.
 
-3. Add your file here as **`submissions/<team>__<subtask>.jsonl`**, where
-   `<subtask>` is one of `8k-lite`, `16k`, `full`
-   (e.g. `submissions/my-model__8k-lite.jsonl`), and open a Pull Request.
+3. Add your file here as **`submissions/<team>__hard.jsonl`**
+   (e.g. `submissions/my-model__hard.jsonl`), and open a Pull Request.
 
 4. A GitHub Action scores it against the hidden gold and **comments your score**
    (JOINT, plus the auxiliary trace-sound signal) on the PR within a minute or two.
 
-5. **Auto-merge:** if your PR changes *only* `submissions/<team>__<subtask>.jsonl`
+5. **Auto-merge:** if your PR changes *only* `submissions/<team>__hard.jsonl`
    file(s) and scored cleanly, it is **merged automatically** and the public
    leaderboard ([`LEADERBOARD.md`](../leaderboard/LEADERBOARD.md), the
    [`leaderboard.json`](https://huggingface.co/datasets/qbao775/naf-bench) feed,
    and the [live board](https://huggingface.co/spaces/qbao775/naf-bench-leaderboard))
-   updates on its own — no maintainer action needed. Best JOINT per team per
-   subtask is kept. A PR that touches anything else (code, workflows, …) is held
-   for manual maintainer review instead.
+   updates on its own — no maintainer action needed. Best JOINT per team is kept.
+   A PR that touches anything else (code, workflows, …) is held for manual
+   maintainer review instead.
 
 ## Metric
 
@@ -63,8 +62,9 @@ approximation of soundness**, not a verified proof audit, so it is reported as
 auxiliary information only and does not affect ranking. It gives a coarse signal for
 "right answer, unsound/absent reasoning." Ranking is by JOINT alone.
 
-## Subtasks (by context budget)
+## The task
 
-`8k-lite` ⊂ `16k` ⊂ `full`. The lite tiers drop the largest search instances so a
-competent reasoner can solve them within an 8k / 16k token budget; `full`
-includes the largest 3-SAT instances that may need longer context.
+A single set, `hard` (77 programs / 385 prompts). It keeps the bounded 3-SAT
+search tier `cnf_n8` but excludes the prohibitively-large instances `cnf_n14` /
+`cnf_n22` (search spaces of 2¹⁴–2²²), which no model can do in context and which
+therefore added noise rather than signal.
