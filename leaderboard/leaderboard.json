@@ -1,5 +1,17 @@
 [
  {
+  "team": "claude-sonnet-5",
+  "subtask": "hard",
+  "reasoned_soundly": null,
+  "trace_coverage": 0,
+  "joint_accuracy": 89.6,
+  "per_prompt_accuracy": 96.8,
+  "sldnf_accuracy": 100.0,
+  "cred_accuracy": 94.8,
+  "skept_accuracy": 92.2,
+  "wfs_accuracy": 100.0
+ },
+ {
   "team": "gemma4-31b",
   "subtask": "hard",
   "reasoned_soundly": 84.9,
@@ -10,6 +22,18 @@
   "cred_accuracy": 85.7,
   "skept_accuracy": 77.9,
   "wfs_accuracy": 98.7
+ },
+ {
+  "team": "o4-mini",
+  "subtask": "hard",
+  "reasoned_soundly": null,
+  "trace_coverage": 0,
+  "joint_accuracy": 74.0,
+  "per_prompt_accuracy": 91.9,
+  "sldnf_accuracy": 100.0,
+  "cred_accuracy": 89.6,
+  "skept_accuracy": 88.3,
+  "wfs_accuracy": 89.6
  },
  {
   "team": "deepseek-r1-32b",
