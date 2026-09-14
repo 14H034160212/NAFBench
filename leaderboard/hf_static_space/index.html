@@ -86,7 +86,7 @@
      3-SAT search), plus a propagation-decidable control.</p>
 
   <h2>Live competition — <code>hard_v3</code> <span class="note">(hidden test set — auto-scored on submission)</span></h2>
-  <p class="note">Ranked by <b>JOINT %</b> only. The <b>trace-sound %</b> column is <em>auxiliary information, not a ranking criterion</em>: if you submit a <code>trace</code>, we check whether its reasoning commits to the certified query verdict. The check is <em>regex-based and imperfect — a rough approximation of soundness</em>, not a verified proof audit. <code>–</code> = answer-only submission.</p>
+  <p class="note">Ranked by <b>JOINT %</b> only. The <b>trace-sound %</b> column is <em>auxiliary information, not a ranking criterion</em>: if you submit a <code>trace</code>, we check whether its reasoning commits to the certified query verdict. The check is <em>regex-based and imperfect — a rough approximation of soundness</em>, not a verified proof audit. <code>–</code> = answer-only submission. For closed frontier models (o4-mini, sonnet-5) the trace is the model's <em>visible</em> output only (hidden chain-of-thought is not returned), so their trace-sound can understate and is not directly comparable to the open models.</p>
   <div id="boards">Loading…</div>
   <p class="note" id="ts"></p>
 

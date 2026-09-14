@@ -2,8 +2,8 @@
  {
   "team": "claude-sonnet-5",
   "subtask": "hard",
-  "reasoned_soundly": null,
-  "trace_coverage": 0,
+  "reasoned_soundly": 56.0,
+  "trace_coverage": 301,
   "joint_accuracy": 89.6,
   "per_prompt_accuracy": 96.8,
   "sldnf_accuracy": 100.0,
@@ -26,8 +26,8 @@
  {
   "team": "o4-mini",
   "subtask": "hard",
-  "reasoned_soundly": null,
-  "trace_coverage": 0,
+  "reasoned_soundly": 69.3,
+  "trace_coverage": 308,
   "joint_accuracy": 74.0,
   "per_prompt_accuracy": 91.9,
   "sldnf_accuracy": 100.0,

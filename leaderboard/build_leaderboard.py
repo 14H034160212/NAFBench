@@ -84,7 +84,10 @@ def main():
               " the share whose trace commits to the certified query verdict (and, on odd"
               " cycles, registers that there is no stable model). The check is **regex-based"
               " and imperfect — a rough approximation of soundness**, not a verified proof"
-              " audit. `–` = answer-only submission.", ""]
+              " audit. `–` = answer-only submission. For closed frontier models (o4-mini,"
+              " sonnet-5) the trace is the model's *visible* output only — hidden"
+              " chain-of-thought is not returned — so their trace-sound can understate and"
+              " is not directly comparable to open models whose full reasoning is captured.", ""]
 
     out = os.path.join(HERE, "LEADERBOARD.md")
     open(out, "w").write("\n".join(lines) + "\n")
